@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "tinkersinnovation:block/void_crystal_ore"
+  }
+}

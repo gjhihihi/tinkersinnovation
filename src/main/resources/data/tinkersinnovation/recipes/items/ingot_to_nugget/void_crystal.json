@@ -1,0 +1,24 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:true"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "tinkersinnovation:void_crystal_ingot"
+          }
+        ],
+        "result": {
+          "item": "tinkersinnovation:void_crystal_nugget",
+          "count": 9
+        }
+      }
+    }
+  ]
+}

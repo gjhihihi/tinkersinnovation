@@ -16,7 +16,7 @@ plugins {
 apply plugin: 'net.minecraftforge.gradle'
 
 
-version = 'v0.1.a'
+version = 'v0.0.1'
 group = 'com.gjhi.tinkersinnovation' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'tinkersinnovation'
 

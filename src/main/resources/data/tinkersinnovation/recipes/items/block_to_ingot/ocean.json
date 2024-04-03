@@ -1,0 +1,24 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:true"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "tinkersinnovation:ocean_block"
+          }
+        ],
+        "result": {
+          "item": "tinkersinnovation:ocean_ingot",
+          "count": 9
+        }
+      }
+    }
+  ]
+}

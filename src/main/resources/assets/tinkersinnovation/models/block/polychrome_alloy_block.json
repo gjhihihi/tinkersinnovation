@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "tinkersinnovation:block/polychrome_alloy_block"
+  }
+}

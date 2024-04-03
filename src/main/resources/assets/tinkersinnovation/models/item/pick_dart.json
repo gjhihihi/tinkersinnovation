@@ -1,0 +1,24 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default-tool",
+  "textures": {
+    "blade_left":         "tinkersinnovation:item/tool/pick_dart/blade_left",
+    "broken_blade_left":  "tinkersinnovation:item/tool/pick_dart/broken_blade_left",
+    "blade_right":        "tinkersinnovation:item/tool/pick_dart/blade_right",
+    "broken_blade_right": "tinkersinnovation:item/tool/pick_dart/broken_blade_right",
+    "pickhead": "tinkersinnovation:item/tool/pick_dart/pickhead",
+    "broken_pickhead": "tinkersinnovation:item/tool/pick_dart/broken_pickhead",
+    "handguard": "tinkersinnovation:item/tool/pick_dart/handguard"
+  },
+  "modifier_roots": [ "tinkersinnovation:item/tool/pick_dart/modifiers/" ],
+  "parts": [
+    { "name": "handguard", "index": 1 },
+    { "name": "blade_left",    "index": 0, "broken": "broken_blade_left" },
+    { "name": "blade_right",   "index": 2, "broken": "broken_blade_right" },
+    { "name": "pickhead",   "index": 3, "broken": "broken_pickhead" }
+  ],
+  "overrides": [{
+    "predicate": { "tconstruct:charging": 2 },
+    "model": "tinkersinnovation:item/blocking/pick_dart"
+  }]
+}

@@ -1,0 +1,15 @@
+{
+  "type": "tconstruct:material",
+  "conditions": [
+    {
+      "modid": "create",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "ingredient": {
+    "item": "create:andesite_alloy_block"
+  },
+  "value": 9,
+  "needed": 1,
+  "material": "tinkersinnovation:andesite_alloy"
+}

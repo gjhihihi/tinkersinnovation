@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "tinkersinnovation:polychrome_alloy_block",
+    "tinkersinnovation:void_crystal_block",
+    "tinkersinnovation:enchantment_block",
+    "tinkersinnovation:life_block",
+    "tinkersinnovation:ocean_block"
+  ]
+}
