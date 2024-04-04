@@ -1,7 +1,11 @@
 {
   "default": [
     {
-      "name": "tconstruct:sturdy",
+      "name": "tinkersinnovation:ocean_blessing",
+      "level": 1
+    },
+    {
+      "name": "tinkersinnovation:energy_state",
       "level": 1
     }
   ]

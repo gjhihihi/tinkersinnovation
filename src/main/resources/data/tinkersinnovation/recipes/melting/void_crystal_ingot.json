@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkersinnovation:void_crystal_ingot"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:void_crystal",
+    "amount": 90
+  },
+  "temperature": 900,
+  "time": 15
+}

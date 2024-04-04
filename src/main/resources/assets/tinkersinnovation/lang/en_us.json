@@ -98,6 +98,12 @@
   "block.tinkersinnovation.refined_radiance": "Molten Refined Radiance",
   "block.tinkersinnovation.rose_quartz": "Molten Rose Quartz",
 
+  "modifier.tinkersinnovation.shadow": "Shadow",
+  "modifier.tinkersinnovation.energy_state": "Energy State",
+  "modifier.tinkersinnovation.ocean_blessing": "Ocean Blessing",
+  "modifier.tinkersinnovation.falling_attack": "Falling Attack",
+  "modifier.tinkersinnovation.void": "Void",
+
   "itemGroup.TinkersInnovationItemGroup": "Tinkers' Innovation:Items",
   "itemGroup.TinkersInnovationToolGroup": "Tinkers' Innovation:Tools"
 }

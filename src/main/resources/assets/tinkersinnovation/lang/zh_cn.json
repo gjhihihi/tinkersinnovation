@@ -98,6 +98,12 @@
   "block.tinkersinnovation.refined_radiance": "熔融光辉石",
   "block.tinkersinnovation.rose_quartz": "熔融玫瑰石英",
 
+  "modifier.tinkersinnovation.shadow": "暗影",
+  "modifier.tinkersinnovation.energy_state": "能量态",
+  "modifier.tinkersinnovation.ocean_blessing": "海洋祝福",
+  "modifier.tinkersinnovation.falling_attack": "坠击",
+  "modifier.tinkersinnovation.void": "虚无",
+
   "itemGroup.TinkersInnovationItemGroup": "工匠创新：物品",
   "itemGroup.TinkersInnovationToolGroup": "工匠创新：工具"
 }

@@ -3,6 +3,10 @@
     {
       "name": "tconstruct:sturdy",
       "level": 1
+    },
+    {
+      "name": "tinkersinnovation:energy_state",
+      "level": 1
     }
   ]
 }

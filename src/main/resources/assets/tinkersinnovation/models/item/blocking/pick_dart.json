@@ -1,5 +1,5 @@
 {
-  "parent": "tinkers_thinking:item/pick_dart",
+  "parent": "tinkersinnovation:item/pick_dart",
   "display": {
     "firstperson_righthand": {
       "rotation": [ 0, 180, -5 ],

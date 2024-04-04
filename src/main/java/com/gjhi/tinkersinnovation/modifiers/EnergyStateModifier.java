@@ -13,10 +13,14 @@ public class EnergyStateModifier extends Modifier {
 }
     @Override
     public int onDamageTool(IToolStackView tool, int level, int amount, @Nullable LivingEntity holder) {
-        return (int) (amount*1.5);
+        return amount*level*2;
     }
     @Override
     public float getRepairFactor(IToolStackView toolStack, int level, float factor) {
-        return (float) (factor*1.5);
+        return factor*level*1.5f;
+    }
+    @Override
+    public int getDurabilityRGB(IToolStackView tool, int level) {
+        return 0xB0C4DE;
     }
 }

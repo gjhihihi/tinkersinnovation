@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "modid": "create",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "ingredient": {
+    "item": "create:refined_radiance"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:refined_radiance",
+    "amount": 90
+  },
+  "temperature": 900,
+  "time": 15
+}
