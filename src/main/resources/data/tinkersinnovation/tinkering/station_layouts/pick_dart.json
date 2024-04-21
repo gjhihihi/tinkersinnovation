@@ -1,0 +1,46 @@
+{
+  "translation_key": "item.tinkers#innovation.pick_dart",
+  "icon": {
+    "item": "tinkers#innovation:pick_dart",
+    "nbt": "{Damage:0,tic_broken:0b,tic_display:1b,tic_materials:[\"tconstruct:ui_render#head\",\"tconstruct:ui_render#handle\",\"tconstruct:ui_render#extra\",\"tconstruct:ui_render#large\",\"tconstruct:ui_render#extra_large\"]}"
+  },
+  "sortIndex": 4,
+  "input_slots": [
+    {
+      "icon": "tconstruct:small_blade",
+      "translation_key": "item.tconstruct.small_blade",
+      "x": 39,
+      "y": 53,
+      "filter": {
+        "item": "tconstruct:small_blade"
+      }
+    },
+    {
+      "icon": "tconstruct:pick_head",
+      "translation_key": "item.tconstruct.pick_head",
+      "x": 39,
+      "y": 35,
+      "filter": {
+        "item": "tconstruct:pick_head"
+      }
+    },
+    {
+      "icon": "tconstruct:small_blade",
+      "translation_key": "item.tconstruct.small_blade",
+      "x": 21,
+      "y": 35,
+      "filter": {
+        "item": "tconstruct:small_blade"
+      }
+    },
+    {
+      "icon": "tinkersinnovation:handguard",
+      "translation_key": "item.tinkersinnovation.handguard",
+      "x": 21,
+      "y": 53,
+      "filter": {
+        "item": "tinkersinnovation:handguard"
+      }
+    }
+  ]
+}

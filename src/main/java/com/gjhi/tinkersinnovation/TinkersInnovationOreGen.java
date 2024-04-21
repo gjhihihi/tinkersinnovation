@@ -1,5 +1,7 @@
 package com.gjhi.tinkersinnovation;
 
+import com.gjhi.tinkersinnovation.register.TinkersInnovationBlocks;
+import com.gjhi.tinkersinnovation.register.TinkersInnovationTags;
 import net.minecraft.data.worldgen.features.OreFeatures;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.biome.Biome;
@@ -37,8 +39,8 @@ public class TinkersInnovationOreGen {
     public static final ConfiguredFeatureDeferredRegister CONFIGURED_FEATURES = new ConfiguredFeatureDeferredRegister(MOD_ID);
     public static final PlacedFeatureDeferredRegister PLACED_FEATURES = new PlacedFeatureDeferredRegister(MOD_ID);
 
-    public static RegistryObject<ConfiguredFeature<OreConfiguration, Feature<OreConfiguration>>> HOTHIUM_ORE = CONFIGURED_FEATURES.registerSupplier("hothium_ore", () -> Feature.ORE, () -> new OreConfiguration(voiReplace.get(), TinkersInnovationConfig.COMMON.voidcrystalOre.getSize()));
-    public static RegistryObject<PlacedFeature> placedVoidcrystalOre = PLACED_FEATURES.register("void_crystal_ore", HOTHIUM_ORE, CountPlacement.of(TinkersInnovationConfig.COMMON.voidcrystalOre.getCount()), InSquarePlacement.spread(), BiomeFilter.biome(), HeightRangePlacement.uniform(VerticalAnchor.absolute(TinkersInnovationConfig.COMMON.voidcrystalOre.getMinY()), VerticalAnchor.absolute(TinkersInnovationConfig.COMMON.voidcrystalOre.getMaxY())));
+    public static RegistryObject<ConfiguredFeature<OreConfiguration, Feature<OreConfiguration>>> VOID_CRYSTAL_ORE = CONFIGURED_FEATURES.registerSupplier("void_crystal_ore", () -> Feature.ORE, () -> new OreConfiguration(voiReplace.get(), TinkersInnovationConfig.COMMON.voidcrystalOre.getSize()));
+    public static RegistryObject<PlacedFeature> placedVoidcrystalOre = PLACED_FEATURES.register("void_crystal_ore", VOID_CRYSTAL_ORE, CountPlacement.of(TinkersInnovationConfig.COMMON.voidcrystalOre.getCount()), InSquarePlacement.spread(), BiomeFilter.biome(), HeightRangePlacement.uniform(VerticalAnchor.absolute(TinkersInnovationConfig.COMMON.voidcrystalOre.getMinY()), VerticalAnchor.absolute(TinkersInnovationConfig.COMMON.voidcrystalOre.getMaxY())));
     @SubscribeEvent
     public static void onBiomeLoad(final BiomeLoadingEvent event) {
         BiomeGenerationSettingsBuilder generation = event.getGeneration();
@@ -70,11 +72,11 @@ public class TinkersInnovationOreGen {
                 placedprehniteGeode.getHolder().ifPresent(holder -> generation.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, holder));
             }*/
         }
-        /*if (isNetherBiome(category)) {
-            if (TinkersInnovationConfig.COMMON.inertwitheriumOre.isEnabled()) {
+        if (isNetherBiome(category)) {
+            /*if (TinkersInnovationConfig.COMMON.inertwitheriumOre.isEnabled()) {
                 placedInertwitheriumOre.getHolder().ifPresent(holder -> generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, holder));
-            }
-        }*/
+            }*/
+        }
         if (isEndBiome(category)) {
             if (TinkersInnovationConfig.COMMON.voidcrystalOre.isEnabled()) {
                 placedVoidcrystalOre.getHolder().ifPresent(holder -> generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, holder));

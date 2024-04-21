@@ -1,25 +1,7 @@
 {
-  "perStat": {
-    "tconstruct:ranged": [
-      {
-        "name": "tinkersinnovation:ocean_blessing",
-        "level": 1
-      }
-    ],
-    "tconstruct:melee_harvest": [
-      {
-        "name": "tinkersinnovation:shadow",
-        "level": 1
-      }
-    ]
-  },
   "default": [
     {
-      "name": "tconstruct:enhanced",
-      "level": 2
-    },
-    {
-      "name": "tinkersinnovation:energy_state",
+      "name": "tinkersinnovation:omnipotent",
       "level": 1
     }
   ]

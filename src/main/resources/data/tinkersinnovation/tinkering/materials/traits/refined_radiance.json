@@ -1,7 +1,21 @@
 {
+  "perStat": {
+    "tconstruct:ranged": [
+      {
+        "name": "tconstruct:holy",
+        "level": 1
+      }
+    ],
+    "tconstruct:melee_harvest": [
+      {
+        "name": "tconstruct:smite",
+        "level": 1
+      }
+    ]
+  },
   "default": [
     {
-      "name": "tconstruct:sturdy",
+      "name": "tinkersinnovation:radiance",
       "level": 1
     }
   ]

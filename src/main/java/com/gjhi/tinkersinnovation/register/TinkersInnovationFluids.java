@@ -1,4 +1,4 @@
-package com.gjhi.tinkersinnovation;
+package com.gjhi.tinkersinnovation.register;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
@@ -29,7 +29,9 @@ public class TinkersInnovationFluids {
      public static FluidObject<ForgeFlowingFluid> andesite_alloy = register("andesite_alloy", 900);
      public static FluidObject<ForgeFlowingFluid> shadow_steel = register("shadow_steel", 1000);
      public static FluidObject<ForgeFlowingFluid> refined_radiance = register("refined_radiance", 1000);
+
      public static FluidObject<ForgeFlowingFluid> rose_quartz = register("rose_quartz", 600);
+     public static FluidObject<ForgeFlowingFluid> ether = register("ether", 1200);
 
 /*     public static final RegistryObject<Fluid> * =  FLUIDS.register("*", () -> new ForgeFlowingFluid.Source(TinkersCreationFluids.*_PROPERTIES ));
      public static final RegistryObject<Fluid> *_flowing =  FLUIDS.register("*_flowing", () -> new ForgeFlowingFluid.Flowing(TinkersCreationFluids.*_PROPERTIES ));

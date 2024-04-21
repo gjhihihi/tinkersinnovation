@@ -1,6 +1,6 @@
 package com.gjhi.tinkersinnovation.creativetabs;
 
-import com.gjhi.tinkersinnovation.TinkersInnovationItems;
+import com.gjhi.tinkersinnovation.register.TinkersInnovationItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 

@@ -16,7 +16,7 @@ plugins {
 apply plugin: 'net.minecraftforge.gradle'
 
 
-version = 'v0.0.1'
+version = mod_version
 group = 'com.gjhi.tinkersinnovation' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'tinkersinnovation'
 
@@ -167,6 +167,7 @@ dependencies {
     implementation fg.deobf("slimeknights.tconstruct:TConstruct:1.18.2-${tcon_version}")
     implementation fg.deobf("slimeknights.mantle:Mantle:1.18.2-${mantle_version}")
     implementation fg.deobf("mezz.jei:jei-${minecraft_version}:${jei_version}")
+    compileOnly fileTree(dir: 'lib',includes: ['*.jar'])
     // Real mod deobf dependency examples - these get remapped to your current mappings
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency
     // runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}") // Adds the full JEI mod as a runtime dependency

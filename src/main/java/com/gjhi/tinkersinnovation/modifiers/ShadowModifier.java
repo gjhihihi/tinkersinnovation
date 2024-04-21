@@ -1,5 +1,6 @@
 package com.gjhi.tinkersinnovation.modifiers;
 
+import com.google.j2objc.annotations.ReflectionSupport;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.player.Player;
@@ -10,6 +11,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingExperienceDropEvent;
 import net.minecraftforge.event.world.BlockEvent.BreakEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
 import org.jetbrains.annotations.NotNull;
 import slimeknights.tconstruct.TConstruct;
 import slimeknights.tconstruct.library.modifiers.Modifier;
@@ -31,9 +33,9 @@ public class ShadowModifier extends Modifier implements ProjectileHitModifierHoo
         return get+size*2;
     }
     public ShadowModifier() {
-        MinecraftForge.EVENT_BUS.addListener(this::onExperienceDrop);
-        MinecraftForge.EVENT_BUS.addListener(this::onEntityKilled);
-        MinecraftForge.EVENT_BUS.addListener(this::beforeBlockBreak);
+        MinecraftForge.EVENT_BUS.addListener(EventPriority.LOWEST, this::onExperienceDrop);
+        MinecraftForge.EVENT_BUS.addListener(EventPriority.LOWEST, this::onEntityKilled);
+        MinecraftForge.EVENT_BUS.addListener(EventPriority.LOWEST, this::beforeBlockBreak);
     }
 
     private void beforeBlockBreak(BreakEvent event) {
@@ -44,6 +46,7 @@ public class ShadowModifier extends Modifier implements ProjectileHitModifierHoo
             level = tool.getModifierLevel(this);
         }
         if (level > 0) {
+            experience_size = 2 * level;
             event.setExpToDrop(boost(event.getExpToDrop(), experience_size));
         }
     }
@@ -62,7 +65,7 @@ public class ShadowModifier extends Modifier implements ProjectileHitModifierHoo
         // if the entity was killed by one of our arrows, boost the experience from that
         int experienced = event.getEntityLiving().getCapability(TinkerDataCapability.CAPABILITY).resolve().map(data -> data.get(EXPERIENCED)).orElse(-1);
         if (experienced > 0) {
-            event.setDroppedExperience(boost(event.getDroppedExperience(), experienced));
+            event.setDroppedExperience(boost(event.getDroppedExperience(), experienced+experience_size));
             // experienced being zero means it was our arrow but it was not modified, do not check the held item in that case
         } else if (experienced != 0) {
             Player player = event.getAttackingPlayer();

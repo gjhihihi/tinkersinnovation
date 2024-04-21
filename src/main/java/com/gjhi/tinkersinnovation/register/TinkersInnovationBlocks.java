@@ -1,4 +1,4 @@
-package com.gjhi.tinkersinnovation;
+package com.gjhi.tinkersinnovation.register;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;

@@ -7,12 +7,12 @@
     }
   ],
   "ingredient": {
-    "item": "create:rose_quartz"
+    "item": "create:experience_block"
   },
   "result": {
-    "fluid": "tinkersinnovation:rose_quartz",
-    "amount": 90
+    "fluid": "tinkersinnovation:experience",
+    "amount": 810
   },
   "temperature": 900,
-  "time": 15
+  "time": 135
 }

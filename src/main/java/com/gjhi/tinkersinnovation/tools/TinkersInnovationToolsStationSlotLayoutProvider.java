@@ -1,6 +1,6 @@
 package com.gjhi.tinkersinnovation.tools;
 
-import com.gjhi.tinkersinnovation.TinkersInnovationItems;
+import com.gjhi.tinkersinnovation.register.TinkersInnovationItems;
 import net.minecraft.data.DataGenerator;
 import slimeknights.tconstruct.library.data.tinkering.AbstractStationSlotLayoutProvider;
 import slimeknights.tconstruct.tools.TinkerToolParts;
@@ -14,10 +14,10 @@ public class TinkersInnovationToolsStationSlotLayoutProvider extends AbstractSta
     protected void addLayouts() {
         defineModifiable(TinkersInnovationItems.pick_dart)
                 .sortIndex(2)
-                .addInputItem(TinkerToolParts.pickHead, 25, 20)
-                .addInputItem(TinkerToolParts.smallBlade, 50, 48)
-                .addInputItem(TinkerToolParts.smallBlade, 21, 52)
-                .addInputItem(TinkersInnovationItems.handguard.get(), 15, 50)
+                .addInputItem(TinkerToolParts.pickHead, 39, 35)
+                .addInputItem(TinkerToolParts.smallBlade, 39, 53)
+                .addInputItem(TinkerToolParts.smallBlade, 21, 35)
+                .addInputItem(TinkersInnovationItems.handguard.get(), 21, 53)
                 .build();
         defineModifiable(TinkersInnovationItems.heavy_shield)
                 .sortIndex(3)

@@ -1,0 +1,30 @@
+{
+  "type": "tconstruct:alloy",
+  "result": {
+    "fluid": "tinkersinnovation:polychrome_alloy",
+    "amount": 90
+  },
+  "inputs": [
+    {
+      "name": "tinkersinnovation:enchantment_essence",
+      "amount": 90
+    },
+    {
+      "name": "tinkersinnovation:life_essence",
+      "amount": 90
+    },
+    {
+      "name": "tinkersinnovation:ocean_essence",
+      "amount": 90
+    },
+    {
+      "name": "tconstruct:liquid_soul",
+      "amount": 90
+    },
+    {
+      "name": "tconstruct:earth_slime",
+      "amount": 90
+    }
+  ],
+  "temperature": 1500
+}

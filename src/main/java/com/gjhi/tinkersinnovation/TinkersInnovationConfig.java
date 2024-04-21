@@ -16,6 +16,7 @@ public class TinkersInnovationConfig {
 
     public static class CommonConfig {
         public final OreConfig voidcrystalOre;
+        //public final MaterialConfig createMaterial;
         /*public final ForgeConfigSpec.BooleanValue icelandsparGeodes;
         public final ForgeConfigSpec.BooleanValue topazGeodes;
         public final ForgeConfigSpec.BooleanValue lizaniteGeodes;
@@ -24,7 +25,10 @@ public class TinkersInnovationConfig {
         CommonConfig(ForgeConfigSpec.Builder builder) {
             builder.comment("Void Crystal Ore Worldgen").push("void_crystal_ore");
             voidcrystalOre = new VoidCrystalOreConfig(builder);
-            builder.pop();
+            builder.pop();/*
+            builder.comment("Whether to link Create").push("create");
+            createMaterial = new CreateMaterialConfig(builder);
+            builder.pop();*/
 
             /*builder.comment("World generation, mainly geodes").push("worldgen");
             {
@@ -72,18 +76,31 @@ public class TinkersInnovationConfig {
             return minY.get();
         }
     }
+    /*public static class MaterialConfig {
+        public ForgeConfigSpec.BooleanValue enabled;
+        public boolean isEnabled() {
+            return enabled.get();
+        }
+        public MaterialConfig(ForgeConfigSpec.Builder builder) {
+        }
+    }*/
 
     public static class VoidCrystalOreConfig extends OreConfig {
-
         public VoidCrystalOreConfig(ForgeConfigSpec.Builder builder) {
             super(builder);
-            this.enabled = builder.worldRestart().comment("Enable/Disable Void Crystal ore").define("titaniumOreEnabled", true);
-            this.minY = builder.comment("Min Y level").defineInRange("minY", -20, -60, 0);
-            this.maxY = builder.comment("Max Y Level").defineInRange("maxY", -10, -60, 20);
+            this.enabled = builder.worldRestart().comment("Enable/Disable Void Crystal ore").define("VoidCrystalOreEnabled", true);
+            this.minY = builder.comment("Min Y level").defineInRange("minY", 0, 0, 20);
+            this.maxY = builder.comment("Max Y Level").defineInRange("maxY", 30, 0, 100);
             this.count = builder.comment("Ore vein count").defineInRange("veinCount", 20, 1, 40);
             this.size = builder.comment("Ore vein size").defineInRange("veinSize", 3, 1, 40);
         }
     }
+    /*public static class CreateMaterialConfig extends MaterialConfig{
+        public CreateMaterialConfig(ForgeConfigSpec.Builder builder) {
+            super(builder);
+            this.enabled = builder.worldRestart().comment("Enable/Disable Create's Material").define("CreateMaterialEnabled", false);
+        }
+    }*/
   /*  public static class TitaniumOreConfig extends OreConfig {
 
         public TitaniumOreConfig(ForgeConfigSpec.Builder builder) {

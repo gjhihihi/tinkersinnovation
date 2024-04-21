@@ -1,9 +1,13 @@
 package com.gjhi.tinkersinnovation.tools;
 
-import com.gjhi.tinkersinnovation.TinkersInnovationItems;
-import com.gjhi.tinkersinnovation.TinkersInnovationModifiers;
+import com.gjhi.tinkersinnovation.register.TinkersInnovationItems;
 import net.minecraft.data.DataGenerator;
 import slimeknights.tconstruct.library.data.tinkering.AbstractToolDefinitionDataProvider;
+import slimeknights.tconstruct.library.json.predicate.modifier.SingleModifierPredicate;
+import slimeknights.tconstruct.library.modifiers.hook.interaction.InteractionSource;
+import slimeknights.tconstruct.library.tools.SlotType;
+import slimeknights.tconstruct.library.tools.definition.module.ToolModuleHooks;
+import slimeknights.tconstruct.library.tools.definition.module.interaction.PreferenceSetInteraction;
 import slimeknights.tconstruct.library.tools.stat.ToolStats;
 import slimeknights.tconstruct.tools.TinkerModifiers;
 import slimeknights.tconstruct.tools.TinkerToolParts;
@@ -29,7 +33,10 @@ public class TinkersInnovationToolsDefinitionDataProvider extends AbstractToolDe
                 .multiplier(ToolStats.MINING_SPEED, 0.7f)
                 .multiplier(ToolStats.ATTACK_DAMAGE, 0.5f)
                 .multiplier(ToolStats.ATTACK_SPEED, 1.6f)
-                .multiplier(ToolStats.DURABILITY, 2.3f);
+                .multiplier(ToolStats.DURABILITY, 2.3f)
+                .startingSlots(SlotType.ABILITY, 1)
+                .startingSlots(SlotType.UPGRADE, 4)
+        ;
                 //trait
         //        .trait(TinkerModifiers.knockback, 1)
                 //other
@@ -47,7 +54,16 @@ public class TinkersInnovationToolsDefinitionDataProvider extends AbstractToolDe
                 .multiplier(ToolStats.ATTACK_DAMAGE, 0.5f)
                 .multiplier(ToolStats.ATTACK_SPEED, 1.6f)
                 .multiplier(ToolStats.DURABILITY, 2.3f)
-                .trait(TinkersInnovationModifiers.falling_attack, 1);
+                .stat(ToolStats.BLOCK_AMOUNT, 100.0F)
+                .stat(ToolStats.BLOCK_ANGLE, 180.0F)
+                .stat(ToolStats.ARMOR_TOUGHNESS, 2.0F)
+                .startingSlots(SlotType.UPGRADE, 1)
+                .startingSlots(SlotType.DEFENSE, 4)
+                .startingSlots(SlotType.ABILITY, 1)
+                .trait(TinkerModifiers.blocking)
+                .module(ToolModuleHooks.INTERACTION, new PreferenceSetInteraction(InteractionSource.RIGHT_CLICK, new SingleModifierPredicate(TinkerModifiers.blocking.getId())))
+                //.action(ToolActions.SHIELD_BLOCK)
+        ;
     }
 
     @Override

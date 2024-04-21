@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "minecraft:totem_of_undying"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:life_essence",
+    "amount": 10
+  },
+  "temperature": 900,
+  "time": 15
+}

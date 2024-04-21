@@ -1,4 +1,4 @@
-package com.gjhi.tinkersinnovation;
+package com.gjhi.tinkersinnovation.register;
 
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;

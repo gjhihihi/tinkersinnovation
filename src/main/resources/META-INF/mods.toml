@@ -34,7 +34,7 @@ credits="感谢游玩本模组" #optional
 authors="gjhi" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-本模组是匠魂3的一个扩展，添加了许多奇妙的内容。
+An addon mod for Tinkers' Construct.
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.tinkersinnovation]] #optional

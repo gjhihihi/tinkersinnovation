@@ -1,4 +1,4 @@
-package com.gjhi.tinkersinnovation;
+package com.gjhi.tinkersinnovation.register;
 
 import net.minecraft.resources.ResourceLocation;
 import slimeknights.tconstruct.library.materials.definition.MaterialId;
@@ -17,7 +17,8 @@ public class TinkersInnovationMaterials {
     public static final MaterialId ocean_essence = createMaterial("ocean_essence");
     public static final MaterialId andesite_alloy = createMaterial("andesite_alloy");
     public static final MaterialId experience = createMaterial("experience");
-    public static final MaterialId shadow_steel = createMaterial("shadow_steel");
-    public static final MaterialId refined_radiance = createMaterial("refined_radiance");
-    public static final MaterialId rose_quartz = createMaterial("rose_quartz");
+    //public static final MaterialId shadow_steel = createMaterial("shadow_steel");
+    //public static final MaterialId refined_radiance = createMaterial("refined_radiance");
+    //public static final MaterialId rose_quartz = createMaterial("rose_quartz");
+    public static final MaterialId ether = createMaterial("ether");
 }

@@ -1,13 +1,19 @@
 package com.gjhi.tinkersinnovation;
 
 import com.gjhi.tinkersinnovation.creativetabs.*;
+import com.gjhi.tinkersinnovation.register.TinkersInnovationBlocks;
+import com.gjhi.tinkersinnovation.register.TinkersInnovationFluids;
+import com.gjhi.tinkersinnovation.register.TinkersInnovationItems;
+import com.gjhi.tinkersinnovation.register.TinkersInnovationModifiers;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
@@ -17,6 +23,7 @@ import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 public class TinkersInnovation {
     public static final String MOD_ID = "tinkersinnovation";
     public TinkersInnovation() {
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, TinkersInnovationConfig.config);
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         MinecraftForge.EVENT_BUS.register(this);
         TinkersInnovationModifiers.MODIFIERS.register(bus);

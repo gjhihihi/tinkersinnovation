@@ -1,4 +1,4 @@
-package com.gjhi.tinkersinnovation;
+package com.gjhi.tinkersinnovation.register;
 
 import com.gjhi.tinkersinnovation.tools.TinkersInnovationToolsDefinition;
 import net.minecraft.world.item.BlockItem;

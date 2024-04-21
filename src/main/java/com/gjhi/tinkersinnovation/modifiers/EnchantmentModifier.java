@@ -8,8 +8,8 @@ import org.jetbrains.annotations.NotNull;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
+import static java.lang.Math.random;
 
-import static org.apache.commons.lang3.RandomUtils.nextDouble;
 
 public class EnchantmentModifier extends Modifier {
     @Override
@@ -17,37 +17,51 @@ public class EnchantmentModifier extends Modifier {
         Player player = context.getPlayerAttacker();
         LivingEntity target = context.getLivingTarget();
         if (player != null && target != null) {
-            if (nextDouble()<0.1){
-               MobEffectInstance effect = new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 40 * level ,level-1);
-               target.addEffect(effect);
+            if(RANDOM.nextFloat()<0.1){
+               target.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 40 * level ,level-1),target);
             }
-            if (nextDouble()<0.1){
-                MobEffectInstance effect = new MobEffectInstance(MobEffects.WITHER, 40 * level ,level-1);
-                target.addEffect(effect);
+            if (RANDOM.nextFloat()<0.1){
+                target.addEffect(new MobEffectInstance(MobEffects.WITHER, 40 * level ,level-1),target);
             }
-            if (nextDouble()<0.1){
-                MobEffectInstance effect = new MobEffectInstance(MobEffects.WEAKNESS, 40 * level ,level-1);
-                target.addEffect(effect);
+            if (RANDOM.nextFloat()<0.1){
+                target.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 40 * level ,level-1),target);
             }
-            if (nextDouble()<0.1){
-                MobEffectInstance effect = new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40 * level ,level-1);
-                target.addEffect(effect);
+            if (RANDOM.nextFloat()<0.1){
+                target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40 * level ,level-1),target);
             }
-            if (nextDouble()<0.1){
-                MobEffectInstance effect = new MobEffectInstance(MobEffects.BLINDNESS, 40 * level ,level-1);
-                target.addEffect(effect);
+            if (RANDOM.nextFloat()<0.1){
+                target.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 40 * level ,level-1),target);
             }
-            if (nextDouble()<0.1){
-                MobEffectInstance effect = new MobEffectInstance(MobEffects.HUNGER, 40 * level ,level-1);
-                target.addEffect(effect);
+            if (RANDOM.nextFloat()<0.1){
+                target.addEffect(new MobEffectInstance(MobEffects.HUNGER, 40 * level ,level-1),target);
             }
-            if (nextDouble()<0.1){
-                MobEffectInstance effect = new MobEffectInstance(MobEffects.POISON, 40 * level ,level-1);
-                target.addEffect(effect);
+            if (RANDOM.nextFloat()<0.1){
+                target.addEffect(new MobEffectInstance(MobEffects.POISON, 40 * level ,level-1),target);
             }
-            if (nextDouble()<0.1){
-                MobEffectInstance effect = new MobEffectInstance(MobEffects.CONFUSION, 40 * level ,level-1);
-                target.addEffect(effect);
+            if (RANDOM.nextFloat()<0.1){
+                target.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 40 * level ,level-1),target);
+            }
+            //------------------------------------------------------------
+            if (RANDOM.nextFloat()<0.1){
+                player.addEffect(new MobEffectInstance(MobEffects.LUCK, 40 * level ,level-1),player);
+            }
+            if (RANDOM.nextFloat()<0.1){
+                player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 40 * level,level - 1));
+            }
+            if (RANDOM.nextFloat()<0.1){
+                player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40 * level ,level-1));
+            }
+            if (RANDOM.nextFloat()<0.1){
+                player.addEffect(new MobEffectInstance(MobEffects.GLOWING, 40 * level ,level-1));
+            }
+            if (RANDOM.nextFloat()<0.1){
+                player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40 * level ,level-1));
+            }
+            if (RANDOM.nextFloat()<0.1){
+                player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40 * level ,level-1));
+            }
+            if (RANDOM.nextFloat()<0.1){
+                player.addEffect(new MobEffectInstance(MobEffects.JUMP, 40 * level ,level-1));
             }
         }
         return level;
@@ -57,8 +71,7 @@ public class EnchantmentModifier extends Modifier {
         Player player = context.getPlayerAttacker();
         LivingEntity target = context.getLivingTarget();
         if (player != null && target != null) {
-                MobEffectInstance effect = new MobEffectInstance(MobEffects.CONFUSION, 120 * level ,2);
-                target.addEffect(effect);
+                target.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 1200 * level ,2));
         }
     }
 }

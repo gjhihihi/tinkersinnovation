@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "minecraft:enchanted_book"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:enchantment_essence",
+    "amount": 10
+  },
+  "temperature": 900,
+  "time": 15
+}

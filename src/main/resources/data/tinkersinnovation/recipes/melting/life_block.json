@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkersinnovation:life_block"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:life_essence",
+    "amount": 810
+  },
+  "temperature": 900,
+  "time": 135
+}
