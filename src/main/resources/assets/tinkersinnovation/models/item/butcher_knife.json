@@ -1,0 +1,21 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default-tool",
+  "textures": {
+    "broadblade": "tinkersinnovation:item/tool/butcher_knife/broadblade",
+    "broken_broadblade": "tinkersinnovation:item/tool/butcher_knife/broken_broadblade",
+    "largeplate":         "tinkersinnovation:item/tool/butcher_knife/largeplate",
+    "broken_largeplate":  "tinkersinnovation:item/tool/butcher_knife/broken_largeplate",
+    "tough_handle": "tinkersinnovation:item/tool/butcher_knife/tough_handle"
+  },
+  "modifier_roots": [ "tinkersinnovation:item/tool/butcher_knife/modifiers/" ],
+  "parts": [
+    { "name": "broadblade",    "index": 1, "broken": "broken_broadblade" },
+    { "name": "largeplate",   "index": 2, "broken": "broken_largeplate" },
+    { "name": "tough_handle",   "index": 0 }
+  ],
+  "overrides": [{
+    "predicate": { "tconstruct:charging": 2 },
+    "model": "tinkersinnovation:item/blocking/butcher_knife"
+  }]
+}

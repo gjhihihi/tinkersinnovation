@@ -89,8 +89,8 @@ public class TinkersInnovationConfig {
         public VoidCrystalOreConfig(ForgeConfigSpec.Builder builder) {
             super(builder);
             this.enabled = builder.worldRestart().comment("Enable/Disable Void Crystal ore").define("VoidCrystalOreEnabled", true);
-            this.minY = builder.comment("Min Y level").defineInRange("minY", 0, 0, 20);
-            this.maxY = builder.comment("Max Y Level").defineInRange("maxY", 30, 0, 100);
+            this.minY = builder.comment("Min Y level").defineInRange("minY", -64, -64, -20);
+            this.maxY = builder.comment("Max Y Level").defineInRange("maxY", -54, -60, 0);
             this.count = builder.comment("Ore vein count").defineInRange("veinCount", 20, 1, 40);
             this.size = builder.comment("Ore vein size").defineInRange("veinSize", 3, 1, 40);
         }

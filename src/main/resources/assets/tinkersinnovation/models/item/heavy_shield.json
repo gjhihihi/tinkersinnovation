@@ -10,22 +10,22 @@
     "broken_shield_plate": "tinkersinnovation:item/tool/heavy_shield/broken_shield_plate",
     "tool_handle": "tinkersinnovation:item/tool/heavy_shield/tool_handle",
 
-    "big_large_plate_up": "tinkersinnovation:item/tool/heavy_shield/blocking/large_plate_up",
-    "big_broken_large_plate_up": "tinkersinnovation:item/tool/heavy_shield/blocking/broken_large_plate_up",
-    "big_large_plate_down": "tinkersinnovation:item/tool/heavy_shield/blocking/large_plate_down",
-    "big_broken_large_plate_down": "tinkersinnovation:item/tool/heavy_shield/blocking/broken_large_plate_down",
-    "big_shield_plate": "tinkersinnovation:item/tool/heavy_shield/blocking/shield_plate",
-    "big_broken_shield_plate": "tinkersinnovation:item/tool/heavy_shield/blocking/broken_shield_plate"
+    "large_plate_up_large": "tinkersinnovation:item/tool/heavy_shield/blocking/large_plate_up",
+    "broken_large_plate_up_large": "tinkersinnovation:item/tool/heavy_shield/blocking/broken_large_plate_up",
+    "large_plate_down_large": "tinkersinnovation:item/tool/heavy_shield/blocking/large_plate_down",
+    "broken_large_plate_down_large": "tinkersinnovation:item/tool/heavy_shield/blocking/broken_large_plate_down",
+    "shield_plate_large": "tinkersinnovation:item/tool/heavy_shield/blocking/shield_plate",
+    "broken_shield_plate_large": "tinkersinnovation:item/tool/heavy_shield/blocking/broken_shield_plate"
   },
   "modifier_roots": {
     "small": [ "tinkersinnovation:item/tool/heavy_shield/modifiers/small" ],
     "large": [ "tinkersinnovation:item/tool/heavy_shield/modifiers/large" ]
   },
   "parts": [
-    { "name": "tool_handle", "index": 0 },
-    { "name": "large_plate_up",    "index": 1, "broken": "broken_large_plate_up" },
-    { "name": "large_plate_down",   "index": 2, "broken": "broken_large_plate_down" },
-    { "name": "shield_plate",   "index": 3, "broken": "broken_shield_plate" }
+      { "name": "tool_handle", "index": 0 },
+      { "name": "large_plate_up",    "index": 1, "broken": "broken_large_plate_up" },
+      { "name": "large_plate_down",   "index": 2, "broken": "broken_large_plate_down" },
+      { "name": "shield_plate",   "index": 3, "broken": "broken_shield_plate" }
   ],
   "large": true,
   "large_offset": [-8, 0],

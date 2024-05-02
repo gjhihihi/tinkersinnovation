@@ -11,7 +11,7 @@
       "durability": 1250,
       "miningSpeed": 6.5,
       "harvestTier": "minecraft:netherite",
-      "attack": 1.0
+      "attack": 1.5
     },
     "tconstruct:limb": {
       "durability": 1250,

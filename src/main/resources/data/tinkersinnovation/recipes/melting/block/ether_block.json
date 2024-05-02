@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkersinnovation:ether_block"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:ether",
+    "amount": 810
+  },
+  "temperature": 1200,
+  "time": 135
+}

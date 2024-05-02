@@ -31,10 +31,9 @@ import static slimeknights.tconstruct.world.TinkerWorld.TAB_WORLD;
 @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 
 public class TinkersInnovationOreGen {
-    public static final RuleTest END_ORE_REPLACEABLES = new TagMatchTest(TinkersInnovationTags.BASE_STONE_END);
 
     //public static Supplier<List<OreConfiguration.TargetBlockState>> titReplace = () -> List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, TinkersInnovationBlocks.titanium_ore.get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, TinkersInnovationBlocks.deepslate_titanium_ore.get().defaultBlockState()));
-    public static Supplier<List<OreConfiguration.TargetBlockState>> voiReplace = () -> List.of(OreConfiguration.target(END_ORE_REPLACEABLES, TinkersInnovationBlocks.void_crystal_ore.get().defaultBlockState()));
+    public static Supplier<List<OreConfiguration.TargetBlockState>> voiReplace = () -> List.of(OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, TinkersInnovationBlocks.void_crystal_ore.get().defaultBlockState()));
 
     public static final ConfiguredFeatureDeferredRegister CONFIGURED_FEATURES = new ConfiguredFeatureDeferredRegister(MOD_ID);
     public static final PlacedFeatureDeferredRegister PLACED_FEATURES = new PlacedFeatureDeferredRegister(MOD_ID);
@@ -46,6 +45,9 @@ public class TinkersInnovationOreGen {
         BiomeGenerationSettingsBuilder generation = event.getGeneration();
         Biome.BiomeCategory category = event.getCategory();
         if (isOverworldBiome(category)) {
+            if (TinkersInnovationConfig.COMMON.voidcrystalOre.isEnabled()) {
+                placedVoidcrystalOre.getHolder().ifPresent(holder -> generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, holder));
+            }
             /*
             if (TinkersInnovationConfig.COMMON.aventurineOre.isEnabled()) {
                 placedAventurineOre.getHolder().ifPresent(holder -> generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, holder));
@@ -78,9 +80,7 @@ public class TinkersInnovationOreGen {
             }*/
         }
         if (isEndBiome(category)) {
-            if (TinkersInnovationConfig.COMMON.voidcrystalOre.isEnabled()) {
-                placedVoidcrystalOre.getHolder().ifPresent(holder -> generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, holder));
-            }
+            //
         }
     }
 

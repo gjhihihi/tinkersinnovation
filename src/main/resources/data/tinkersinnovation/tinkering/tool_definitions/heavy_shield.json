@@ -27,7 +27,7 @@
     }
   },
   "slots": {
-    "upgrades": 3,
+    "upgrades": 2,
     "defense": 4,
     "abilities": 1
   },

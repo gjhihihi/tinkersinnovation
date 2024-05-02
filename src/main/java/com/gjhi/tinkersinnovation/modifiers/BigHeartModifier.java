@@ -5,13 +5,22 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
+import slimeknights.tconstruct.library.modifiers.ModifierEntry;
+import slimeknights.tconstruct.library.modifiers.TinkerHooks;
+import slimeknights.tconstruct.library.modifiers.hook.combat.ModifyDamageModifierHook;
 import slimeknights.tconstruct.library.modifiers.impl.NoLevelsModifier;
+import slimeknights.tconstruct.library.modifiers.util.ModifierHookMap;
 import slimeknights.tconstruct.library.tools.context.EquipmentContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 
-public class BigHeartModifier extends NoLevelsModifier {
+public class BigHeartModifier extends NoLevelsModifier implements ModifyDamageModifierHook {
     @Override
-    public void onAttacked(IToolStackView tool, int level, EquipmentContext context, EquipmentSlot slotType, DamageSource source, float amount, boolean isDirectDamage) {
+    protected void registerHooks(ModifierHookMap.Builder hookBuilder) {
+        hookBuilder.addHook(this, TinkerHooks.MODIFY_DAMAGE);
+    }
+    @Override
+    public float modifyDamageTaken(IToolStackView tool, ModifierEntry modifier, EquipmentContext context, EquipmentSlot slotType, DamageSource source, float amount, boolean isDirectDamage) {
+        int level = modifier.getLevel();
         LivingEntity player = context.getEntity();
         if(!player.hasEffect(MobEffects.REGENERATION)){
             float LOVE=player.getMaxHealth()/player.getHealth();
@@ -27,5 +36,6 @@ public class BigHeartModifier extends NoLevelsModifier {
                 player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 900, lv));
             }
         }
+        return amount;
     }
 }

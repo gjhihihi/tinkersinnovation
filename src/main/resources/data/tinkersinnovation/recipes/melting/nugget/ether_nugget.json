@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkersinnovation:ether_nugget"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:ether",
+    "amount": 10
+  },
+  "temperature": 1200,
+  "time": 2
+}

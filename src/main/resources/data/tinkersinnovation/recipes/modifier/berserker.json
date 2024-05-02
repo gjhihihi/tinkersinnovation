@@ -1,0 +1,27 @@
+{
+  "type": "tconstruct:modifier",
+  "inputs": [
+    {
+      "item": "minecraft:gold_apple"
+    },
+    {
+      "item": "minecraft:ghast_tear",
+      "amount_needed": 3
+    },
+    {
+      "item": "tconstruct:necrotic_bone"
+    }
+  ],
+  "tools": {
+    "tag": "tconstruct:modifiable/armor"
+  },
+  "slots": {
+    "abilities": 1
+  },
+  "allow_crystal": true,
+  "result": {
+    "name": "tinkersinnovation:berserker",
+    "level": 1
+  },
+  "max_level": 5
+}

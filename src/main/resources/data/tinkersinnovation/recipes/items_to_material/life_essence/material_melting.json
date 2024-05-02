@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input": "tinkersinnovation:life_essence",
+  "temperature": 600,
+  "result": {
+    "fluid": "tinkersinnovation:life_essence",
+    "amount": 90
+  }
+}

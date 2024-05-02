@@ -11,12 +11,12 @@
       "durability": 1250,
       "miningSpeed": 6.5,
       "harvestTier": "minecraft:diamond",
-      "attack": 1.0
+      "attack": 2
     },
     "tconstruct:limb": {
       "durability": 1250,
-      "drawSpeed": -0.35,
-      "velocity": 0.25,
+      "drawSpeed": -0.15,
+      "velocity": -0.15,
       "accuracy": -0.15
     },
     "tconstruct:grip": {

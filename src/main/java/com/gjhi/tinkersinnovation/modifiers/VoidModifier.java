@@ -12,20 +12,21 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.loot.BuiltInLootTables;
 import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.eventbus.api.Event;
 import org.jetbrains.annotations.NotNull;
+import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
+import slimeknights.tconstruct.library.modifiers.TinkerHooks;
 import slimeknights.tconstruct.library.modifiers.hook.ProjectileHitModifierHook;
+import slimeknights.tconstruct.library.modifiers.hook.combat.MeleeDamageModifierHook;
 import slimeknights.tconstruct.library.modifiers.impl.NoLevelsModifier;
+import slimeknights.tconstruct.library.modifiers.util.ModifierHookMap;
 import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.context.ToolHarvestContext;
 import slimeknights.tconstruct.library.tools.definition.aoe.IAreaOfEffectIterator;
@@ -34,19 +35,21 @@ import slimeknights.tconstruct.library.tools.helper.ToolHarvestLogic;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ToolStack;
 import slimeknights.tconstruct.library.utils.BlockSideHitListener;
-import slimeknights.tconstruct.shared.TinkerCommons;
 
 import java.util.Objects;
 
-import static slimeknights.tconstruct.tools.data.material.MaterialIds.manyullyn;
 
-public class VoidModifier extends NoLevelsModifier implements ProjectileHitModifierHook {
+public class VoidModifier extends Modifier implements ProjectileHitModifierHook, MeleeDamageModifierHook {
     @Override
     public int getPriority() {
         return 120;
     }
     public VoidModifier() {
         MinecraftForge.EVENT_BUS.addListener(this::leftClickBlock);
+    }
+    @Override
+    protected void registerHooks(ModifierHookMap.Builder hookBuilder) {
+        hookBuilder.addHook(this, TinkerHooks.MELEE_DAMAGE, TinkerHooks.PROJECTILE_HIT);
     }
 
     private void leftClickBlock(PlayerInteractEvent.LeftClickBlock event) {
@@ -79,7 +82,7 @@ public class VoidModifier extends NoLevelsModifier implements ProjectileHitModif
                         }
                     }
                     for (ModifierEntry entry : tool.getModifierList()) {
-                        entry.getModifier().finishBreakingBlocks(tool, entry.getLevel(), context);
+                        entry.getModifier().getHook(TinkerHooks.FINISH_HARVEST).finishHarvest(tool, entry, context);
                     }
 
                     //bedrock has no loot table
@@ -134,7 +137,7 @@ public class VoidModifier extends NoLevelsModifier implements ProjectileHitModif
         // broken means we are using "empty hand"
         if (!tool.isBroken()) {
             for (ModifierEntry entry : tool.getModifierList()) {
-                entry.getModifier().afterBlockBreak(tool, entry.getLevel(), context);
+                entry.getModifier().getHook(TinkerHooks.BLOCK_BREAK).afterBlockBreak(tool, entry, context);
             }
             ToolDamageUtil.damageAnimated(tool, damage, player);
         }
@@ -154,7 +157,7 @@ public class VoidModifier extends NoLevelsModifier implements ProjectileHitModif
         Boolean removed = null;
         if (!tool.isBroken()) {
             for (ModifierEntry entry : tool.getModifierList()) {
-                removed = entry.getModifier().removeBlock(tool, entry.getLevel(), context);
+                removed = entry.getModifier().getHook(TinkerHooks.REMOVE_BLOCK).removeBlock(tool, entry, context);
                 if (removed != null) {
                     break;
                 }
@@ -174,8 +177,8 @@ public class VoidModifier extends NoLevelsModifier implements ProjectileHitModif
         return removed;
     }
     @Override
-    public float getEntityDamage(@NotNull IToolStackView tool, int level, ToolAttackContext context, float baseDamage, float damage) {
-        float voiddamage = damage * 0.05f * level;
+    public float getMeleeDamage(@NotNull IToolStackView tool, @NotNull ModifierEntry modifier, ToolAttackContext context, float baseDamage, float damage) {
+        float voiddamage = damage * 0.05f * modifier.getLevel();
         LivingEntity entity = context.getLivingTarget();
         if (entity != null) {
             entity.hurt(DamageSource.OUT_OF_WORLD,voiddamage);

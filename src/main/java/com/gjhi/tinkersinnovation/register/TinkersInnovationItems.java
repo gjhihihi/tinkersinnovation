@@ -1,6 +1,6 @@
 package com.gjhi.tinkersinnovation.register;
 
-import com.gjhi.tinkersinnovation.tools.TinkersInnovationToolsDefinition;
+import com.gjhi.tinkersinnovation.register.tools.TinkersInnovationToolsDefinition;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -30,20 +30,29 @@ public class TinkersInnovationItems {
     public static RegistryObject<Item> enchantment_ingot = ITEMS.register("enchantment_ingot", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> life_ingot = ITEMS.register("life_ingot", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> ocean_ingot = ITEMS.register("ocean_ingot", TinkersInnovationItems::register_item);
+    public static RegistryObject<Item> slimton_ingot = ITEMS.register("slimton_ingot", TinkersInnovationItems::register_item);
+    public static RegistryObject<Item> ether_ingot = ITEMS.register("ether_ingot", TinkersInnovationItems::register_item);
     //nuggets
     public static RegistryObject<Item> polychrome_alloy_nugget = ITEMS.register("polychrome_alloy_nugget", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> void_crystal_nugget = ITEMS.register("void_crystal_nugget", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> enchantment_nugget = ITEMS.register("enchantment_nugget", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> life_nugget = ITEMS.register("life_nugget", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> ocean_nugget = ITEMS.register("ocean_nugget", TinkersInnovationItems::register_item);
+    public static RegistryObject<Item> slimton_nugget = ITEMS.register("slimton_nugget", TinkersInnovationItems::register_item);
+    public static RegistryObject<Item> ether_nugget = ITEMS.register("ether_nugget", TinkersInnovationItems::register_item);
     //blocks
     public static RegistryObject<Item> polychrome_alloy_block = ITEMS.register("polychrome_alloy_block", () -> register_block(TinkersInnovationBlocks.polychrome_alloy_block.get()));
     public static RegistryObject<Item> void_crystal_block = ITEMS.register("void_crystal_block", () -> register_block(TinkersInnovationBlocks.void_crystal_block.get()));
     public static RegistryObject<Item> enchantment_block = ITEMS.register("enchantment_block", () -> register_block(TinkersInnovationBlocks.enchantment_block.get()));
     public static RegistryObject<Item> life_block = ITEMS.register("life_block", () -> register_block(TinkersInnovationBlocks.life_block.get()));
     public static RegistryObject<Item> ocean_block = ITEMS.register("ocean_block", () -> register_block(TinkersInnovationBlocks.ocean_block.get()));
+    public static RegistryObject<Item> slimton_block = ITEMS.register("slimton_block", () -> register_block(TinkersInnovationBlocks.slimton_block.get()));
+    public static RegistryObject<Item> ether_block = ITEMS.register("ether_block", () -> register_block(TinkersInnovationBlocks.ether_block.get()));
     //ores
     public static RegistryObject<Item> void_crystal_ore = ITEMS.register("void_crystal_ore", () -> register_block(TinkersInnovationBlocks.void_crystal_ore.get()));
+    //others
+    public static RegistryObject<Item> seared_bedrock = ITEMS.register("seared_bedrock", () -> register_block(TinkersInnovationBlocks.seared_bedrock.get()));
+    public static RegistryObject<Item> scorched_bedrock = ITEMS.register("scorched_bedrock", () -> register_block(TinkersInnovationBlocks.scorched_bedrock.get()));
     //raw ores
     public static RegistryObject<Item> raw_void_crystal = ITEMS.register("raw_void_crystal", TinkersInnovationItems::register_item);
     //tool parts
@@ -58,5 +67,6 @@ public class TinkersInnovationItems {
     //tools
     public static final RegistryObject<ModifiableItem> pick_dart = ITEMS.register("pick_dart", () -> new ModifiableItem(TOOL, TinkersInnovationToolsDefinition.PickDart));
     public static final RegistryObject<ModifiableItem> heavy_shield = ITEMS.register("heavy_shield", () -> new ModifiableItem(TOOL, TinkersInnovationToolsDefinition.HeavyShield));
+    public static final RegistryObject<ModifiableItem> butcher_knife = ITEMS.register("butcher_knife", () -> new ModifiableItem(TOOL, TinkersInnovationToolsDefinition.ButcherKnife));
 
 }

@@ -1,42 +1,46 @@
 {
   "fallbacks": [
-    "metal"
+    "rock"
   ],
   "color": "4A5451",
   "luminosity": 0,
   "generator": {
-    "transformer": {
-      "type": "tconstruct:grey_to_sprite",
-      "palette": [
-        {
-          "grey": 0,
-          "color": "FF000000"
-        },
-        {
-          "grey": 63,
-          "color": "FFC9CABA"
-        },
-        {
-          "grey": 102,
-          "color": "FFA9AFA1"
-        },
-        {
-          "grey": 140,
-          "color": "FF829789"
-        },
-        {
-          "grey": 178,
-          "color": "FF6D7D73"
-        },
-        {
-          "grey": 216,
-          "color": "FF5E6963"
-        },
-        {
-          "grey": 255,
-          "color": "FF4A5451"
-        }
-      ]
+    "transformer":
+    {
+      "type": "tconstruct:recolor_sprite",
+      "color_mapping": {
+        "type": "tconstruct:grey_to_color",
+        "palette": [
+          {
+            "grey": 0,
+            "color": "FF000000"
+          },
+          {
+            "grey": 63,
+            "color": "FFC9CABA"
+          },
+          {
+            "grey": 102,
+            "color": "FFA9AFA1"
+          },
+          {
+            "grey": 140,
+            "color": "FF829789"
+          },
+          {
+            "grey": 178,
+            "color": "FF6D7D73"
+          },
+          {
+            "grey": 216,
+            "color": "FF5E6963"
+          },
+          {
+            "grey": 255,
+            "color": "FF4A5451"
+          }
+        ]
+      }
     },
     "supportedStats": [
       "tconstruct:head",

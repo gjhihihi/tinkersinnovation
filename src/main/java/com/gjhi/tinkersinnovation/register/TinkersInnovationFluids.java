@@ -22,15 +22,12 @@ public class TinkersInnovationFluids {
 
      public static FluidObject<ForgeFlowingFluid> polychrome_alloy = register("polychrome_alloy", 1200);
      public static FluidObject<ForgeFlowingFluid> experience = register("experience", 600);
+     public static FluidObject<ForgeFlowingFluid> andesite_alloy = register("andesite_alloy", 900);
      public static FluidObject<ForgeFlowingFluid> void_crystal = register("void_crystal", 600);
      public static FluidObject<ForgeFlowingFluid> enchantment_essence = register("enchantment_essence", 600);
      public static FluidObject<ForgeFlowingFluid> life_essence = register("life_essence", 600);
      public static FluidObject<ForgeFlowingFluid> ocean_essence = register("ocean_essence", 600);
-     public static FluidObject<ForgeFlowingFluid> andesite_alloy = register("andesite_alloy", 900);
-     public static FluidObject<ForgeFlowingFluid> shadow_steel = register("shadow_steel", 1000);
-     public static FluidObject<ForgeFlowingFluid> refined_radiance = register("refined_radiance", 1000);
-
-     public static FluidObject<ForgeFlowingFluid> rose_quartz = register("rose_quartz", 600);
+     public static FluidObject<ForgeFlowingFluid> slimton = register("slimton", 1000);
      public static FluidObject<ForgeFlowingFluid> ether = register("ether", 1200);
 
 /*     public static final RegistryObject<Fluid> * =  FLUIDS.register("*", () -> new ForgeFlowingFluid.Source(TinkersCreationFluids.*_PROPERTIES ));

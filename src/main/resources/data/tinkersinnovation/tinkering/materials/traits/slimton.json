@@ -1,0 +1,12 @@
+{
+  "default": [
+    {
+      "name": "tinkersinnovation:trader",
+      "level": 1
+    },
+    {
+      "name": "tinkersinnovation:big_shot",
+      "level": 1
+    }
+  ]
+}

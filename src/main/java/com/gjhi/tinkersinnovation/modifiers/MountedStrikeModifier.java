@@ -8,6 +8,10 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import org.jetbrains.annotations.NotNull;
 import slimeknights.tconstruct.library.modifiers.Modifier;
+import slimeknights.tconstruct.library.modifiers.ModifierEntry;
+import slimeknights.tconstruct.library.modifiers.TinkerHooks;
+import slimeknights.tconstruct.library.modifiers.hook.combat.MeleeDamageModifierHook;
+import slimeknights.tconstruct.library.modifiers.util.ModifierHookMap;
 import slimeknights.tconstruct.library.tools.context.EquipmentContext;
 import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
@@ -15,12 +19,16 @@ import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import static java.lang.Math.pow;
 import static slimeknights.tconstruct.tools.data.material.MaterialIds.manyullyn;
 
-public class MountedStrikeModifier extends Modifier {
+public class MountedStrikeModifier extends Modifier implements MeleeDamageModifierHook {
     @Override
-    public float getEntityDamage(@NotNull IToolStackView tool, int level, ToolAttackContext context, float baseDamage, float damage) {
+    protected void registerHooks(ModifierHookMap.Builder hookBuilder) {
+        hookBuilder.addHook(this, TinkerHooks.MELEE_DAMAGE);
+    }
+    @Override
+    public float getMeleeDamage(@NotNull IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float baseDamage, float damage) {
         Player player = context.getPlayerAttacker();
         if (player != null && player.isPassenger())
-            return (float) (damage * pow(1.25,level));
+            return (float) (damage * pow(1.25,modifier.getLevel()));
         return damage;
     }
 }

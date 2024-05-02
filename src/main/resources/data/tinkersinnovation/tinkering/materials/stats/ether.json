@@ -4,23 +4,23 @@
     "tconstruct:handle": {
       "durability": 1.1,
       "miningSpeed": 1.1,
-      "attackSpeed": 1.25,
-      "attackDamage": 0.95
+      "attackSpeed": 1.5,
+      "attackDamage": 1.5
     },
     "tconstruct:head": {
-      "durability": 200,
-      "miningSpeed": 6,
-      "harvestTier": "minecraft:iron",
-      "attack": 1.0
+      "durability": 1000,
+      "miningSpeed": 6.5,
+      "harvestTier": "minecraft:netherite",
+      "attack": 3
     },
     "tconstruct:limb": {
-      "durability": 250,
+      "durability": 800,
       "drawSpeed": -0.3,
-      "velocity": 0.1,
+      "velocity": -0.1,
       "accuracy": 0
     },
     "tconstruct:grip": {
-      "durability": 1.1,
+      "durability": 1,
       "accuracy": 0,
       "meleeAttack": 1.5
     }

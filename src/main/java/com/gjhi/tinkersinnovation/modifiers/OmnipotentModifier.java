@@ -14,6 +14,10 @@ import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.TinkerHooks;
 import slimeknights.tconstruct.library.modifiers.hook.ProjectileHitModifierHook;
+import slimeknights.tconstruct.library.modifiers.hook.build.ToolStatsModifierHook;
+import slimeknights.tconstruct.library.modifiers.hook.build.VolatileDataModifierHook;
+import slimeknights.tconstruct.library.modifiers.hook.combat.MeleeDamageModifierHook;
+import slimeknights.tconstruct.library.modifiers.hook.combat.MeleeHitModifierHook;
 import slimeknights.tconstruct.library.modifiers.util.ModifierHookMap;
 import slimeknights.tconstruct.library.tools.SlotType;
 import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
@@ -34,10 +38,11 @@ import static com.gjhi.tinkersinnovation.register.TinkersInnovationMaterials.*;
 //import static com.james.tinkerscalibration.Utils.*;
 import static slimeknights.tconstruct.tools.data.material.MaterialIds.*;
 
-public class OmnipotentModifier extends Modifier implements ProjectileHitModifierHook {
+public class OmnipotentModifier extends Modifier implements VolatileDataModifierHook, MeleeDamageModifierHook, ToolStatsModifierHook, MeleeHitModifierHook, ProjectileHitModifierHook {
     private static final String[] list = {
             //this mod
             polychrome_alloy.toString(),
+            slimton.toString(),
             //tconstruct
             manyullyn.toString(),
             queensSlime.toString(),
@@ -46,33 +51,33 @@ public class OmnipotentModifier extends Modifier implements ProjectileHitModifie
             "tinkerscalibration:mangobberslime",
             "tinkerscalibration:mandite",
             "tinkerscalibration:darkmatter",
-            "tinkerscalibration:redmatter"
+            "tinkerscalibration:redmatter",
+            "tinkerscalibration:emperorslime",
+            "tinkerscalibration:netherite"
     };
 
     @Override
     public int getPriority() {
-        return 10;
+        return 1;
     }
-
     @Override
     protected void registerHooks(ModifierHookMap.Builder hookBuilder) {
-        hookBuilder.addHook(this, TinkerHooks.PROJECTILE_HIT);
+        hookBuilder.addHook(this, TinkerHooks.MELEE_DAMAGE, TinkerHooks.MELEE_HIT, TinkerHooks.PROJECTILE_HIT, TinkerHooks.TOOL_STATS, TinkerHooks.VOLATILE_DATA);
     }
     @Override
-    public int afterEntityHit(@NotNull IToolStackView tool, int level, ToolAttackContext context, float damageDealt) {
+    public void afterMeleeHit(@NotNull IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float damageDealt) {
         LivingEntity target = context.getLivingTarget();
-        if (target != null && comp(tool,"tinkerscalibration:mandite") > 0) {
-            target.invulnerableTime = 0;
-        }
         if(target != null && comp(tool,"tinkerscalibration:redmatter")>0){
             target.setHealth(target.getHealth()*0.8f);
         }else if(target != null && comp(tool,"tinkerscalibration:darkmatter")>0){
             target.setHealth(target.getHealth()*0.9f);
         }
-        return 0;
+        if (target != null && comp(tool,"tinkerscalibration:mandite") > 0) {
+            target.invulnerableTime = 0;
+        }
     }
     @Override
-    public boolean onProjectileHitEntity(ModifierNBT modifiers, NamespacedNBT persistentData, ModifierEntry modifier, Projectile projectile, EntityHitResult hit, @Nullable LivingEntity attacker, @Nullable LivingEntity target) {
+    public boolean onProjectileHitEntity(ModifierNBT modifiers, NamespacedNBT persistentData, @NotNull ModifierEntry modifier, @NotNull Projectile projectile, EntityHitResult hit, @Nullable LivingEntity attacker, @Nullable LivingEntity target) {
         boolean result = false;
         for (ModifierEntry entry : modifiers.getModifiers()) {
             if (entry.getId().toString().equals("tinkerscalibration:bloodthirsty"))
@@ -85,35 +90,35 @@ public class OmnipotentModifier extends Modifier implements ProjectileHitModifie
     }
 
     @Override
-    public void addToolStats(@NotNull ToolRebuildContext context, int level, @NotNull ModifierStatsBuilder builder) {
+    public void addToolStats(@NotNull ToolRebuildContext context, @NotNull ModifierEntry modifier, @NotNull ModifierStatsBuilder builder) {
         int partnum;
         if ((partnum = comp(context, hepatizon.toString())) > 0) {
             if (context.getBaseStats().hasStat(ToolStats.VELOCITY))
-                ToolStats.VELOCITY.add(builder, context.getBaseStats().get(ToolStats.VELOCITY) * level * partnum * 0.07f);
+                ToolStats.VELOCITY.add(builder, context.getBaseStats().get(ToolStats.VELOCITY) * modifier.getLevel() * partnum * 0.07f);
             if (context.getBaseStats().hasStat(ToolStats.MINING_SPEED))
-                ToolStats.MINING_SPEED.add(builder, context.getBaseStats().get(ToolStats.VELOCITY) * level * partnum * 0.07f);
+                ToolStats.MINING_SPEED.add(builder, context.getBaseStats().get(ToolStats.VELOCITY) * modifier.getLevel() * partnum * 0.07f);
         }
         if ((partnum = comp(context)) > 0) {
             if (context.getBaseStats().hasStat(ToolStats.DURABILITY))
-                ToolStats.DURABILITY.add(builder, level * partnum * 50);
+                ToolStats.DURABILITY.add(builder, modifier.getLevel() * partnum * 50);
             if (context.getBaseStats().hasStat(ToolStats.ATTACK_DAMAGE))
-                ToolStats.ATTACK_DAMAGE.add(builder, level * partnum * 2);
+                ToolStats.ATTACK_DAMAGE.add(builder, modifier.getLevel() * partnum * 2);
         }
     }
 
     @Override
-    public float getEntityDamage(@NotNull IToolStackView tool, int level, ToolAttackContext context, float baseDamage, float damage) {
+    public float getMeleeDamage(@NotNull IToolStackView tool, @NotNull ModifierEntry modifier, ToolAttackContext context, float baseDamage, float damage) {
         int partnum;
         LivingEntity target = context.getLivingTarget();
         if ((partnum = comp(tool, manyullyn.toString())) > 0) {
             if (target != null)
-                damage += (target.getMaxHealth() - target.getHealth()) * (0.05f + 0.05f * level * partnum);
+                damage += (target.getMaxHealth() - target.getHealth()) * (0.05f + 0.05f * modifier.getLevel() * partnum);
         }
         return damage;
     }
 
     @Override
-    public void addVolatileData(@NotNull ToolRebuildContext context, int level, @NotNull ModDataNBT volatileData) {
+    public void addVolatileData(@NotNull ToolRebuildContext context, @NotNull ModifierEntry modifier, @NotNull ModDataNBT volatileData) {
         OverslimeModifier overslime = TinkerModifiers.overslime.get();
         overslime.setFriend(volatileData);
         int partnum;
@@ -122,7 +127,10 @@ public class OmnipotentModifier extends Modifier implements ProjectileHitModifie
             volatileData.addSlots(SlotType.UPGRADE, partnum);
         }
         if ((partnum = comp(context, queensSlime.toString())) > 0) {
-            overslime.addCapacity(volatileData, 100 * partnum * level);
+            overslime.addCapacity(volatileData, 200 * partnum * modifier.getLevel());
+        }
+        if ((partnum = comp(context, "tinkerscalibration:emperorslime")) > 0) {
+            overslime.addCapacity(volatileData, overslime.getCapacity(volatileData)/2);
         }
     }
 

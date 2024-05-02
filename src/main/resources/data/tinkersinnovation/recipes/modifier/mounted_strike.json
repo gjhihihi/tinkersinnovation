@@ -1,0 +1,26 @@
+{
+  "type": "tconstruct:modifier",
+  "inputs": [
+    {
+      "item": "minecraft:lead"
+    },
+    {
+      "item": "minecraft:saddle"
+    },
+    {
+      "item": "minecraft:lead"
+    }
+  ],
+  "tools": {
+    "tag": "tconstruct:modifiable/melee_or_unarmed"
+  },
+  "slots": {
+    "abilities": 1
+  },
+  "allow_crystal": true,
+  "result": {
+    "name": "tinkersinnovation:mounted_strike",
+    "level": 1
+  },
+  "max_level": 5
+}

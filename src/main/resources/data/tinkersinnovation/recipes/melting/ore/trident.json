@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "minecraft:trident"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:ocean_essence",
+    "amount": 10
+  },
+  "temperature": 900,
+  "time": 15
+}
