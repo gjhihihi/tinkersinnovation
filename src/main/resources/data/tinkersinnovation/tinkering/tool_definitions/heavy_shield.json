@@ -1,10 +1,10 @@
 {
   "parts": [
     {
-      "item": "tconstruct:large_plate"
+      "item": "tconstruct:tough_handle"
     },
     {
-      "item": "tconstruct:tool_handle"
+      "item": "tconstruct:large_plate"
     },
     {
       "item": "tconstruct:large_plate"
@@ -15,15 +15,17 @@
   ],
   "stats": {
     "base": {
-      "tconstruct:durability": 100,
-      "tconstruct:attack_speed": 1.2,
+      "tconstruct:durability": 200,
+      "tconstruct:attack_damage": 5,
+      "tconstruct:attack_speed": 0.6,
       "tconstruct:block_amount": 100.0,
       "tconstruct:block_angle": 180.0,
       "tconstruct:armor_toughness": 2.0
     },
     "multipliers": {
-      "tconstruct:attack_damage": 1,
-      "tconstruct:mining_speed": 1.2
+      "tconstruct:durability": 6.25,
+      "tconstruct:attack_damage": 1.65,
+      "tconstruct:mining_speed": 0.75
     }
   },
   "slots": {
@@ -47,5 +49,4 @@
       }
     }
   }
-}
 }

@@ -21,7 +21,7 @@ import java.util.List;
 public class FastEatModifier extends Modifier implements MeleeHitModifierHook, BlockBreakModifierHook {
     @Override
     protected void registerHooks(ModifierHookMap.Builder hookBuilder) {
-        hookBuilder.addHook(this, TinkerHooks.MELEE_HIT,TinkerHooks.BLOCK_BREAK);
+        hookBuilder.addHook(this, TinkerHooks.MELEE_HIT, TinkerHooks.BLOCK_BREAK);
     }
     @Override
     public void afterMeleeHit(@NotNull IToolStackView tool, @NotNull ModifierEntry modifier, ToolAttackContext context, float damageDealt) {

@@ -28,7 +28,7 @@ public class SuppressModifier extends Modifier implements MeleeHitModifierHook {
             entity.removeEffect(MobEffects.HEALTH_BOOST);
             entity.removeEffect(MobEffects.REGENERATION);
             entity.removeEffect(MobEffects.ABSORPTION);
-            entity.addEffect(new MobEffectInstance(MobEffects.WITHER, modifier.getLevel()*200));
+            entity.addEffect(new MobEffectInstance(MobEffects.WITHER, modifier.getLevel() * 200, 1));
         }
     }
 }

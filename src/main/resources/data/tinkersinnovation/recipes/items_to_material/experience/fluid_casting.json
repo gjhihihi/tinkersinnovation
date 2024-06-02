@@ -1,7 +1,7 @@
 {
   "type": "tconstruct:material_fluid",
   "fluid": {
-    "tag": "tinkersinnovation:experience",
+    "tag": "tinkersinnovation:molten_experience",
     "amount": 90
   },
   "temperature": 600,

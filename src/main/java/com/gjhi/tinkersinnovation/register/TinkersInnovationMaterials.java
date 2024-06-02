@@ -19,4 +19,5 @@ public class TinkersInnovationMaterials {
     public static final MaterialId andesite_alloy = createMaterial("andesite_alloy");
     public static final MaterialId ether = createMaterial("ether");
     public static final MaterialId slimton = createMaterial("slimton");
+    public static final MaterialId apatite = createMaterial("apatite");
 }

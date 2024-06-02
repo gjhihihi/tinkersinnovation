@@ -3,7 +3,7 @@
   "input": "tinkersinnovation:andesite_alloy",
   "temperature": 900,
   "result": {
-    "fluid": "tinkersinnovation:andesite_alloy",
+    "fluid": "tinkersinnovation:molten_andesite_alloy",
     "amount": 90
   }
 }

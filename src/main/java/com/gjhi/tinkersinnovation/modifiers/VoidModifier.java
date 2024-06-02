@@ -38,7 +38,6 @@ import slimeknights.tconstruct.library.utils.BlockSideHitListener;
 
 import java.util.Objects;
 
-
 public class VoidModifier extends Modifier implements ProjectileHitModifierHook, MeleeDamageModifierHook {
     @Override
     public int getPriority() {
@@ -52,7 +51,7 @@ public class VoidModifier extends Modifier implements ProjectileHitModifierHook,
         hookBuilder.addHook(this, TinkerHooks.MELEE_DAMAGE, TinkerHooks.PROJECTILE_HIT);
     }
 
-    private void leftClickBlock(PlayerInteractEvent.LeftClickBlock event) {
+    protected void leftClickBlock(PlayerInteractEvent.LeftClickBlock event) {
         BlockState state = event.getEntity().level.getBlockState(event.getPos());
         if (!event.getPlayer().isCreative() && state.getDestroySpeed(event.getEntity().level, event.getPos()) < 0.0F) {
             ToolStack tool = getHeldTool(event.getPlayer(), InteractionHand.MAIN_HAND);

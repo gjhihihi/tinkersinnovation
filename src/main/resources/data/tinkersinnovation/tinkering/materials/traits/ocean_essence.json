@@ -1,8 +1,22 @@
 {
   "default": [
     {
-      "name": "tinkersinnovation:ocean_blessing",
+      "name": "tinkersinnovation:ocean_tears",
       "level": 1
     }
-  ]
+  ],
+  "perStat": {
+    "tconstruct:melee_harvest": [
+      {
+        "name": "tinkersinnovation:ocean_blessing",
+        "level": 1
+      }
+    ],
+    "tconstruct:ranged": [
+      {
+        "name": "tinkersinnovation:ocean_blessing",
+        "level": 1
+      }
+    ]
+  }
 }

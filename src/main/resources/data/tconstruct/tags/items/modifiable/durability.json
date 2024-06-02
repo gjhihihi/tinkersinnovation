@@ -1,8 +1,7 @@
 {
   "replace": false,
   "values": [
-    "tinkersinnovation:pick_dart",
     "tinkersinnovation:heavy_shield",
-    "tinkersinnovation:butcher_knife"
+    "tinkersinnovation:claw"
   ]
 }

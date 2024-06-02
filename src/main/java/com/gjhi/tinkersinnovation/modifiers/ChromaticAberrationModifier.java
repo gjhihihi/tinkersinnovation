@@ -11,12 +11,13 @@ import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraftforge.common.Tags;
 import org.jetbrains.annotations.NotNull;
 import slimeknights.tconstruct.library.modifiers.Modifier;
+import slimeknights.tconstruct.library.modifiers.impl.NoLevelsModifier;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 
 import java.util.List;
 
 
-public class ChromaticAberrationModifier extends Modifier {
+public class ChromaticAberrationModifier extends NoLevelsModifier {
     private static final Item[] wool ={
             Items.WHITE_WOOL,Items.ORANGE_WOOL,Items.MAGENTA_WOOL,Items.LIGHT_BLUE_WOOL,Items.YELLOW_WOOL,
             Items.LIME_WOOL,Items.PINK_WOOL,Items.GRAY_WOOL,Items.LIGHT_GRAY_WOOL,Items.CYAN_WOOL,

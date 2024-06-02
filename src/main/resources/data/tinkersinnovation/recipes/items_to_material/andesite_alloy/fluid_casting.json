@@ -1,7 +1,7 @@
 {
   "type": "tconstruct:material_fluid",
   "fluid": {
-    "tag": "tinkersinnovation:andesite_alloy",
+    "tag": "tinkersinnovation:molten_andesite_alloy",
     "amount": 90
   },
   "temperature": 900,

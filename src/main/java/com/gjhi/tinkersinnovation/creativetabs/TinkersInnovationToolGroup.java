@@ -10,6 +10,6 @@ public class TinkersInnovationToolGroup extends CreativeModeTab {
     }
     @Override
     public ItemStack makeIcon() {
-        return new ItemStack(TinkersInnovationItems.pick_dart.get());
+        return new ItemStack(TinkersInnovationItems.claw.get());
     }
 }

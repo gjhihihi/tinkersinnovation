@@ -9,7 +9,7 @@
     "amount": 10
   },
   "temperature": 900,
-  "time": 15,
+  "time": 300,
   "byproducts": [
     {
       "fluid": "tconstruct:molten_gold",

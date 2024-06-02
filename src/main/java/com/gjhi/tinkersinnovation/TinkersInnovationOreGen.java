@@ -34,12 +34,15 @@ public class TinkersInnovationOreGen {
 
     //public static Supplier<List<OreConfiguration.TargetBlockState>> titReplace = () -> List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, TinkersInnovationBlocks.titanium_ore.get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, TinkersInnovationBlocks.deepslate_titanium_ore.get().defaultBlockState()));
     public static Supplier<List<OreConfiguration.TargetBlockState>> voiReplace = () -> List.of(OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, TinkersInnovationBlocks.void_crystal_ore.get().defaultBlockState()));
+    public static Supplier<List<OreConfiguration.TargetBlockState>> apaReplace = () -> List.of(OreConfiguration.target(OreFeatures.NATURAL_STONE, TinkersInnovationBlocks.apatite_block.get().defaultBlockState()));
 
     public static final ConfiguredFeatureDeferredRegister CONFIGURED_FEATURES = new ConfiguredFeatureDeferredRegister(MOD_ID);
     public static final PlacedFeatureDeferredRegister PLACED_FEATURES = new PlacedFeatureDeferredRegister(MOD_ID);
 
     public static RegistryObject<ConfiguredFeature<OreConfiguration, Feature<OreConfiguration>>> VOID_CRYSTAL_ORE = CONFIGURED_FEATURES.registerSupplier("void_crystal_ore", () -> Feature.ORE, () -> new OreConfiguration(voiReplace.get(), TinkersInnovationConfig.COMMON.voidcrystalOre.getSize()));
+    public static RegistryObject<ConfiguredFeature<OreConfiguration, Feature<OreConfiguration>>> APATITE_BLOCK = CONFIGURED_FEATURES.registerSupplier("apatite_block", () -> Feature.ORE, () -> new OreConfiguration(apaReplace.get(), TinkersInnovationConfig.COMMON.apatiteBlock.getSize()));
     public static RegistryObject<PlacedFeature> placedVoidcrystalOre = PLACED_FEATURES.register("void_crystal_ore", VOID_CRYSTAL_ORE, CountPlacement.of(TinkersInnovationConfig.COMMON.voidcrystalOre.getCount()), InSquarePlacement.spread(), BiomeFilter.biome(), HeightRangePlacement.uniform(VerticalAnchor.absolute(TinkersInnovationConfig.COMMON.voidcrystalOre.getMinY()), VerticalAnchor.absolute(TinkersInnovationConfig.COMMON.voidcrystalOre.getMaxY())));
+    public static RegistryObject<PlacedFeature> placedApatiteBlock = PLACED_FEATURES.register("apatite_block", APATITE_BLOCK, CountPlacement.of(TinkersInnovationConfig.COMMON.apatiteBlock.getCount()), InSquarePlacement.spread(), BiomeFilter.biome(), HeightRangePlacement.uniform(VerticalAnchor.absolute(TinkersInnovationConfig.COMMON.apatiteBlock.getMinY()), VerticalAnchor.absolute(TinkersInnovationConfig.COMMON.apatiteBlock.getMaxY())));
     @SubscribeEvent
     public static void onBiomeLoad(final BiomeLoadingEvent event) {
         BiomeGenerationSettingsBuilder generation = event.getGeneration();
@@ -47,6 +50,9 @@ public class TinkersInnovationOreGen {
         if (isOverworldBiome(category)) {
             if (TinkersInnovationConfig.COMMON.voidcrystalOre.isEnabled()) {
                 placedVoidcrystalOre.getHolder().ifPresent(holder -> generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, holder));
+            }
+            if (TinkersInnovationConfig.COMMON.apatiteBlock.isEnabled()) {
+                placedApatiteBlock.getHolder().ifPresent(holder -> generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, holder));
             }
             /*
             if (TinkersInnovationConfig.COMMON.aventurineOre.isEnabled()) {

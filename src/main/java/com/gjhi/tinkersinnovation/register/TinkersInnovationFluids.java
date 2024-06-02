@@ -20,15 +20,15 @@ public class TinkersInnovationFluids {
           return FLUIDS.register(name, FluidAttributes.builder(new ResourceLocation(still), new ResourceLocation(flow)).density(2000).viscosity(10000).temperature(temp).sound(SoundEvents.BUCKET_FILL_LAVA, SoundEvents.BUCKET_EMPTY_LAVA), Material.LAVA, 15);
      }
 
-     public static FluidObject<ForgeFlowingFluid> polychrome_alloy = register("polychrome_alloy", 1200);
-     public static FluidObject<ForgeFlowingFluid> experience = register("experience", 600);
-     public static FluidObject<ForgeFlowingFluid> andesite_alloy = register("andesite_alloy", 900);
-     public static FluidObject<ForgeFlowingFluid> void_crystal = register("void_crystal", 600);
+     public static FluidObject<ForgeFlowingFluid> polychrome_alloy = register("molten_polychrome_alloy", 1200);
+     public static FluidObject<ForgeFlowingFluid> experience = register("molten_experience", 600);
+     public static FluidObject<ForgeFlowingFluid> andesite_alloy = register("molten_andesite_alloy", 900);
+     public static FluidObject<ForgeFlowingFluid> void_crystal = register("molten_void_crystal", 600);
      public static FluidObject<ForgeFlowingFluid> enchantment_essence = register("enchantment_essence", 600);
      public static FluidObject<ForgeFlowingFluid> life_essence = register("life_essence", 600);
      public static FluidObject<ForgeFlowingFluid> ocean_essence = register("ocean_essence", 600);
-     public static FluidObject<ForgeFlowingFluid> slimton = register("slimton", 1000);
-     public static FluidObject<ForgeFlowingFluid> ether = register("ether", 1200);
+     public static FluidObject<ForgeFlowingFluid> slimton = register("molten_slimton", 1000);
+     public static FluidObject<ForgeFlowingFluid> ether = register("molten_ether", 1200);
 
 /*     public static final RegistryObject<Fluid> * =  FLUIDS.register("*", () -> new ForgeFlowingFluid.Source(TinkersCreationFluids.*_PROPERTIES ));
      public static final RegistryObject<Fluid> *_flowing =  FLUIDS.register("*_flowing", () -> new ForgeFlowingFluid.Flowing(TinkersCreationFluids.*_PROPERTIES ));

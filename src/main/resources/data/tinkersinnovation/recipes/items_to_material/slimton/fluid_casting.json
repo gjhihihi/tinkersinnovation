@@ -1,7 +1,7 @@
 {
   "type": "tconstruct:material_fluid",
   "fluid": {
-    "tag": "tinkersinnovation:slimton",
+    "tag": "tinkersinnovation:molten_slimton",
     "amount": 90
   },
   "temperature": 1000,

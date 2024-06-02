@@ -29,7 +29,7 @@ public class TinkersInnovationBlocks {
     public static RegistryObject<Block> ether_block = BLOCKS.register("ether_block", () -> new Block(METAL));
 
     public static RegistryObject<Block> void_crystal_ore = BLOCKS.register("void_crystal_ore", () -> new Block(DEEPSLATE_ORE));
-
+    public static RegistryObject<Block> apatite_block = BLOCKS.register("apatite_block", () -> new Block(ORE));
     public static RegistryObject<Block> seared_bedrock = BLOCKS.register("seared_bedrock", () -> new Block(BEDROCK));
     public static RegistryObject<Block> scorched_bedrock = BLOCKS.register("scorched_bedrock", () -> new Block(BEDROCK));
 

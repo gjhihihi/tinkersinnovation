@@ -2,7 +2,7 @@
   "fallbacks": [
     "metal"
   ],
-  "color": "4A5451",
+  "color": "9B3CAF",
   "luminosity": 0,
   "generator": {
     "transformer": {
@@ -14,27 +14,27 @@
         },
         {
           "grey": 63,
-          "color": "FFC9CABA"
+          "path": "tinkersinnovation:item/materials/slimton/slimton1"
         },
         {
           "grey": 102,
-          "color": "FFA9AFA1"
+          "path": "tinkersinnovation:item/materials/slimton/slimton2"
         },
         {
           "grey": 140,
-          "color": "FF829789"
+          "path": "tinkersinnovation:item/materials/slimton/slimton3"
         },
         {
           "grey": 178,
-          "color": "FF6D7D73"
+          "path": "tinkersinnovation:item/materials/slimton/slimton"
         },
         {
           "grey": 216,
-          "color": "FF5E6963"
+          "path": "tinkersinnovation:item/materials/slimton/slimton4"
         },
         {
           "grey": 255,
-          "color": "FF4A5451"
+          "path": "tinkersinnovation:item/materials/slimton/slimton5"
         }
       ]
     },
@@ -44,7 +44,8 @@
       "tconstruct:extra",
       "tconstruct:repair_kit",
       "tconstruct:limb",
-      "tconstruct:grip"
+      "tconstruct:grip",
+      "tconstruct:plate"
     ],
     "ignoreMaterialStats": false
   }

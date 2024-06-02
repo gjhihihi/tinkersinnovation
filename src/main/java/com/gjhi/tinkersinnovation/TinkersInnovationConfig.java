@@ -16,6 +16,7 @@ public class TinkersInnovationConfig {
 
     public static class CommonConfig {
         public final OreConfig voidcrystalOre;
+        public final OreConfig apatiteBlock;
         //public final MaterialConfig createMaterial;
         /*public final ForgeConfigSpec.BooleanValue icelandsparGeodes;
         public final ForgeConfigSpec.BooleanValue topazGeodes;
@@ -25,6 +26,9 @@ public class TinkersInnovationConfig {
         CommonConfig(ForgeConfigSpec.Builder builder) {
             builder.comment("Void Crystal Ore Worldgen").push("void_crystal_ore");
             voidcrystalOre = new VoidCrystalOreConfig(builder);
+            builder.pop();
+            builder.comment("Apatite Block Worldgen").push("apatite_block");
+            apatiteBlock = new ApatiteBlockConfig(builder);
             builder.pop();/*
             builder.comment("Whether to link Create").push("create");
             createMaterial = new CreateMaterialConfig(builder);
@@ -93,6 +97,16 @@ public class TinkersInnovationConfig {
             this.maxY = builder.comment("Max Y Level").defineInRange("maxY", -54, -60, 0);
             this.count = builder.comment("Ore vein count").defineInRange("veinCount", 20, 1, 40);
             this.size = builder.comment("Ore vein size").defineInRange("veinSize", 3, 1, 40);
+        }
+    }
+    public static class ApatiteBlockConfig extends OreConfig {
+        public ApatiteBlockConfig(ForgeConfigSpec.Builder builder) {
+            super(builder);
+            this.enabled = builder.worldRestart().comment("Enable/Disable Void Crystal ore").define("VoidCrystalOreEnabled", true);
+            this.minY = builder.comment("Min Y level").defineInRange("minY", 16, 0, 128);
+            this.maxY = builder.comment("Max Y Level").defineInRange("maxY", 320, 256, 320);
+            this.count = builder.comment("Ore vein count").defineInRange("veinCount", 20, 1, 40);
+            this.size = builder.comment("Ore vein size").defineInRange("veinSize", 10, 1, 40);
         }
     }
     /*public static class CreateMaterialConfig extends MaterialConfig{

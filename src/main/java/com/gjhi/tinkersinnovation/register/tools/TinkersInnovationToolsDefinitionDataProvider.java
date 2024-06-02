@@ -21,22 +21,6 @@ public class TinkersInnovationToolsDefinitionDataProvider extends AbstractToolDe
 
     @Override
     protected void addToolDefinitions() {
-        define(TinkersInnovationToolsDefinition.PickDart)
-                //part
-                .part(TinkerToolParts.pickHead)
-                .part(TinkerToolParts.smallBlade)
-                .part(TinkerToolParts.smallBlade)
-                .part(TinkersInnovationItems.handguard)
-                //stat
-                .stat(ToolStats.ATTACK_DAMAGE, 2.5f)
-                .stat(ToolStats.ATTACK_SPEED, 1.0f)
-                .multiplier(ToolStats.MINING_SPEED, 0.7f)
-                .multiplier(ToolStats.ATTACK_DAMAGE, 0.5f)
-                .multiplier(ToolStats.ATTACK_SPEED, 1.6f)
-                .multiplier(ToolStats.DURABILITY, 2.3f)
-                .startingSlots(SlotType.ABILITY, 1)
-                .startingSlots(SlotType.UPGRADE, 4)
-        ;
                 //trait
         //        .trait(TinkerModifiers.knockback, 1)
                 //other
@@ -46,7 +30,7 @@ public class TinkersInnovationToolsDefinitionDataProvider extends AbstractToolDe
                 .part(TinkerToolParts.largePlate)
                 .part(TinkerToolParts.largePlate)
                 .part(TinkersInnovationItems.shield_plate)
-                .part(TinkerToolParts.toolHandle)
+                .part(TinkerToolParts.toughHandle)
                 //stat
                 .stat(ToolStats.ATTACK_DAMAGE, 2.5f)
                 .stat(ToolStats.ATTACK_SPEED, 1.0f)
@@ -57,18 +41,19 @@ public class TinkersInnovationToolsDefinitionDataProvider extends AbstractToolDe
                 .stat(ToolStats.BLOCK_AMOUNT, 100.0F)
                 .stat(ToolStats.BLOCK_ANGLE, 180.0F)
                 .stat(ToolStats.ARMOR_TOUGHNESS, 2.0F)
-                .startingSlots(SlotType.UPGRADE, 1)
+                .startingSlots(SlotType.UPGRADE, 2)
                 .startingSlots(SlotType.DEFENSE, 4)
                 .startingSlots(SlotType.ABILITY, 1)
                 .trait(TinkerModifiers.blocking)
                 .module(ToolModuleHooks.INTERACTION, new PreferenceSetInteraction(InteractionSource.RIGHT_CLICK, new SingleModifierPredicate(TinkerModifiers.blocking.getId())))
                 //.action(ToolActions.SHIELD_BLOCK)
         ;
-        define(TinkersInnovationToolsDefinition.ButcherKnife)
+        define(TinkersInnovationToolsDefinition.Claw)
                 //part
-                .part(TinkerToolParts.broadBlade)
-                .part(TinkerToolParts.largePlate)
-                .part(TinkerToolParts.toughHandle)
+                .part(TinkerToolParts.smallBlade)
+                .part(TinkerToolParts.smallBlade)
+                .part(TinkerToolParts.smallBlade)
+                .part(TinkersInnovationItems.handguard)
                 //stat
                 .stat(ToolStats.ATTACK_DAMAGE, 2.5f)
                 .stat(ToolStats.ATTACK_SPEED, 1.0f)

@@ -3,6 +3,25 @@
   "values": [
     "minecraft:sheep",
     "minecraft:horse",
-    "minecraft:pig"
+    "minecraft:pig",
+    "minecraft:rabbit",
+    "minecraft:cow",
+    "minecraft:cat",
+    "minecraft:mooshroom",
+    "minecraft:wolf",
+    "minecraft:chicken",
+    "minecraft:goat",
+    "minecraft:llama",
+    "minecraft:trader_llama",
+    "minecraft:mule",
+    "minecraft:hoglin",
+    "minecraft:donkey",
+    "minecraft:fox",
+    "minecraft:ocelot",
+    "minecraft:axolotl",
+    "minecraft:turtle",
+    "minecraft:panda",
+    "minecraft:polar_bear",
+    "minecraft:squid"
   ]
 }
