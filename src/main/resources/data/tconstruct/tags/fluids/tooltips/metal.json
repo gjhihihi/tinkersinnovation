@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "tinkersinnovation:enchantment_essence",
+    "tinkersinnovation:molten_ether",
+    "tinkersinnovation:molten_experience",
+    "tinkersinnovation:life_essence",
+    "tinkersinnovation:ocean_essence",
+    "tinkersinnovation:molten_polychrome_alloy",
+    "tinkersinnovation:molten_slimton",
+    "tinkersinnovation:molten_void_crystal",
+    "tinkersinnovation:molten_andesite_alloy",
+    "tinkersinnovation:molten_biotite"
+  ]
+}

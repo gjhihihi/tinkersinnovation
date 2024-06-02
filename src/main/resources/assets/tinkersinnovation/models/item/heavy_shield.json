@@ -2,36 +2,40 @@
   "loader": "tconstruct:tool",
   "parent": "tconstruct:item/base/shield_large",
   "textures": {
-    "large_plate_up": "tinkersinnovation:item/tool/heavy_shield/large_plate_up",
-    "broken_large_plate_up": "tinkersinnovation:item/tool/heavy_shield/broken_large_plate_up",
-    "large_plate_down": "tinkersinnovation:item/tool/heavy_shield/large_plate_down",
-    "broken_large_plate_down": "tinkersinnovation:item/tool/heavy_shield/broken_large_plate_down",
+    "plate_up": "tinkersinnovation:item/tool/heavy_shield/plate_up",
+    "broken_plate_up": "tinkersinnovation:item/tool/heavy_shield/broken_plate_up",
+    "plate_down": "tinkersinnovation:item/tool/heavy_shield/plate_down",
+    "broken_plate_down": "tinkersinnovation:item/tool/heavy_shield/broken_plate_down",
     "shield_plate": "tinkersinnovation:item/tool/heavy_shield/shield_plate",
     "broken_shield_plate": "tinkersinnovation:item/tool/heavy_shield/broken_shield_plate",
-    "tool_handle": "tinkersinnovation:item/tool/heavy_shield/tool_handle",
+    "handle": "tinkersinnovation:item/tool/heavy_shield/handle",
 
-    "large_plate_up_large": "tinkersinnovation:item/tool/heavy_shield/blocking/large_plate_up",
-    "broken_large_plate_up_large": "tinkersinnovation:item/tool/heavy_shield/blocking/broken_large_plate_up",
-    "large_plate_down_large": "tinkersinnovation:item/tool/heavy_shield/blocking/large_plate_down",
-    "broken_large_plate_down_large": "tinkersinnovation:item/tool/heavy_shield/blocking/broken_large_plate_down",
-    "shield_plate_large": "tinkersinnovation:item/tool/heavy_shield/blocking/shield_plate",
-    "broken_shield_plate_large": "tinkersinnovation:item/tool/heavy_shield/blocking/broken_shield_plate"
+    "large_plate_up": "tinkersinnovation:item/tool/heavy_shield/plate_up",
+    "large_broken_plate_up": "tinkersinnovation:item/tool/heavy_shield/broken_plate_up",
+    "large_plate_down": "tinkersinnovation:item/tool/heavy_shield/plate_down",
+    "large_broken_plate_down": "tinkersinnovation:item/tool/heavy_shield/broken_plate_down",
+    "large_shield_plate": "tinkersinnovation:item/tool/heavy_shield/shield_plate",
+    "large_broken_shield_plate": "tinkersinnovation:item/tool/heavy_shield/broken_shield_plate",
+    "large_handle": "tinkersinnovation:item/tool/heavy_shield/handle"
   },
   "modifier_roots": {
-    "small": [ "tinkersinnovation:item/tool/heavy_shield/modifiers/small" ],
-    "large": [ "tinkersinnovation:item/tool/heavy_shield/modifiers/large" ]
+    "small": ["tinkersinnovation:item/tool/heavy_shield/modifiers/small"],
+    "large": ["tinkersinnovation:item/tool/heavy_shield/modifiers/large"]
   },
   "parts": [
-      { "name": "tool_handle", "index": 0 },
-      { "name": "large_plate_up",    "index": 1, "broken": "broken_large_plate_up" },
-      { "name": "large_plate_down",   "index": 2, "broken": "broken_large_plate_down" },
-      { "name": "shield_plate",   "index": 3, "broken": "broken_shield_plate" }
+    {"name": "handle", "index": 0},
+    {"name": "plate_up", "index": 1, "broken": "broken_plate_up"},
+    {"name": "plate_down", "index": 2, "broken": "broken_plate_down"},
+    {"name": "shield_plate", "index": 3, "broken": "broken_shield_plate"}
   ],
   "large": true,
   "large_offset": [-8, 0],
-  "first_modifiers": [ "tconstruct:dyed", "tconstruct:embellishment" ],
+  "first_modifiers": [
+    "tconstruct:dyed",
+    "tconstruct:embellishment"
+  ],
   "overrides": [{
-    "predicate": { "tconstruct:charging": 2 },
-    "model": "tinkersinnovation:item/blocking/heavy_shield"
-  }]
+      "predicate": {"tconstruct:charging": 2 },
+      "model": "tinkersinnovation:item/blocking/heavy_shield"
+    }]
 }

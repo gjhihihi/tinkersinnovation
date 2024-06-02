@@ -1,0 +1,16 @@
+{
+  "type": "tconstruct:part_builder",
+  "pattern": "tinkersinnovation:shield_plate",
+  "pattern_item": [
+    {
+      "tag": "tconstruct:patterns/default"
+    },
+    {
+      "item": "tinkersinnovation:shield_plate_cast"
+    }
+  ],
+  "cost": 9,
+  "result": {
+    "item": "tinkersinnovation:shield_plate"
+  }
+}

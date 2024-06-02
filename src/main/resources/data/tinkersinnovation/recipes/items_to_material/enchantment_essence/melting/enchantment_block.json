@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkersinnovation:enchantment_block"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:enchantment_essence",
+    "amount": 810
+  },
+  "temperature": 900,
+  "time": 180
+}

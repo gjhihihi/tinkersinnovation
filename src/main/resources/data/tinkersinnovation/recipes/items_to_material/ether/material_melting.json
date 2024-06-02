@@ -3,7 +3,7 @@
   "input": "tinkersinnovation:ether",
   "temperature": 1200,
   "result": {
-    "fluid": "tinkersinnovation:ether",
+    "fluid": "tinkersinnovation:molten_ether",
     "amount": 90
   }
 }

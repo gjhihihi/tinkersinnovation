@@ -1,0 +1,16 @@
+{
+  "type": "tconstruct:part_builder",
+  "pattern": "tinkersinnovation:handguard",
+  "pattern_item": [
+    {
+      "tag": "tconstruct:patterns/default"
+    },
+    {
+      "item": "tinkersinnovation:handguard_cast"
+    }
+  ],
+  "cost": 1,
+  "result": {
+    "item": "tinkersinnovation:handguard"
+  }
+}

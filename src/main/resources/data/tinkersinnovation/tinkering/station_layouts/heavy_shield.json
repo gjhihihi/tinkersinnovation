@@ -16,12 +16,12 @@
       }
     },
     {
-      "icon": "tconstruct:tool_handle",
+      "icon": "tconstruct:tough_handle",
       "translation_key": "item.tconstruct.tool_handle",
       "x": 39,
       "y": 35,
       "filter": {
-        "item": "tconstruct:tool_handle"
+        "item": "tconstruct:tough_handle"
       }
     },
     {

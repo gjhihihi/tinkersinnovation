@@ -3,7 +3,7 @@
   "input": "tinkersinnovation:slimton",
   "temperature": 1000,
   "result": {
-    "fluid": "tinkersinnovation:slimton",
+    "fluid": "tinkersinnovation:molten_slimton",
     "amount": 90
   }
 }

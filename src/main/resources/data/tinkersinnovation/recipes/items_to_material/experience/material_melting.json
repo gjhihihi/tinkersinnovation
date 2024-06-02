@@ -3,7 +3,7 @@
   "input": "tinkersinnovation:experience",
   "temperature": 600,
   "result": {
-    "fluid": "tinkersinnovation:experience",
+    "fluid": "tinkersinnovation:molten_experience",
     "amount": 90
   }
 }

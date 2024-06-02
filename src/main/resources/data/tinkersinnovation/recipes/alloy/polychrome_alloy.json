@@ -1,7 +1,7 @@
 {
   "type": "tconstruct:alloy",
   "result": {
-    "fluid": "tinkersinnovation:polychrome_alloy",
+    "fluid": "tinkersinnovation:molten_polychrome_alloy",
     "amount": 90
   },
   "inputs": [

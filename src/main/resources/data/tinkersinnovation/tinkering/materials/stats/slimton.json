@@ -8,13 +8,13 @@
       "attackDamage": 0.95
     },
     "tconstruct:head": {
-      "durability": 1000,
+      "durability": 1200,
       "miningSpeed": 6,
       "harvestTier": "minecraft:diamond",
       "attack": 1.2
     },
     "tconstruct:limb": {
-      "durability": 1000,
+      "durability": 1200,
       "drawSpeed": 2.5,
       "velocity": -2,
       "accuracy": 2
@@ -23,6 +23,19 @@
       "durability": 1.5,
       "accuracy": 2,
       "meleeAttack": 3
+    },
+    "tinkers_ingenuity:trim": {},
+    "tinkers_ingenuity:mail": {
+      "durability": 1.5,
+      "armor": 1.5,
+      "movementSpeed": 0.8
+    },
+    "tinkers_ingenuity:plate": {
+      "durability": 1200,
+      "armor": 25.0,
+      "toughness": 10.0,
+      "knockbackResistance": 0.05,
+      "movementSpeed": 0.0
     }
   }
 }

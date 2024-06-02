@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/ingot"
+  },
+  "cast_consumed": false,
+  "fluid": {
+    "name": "tinkersinnovation:molten_void_crystal",
+    "amount": 90
+  },
+  "result": "tinkersinnovation:void_crystal_ingot",
+  "cooling_time": 90
+}

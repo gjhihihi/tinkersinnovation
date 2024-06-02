@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:nuggets/enchantment_essence",
+    "#forge:nuggets/ether",
+    "#forge:nuggets/life_essence",
+    "#forge:nuggets/ocean_essence",
+    "#forge:nuggets/polychrome_alloy",
+    "#forge:nuggets/slimton",
+    "#forge:nuggets/void_crystal"
+  ]
+}

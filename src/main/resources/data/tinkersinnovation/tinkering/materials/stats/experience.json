@@ -23,6 +23,19 @@
       "durability": 1.1,
       "accuracy": -0.2,
       "meleeAttack": 2
+    },
+    "tinkers_ingenuity:trim": {},
+    "tinkers_ingenuity:mail": {
+      "durability": 1.1,
+      "armor": 0.8,
+      "movementSpeed": 1.2
+    },
+    "tinkers_ingenuity:plate": {
+      "durability": 180,
+      "armor": 6.0,
+      "toughness": 0.0,
+      "knockbackResistance": 0.0,
+      "movementSpeed": 0.02
     }
   }
 }

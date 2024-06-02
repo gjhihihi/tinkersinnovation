@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkersinnovation:ocean_nugget"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:ocean_essence",
+    "amount": 10
+  },
+  "temperature": 900,
+  "time": 45
+}

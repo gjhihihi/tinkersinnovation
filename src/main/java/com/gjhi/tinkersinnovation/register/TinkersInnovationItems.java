@@ -50,6 +50,7 @@ public class TinkersInnovationItems {
     public static RegistryObject<Item> ether_block = ITEMS.register("ether_block", () -> register_block(TinkersInnovationBlocks.ether_block.get()));
     //ores
     public static RegistryObject<Item> void_crystal_ore = ITEMS.register("void_crystal_ore", () -> register_block(TinkersInnovationBlocks.void_crystal_ore.get()));
+    public static RegistryObject<Item> apatite_block = ITEMS.register("apatite_block", () -> register_block(TinkersInnovationBlocks.apatite_block.get()));
     //others
     public static RegistryObject<Item> seared_bedrock = ITEMS.register("seared_bedrock", () -> register_block(TinkersInnovationBlocks.seared_bedrock.get()));
     public static RegistryObject<Item> scorched_bedrock = ITEMS.register("scorched_bedrock", () -> register_block(TinkersInnovationBlocks.scorched_bedrock.get()));
@@ -65,8 +66,7 @@ public class TinkersInnovationItems {
     public static RegistryObject<Item> shield_plate_sand_cast = ITEMS.register("shield_plate_sand_cast", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> shield_plate_red_sand_cast = ITEMS.register("shield_plate_red_sand_cast", TinkersInnovationItems::register_item);
     //tools
-    public static final RegistryObject<ModifiableItem> pick_dart = ITEMS.register("pick_dart", () -> new ModifiableItem(TOOL, TinkersInnovationToolsDefinition.PickDart));
     public static final RegistryObject<ModifiableItem> heavy_shield = ITEMS.register("heavy_shield", () -> new ModifiableItem(TOOL, TinkersInnovationToolsDefinition.HeavyShield));
-    public static final RegistryObject<ModifiableItem> butcher_knife = ITEMS.register("butcher_knife", () -> new ModifiableItem(TOOL, TinkersInnovationToolsDefinition.ButcherKnife));
+    public static final RegistryObject<ModifiableItem> claw = ITEMS.register("claw", () -> new ModifiableItem(TOOL, TinkersInnovationToolsDefinition.Claw));
 
 }

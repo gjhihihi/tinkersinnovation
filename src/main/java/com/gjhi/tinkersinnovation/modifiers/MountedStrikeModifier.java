@@ -28,7 +28,7 @@ public class MountedStrikeModifier extends Modifier implements MeleeDamageModifi
     public float getMeleeDamage(@NotNull IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float baseDamage, float damage) {
         Player player = context.getPlayerAttacker();
         if (player != null && player.isPassenger())
-            return (float) (damage * pow(1.25,modifier.getLevel()));
+            return (float) (damage * pow(1.75,modifier.getLevel()));
         return damage;
     }
 }

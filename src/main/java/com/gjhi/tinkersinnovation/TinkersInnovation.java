@@ -1,10 +1,7 @@
 package com.gjhi.tinkersinnovation;
 
 import com.gjhi.tinkersinnovation.creativetabs.*;
-import com.gjhi.tinkersinnovation.register.TinkersInnovationBlocks;
-import com.gjhi.tinkersinnovation.register.TinkersInnovationFluids;
-import com.gjhi.tinkersinnovation.register.TinkersInnovationItems;
-import com.gjhi.tinkersinnovation.register.TinkersInnovationModifiers;
+import com.gjhi.tinkersinnovation.register.*;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraftforge.common.MinecraftForge;
@@ -33,6 +30,7 @@ public class TinkersInnovation {
         TinkersInnovationOreGen.CONFIGURED_FEATURES.register(bus);
         TinkersInnovationOreGen.PLACED_FEATURES.register(bus);
         TinkersInnovationOreGen.BLOCKS.register(bus);
+        TinkersInnovationTags.init();
     }
     @SubscribeEvent
     public static void gatherData(final GatherDataEvent event) {

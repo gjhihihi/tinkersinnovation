@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:ingots/enchantment_essence",
+    "#forge:ingots/ether",
+    "#forge:ingots/life_essence",
+    "#forge:ingots/ocean_essence",
+    "#forge:ingots/polychrome_alloy",
+    "#forge:ingots/slimton",
+    "#forge:ingots/void_crystal"
+  ]
+}

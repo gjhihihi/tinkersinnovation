@@ -10,37 +10,31 @@
       "palette": [
         {
           "grey": 0,
-          "color": "FFAF2649"
+          "color": "FF000000"
         },
         {
           "grey": 63,
-          "color": "FFFFE979",
-          "path": "tinkersinnovation:block/polychrome_alloy_block"
+          "path": "tinkersinnovation:item/materials/polychrome_alloy/polychrome_alloy1"
         },
         {
           "grey": 102,
-          "color": "FF7DE763",
-          "path": "tinkersinnovation:block/polychrome_alloy_block"
+          "path": "tinkersinnovation:item/materials/polychrome_alloy/polychrome_alloy2"
         },
         {
           "grey": 140,
-          "color": "FF56FEB3",
-          "path": "tinkersinnovation:block/polychrome_alloy_block"
+          "path": "tinkersinnovation:item/materials/polychrome_alloy/polychrome_alloy3"
         },
         {
           "grey": 178,
-          "color": "FF00DEEC",
-          "path": "tinkersinnovation:block/polychrome_alloy_block"
+          "path": "tinkersinnovation:item/materials/polychrome_alloy/polychrome_alloy"
         },
         {
           "grey": 216,
-          "color": "FF8997BD",
-          "path": "tinkersinnovation:block/polychrome_alloy_block"
+          "path": "tinkersinnovation:item/materials/polychrome_alloy/polychrome_alloy4"
         },
         {
           "grey": 255,
-          "color": "FF722C84",
-          "path": "tinkersinnovation:block/polychrome_alloy_block"
+          "path": "tinkersinnovation:item/materials/polychrome_alloy/polychrome_alloy5"
         }
       ]
     },
@@ -50,7 +44,8 @@
       "tconstruct:extra",
       "tconstruct:repair_kit",
       "tconstruct:limb",
-      "tconstruct:grip"
+      "tconstruct:grip",
+      "tconstruct:plate"
     ],
     "ignoreMaterialStats": false
   }

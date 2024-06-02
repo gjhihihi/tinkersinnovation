@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkersinnovation:enchantment_nugget"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:enchantment_essence",
+    "amount": 10
+  },
+  "temperature": 900,
+  "time": 45
+}

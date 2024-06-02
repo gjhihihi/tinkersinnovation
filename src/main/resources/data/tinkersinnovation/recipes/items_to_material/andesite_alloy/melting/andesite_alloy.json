@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "modid": "create",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "ingredient": {
+    "item": "create:andesite_alloy"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:molten_andesite_alloy",
+    "amount": 90
+  },
+  "temperature": 900,
+  "time": 90
+}

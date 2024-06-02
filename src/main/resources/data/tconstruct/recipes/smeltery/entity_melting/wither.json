@@ -4,7 +4,7 @@
     "type": "minecraft:wither"
   },
   "result": {
-    "fluid": "tinkersinnovation:ether",
+    "fluid": "tinkersinnovation:molten_ether",
     "amount": 10
   },
   "damage": 2

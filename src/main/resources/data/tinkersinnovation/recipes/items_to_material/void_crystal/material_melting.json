@@ -3,7 +3,7 @@
   "input": "tinkersinnovation:void_crystal",
   "temperature": 600,
   "result": {
-    "fluid": "tinkersinnovation:void_crystal",
+    "fluid": "tinkersinnovation:molten_void_crystal",
     "amount": 90
   }
 }

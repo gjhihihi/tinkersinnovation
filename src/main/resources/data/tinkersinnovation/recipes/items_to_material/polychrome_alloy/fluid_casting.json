@@ -1,7 +1,7 @@
 {
   "type": "tconstruct:material_fluid",
   "fluid": {
-    "tag": "tinkersinnovation:polychrome_alloy",
+    "tag": "tinkersinnovation:molten_polychrome_alloy",
     "amount": 90
   },
   "temperature": 1200,
