@@ -1,7 +1,7 @@
 {
   "type": "tconstruct:casting_basin",
   "fluid": {
-    "name": "tinkersinnovation:enchantment_essence",
+    "name": "tinkersinnovation:molten_enchantment_essence",
     "amount": 810
   },
   "result": "tinkersinnovation:enchantment_block",

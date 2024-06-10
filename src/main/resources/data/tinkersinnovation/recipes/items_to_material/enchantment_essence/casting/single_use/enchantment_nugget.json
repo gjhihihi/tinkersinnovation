@@ -5,7 +5,7 @@
   },
   "cast_consumed": true,
   "fluid": {
-    "name": "tinkersinnovation:enchantment_essence",
+    "name": "tinkersinnovation:molten_enchantment_essence",
     "amount": 10
   },
   "result": "tinkersinnovation:enchantment_nugget",

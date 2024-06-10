@@ -1,7 +1,7 @@
 {
   "type": "tconstruct:material_fluid",
   "fluid": {
-    "tag": "tinkersinnovation:enchantment_essence",
+    "tag": "tinkersinnovation:molten_enchantment_essence",
     "amount": 90
   },
   "temperature": 600,
