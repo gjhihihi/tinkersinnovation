@@ -1,0 +1,30 @@
+{
+    "replace": false,
+    "parts": [
+        {"path": "tinkersinnovation:item/tool/parts/handguard", "statType": "tconstruct:handle"},
+        {"path": "tinkersinnovation:item/tool/parts/heavy_shield_plate", "statType": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/parts/light_shield_plate", "statType": "tconstruct:head"},
+
+        {"path": "tinkersinnovation:item/tool/heavy_shield/plate_up", "statType": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/heavy_shield/broken_plate_up", "statType": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/heavy_shield/plate_down", "statType": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/heavy_shield/broken_plate_down", "statType": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/heavy_shield/plate_mid", "statType": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/heavy_shield/broken_plate_mid","statType": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/heavy_shield/handle","statType": "tconstruct:handle"},
+
+        {"path": "tinkersinnovation:item/tool/round_shield/plate_round", "statType": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/round_shield/broken_plate_round", "statType": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/round_shield/plate_mid", "statType": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/round_shield/broken_plate_mid","statType": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/round_shield/handle","statType": "tconstruct:handle"},
+
+        {"path": "tinkersinnovation:item/tool/claw/blade1", "statType": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/claw/broken_blade1", "statType": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/claw/blade2", "statType": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/claw/broken_blade2", "statType": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/claw/blade3", "statType": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/claw/broken_blade3", "statType": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/claw/handle", "statType": "tconstruct:handle"}
+    ]
+}

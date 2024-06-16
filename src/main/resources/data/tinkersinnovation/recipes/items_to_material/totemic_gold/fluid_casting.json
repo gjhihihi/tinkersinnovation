@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "tag": "tinkersinnovation:molten_totemic_gold",
+    "amount": 90
+  },
+  "temperature": 900,
+  "output": "tinkersinnovation:totemic_gold"
+}

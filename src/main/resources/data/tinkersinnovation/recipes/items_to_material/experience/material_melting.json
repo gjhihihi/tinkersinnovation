@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input": "tinkersinnovation:experience",
+  "temperature": 600,
+  "result": {
+    "fluid": "tinkersinnovation:molten_experience",
+    "amount": 90
+  }
+}

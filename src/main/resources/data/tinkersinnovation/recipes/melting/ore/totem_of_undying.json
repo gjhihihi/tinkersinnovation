@@ -1,0 +1,25 @@
+{
+  "type": "tconstruct:ore_melting",
+  "conditions": [
+    {
+      "modid": "l2complements",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "rate": "gem",
+  "ingredient": {
+    "item": "minecraft:totem_of_undying"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:molten_totemic_gold",
+    "amount": 90
+  },
+  "temperature": 900,
+  "time": 300,
+  "byproducts": [
+    {
+      "fluid": "tconstruct:molten_gold",
+      "amount": 90
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "tinkersinnovation:big_heart": ["tinkersinnovation:item/modifiers/big_heart", "tconstruct:gui/modifiers/book"],
+  "tinkersinnovation:double_attack": ["tinkersinnovation:item/modifiers/double_attack"],
+  "tinkersinnovation:berserker": ["tinkersinnovation:item/modifiers/berserker"],
+  "tinkersinnovation:chromatic_aberration": ["tinkersinnovation:item/modifiers/chromatic_aberration"],
+  "tinkersinnovation:fast_eat": ["tinkersinnovation:item/modifiers/fast_eat"],
+  "tinkersinnovation:mounted_strike": ["tinkersinnovation:item/modifiers/mounted_strike"]
+}

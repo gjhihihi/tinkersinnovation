@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.gjhi.tinkersinnovation.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "DampenedMixin",
+    "HardenMixin",
+    "HealthFixMixin"
+  ],
+  "client": [
+    "TransparentMixin"
+  ],
+  "server": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

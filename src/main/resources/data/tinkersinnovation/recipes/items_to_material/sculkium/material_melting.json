@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input": "tinkersinnovation:sculkium",
+  "temperature": 1000,
+  "result": {
+    "fluid": "tinkersinnovation:molten_sculkium",
+    "amount": 90
+  }
+}

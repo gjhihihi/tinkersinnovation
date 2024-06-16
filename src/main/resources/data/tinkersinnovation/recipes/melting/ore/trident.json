@@ -1,0 +1,29 @@
+{
+  "type": "tconstruct:ore_melting",
+  "conditions": [
+    {
+      "modid": "l2complements",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "rate": "gem",
+  "ingredient": {
+    "item": "minecraft:trident"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:molten_poseidite",
+    "amount": 90
+  },
+  "temperature": 900,
+  "time": 300,
+  "byproducts": [
+    {
+      "fluid": "tconstruct:molten_iron",
+      "amount": 30
+    },
+    {
+      "fluid": "tconstruct:molten_copper",
+      "amount": 60
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "type": "tconstruct:casting_table",
+  "conditions": [
+    {
+      "modid": "l2complements",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/nugget"
+  },
+  "cast_consumed": false,
+  "fluid": {
+    "name": "tinkersinnovation:molten_eternium",
+    "amount": 10
+  },
+  "result": "l2complements:eternium_nugget",
+  "cooling_time": 45
+}

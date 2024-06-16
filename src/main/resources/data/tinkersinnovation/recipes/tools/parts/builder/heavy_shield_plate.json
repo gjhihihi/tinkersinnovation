@@ -1,0 +1,16 @@
+{
+  "type": "tconstruct:part_builder",
+  "pattern": "tinkersinnovation:heavy_shield_plate",
+  "pattern_item": [
+    {
+      "tag": "tconstruct:patterns/default"
+    },
+    {
+      "item": "tinkersinnovation:heavy_shield_plate_cast"
+    }
+  ],
+  "cost": 9,
+  "result": {
+    "item": "tinkersinnovation:heavy_shield_plate"
+  }
+}

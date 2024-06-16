@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkersinnovation:void_crystal_nugget"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:molten_void_crystal",
+    "amount": 10
+  },
+  "temperature": 600,
+  "time": 45
+}

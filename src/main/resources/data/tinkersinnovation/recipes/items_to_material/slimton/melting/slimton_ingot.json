@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkersinnovation:slimton_ingot"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:molten_slimton",
+    "amount": 90
+  },
+  "temperature": 1000,
+  "time": 90
+}

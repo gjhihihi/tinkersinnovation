@@ -1,0 +1,33 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "tconstruct:item/base/shield_large",
+  "textures": {
+    "plate_up": "tinkersinnovation:item/tool/heavy_shield/broken_plate_up",
+    "plate_down": "tinkersinnovation:item/tool/heavy_shield/broken_plate_down",
+    "plate_mid": "tinkersinnovation:item/tool/heavy_shield/broken_plate_mid",
+    "handle": "tinkersinnovation:item/tool/heavy_shield/handle",
+
+    "large_plate_up": "tinkersinnovation:item/tool/heavy_shield/broken_plate_up",
+    "large_plate_down": "tinkersinnovation:item/tool/heavy_shield/broken_plate_down",
+    "large_plate_mid": "tinkersinnovation:item/tool/heavy_shield/broken_plate_mid",
+    "large_handle": "tinkersinnovation:item/tool/heavy_shield/handle"
+  },
+  "modifier_roots": {
+    "small": [
+      "tinkersinnovation:item/tool/heavy_shield/modifiers/broken/",
+      "tinkersinnovation:item/tool/heavy_shield/modifiers/"
+    ],
+    "large": [
+      "tinkersinnovation:item/tool/heavy_shield/modifiers/broken/",
+      "tinkersinnovation:item/tool/heavy_shield/modifiers/"
+    ]
+  },
+  "parts": [
+    {"name": "handle", "index": 0},
+    {"name": "plate_up", "index": 1},
+    {"name": "plate_down", "index": 2},
+    {"name": "plate_mid", "index": 3}
+  ],
+  "large": true,
+  "large_offset": [-8, 0]
+}

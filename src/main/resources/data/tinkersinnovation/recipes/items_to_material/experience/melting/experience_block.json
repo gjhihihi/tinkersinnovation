@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "modid": "create",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "ingredient": {
+    "item": "create:experience_block"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:molten_experience",
+    "amount": 810
+  },
+  "temperature": 600,
+  "time": 180
+}

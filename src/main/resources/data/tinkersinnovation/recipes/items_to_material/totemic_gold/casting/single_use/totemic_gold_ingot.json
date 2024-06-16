@@ -1,0 +1,19 @@
+{
+  "type": "tconstruct:casting_table",
+  "conditions": [
+    {
+      "modid": "l2complements",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "cast": {
+    "tag": "tconstruct:casts/single_use/ingot"
+  },
+  "cast_consumed": true,
+  "fluid": {
+    "name": "tinkersinnovation:molten_totemic_gold",
+    "amount": 90
+  },
+  "result": "l2complements:totemic_gold_ingot",
+  "cooling_time": 90
+}

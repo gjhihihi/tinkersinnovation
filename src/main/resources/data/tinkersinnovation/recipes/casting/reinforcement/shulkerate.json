@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "item": "tconstruct:obsidian_pane"
+  },
+  "cast_consumed": true,
+  "cooling_time": 35,
+  "fluid": {
+    "amount": 40,
+    "tag": "tinkersinnovation:molten_shulkerate"
+  },
+  "result": "tinkersinnovation:shulkerate_reinforcement"
+}

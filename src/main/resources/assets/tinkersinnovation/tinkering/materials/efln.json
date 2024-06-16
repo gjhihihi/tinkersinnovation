@@ -1,0 +1,53 @@
+{
+  "color": "FF980000",
+  "fallbacks": [
+    "rock"
+  ],
+  "generator": {
+    "ignoreMaterialStats": false,
+    "supportedStats": [
+      "tconstruct:head",
+      "tconstruct:limb",
+      "tconstruct:binding",
+      "tconstruct:repair_kit",
+      "tconstruct:shield_core"
+    ],
+    "transformer":
+    {
+      "type": "tconstruct:grey_to_sprite",
+        "palette": [
+          {
+            "grey": 0,
+            "color": "FF000000"
+          },
+          {
+            "grey": 63,
+            "color": "FF2D0000",
+            "path": "tinkersinnovation:item/materials/efln/efln1"
+          },
+          {
+            "grey": 102,
+            "path": "tinkersinnovation:item/materials/efln/efln2"
+          },
+          {
+            "grey": 140,
+            "color": "FF980000",
+            "path": "tinkersinnovation:item/materials/efln/efln"
+          },
+          {
+            "grey": 178,
+            "path": "tinkersinnovation:item/materials/efln/efln"
+          },
+          {
+            "grey": 216,
+            "path": "tinkersinnovation:item/materials/efln/efln4"
+          },
+          {
+            "grey": 255,
+            "path": "tinkersinnovation:item/materials/efln/efln5"
+          }
+        ]
+    }
+  },
+  "luminosity": 0
+}

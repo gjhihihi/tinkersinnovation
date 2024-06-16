@@ -1,0 +1,28 @@
+{
+  "default": [
+    {
+      "name": "tinkersinnovation:vitality",
+      "level": 1
+    }
+  ],
+  "perStat": {
+    "tconstruct:melee_harvest": [
+      {
+        "name": "tinkersinnovation:super_undead",
+        "level": 1
+      }
+    ],
+    "tconstruct:ranged": [
+      {
+        "name": "tinkersinnovation:super_undead",
+        "level": 1
+      }
+    ],
+    "tconstruct:armor": [
+      {
+        "name": "tinkersinnovation:vitality_armor",
+        "level": 1
+      }
+    ]
+  }
+}

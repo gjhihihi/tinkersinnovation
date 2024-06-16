@@ -1,12 +1,22 @@
 {
-  "default": [
-    {
-      "name": "tconstruct:sturdy",
-      "level": 1
-    },
-    {
-      "name": "tinkersinnovation:energy_state",
-      "level": 1
-    }
-  ]
+  "perStat": {
+    "tconstruct:melee_harvest": [
+      {
+        "name": "tinkersinnovation:enchantment",
+        "level": 1
+      }
+    ],
+    "tconstruct:ranged": [
+      {
+        "name": "tinkersinnovation:enchantment",
+        "level": 1
+      }
+    ],
+    "tconstruct:armor": [
+      {
+        "name": "tinkersinnovation:enchantment_armor",
+        "level": 1
+      }
+    ]
+  }
 }

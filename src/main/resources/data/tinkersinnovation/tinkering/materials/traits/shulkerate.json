@@ -1,0 +1,12 @@
+{
+  "default": [
+    {
+      "name": "tinkersinnovation:harden",
+      "level": 1
+    },
+    {
+      "name": "tinkersinnovation:transparent",
+      "level": 1
+    }
+  ]
+}

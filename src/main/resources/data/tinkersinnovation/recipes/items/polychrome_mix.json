@@ -1,0 +1,35 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "tinkersinnovation:polychrome_alloy_material/red"
+    },
+    {
+      "tag": "tinkersinnovation:polychrome_alloy_material/orange"
+    },
+    {
+      "tag": "tinkersinnovation:polychrome_alloy_material/yellow"
+    },
+    {
+      "tag": "tinkersinnovation:polychrome_alloy_material/green"
+    },
+    {
+      "tag": "tinkersinnovation:polychrome_alloy_material/blue"
+    },
+    {
+      "tag": "tinkersinnovation:polychrome_alloy_material/indigo"
+    },
+    {
+      "tag": "tinkersinnovation:polychrome_alloy_material/purple"
+    },
+    {
+      "tag": "tinkersinnovation:polychrome_alloy_material/white"
+    },
+    {
+      "tag": "tinkersinnovation:polychrome_alloy_material/black"
+    }
+  ],
+  "result": {
+    "item": "tinkersinnovation:polychrome_mix"
+  }
+}

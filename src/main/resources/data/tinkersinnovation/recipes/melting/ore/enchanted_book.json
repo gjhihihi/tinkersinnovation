@@ -1,0 +1,19 @@
+{
+  "type": "tconstruct:ore_melting",
+  "rate": "gem",
+  "ingredient": {
+    "item": "minecraft:enchanted_book"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:molten_enchantment_essence",
+    "amount": 10
+  },
+  "temperature": 900,
+  "time": 300,
+  "byproducts": [
+    {
+      "fluid": "tinkersinnovation:molten_experience",
+      "amount": 30
+    }
+  ]
+}

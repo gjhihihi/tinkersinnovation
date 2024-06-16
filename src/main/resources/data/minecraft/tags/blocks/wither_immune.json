@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "tinkersinnovation:seared_bedrock",
+    "tinkersinnovation:scorched_bedrock",
+    "tconstruct:smeltery_controller",
+    "tconstruct:foundry_controller",
+    "#tconstruct:seared_tanks",
+    "#tconstruct:scorched_tanks"
+  ]
+}

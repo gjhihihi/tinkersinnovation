@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input": "tinkersinnovation:enchantment_essence",
+  "temperature": 600,
+  "result": {
+    "fluid": "tinkersinnovation:molten_enchantment_essence",
+    "amount": 90
+  }
+}

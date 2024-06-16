@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkersinnovation:slimton_nugget"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:molten_slimton",
+    "amount": 10
+  },
+  "temperature": 1000,
+  "time": 45
+}

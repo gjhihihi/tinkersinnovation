@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input": "tinkersinnovation:polychrome_alloy",
+  "temperature": 1200,
+  "result": {
+    "fluid": "tinkersinnovation:molten_polychrome_alloy",
+    "amount": 90
+  }
+}

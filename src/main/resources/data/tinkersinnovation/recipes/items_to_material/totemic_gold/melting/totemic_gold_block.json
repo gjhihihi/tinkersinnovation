@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "modid": "l2complements",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "ingredient": {
+    "item": "l2complements:totemic_gold_block"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:molten_totemic_gold",
+    "amount": 810
+  },
+  "temperature": 900,
+  "time": 180
+}

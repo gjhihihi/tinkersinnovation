@@ -1,9 +1,0 @@
-{
-  "type": "tconstruct:material_fluid",
-  "fluid": {
-    "tag": "tinkersinnovation:experience",
-    "amount": 90
-  },
-  "temperature": 600,
-  "output": "tinkersinnovation:experience"
-}

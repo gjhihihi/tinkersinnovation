@@ -1,0 +1,11 @@
+{
+  "type": "tconstruct:entity_melting",
+  "entity": {
+    "type": "minecraft:wither"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:molten_ether",
+    "amount": 10
+  },
+  "damage": 2
+}

@@ -1,7 +1,8 @@
 {
   "replace": false,
   "values": [
-    "#tinkersinnovation:casts/single_use/handguard",
-    "#tinkersinnovation:casts/single_use/shield_plate"
+    "#tconstruct:casts/single_use/handguard",
+    "#tconstruct:casts/single_use/heavy_shield_plate",
+    "#tconstruct:casts/single_use/light_shield_plate"
   ]
 }

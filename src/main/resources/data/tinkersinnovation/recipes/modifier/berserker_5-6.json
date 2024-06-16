@@ -1,0 +1,37 @@
+{
+  "type": "tconstruct:modifier",
+  "inputs": [
+    {
+      "item": "tconstruct:jeweled_apple"
+    },
+    {
+      "item": "minecraft:wither_skeleton_skull"
+    },
+    {
+      "item": "minecraft:blaze_powder"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:tnt"
+    }
+  ],
+  "tools": {
+    "tag": "tconstruct:modifiable/armor/chestplate"
+  },
+  "requirements": {
+    "name": "tinkersinnovation:berserker",
+    "level": 4,
+    "error": "recipe.tconstruct.modifier.berserker_5-6"
+  },
+  "slots": {
+    "abilities": 1
+  },
+  "allow_crystal": true,
+  "result": "tinkersinnovation:berserker",
+  "level": {
+    "max": 6,
+    "min": 5
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tinkersinnovation:item/cast/sand/heavy_shield_plate"
+  }
+}

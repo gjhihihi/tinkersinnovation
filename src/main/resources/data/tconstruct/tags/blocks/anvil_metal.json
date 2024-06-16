@@ -1,0 +1,28 @@
+{
+  "replace": false,
+  "values": [
+    "tinkersinnovation:polychrome_alloy_block",
+    "tinkersinnovation:slimton_block",
+    "tinkersinnovation:ether_block",
+    {
+      "id": "l2complements:totemic_gold_block",
+      "required": false
+    },
+    {
+      "id": "l2complements:poseidite_block",
+      "required": false
+    },
+    {
+      "id": "l2complements:shulkerate_block",
+      "required": false
+    },
+    {
+      "id": "l2complements:sculkium_block",
+      "required": false
+    },
+    {
+      "id": "l2complements:eternium_block",
+      "required": false
+    }
+  ]
+}

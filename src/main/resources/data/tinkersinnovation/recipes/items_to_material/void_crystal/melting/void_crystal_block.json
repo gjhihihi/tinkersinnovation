@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkersinnovation:void_crystal_block"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:molten_void_crystal",
+    "amount": 810
+  },
+  "temperature": 600,
+  "time": 180
+}

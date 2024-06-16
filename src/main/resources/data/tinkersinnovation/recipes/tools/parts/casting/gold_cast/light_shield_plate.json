@@ -1,0 +1,8 @@
+{
+  "type": "tconstruct:table_casting_material",
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/light_shield_plate"
+  },
+  "item_cost": 9,
+  "result": "tinkersinnovation:light_shield_plate"
+}

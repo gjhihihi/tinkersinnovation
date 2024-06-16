@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "tag": "tinkersinnovation:molten_void_crystal",
+    "amount": 90
+  },
+  "temperature": 600,
+  "output": "tinkersinnovation:void_crystal"
+}

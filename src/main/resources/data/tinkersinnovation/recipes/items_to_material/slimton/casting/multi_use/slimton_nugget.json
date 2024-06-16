@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/nugget"
+  },
+  "cast_consumed": false,
+  "fluid": {
+    "name": "tinkersinnovation:molten_slimton",
+    "amount": 10
+  },
+  "result": "tinkersinnovation:slimton_nugget",
+  "cooling_time": 45
+}

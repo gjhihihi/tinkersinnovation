@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "modid": "l2complements",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "ingredient": {
+    "item": "l2complements:poseidite_block"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:molten_poseidite",
+    "amount": 810
+  },
+  "temperature": 1000,
+  "time": 180
+}

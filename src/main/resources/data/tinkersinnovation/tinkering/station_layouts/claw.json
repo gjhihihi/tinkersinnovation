@@ -1,0 +1,46 @@
+{
+  "translation_key": "item.tinkersinnovation.claw",
+  "icon": {
+    "item": "tinkersinnovation:claw",
+    "nbt": "{Damage:0,tic_broken:0b,tic_display:1b,tic_materials:[\"tconstruct:ui_render#head\",\"tconstruct:ui_render#handle\",\"tconstruct:ui_render#extra\",\"tconstruct:ui_render#large\",\"tconstruct:ui_render#extra_large\"]}"
+  },
+  "sortIndex": 3,
+  "input_slots": [
+    {
+      "icon": "tconstruct:small_blade",
+      "translation_key": "item.tconstruct.small_blade",
+      "x": 25,
+      "y": 30,
+      "filter": {
+        "item": "tconstruct:small_blade"
+      }
+    },
+    {
+      "icon": "tconstruct:small_blade",
+      "translation_key": "item.tconstruct.small_blade",
+      "x": 43,
+      "y": 30,
+      "filter": {
+        "item": "tconstruct:small_blade"
+      }
+    },
+    {
+      "icon": "tconstruct:small_blade",
+      "translation_key": "item.tconstruct.small_blade",
+      "x": 61,
+      "y": 30,
+      "filter": {
+        "item": "tconstruct:small_blade"
+      }
+    },
+    {
+      "icon": "tinkersinnovation:handguard",
+      "translation_key": "item.tinkersinnovation.handguard",
+      "x": 43,
+      "y": 48,
+      "filter": {
+        "item": "tinkersinnovation:handguard"
+      }
+    }
+  ]
+}

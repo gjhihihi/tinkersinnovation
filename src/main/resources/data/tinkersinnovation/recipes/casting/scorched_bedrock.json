@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:casting_basin",
+  "cast": {
+    "item": "minecraft:bedrock"
+  },
+  "cast_consumed": true,
+  "fluid": {
+    "name": "tconstruct:scorched_stone",
+    "amount": 1000
+  },
+  "result": "tinkersinnovation:scorched_bedrock",
+  "cooling_time": 1200
+}

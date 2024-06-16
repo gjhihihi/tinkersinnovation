@@ -1,0 +1,8 @@
+{
+  "type": "tconstruct:table_casting_material",
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/heavy_shield_plate"
+  },
+  "item_cost": 9,
+  "result": "tinkersinnovation:heavy_shield_plate"
+}

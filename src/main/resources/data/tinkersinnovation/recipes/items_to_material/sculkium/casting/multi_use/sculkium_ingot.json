@@ -1,0 +1,19 @@
+{
+  "type": "tconstruct:casting_table",
+  "conditions": [
+    {
+      "modid": "l2complements",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/ingot"
+  },
+  "cast_consumed": false,
+  "fluid": {
+    "name": "tinkersinnovation:molten_sculkium",
+    "amount": 90
+  },
+  "result": "l2complements:sculkium_ingot",
+  "cooling_time": 90
+}

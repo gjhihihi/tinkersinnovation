@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input": "tinkersinnovation:ether",
+  "temperature": 1200,
+  "result": {
+    "fluid": "tinkersinnovation:molten_ether",
+    "amount": 90
+  }
+}

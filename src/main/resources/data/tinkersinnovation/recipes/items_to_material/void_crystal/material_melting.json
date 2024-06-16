@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input": "tinkersinnovation:void_crystal",
+  "temperature": 600,
+  "result": {
+    "fluid": "tinkersinnovation:molten_void_crystal",
+    "amount": 90
+  }
+}

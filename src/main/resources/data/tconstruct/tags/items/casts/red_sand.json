@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "tinkersinnovation:handguard_red_sand_cast",
-    "tinkersinnovation:shield_plate_red_sand_cast"
+    "tinkersinnovation:heavy_shield_plate_red_sand_cast",
+    "tinkersinnovation:light_shield_plate_red_sand_cast"
   ]
 }

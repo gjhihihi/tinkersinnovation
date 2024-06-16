@@ -1,0 +1,27 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default-tool",
+  "textures": {
+    "blade1": "tinkersinnovation:item/tool/claw/blade1",
+    "blade2":  "tinkersinnovation:item/tool/claw/blade2",
+    "blade3":  "tinkersinnovation:item/tool/claw/blade3",
+    "handguard": "tinkersinnovation:item/tool/claw/handle"
+  },
+  "modifier_roots": [ "tinkersinnovation:item/tool/claw/modifiers/" ],
+  "parts": [
+    { "name": "blade1",    "index": 0 },
+    { "name": "blade2",   "index": 1 },
+    { "name": "blade3",   "index": 2 },
+    { "name": "handguard", "index": 3 }
+  ],
+  "overrides": [
+    {
+      "predicate": { "tconstruct:charging": 2 },
+      "model": "tconstruct:item/tool/claw/blocking"
+    },
+    {
+      "predicate": { "tconstruct:broken": 1 },
+      "model": "tconstruct:item/tool/claw/broken"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "modifier.tinkersinnovation":{
+    "ripening":"#A89984",
+    "enchantment":"#B478ED",
+    "suppress":"#589186",
+    "vitality":"#A8FF0A",
+    "poseidite_weapon":"#0035E4",
+    "poseidite_blessing":"#0035E4",
+    "omnipotent":"#D95779",
+    "trader":"#9B3CAF",
+    "big_shot":"#9B3CAF",
+    "void":"#380C38",
+    "slaughter":"#FFFFFF",
+    "mounted_strike":"#FFFFFF",
+    "berserker":"#FFFFFF",
+    "chromatic_aberration":"#FFFFFF",
+    "fast_eat":"#FFFFFF",
+    "big_heart":"#FFFFFF",
+    "double_attack":"#FFFFFF"
+  },
+  "material.tinkersinnovation":{
+    "polychrome_alloy": "#D95779",
+    "void_crystal": "#380C38",
+    "enchantment_essence": "#B478ED",
+    "totemic_gold": "#A8FF0A",
+    "poseidite": "#0035E4",
+    "experience": "#6FC451",
+    "andesite_alloy": "#5E6963",
+    "slimton": "#9B3CAF",
+    "ether": "#589186",
+    "apatite": "#A89984"
+  }
+}

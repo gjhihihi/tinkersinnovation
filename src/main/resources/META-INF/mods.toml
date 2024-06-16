@@ -34,7 +34,7 @@ credits="感谢游玩本模组" #optional
 authors="gjhi" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-本模组是匠魂3的一个扩展，添加了许多奇妙的内容。
+An addon mod for Tinkers' Construct.
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.tinkersinnovation]] #optional
@@ -53,12 +53,18 @@ description='''
     modId="minecraft"
     mandatory=true
 # This version range declares a minimum of the current minecraft version up to but not including the next major version
-    versionRange="[1.18.2,1.19)"
+    versionRange="[1.19.2,1.20)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.tinkersinnovation]]
     modId="tconstruct"
     mandatory=true
-    versionRange="[1.18.2-3.6.4.113,)"
+    versionRange="[1.19.2-3.8.3.39,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.tinkersinnovation]]
+    modId="l2complements"
+    mandatory=false
+    versionRange="*"
     ordering="AFTER"
     side="BOTH"

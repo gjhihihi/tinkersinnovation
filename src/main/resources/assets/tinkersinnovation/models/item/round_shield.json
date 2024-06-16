@@ -1,0 +1,25 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "tconstruct:item/base/shield",
+  "textures": {
+    "plate_round": "tinkersinnovation:item/tool/round_shield/plate_round",
+    "plate_mid": "tinkersinnovation:item/tool/round_shield/plate_mid",
+    "handle": "tinkersinnovation:item/tool/round_shield/handle"
+  },
+  "modifier_roots": ["tinkersinnovation:item/tool/round_shield/modifiers/"],
+  "parts": [
+    {"name": "handle", "index": 0},
+    {"name": "plate_round", "index": 1},
+    {"name": "plate_mid", "index": 2}
+  ],
+  "overrides": [
+    {
+      "predicate": { "tconstruct:charging": 2 },
+      "model": "tconstruct:item/tool/round_shield/blocking"
+    },
+    {
+      "predicate": { "tconstruct:broken": 1 },
+      "model": "tconstruct:item/tool/round_shield/broken"
+    }
+  ]
+}

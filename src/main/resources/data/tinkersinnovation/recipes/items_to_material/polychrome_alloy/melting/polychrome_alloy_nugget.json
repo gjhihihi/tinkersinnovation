@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkersinnovation:polychrome_alloy_nugget"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:molten_polychrome_alloy",
+    "amount": 10
+  },
+  "temperature": 1200,
+  "time": 45
+}

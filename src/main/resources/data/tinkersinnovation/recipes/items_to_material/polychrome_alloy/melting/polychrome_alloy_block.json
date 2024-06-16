@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkersinnovation:polychrome_alloy_block"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:molten_polychrome_alloy",
+    "amount": 810
+  },
+  "temperature": 1200,
+  "time": 180
+}

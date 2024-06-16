@@ -4,61 +4,136 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.phys.EntityHitResult;
 import org.jetbrains.annotations.NotNull;
 import slimeknights.tconstruct.library.modifiers.Modifier;
+import slimeknights.tconstruct.library.modifiers.ModifierEntry;
+import slimeknights.tconstruct.library.modifiers.ModifierHooks;
+import slimeknights.tconstruct.library.modifiers.hook.combat.MeleeHitModifierHook;
+import slimeknights.tconstruct.library.modifiers.hook.ranged.ProjectileHitModifierHook;
+import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
+import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
+import slimeknights.tconstruct.library.tools.nbt.NamespacedNBT;
 
-import static org.apache.commons.lang3.RandomUtils.nextDouble;
+import javax.annotation.Nullable;
 
-public class EnchantmentModifier extends Modifier {
+
+public class EnchantmentModifier extends Modifier implements MeleeHitModifierHook, ProjectileHitModifierHook {
     @Override
-    public int afterEntityHit(@NotNull IToolStackView tool, int level, ToolAttackContext context, float damageDealt) {
-        Player player = context.getPlayerAttacker();
-        LivingEntity target = context.getLivingTarget();
-        if (player != null && target != null) {
-            if (nextDouble()<0.1){
-               MobEffectInstance effect = new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 40 * level ,level-1);
-               target.addEffect(effect);
-            }
-            if (nextDouble()<0.1){
-                MobEffectInstance effect = new MobEffectInstance(MobEffects.WITHER, 40 * level ,level-1);
-                target.addEffect(effect);
-            }
-            if (nextDouble()<0.1){
-                MobEffectInstance effect = new MobEffectInstance(MobEffects.WEAKNESS, 40 * level ,level-1);
-                target.addEffect(effect);
-            }
-            if (nextDouble()<0.1){
-                MobEffectInstance effect = new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40 * level ,level-1);
-                target.addEffect(effect);
-            }
-            if (nextDouble()<0.1){
-                MobEffectInstance effect = new MobEffectInstance(MobEffects.BLINDNESS, 40 * level ,level-1);
-                target.addEffect(effect);
-            }
-            if (nextDouble()<0.1){
-                MobEffectInstance effect = new MobEffectInstance(MobEffects.HUNGER, 40 * level ,level-1);
-                target.addEffect(effect);
-            }
-            if (nextDouble()<0.1){
-                MobEffectInstance effect = new MobEffectInstance(MobEffects.POISON, 40 * level ,level-1);
-                target.addEffect(effect);
-            }
-            if (nextDouble()<0.1){
-                MobEffectInstance effect = new MobEffectInstance(MobEffects.CONFUSION, 40 * level ,level-1);
-                target.addEffect(effect);
-            }
-        }
-        return level;
+    protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
+        hookBuilder.addHook(this, ModifierHooks.MELEE_HIT, ModifierHooks.PROJECTILE_HIT);
     }
     @Override
-    public void failedEntityHit(@NotNull IToolStackView tool, int level, @NotNull ToolAttackContext context) {
+    public void afterMeleeHit(@NotNull IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float damageDealt) {
+        int level = modifier.getLevel();
         Player player = context.getPlayerAttacker();
         LivingEntity target = context.getLivingTarget();
         if (player != null && target != null) {
-                MobEffectInstance effect = new MobEffectInstance(MobEffects.CONFUSION, 120 * level ,2);
-                target.addEffect(effect);
+            if(RANDOM.nextFloat()<0.1){
+               target.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 40 * level ,level-1));
+            }
+            if (RANDOM.nextFloat()<0.1){
+                target.addEffect(new MobEffectInstance(MobEffects.WITHER, 40 * level ,level-1));
+            }
+            if (RANDOM.nextFloat()<0.1){
+                target.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 40 * level ,level-1));
+            }
+            if (RANDOM.nextFloat()<0.1){
+                target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40 * level ,level-1));
+            }
+            if (RANDOM.nextFloat()<0.1){
+                target.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 40 * level ,level-1));
+            }
+            if (RANDOM.nextFloat()<0.1){
+                target.addEffect(new MobEffectInstance(MobEffects.HUNGER, 40 * level ,level-1));
+            }
+            if (RANDOM.nextFloat()<0.1){
+                target.addEffect(new MobEffectInstance(MobEffects.POISON, 40 * level ,level-1));
+            }
+            if (RANDOM.nextFloat()<0.1){
+                target.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 40 * level ,level-1));
+            }
+            //------------------------------------------------------------
+            if (RANDOM.nextFloat()<0.1){
+                player.addEffect(new MobEffectInstance(MobEffects.LUCK, 40 * level ,level-1));
+            }
+            if (RANDOM.nextFloat()<0.1){
+                player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 40 * level,level - 1));
+            }
+            if (RANDOM.nextFloat()<0.1){
+                player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40 * level ,level-1));
+            }
+            if (RANDOM.nextFloat()<0.1){
+                player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40 * level ,level-1));
+            }
+            if (RANDOM.nextFloat()<0.1){
+                player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40 * level ,level-1));
+            }
+            if (RANDOM.nextFloat()<0.1){
+                player.addEffect(new MobEffectInstance(MobEffects.JUMP, 40 * level ,level-1));
+            }
         }
+    }
+    @Override
+    public void failedMeleeHit(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float damageAttempted) {
+        Player player = context.getPlayerAttacker();
+        LivingEntity target = context.getLivingTarget();
+        if (player != null && target != null) {
+                target.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 1200 * modifier.getLevel() ,2));
+        }
+    }
+    @Override
+    public boolean onProjectileHitEntity(ModifierNBT modifiers, NamespacedNBT persistentData, @NotNull ModifierEntry modifier, @NotNull Projectile projectile, EntityHitResult hit, @Nullable LivingEntity player, @Nullable LivingEntity target) {
+        int level = modifier.getLevel();
+        if (player != null && target != null) {
+            if(RANDOM.nextFloat()<0.1){
+                target.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 40 * level ,level-1));
+            }
+            if (RANDOM.nextFloat()<0.1){
+                target.addEffect(new MobEffectInstance(MobEffects.WITHER, 40 * level ,level-1));
+            }
+            if (RANDOM.nextFloat()<0.1){
+                target.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 40 * level ,level-1));
+            }
+            if (RANDOM.nextFloat()<0.1){
+                target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40 * level ,level-1));
+            }
+            if (RANDOM.nextFloat()<0.1){
+                target.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 40 * level ,level-1));
+            }
+            if (RANDOM.nextFloat()<0.1){
+                target.addEffect(new MobEffectInstance(MobEffects.HUNGER, 40 * level ,level-1));
+            }
+            if (RANDOM.nextFloat()<0.1){
+                target.addEffect(new MobEffectInstance(MobEffects.POISON, 40 * level ,level-1));
+            }
+            if (RANDOM.nextFloat()<0.1){
+                target.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 40 * level ,level-1));
+            }
+            //------------------------------------------------------------
+            if (RANDOM.nextFloat()<0.1){
+                player.addEffect(new MobEffectInstance(MobEffects.LUCK, 40 * level ,level-1));
+            }
+            if (RANDOM.nextFloat()<0.1){
+                player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 40 * level,level - 1));
+            }
+            if (RANDOM.nextFloat()<0.1){
+                player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40 * level ,level-1));
+            }
+            if (RANDOM.nextFloat()<0.1){
+                player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40 * level ,level-1));
+            }
+            if (RANDOM.nextFloat()<0.1){
+                player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40 * level ,level-1));
+            }
+            if (RANDOM.nextFloat()<0.1){
+                player.addEffect(new MobEffectInstance(MobEffects.JUMP, 40 * level ,level-1));
+            }
+        }
+        return false;
     }
 }

@@ -1,12 +1,8 @@
 {
   "default": [
     {
-      "name": "tconstruct:sturdy",
-      "level": 1
-    },
-    {
-      "name": "tinkersinnovation:energy_state",
-      "level": 1
+      "name": "tconstruct:experienced",
+      "level": 2
     }
   ]
 }

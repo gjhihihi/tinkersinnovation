@@ -1,0 +1,63 @@
+{
+  "color": "FFEDD860",
+  "fallbacks": [
+    "metal"
+  ],
+  "generator": {
+    "ignoreMaterialStats": false,
+    "supportedStats": [
+      "tconstruct:head",
+      "tconstruct:handle",
+      "tconstruct:binding",
+      "tconstruct:repair_kit",
+      "tconstruct:limb",
+      "tconstruct:grip",
+      "tconstruct:armor_plating",
+      "tconstruct:plating_boots",
+      "tconstruct:plating_leggings",
+      "tconstruct:plating_chestplate",
+      "tconstruct:plating_helmet",
+      "tconstruct:plating_shield",
+      "tconstruct:maille",
+      "tconstruct:armor_maille"
+    ],
+    "transformer": {
+        "type": "tconstruct:grey_to_sprite",
+        "palette": [
+          {
+            "grey": 0,
+            "color": "FF000000"
+          },
+          {
+            "grey": 63,
+            "color": "FFA05B23",
+            "path": "tinkersinnovation:item/materials/totemic_gold/totemic_gold1"
+          },
+          {
+            "grey": 102,
+            "path": "tinkersinnovation:item/materials/totemic_gold/totemic_gold2"
+          },
+          {
+            "grey": 140,
+            "color": "FFBF9140",
+            "path": "tinkersinnovation:item/materials/totemic_gold/totemic_gold3"
+          },
+          {
+            "grey": 178,
+            "color": "FFEDD860",
+            "path": "tinkersinnovation:item/materials/totemic_gold/totemic_gold"
+          },
+          {
+            "grey": 216,
+            "path": "tinkersinnovation:item/materials/totemic_gold/totemic_gold4"
+          },
+          {
+            "grey": 255,
+            "color": "FFFDFBEE",
+            "path": "tinkersinnovation:item/materials/totemic_gold/totemic_gold5"
+          }
+        ]
+    }
+  },
+  "luminosity": 0
+}
