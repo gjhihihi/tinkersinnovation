@@ -22,6 +22,7 @@ import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.Event;
 import org.jetbrains.annotations.NotNull;
 import slimeknights.tconstruct.common.TinkerTags;
+import slimeknights.tconstruct.library.materials.definition.MaterialVariant;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.TinkerHooks;
@@ -599,8 +600,8 @@ public class OmnipotentModifier extends Modifier implements VolatileDataModifier
         for (TagKey<Item> tag :tags) {
             if (tool.hasTag(tag)) {
                 int level = 0;
-                for (int i = 1; i <= tool.getMaterials().size(); i++) {
-                    if (tool.getMaterial(i).getId().toString().equals(id)) {
+                for (MaterialVariant material : tool.getMaterials().getList()){
+                    if (material.getId().toString().equals(id)) {
                         level++;
                     }
                 }
@@ -615,8 +616,8 @@ public class OmnipotentModifier extends Modifier implements VolatileDataModifier
         for (TagKey<Item> tag :tags) {
             if (tool.hasTag(tag)) {
                 int level = 0;
-                for (int i = 1; i <= tool.getMaterials().size(); i++) {
-                    if (tool.getMaterial(i).getId().toString().equals(id)) {
+                for (MaterialVariant material : tool.getMaterials().getList()){
+                    if (material.getId().toString().equals(id)) {
                         level++;
                     }
                 }
@@ -639,8 +640,8 @@ public class OmnipotentModifier extends Modifier implements VolatileDataModifier
         int level = 0;
         for (TagKey<Item> tag :tags) {
             if (tool.hasTag(tag)) {
-                for (int i = 1; i <= tool.getMaterials().size(); i++) {
-                    if (tool.getMaterial(i).get().getTier() >= 4 && notfind(tool.getMaterial(i).getId().toString())) {
+                for (MaterialVariant material : tool.getMaterials().getList()) {
+                    if (material.get().getTier() >= 4 && notfind(material.getId().toString())) {
                         level++;
                     }
                 }
@@ -655,8 +656,8 @@ public class OmnipotentModifier extends Modifier implements VolatileDataModifier
         int level = 0;
         for (TagKey<Item> tag :tags) {
             if (tool.hasTag(tag)) {
-                for (int i = 1; i <= tool.getMaterials().size(); i++) {
-                    if (tool.getMaterial(i).get().getTier() >= 4 && notfind(tool.getMaterial(i).getId().toString())) {
+                for (MaterialVariant material : tool.getMaterials().getList()) {
+                    if (material.get().getTier() >= 4 && notfind(material.getId().toString())) {
                         level++;
                     }
                 }
