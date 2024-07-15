@@ -1,10 +1,10 @@
 package com.gjhi.tinkersinnovation;
 
-import com.gjhi.tinkersinnovation.creativetabs.*;
+import com.gjhi.tinkersinnovation.creativetabs.TinkersInnovationItemGroup;
+import com.gjhi.tinkersinnovation.creativetabs.TinkersInnovationToolGroup;
 import com.gjhi.tinkersinnovation.register.*;
-import com.gjhi.tinkersinnovation.register.TinkersInnovationWorldGen;
-import com.gjhi.tinkersinnovation.register.link.TinkersL2complementsModifiers;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -43,12 +43,29 @@ public class TinkersInnovation {
         TinkersInnovationWorldGen.PLACED_FEATURES.register(bus);
         TinkersInnovationWorldGen.BLOCKS.register(bus);
         TinkersInnovationTags.init();
+        TinkersInnovationToolStats.init();
+        TinkersInnovationSlots.init();
     }
     private void setup(FMLCommonSetupEvent event) {
+        event.enqueueWork(TinkersInnovationMaterialStats::setup);
         if (ModList.get().isLoaded("l2complements")){
-            TinkersL2complementsModifiers.init();
-            tinkers_logger.info("Found L2complements, integration initializing……");
+            tinkers_logger.info("Found L2Complements, integration initializing……");
+            TinkersInnovationModifiers.L2ComplementsModifier.init();
         }
+        if (ModList.get().isLoaded("tinkers_ingenuity")){
+            tinkers_logger.info("Found Tinkers' Ingenuity, integration initializing……");
+            TinkersInnovationModifiers.TinkersIngenuityModifiers.init();
+        }
+        if (ModList.get().isLoaded("l2hostility")){
+            tinkers_logger.info("Found L2Hostility, integration initializing……");
+            TinkersInnovationModifiers.L2HostilityModifiers.init();
+        }
+    }
+    public static ResourceLocation getResource(String id) {
+        return new ResourceLocation(MOD_ID, id);
+    }
+    public static String makeDescriptionId(String type, String name) {
+        return type + "." + MOD_ID + "." + name;
     }
     @SubscribeEvent
     public static void gatherData(final GatherDataEvent event) {

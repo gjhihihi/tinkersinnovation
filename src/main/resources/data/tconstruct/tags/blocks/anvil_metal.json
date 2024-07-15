@@ -3,7 +3,8 @@
   "values": [
     "tinkersinnovation:polychrome_alloy_block",
     "tinkersinnovation:slimton_block",
-    "tinkersinnovation:ether_block",
+    "tinkersinnovation:decline_block",
+    "tinkersinnovation:hostilium_block",
     {
       "id": "l2complements:totemic_gold_block",
       "required": false

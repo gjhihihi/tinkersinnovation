@@ -26,10 +26,10 @@ public class WitherSkullModifier extends Modifier implements ProjectileHitModifi
         if (RANDOM.nextFloat() > 0.1 * modifier.getLevel()){
             projectile.level.explode(projectile, projectile.getX(), projectile.getY(), projectile.getZ(), 1, Explosion.BlockInteraction.BREAK);
         }else {
-            projectile.level.explode(projectile, projectile.getX(), projectile.getY(), projectile.getZ(), 4, Explosion.BlockInteraction.DESTROY);
+            projectile.level.explode(projectile, projectile.getX(), projectile.getY(), projectile.getZ(), 2, Explosion.BlockInteraction.DESTROY);
         }
         if (target != null) {
-            target.addEffect(new MobEffectInstance(MobEffects.WITHER, 200, 1));
+            target.addEffect(new MobEffectInstance(MobEffects.WITHER, 200, modifier.getLevel() - 1));
         }
         return false;
     }

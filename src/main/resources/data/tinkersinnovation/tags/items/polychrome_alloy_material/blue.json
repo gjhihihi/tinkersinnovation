@@ -1,5 +1,12 @@
 {
   "replace": false,
   "values": [
+    "minecraft:diamond",
+    "tinkersinnovation:decline_ingot",
+    "tconstruct:budding_sky_slime_crystal",
+    {
+      "id": "l2complements:eternium_ingot",
+      "required": false
+    }
   ]
 }

@@ -54,6 +54,22 @@
       "durability": 1450,
       "knockback_resistance": 0.01,
       "toughness": 8
+    },
+    "tinkersinnovation:shield_plate": {
+      "durability": 1450,
+      "armor": 5.0,
+      "toughness": 8,
+      "knockback_resistance": 0.01,
+      "block_amount": 0.2,
+      "shield_amount": 8
+    },
+    "tinkers_ingenuity:battery": {
+      "energy_capacity": 18000,
+      "durability": 0.1
+    },
+    "tinkers_ingenuity:laser_medium": {
+      "laser_range": 35,
+      "cooldown": 0.5
     }
   }
 }

@@ -40,6 +40,7 @@ import slimeknights.tconstruct.library.modifiers.hook.combat.MeleeDamageModifier
 import slimeknights.tconstruct.library.modifiers.hook.combat.MeleeHitModifierHook;
 import slimeknights.tconstruct.library.modifiers.hook.interaction.InventoryTickModifierHook;
 import slimeknights.tconstruct.library.modifiers.hook.ranged.ProjectileHitModifierHook;
+import slimeknights.tconstruct.library.modifiers.impl.NoLevelsModifier;
 import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.nbt.*;
@@ -49,7 +50,7 @@ import java.util.function.BiConsumer;
 
 import static slimeknights.tconstruct.tools.data.material.MaterialIds.manyullyn;
 
-public class PoseiditeWeaponModifier extends Modifier implements MeleeDamageModifierHook, AttributesModifierHook,InventoryTickModifierHook, ModifierRemovalHook {
+public class PoseiditeWeaponModifier extends NoLevelsModifier implements MeleeDamageModifierHook, AttributesModifierHook,InventoryTickModifierHook, ModifierRemovalHook {
 
     private final ResourceLocation KEY = new ResourceLocation("tinkersinnovation", "poseidite_weapon");
 
@@ -62,8 +63,6 @@ public class PoseiditeWeaponModifier extends Modifier implements MeleeDamageModi
         LivingEntity target = context.getLivingTarget();
         Player player = context.getPlayerAttacker();
         if (player != null && target != null){
-            if (player.isInWaterOrBubble())
-                damage *= 1.5f;
             if (target.getMobType().equals(MobType.WATER) || target instanceof Blaze || target instanceof EnderMan || target instanceof SnowGolem)
                 damage *= 2;
         }
@@ -76,7 +75,7 @@ public class PoseiditeWeaponModifier extends Modifier implements MeleeDamageModi
                 if (holder.isInWaterOrBubble()) {
                     persistentData.putBoolean(KEY, true);
                 }else {
-                    persistentData.remove(KEY);
+                    persistentData.putBoolean(KEY, false);
                 }
         }
     }
@@ -89,7 +88,8 @@ public class PoseiditeWeaponModifier extends Modifier implements MeleeDamageModi
     public void addAttributes(IToolStackView tool, ModifierEntry modifier, EquipmentSlot slot, BiConsumer<Attribute, AttributeModifier> consumer) {
         if (slot == EquipmentSlot.MAINHAND) {
             if (tool.getPersistentData().getBoolean(KEY)) {
-                consumer.accept(Attributes.ATTACK_SPEED, new AttributeModifier(UUID.fromString("2d27092b-2533-426c-b31e-9a362b13807b"), Attributes.ATTACK_SPEED.getDescriptionId(), Attributes.ATTACK_SPEED.getDefaultValue()*0.2, AttributeModifier.Operation.MULTIPLY_BASE));
+                consumer.accept(Attributes.ATTACK_SPEED, new AttributeModifier(UUID.fromString("2d27092b-2533-426c-b31e-9a362b13807b"), Attributes.ATTACK_SPEED.getDescriptionId(), 0.2, AttributeModifier.Operation.MULTIPLY_BASE));
+                consumer.accept(Attributes.ATTACK_DAMAGE, new AttributeModifier(UUID.fromString("17daf24e-2aa8-4aa0-abde-ae5abd848d2e"), Attributes.ATTACK_DAMAGE.getDescriptionId(), 0.5, AttributeModifier.Operation.MULTIPLY_BASE));
             }
         }
     }

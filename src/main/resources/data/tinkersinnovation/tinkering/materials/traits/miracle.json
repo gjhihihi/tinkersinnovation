@@ -1,0 +1,12 @@
+{
+  "default": [
+    {
+      "name": "tinkersinnovation:hostility",
+      "level": 1
+    },
+    {
+      "name": "tinkersinnovation:miracle",
+      "level": 1
+    }
+  ]
+}

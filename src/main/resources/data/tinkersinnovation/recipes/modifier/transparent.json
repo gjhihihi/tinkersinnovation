@@ -14,7 +14,7 @@
     "tag": "tconstruct:modifiable"
   },
   "slots": {
-    "abilitys": 1
+    "abilities": 1
   },
   "allow_crystal": true,
   "result": "tinkersinnovation:transparent",

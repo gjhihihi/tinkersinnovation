@@ -21,6 +21,24 @@
         "name": "tinkersinnovation:sculk",
         "level": 1
       }
+    ],
+    "tinkersinnovation:shield": [
+      {
+        "name": "tinkersinnovation:dampened",
+        "level": 1
+      }
+    ],
+    "tinkers_ingenuity:laser_gun": [
+      {
+        "name": "tinkersinnovation:resonance",
+        "level": 1
+      }
+    ],
+    "tinkers_ingenuity:curio": [
+      {
+        "name": "tinkersinnovation:sculk_curio",
+        "level": 1
+      }
     ]
   }
 }

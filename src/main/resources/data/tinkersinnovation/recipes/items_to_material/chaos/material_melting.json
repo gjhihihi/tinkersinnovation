@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input": "tinkersinnovation:chaos",
+  "temperature": 1000,
+  "result": {
+    "fluid": "tinkersinnovation:molten_chaos",
+    "amount": 90
+  }
+}

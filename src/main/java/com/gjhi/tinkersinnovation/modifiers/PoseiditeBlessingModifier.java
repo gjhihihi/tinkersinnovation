@@ -23,6 +23,7 @@ import slimeknights.tconstruct.library.modifiers.hook.armor.OnAttackedModifierHo
 import slimeknights.tconstruct.library.modifiers.hook.behavior.AttributesModifierHook;
 import slimeknights.tconstruct.library.modifiers.hook.build.ModifierRemovalHook;
 import slimeknights.tconstruct.library.modifiers.hook.interaction.InventoryTickModifierHook;
+import slimeknights.tconstruct.library.modifiers.impl.NoLevelsModifier;
 import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.context.EquipmentChangeContext;
 import slimeknights.tconstruct.library.tools.context.EquipmentContext;
@@ -33,10 +34,10 @@ import java.util.Objects;
 import java.util.UUID;
 import java.util.function.BiConsumer;
 
-public class PoseiditeBlessingModifier extends Modifier implements AttributesModifierHook,  ModifierRemovalHook,  InventoryTickModifierHook {
+public class PoseiditeBlessingModifier extends NoLevelsModifier implements AttributesModifierHook,  ModifierRemovalHook,  InventoryTickModifierHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
-        hookBuilder.addHook(this, ModifierHooks.INVENTORY_TICK);
+        hookBuilder.addHook(this, ModifierHooks.INVENTORY_TICK, ModifierHooks.ATTRIBUTES, ModifierHooks.REMOVE);
     }
     private final ResourceLocation KEY = new ResourceLocation("tinkersinnovation", "poseidite_blessing");
     @Override
@@ -51,7 +52,7 @@ public class PoseiditeBlessingModifier extends Modifier implements AttributesMod
                         holder.addEffect(new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 20));
             }
         }else {
-            tool.getPersistentData().remove(KEY);
+            tool.getPersistentData().putBoolean(KEY,false);
         }
     }
 

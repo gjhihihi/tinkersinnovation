@@ -1,5 +1,12 @@
 {
   "replace": false,
   "values": [
+    "tconstruct:manyullyn_ingot",
+    "tinkersinnovation:enchantment_ingot",
+    "minecraft:budding_amethyst",
+    {
+      "id": "l2complements:shulkerate_ingot",
+      "required": false
+    }
   ]
 }

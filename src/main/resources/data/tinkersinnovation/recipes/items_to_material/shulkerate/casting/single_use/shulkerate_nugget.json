@@ -5,6 +5,7 @@
       "modid": "l2complements",
       "type": "forge:mod_loaded"
     }
+  ],
   "cast": {
     "tag": "tconstruct:casts/single_use/nugget"
   },

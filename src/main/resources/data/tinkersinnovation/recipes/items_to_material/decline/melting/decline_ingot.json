@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkersinnovation:decline_ingot"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:molten_decline",
+    "amount": 90
+  },
+  "temperature": 1200,
+  "time": 90
+}

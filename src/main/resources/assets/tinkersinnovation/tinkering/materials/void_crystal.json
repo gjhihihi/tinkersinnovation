@@ -1,7 +1,7 @@
 {
   "color": "FF380C38",
   "fallbacks": [
-    "metal"
+    "crystal"
   ],
   "generator": {
     "ignoreMaterialStats": false,
@@ -29,7 +29,7 @@
           },
           {
             "grey": 102,
-            "color": "FF320065"
+            "color": "FF360753"
           },
           {
             "grey": 140,
@@ -37,7 +37,7 @@
           },
           {
             "grey": 178,
-            "color": "FF380C38"
+            "color": "FF432256"
           },
           {
             "grey": 216,
@@ -45,7 +45,7 @@
           },
           {
             "grey": 255,
-            "color": "FF53327B"
+            "color": "EF53327B"
           }
         ]
       }

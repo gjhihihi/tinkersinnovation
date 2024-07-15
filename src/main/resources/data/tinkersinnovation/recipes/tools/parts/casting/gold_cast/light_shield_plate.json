@@ -3,6 +3,6 @@
   "cast": {
     "tag": "tconstruct:casts/multi_use/light_shield_plate"
   },
-  "item_cost": 9,
+  "item_cost": 4,
   "result": "tinkersinnovation:light_shield_plate"
 }

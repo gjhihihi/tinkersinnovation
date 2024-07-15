@@ -7,11 +7,17 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
+import slimeknights.tconstruct.library.modifiers.ModifierHooks;
 import slimeknights.tconstruct.library.modifiers.hook.armor.OnAttackedModifierHook;
+import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.context.EquipmentContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 
 public class SoulFlameThornModifier extends Modifier implements OnAttackedModifierHook {
+    @Override
+    protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
+        hookBuilder.addHook(this, ModifierHooks.ON_ATTACKED);
+    }
     @Override
     public void onAttacked(IToolStackView tool, ModifierEntry modifier, EquipmentContext context, EquipmentSlot slotType, DamageSource source, float amount, boolean isDirectDamage) {
         int level = modifier.getLevel();
@@ -21,7 +27,7 @@ public class SoulFlameThornModifier extends Modifier implements OnAttackedModifi
             target = entity;
         }
         if (target != null) {
-            target.addEffect(new MobEffectInstance(LCEffects.FLAME.get(), 100));
+            target.addEffect(new MobEffectInstance(LCEffects.FLAME.get(), 100 * modifier.getLevel()));
         }
     }
 }

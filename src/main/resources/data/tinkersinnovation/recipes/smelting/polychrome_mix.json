@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category":"misc",
+  "ingredient": {
+    "item": "tinkersinnovation:polychrome_mix"
+  },
+  "result": "tinkersinnovation:polychrome_alloy_ingot",
+  "experience": 0.6,
+  "cookingtime": 250
+}

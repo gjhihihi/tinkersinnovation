@@ -22,7 +22,7 @@
     "tag": "tconstruct:modifiable/durability"
   },
   "slots": {
-    "abilitys": 1
+    "abilities": 1
   },
   "allow_crystal": true,
   "result": "tinkersinnovation:eternal",

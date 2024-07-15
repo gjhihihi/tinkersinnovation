@@ -1,5 +1,6 @@
 package com.gjhi.tinkersinnovation.modifiers;
 
+import com.gjhi.tinkersinnovation.register.TinkersInnovationUtils;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.damagesource.DamageSource;
@@ -21,6 +22,7 @@ import slimeknights.tconstruct.library.modifiers.hook.armor.OnAttackedModifierHo
 import slimeknights.tconstruct.library.modifiers.hook.behavior.AttributesModifierHook;
 import slimeknights.tconstruct.library.modifiers.hook.build.ModifierRemovalHook;
 import slimeknights.tconstruct.library.modifiers.hook.interaction.InventoryTickModifierHook;
+import slimeknights.tconstruct.library.modifiers.impl.NoLevelsModifier;
 import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.context.EquipmentChangeContext;
 import slimeknights.tconstruct.library.tools.context.EquipmentContext;
@@ -30,12 +32,11 @@ import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 import java.util.UUID;
 import java.util.function.BiConsumer;
 
-public class SculkModifier extends Modifier implements AttributesModifierHook, ModifierRemovalHook, EquipmentChangeModifierHook, InventoryTickModifierHook {
+public class SculkModifier extends NoLevelsModifier implements AttributesModifierHook, ModifierRemovalHook, InventoryTickModifierHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
-        hookBuilder.addHook(this, ModifierHooks.INVENTORY_TICK);
+        hookBuilder.addHook(this, ModifierHooks.INVENTORY_TICK, ModifierHooks.ATTRIBUTES, ModifierHooks.REMOVE);
     }
-    private final ResourceLocation KEY = new ResourceLocation("tinkersinnovation", "sculk");
     @Override
     public void onInventoryTick(@NotNull IToolStackView tool, @NotNull ModifierEntry modifier, Level world, LivingEntity holder, int itemSlot, boolean isSelected, boolean isCorrectSlot, ItemStack stack) {
         holder.removeEffect(MobEffects.BLINDNESS);
@@ -47,7 +48,7 @@ public class SculkModifier extends Modifier implements AttributesModifierHook, M
     }
     @Override
     public void addAttributes(IToolStackView tool, ModifierEntry modifier, EquipmentSlot slot, BiConsumer<Attribute, AttributeModifier> consumer) {
-        if (tool.getPersistentData().getBoolean(KEY)){
+        if (TinkersInnovationUtils.isInArmorSlots(slot)){
             switch (slot){
                 case HEAD -> {
                     consumer.accept(Attributes.ATTACK_SPEED, new AttributeModifier(UUID.fromString("e1febb59-6960-465a-a00f-c1b32b197405"), Attributes.ATTACK_SPEED.getDescriptionId(), 0.06, AttributeModifier.Operation.MULTIPLY_BASE));
@@ -74,15 +75,4 @@ public class SculkModifier extends Modifier implements AttributesModifierHook, M
         return null;
     }
 
-    @Override
-    public void onEquip(IToolStackView tool, ModifierEntry modifier, EquipmentChangeContext context) {
-        ModDataNBT persistentData = tool.getPersistentData();
-        persistentData.putBoolean(KEY, true);
-    }
-
-    @Override
-    public void onUnequip(IToolStackView tool, ModifierEntry modifier, EquipmentChangeContext context) {
-        ModDataNBT persistentData = tool.getPersistentData();
-        persistentData.remove(KEY);
-    }
 }

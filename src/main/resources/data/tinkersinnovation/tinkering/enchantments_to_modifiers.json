@@ -7,5 +7,17 @@
   "l2complements:dampened": "tinkersinnovation:dampened",
   "l2complements:eternal": "tinkersinnovation:eternal",
   "apotheosis:life_mending": "tinkersinnovation:life_fixing",
-  "l2complements:life_mending": "tinkersinnovation:life_fixing"
+  "l2complements:life_mending": "tinkersinnovation:life_fixing",
+  "l2complements:ice_blade": "tinkersinnovation:ice_blade",
+  "l2complements:soul_flame_blade": "tinkersinnovation:soul_flame_blade",
+  "l2complements:ice_thorn": "tinkersinnovation:ice_thorn",
+  "l2complements:soul_flame_thorn": "tinkersinnovation:soul_flame_thorn",
+  "l2complements:cursed_blade": "tinkersinnovation:cruse_blade",
+  "l2complements:sharp_blade": "tinkersinnovation:sharp_blade",
+  "l2complements:environment_reject": "tinkersinnovation:environment_reject",
+  "l2complements:fire_reject": "tinkersinnovation:fire_reject",
+  "l2complements:explosion_reject": "tinkersinnovation:explosion_reject",
+  "l2complements:magic_reject": "tinkersinnovation:magic_reject",
+  "l2complements:invincible": "tinkersinnovation:invincible",
+  "l2complements:owner_protection": "tinkersinnovation:owner_protection"
 }

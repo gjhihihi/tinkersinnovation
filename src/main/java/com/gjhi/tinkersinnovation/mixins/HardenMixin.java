@@ -1,27 +1,26 @@
 package com.gjhi.tinkersinnovation.mixins;
 
+import com.gjhi.tinkersinnovation.modifiers.HardenModifier;
 import com.gjhi.tinkersinnovation.register.TinkersInnovationModifiers;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.ItemStack;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.ModifyArg;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
+import slimeknights.tconstruct.library.tools.helper.ToolDamageUtil;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
-import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
-import slimeknights.tconstruct.library.tools.nbt.StatsNBT;
-import slimeknights.tconstruct.library.tools.nbt.ToolStack;
-
-@Mixin(ToolStack.class)
-public abstract class HardenMixin {/*
-
-    @Shadow public abstract ModifierNBT getModifiers();
-
-    @Shadow public abstract int getDamage();
-
-    @Inject(at = @At("HEAD"), method = "setDamage", cancellable = true)
-    public void harden(int damage, CallbackInfo ci){
-        if (this.getModifiers().getLevel(TinkersInnovationModifiers.harden.getId()) > 0){
-            damage = Math.min(damage, this.getDamage()+1);
+@Mixin(ToolDamageUtil.class)
+public abstract class HardenMixin {
+    /*@Inject(at = @At(value = "HEAD"), method = "directDamage")
+    private static void harden(IToolStackView tool, int amount, LivingEntity entity, ItemStack stack, CallbackInfoReturnable<Boolean> cir){
+        if (tool.getModifierLevel(TinkersInnovationModifiers.harden.get()) > 0){
+            amount = 1;
+        }
+        if (tool.getModifierLevel(TinkersInnovationModifiers.eternal.get()) > 0){
+            cir.cancel();
         }
     }*/
 }

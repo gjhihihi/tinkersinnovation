@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "tinkersinnovation:claw"
+    "tinkersinnovation:claw",
+    "tinkersinnovation:teleport_staff"
   ]
 }

@@ -30,7 +30,6 @@
           },
           {
             "grey": 63,
-            "color": "FFA05B23",
             "path": "tinkersinnovation:item/materials/totemic_gold/totemic_gold1"
           },
           {
@@ -39,22 +38,19 @@
           },
           {
             "grey": 140,
-            "color": "FFBF9140",
             "path": "tinkersinnovation:item/materials/totemic_gold/totemic_gold3"
           },
           {
             "grey": 178,
-            "color": "FFEDD860",
             "path": "tinkersinnovation:item/materials/totemic_gold/totemic_gold"
           },
           {
             "grey": 216,
-            "path": "tinkersinnovation:item/materials/totemic_gold/totemic_gold4"
+            "path": "tinkersinnovation:item/materials/totemic_gold/totemic_gold5"
           },
           {
             "grey": 255,
-            "color": "FFFDFBEE",
-            "path": "tinkersinnovation:item/materials/totemic_gold/totemic_gold5"
+            "path": "tinkersinnovation:item/materials/totemic_gold/totemic_gold6"
           }
         ]
     }

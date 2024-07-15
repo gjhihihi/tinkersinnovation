@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "modid": "l2hostility",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "ingredient": {
+    "item": "l2hostility:hostility_essence"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:molten_hostility",
+    "amount": 20
+  },
+  "temperature": 1200,
+  "time": 200
+}

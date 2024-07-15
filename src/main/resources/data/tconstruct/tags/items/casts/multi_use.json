@@ -3,6 +3,7 @@
   "values": [
     "#tconstruct:casts/multi_use/handguard",
     "#tconstruct:casts/multi_use/heavy_shield_plate",
-    "#tconstruct:casts/multi_use/light_shield_plate"
+    "#tconstruct:casts/multi_use/light_shield_plate",
+    "#tconstruct:casts/multi_use/staff_head"
   ]
 }

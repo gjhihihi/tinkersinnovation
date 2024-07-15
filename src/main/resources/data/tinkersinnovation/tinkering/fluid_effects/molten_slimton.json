@@ -1,0 +1,65 @@
+{
+  "block_effects": [
+    {
+      "type": "tconstruct:mob_effect_cloud",
+      "effects": [
+        {
+          "effect": "minecraft:speed",
+          "level": 1,
+          "time": 60
+        },
+        {
+          "effect": "minecraft:haste",
+          "level": 1,
+          "time": 60
+        },
+        {
+          "effect": "minecraft:strength",
+          "level": 1,
+          "time": 60
+        }
+      ]
+    }
+  ],
+  "entity_effects": [
+    {
+      "type": "tconstruct:conditional",
+      "effect": {
+        "type": "tconstruct:damage",
+        "damage": 1.0,
+        "modifier": [
+          "tconstruct:fire"
+        ]
+      },
+      "target": {
+        "type": "mantle:inverted",
+        "inverted_type": "mantle:fire_immune"
+      }
+    },
+    {
+      "type": "tconstruct:mob_effect",
+      "action": "set",
+      "effect": "minecraft:speed",
+      "level": 1,
+      "time": 60
+    },
+    {
+      "type": "tconstruct:mob_effect",
+      "action": "set",
+      "effect": "minecraft:haste",
+      "level": 1,
+      "time": 60
+    },
+    {
+      "type": "tconstruct:mob_effect",
+      "action": "set",
+      "effect": "minecraft:strength",
+      "level": 1,
+      "time": 60
+    }
+  ],
+  "fluid": {
+    "amount": 20,
+    "tag": "tinkersinnovation:molten_slimton"
+  }
+}

@@ -3,6 +3,6 @@
   "cast": {
     "tag": "tconstruct:casts/multi_use/handguard"
   },
-  "item_cost": 2,
+  "item_cost": 1,
   "result": "tinkersinnovation:handguard"
 }

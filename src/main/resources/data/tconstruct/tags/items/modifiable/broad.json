@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "tinkersinnovation:heavy_shield"
+    "tinkersinnovation:heavy_shield",
+    "tinkersinnovation:teleport_staff"
   ]
 }

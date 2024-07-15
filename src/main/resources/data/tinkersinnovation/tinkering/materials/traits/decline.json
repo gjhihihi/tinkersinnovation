@@ -1,0 +1,38 @@
+{
+  "perStat": {
+    "tconstruct:melee_harvest": [
+      {
+        "name": "tinkersinnovation:wither_killer",
+        "level": 1
+      }
+    ],
+    "tconstruct:ranged": [
+      {
+        "name": "tinkersinnovation:wither_skull",
+        "level": 1
+      },
+      {
+        "name": "tinkersinnovation:wither_killer",
+        "level": 1
+      }
+    ],
+    "tconstruct:armor": [
+      {
+        "name": "tinkersinnovation:wither_protection",
+        "level": 1
+      }
+    ],
+    "tinkersinnovation:shield": [
+      {
+        "name": "tinkersinnovation:wither_protection",
+        "level": 1
+      }
+    ],
+    "tinkers_ingenuity:curio": [
+      {
+        "name": "tinkersinnovation:wither_curio",
+        "level": 1
+      }
+    ]
+  }
+}

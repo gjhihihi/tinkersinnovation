@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "amount": 250,
+    "tag": "tinkersinnovation:molten_mimicream"
+  },
+  "input": "tconstruct:manyullyn",
+  "output": "tinkersinnovation:clonate",
+  "temperature": 1200
+}

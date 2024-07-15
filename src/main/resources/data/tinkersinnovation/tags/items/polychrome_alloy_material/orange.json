@@ -1,5 +1,7 @@
 {
   "replace": false,
   "values": [
+    "tconstruct:rose_gold_ingot",
+    "tconstruct:budding_ichor_slime_crystal"
   ]
 }

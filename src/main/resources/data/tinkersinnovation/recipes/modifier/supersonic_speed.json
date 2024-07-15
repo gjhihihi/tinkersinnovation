@@ -23,7 +23,7 @@
     "tag": "tconstruct:modifiable/ranged"
   },
   "slots": {
-    "abilitys": 1
+    "abilities": 1
   },
   "allow_crystal": true,
   "result": "tinkersinnovation:supersonic_speed",

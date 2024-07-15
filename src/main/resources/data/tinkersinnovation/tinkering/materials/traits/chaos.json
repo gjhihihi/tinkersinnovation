@@ -1,0 +1,44 @@
+{
+  "perStat": {
+    "tconstruct:melee_harvest": [
+      {
+        "name": "tinkersinnovation:hostility",
+        "level": 1
+      },
+      {
+        "name": "tinkersinnovation:chaos",
+        "level": 1
+      }
+    ],
+    "tconstruct:ranged": [
+      {
+        "name": "tinkersinnovation:hostility",
+        "level": 1
+      },
+      {
+        "name": "tinkersinnovation:chaos",
+        "level": 1
+      }
+    ],
+    "tconstruct:armor": [
+      {
+        "name": "tinkersinnovation:hostility",
+        "level": 1
+      },
+      {
+        "name": "tinkersinnovation:chaos_armor",
+        "level": 1
+      }
+    ],
+    "tinkersinnovation:shield": [
+      {
+        "name": "tinkersinnovation:hostility",
+        "level": 1
+      },
+      {
+        "name": "tinkersinnovation:chaos_armor",
+        "level": 1
+      }
+    ]
+  }
+}

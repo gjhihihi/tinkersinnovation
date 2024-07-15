@@ -1,18 +1,20 @@
 {
-  "default": [
-    {
-      "level": 1,
-      "name": "tconstruct:overslime"
-    }
-  ],
   "perStat": {
     "tconstruct:melee_harvest": [
+      {
+        "level": 1,
+        "name": "tconstruct:overslime"
+      },
       {
         "name": "tinkersinnovation:trader",
         "level": 1
       }
     ],
     "tconstruct:ranged": [
+      {
+        "level": 1,
+        "name": "tconstruct:overslime"
+      },
       {
         "name": "tinkersinnovation:trader",
         "level": 1
@@ -24,7 +26,27 @@
     ],
     "tconstruct:armor": [
       {
+        "level": 1,
+        "name": "tconstruct:overslime"
+      },
+      {
         "name": "tinkersinnovation:neo",
+        "level": 1
+      }
+    ],
+    "tinkersinnovation:shield": [
+      {
+        "level": 1,
+        "name": "tconstruct:overslime"
+      },
+      {
+        "name": "tinkersinnovation:neo",
+        "level": 1
+      }
+    ],
+    "tinkers_ingenuity:curio": [
+      {
+        "name": "tinkersinnovation:neo_curio",
         "level": 1
       }
     ]

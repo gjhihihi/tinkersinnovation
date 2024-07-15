@@ -1,8 +1,9 @@
 package com.gjhi.tinkersinnovation.modifiers;
 
+import com.gjhi.tinkersinnovation.modifiers.base.EnchantmentEffectsBase;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import slimeknights.tconstruct.library.modifiers.Modifier;
@@ -28,48 +29,15 @@ public class EnchantmentArmorModifier extends Modifier implements OnAttackedModi
             target = entity;
         }
         if (target != null) {
-            if(RANDOM.nextFloat()<0.1){
-                target.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 40 * level ,level-1));
+            for (MobEffect effect : EnchantmentEffectsBase.BAD_EFFECTS){
+                if (RANDOM.nextFloat()<0.1){
+                    target.addEffect(new MobEffectInstance(effect, 40 * level ,level-1));
+                }
             }
-            if (RANDOM.nextFloat()<0.1){
-                target.addEffect(new MobEffectInstance(MobEffects.WITHER, 40 * level ,level-1));
-            }
-            if (RANDOM.nextFloat()<0.1){
-                target.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 40 * level ,level-1));
-            }
-            if (RANDOM.nextFloat()<0.1){
-                target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40 * level ,level-1));
-            }
-            if (RANDOM.nextFloat()<0.1){
-                target.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 40 * level ,level-1));
-            }
-            if (RANDOM.nextFloat()<0.1){
-                target.addEffect(new MobEffectInstance(MobEffects.HUNGER, 40 * level ,level-1));
-            }
-            if (RANDOM.nextFloat()<0.1){
-                target.addEffect(new MobEffectInstance(MobEffects.POISON, 40 * level ,level-1));
-            }
-            if (RANDOM.nextFloat()<0.1){
-                target.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 40 * level ,level-1));
-            }
-            //------------------------------------------------------------
-            if (RANDOM.nextFloat()<0.1){
-                player.addEffect(new MobEffectInstance(MobEffects.LUCK, 40 * level ,level-1));
-            }
-            if (RANDOM.nextFloat()<0.1){
-                player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 40 * level,level - 1));
-            }
-            if (RANDOM.nextFloat()<0.1){
-                player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40 * level ,level-1));
-            }
-            if (RANDOM.nextFloat()<0.1){
-                player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40 * level ,level-1));
-            }
-            if (RANDOM.nextFloat()<0.1){
-                player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40 * level ,level-1));
-            }
-            if (RANDOM.nextFloat()<0.1){
-                player.addEffect(new MobEffectInstance(MobEffects.JUMP, 40 * level ,level-1));
+            for (MobEffect effect : EnchantmentEffectsBase.GOOD_EFFECTS){
+                if (RANDOM.nextFloat()<0.1){
+                    player.addEffect(new MobEffectInstance(effect, 40 * level ,level-1));
+                }
             }
         }
     }

@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkersinnovation:decline_block"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:molten_decline",
+    "amount": 810
+  },
+  "temperature": 1200,
+  "time": 180
+}

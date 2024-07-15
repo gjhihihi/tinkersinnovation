@@ -10,6 +10,6 @@ public class TinkersInnovationToolGroup extends CreativeModeTab {
     }
     @Override
     public ItemStack makeIcon() {
-        return new ItemStack(TinkersInnovationItems.claw.get());
+        return TinkersInnovationItems.claw.get().getRenderTool();
     }
 }

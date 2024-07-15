@@ -4,6 +4,6 @@
     "tag": "tconstruct:casts/single_use/handguard"
   },
   "cast_consumed": true,
-  "item_cost": 2,
+  "item_cost": 1,
   "result": "tinkersinnovation:handguard"
 }

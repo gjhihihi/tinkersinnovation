@@ -20,7 +20,7 @@ import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 import slimeknights.tconstruct.tools.TinkerModifiers;
 import slimeknights.tconstruct.tools.modifiers.slotless.OverslimeModifier;
 
-public class VitalityModifier extends NoLevelsModifier implements ToolDamageModifierHook {
+public class VitalityModifier extends Modifier implements ToolDamageModifierHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
         hookBuilder.addHook(this, ModifierHooks.TOOL_DAMAGE);
@@ -29,12 +29,7 @@ public class VitalityModifier extends NoLevelsModifier implements ToolDamageModi
     @Override
     public int onDamageTool(@NotNull IToolStackView tool, @NotNull ModifierEntry modifier, int amount, @Nullable LivingEntity holder) {
         if (holder != null && !tool.isBroken()) {
-            float health = holder.getMaxHealth() - holder.getHealth();
-            if (health > amount) {
-                holder.setHealth(holder.getHealth() + amount);
-            } else {
-                holder.setHealth(holder.getMaxHealth());
-            }
+            holder.heal(amount * modifier.getLevel());
         }
         return amount;
     }

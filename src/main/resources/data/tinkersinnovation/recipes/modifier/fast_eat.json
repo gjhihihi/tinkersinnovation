@@ -29,7 +29,7 @@
     "abilities": 1
   },
   "allow_crystal": true,
-  "result": "tinkersinnovation:fast_eat"
+  "result": "tinkersinnovation:fast_eat",
   "level": {
     "max": 5
   }

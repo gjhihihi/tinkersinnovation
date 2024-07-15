@@ -1,0 +1,12 @@
+{
+  "stats": {
+    "tinkersinnovation:shield_plate": {
+      "durability": 414,
+      "armor": 3.0,
+      "toughness": 1.0,
+      "knockback_resistance": 0.1,
+      "block_amount": -0.05,
+      "shield_amount": 3
+    }
+  }
+}

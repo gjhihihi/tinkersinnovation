@@ -1,0 +1,39 @@
+{
+  "block_effects": [
+    {
+      "type": "tconstruct:mob_effect_cloud",
+      "effects": [
+        {
+          "effect": "minecraft:regeneration",
+          "level": 2,
+          "time": 60
+        }
+      ]
+    }
+  ],
+  "entity_effects": [
+    {
+      "type": "tconstruct:mob_effect",
+      "action": "set",
+      "effect": "minecraft:regeneration",
+      "level": 2,
+      "time": 60
+    },
+    {
+      "type": "tconstruct:remove_effect",
+      "effect": "minecraft:poison"
+    },
+    {
+      "type": "tconstruct:remove_effect",
+      "effect": "minecraft:wither"
+    },
+    {
+      "type": "tconstruct:remove_effect",
+      "effect": "minecraft:hunger"
+    }
+  ],
+  "fluid": {
+    "amount": 20,
+    "tag": "tinkersinnovation:molten_totemic_gold"
+  }
+}

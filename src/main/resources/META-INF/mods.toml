@@ -68,3 +68,15 @@ An addon mod for Tinkers' Construct.
     versionRange="*"
     ordering="AFTER"
     side="BOTH"
+[[dependencies.tinkersinnovation]]
+    modId="tinkers_ingenuity"
+    mandatory=false
+    versionRange="*"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.tinkersinnovation]]
+    modId="l2hostility"
+    mandatory=false
+    versionRange="*"
+    ordering="AFTER"
+    side="BOTH"

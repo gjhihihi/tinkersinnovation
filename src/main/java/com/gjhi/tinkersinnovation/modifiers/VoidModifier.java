@@ -19,6 +19,7 @@ import net.minecraft.world.level.storage.loot.BuiltInLootTables;
 import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import net.minecraftforge.eventbus.api.Event;
 import org.jetbrains.annotations.NotNull;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
@@ -26,7 +27,6 @@ import slimeknights.tconstruct.library.modifiers.ModifierHooks;
 //import slimeknights.tconstruct.library.modifiers.hook.ProjectileHitModifierHook;
 import slimeknights.tconstruct.library.modifiers.hook.combat.MeleeDamageModifierHook;
 import slimeknights.tconstruct.library.modifiers.hook.ranged.ProjectileHitModifierHook;
-import slimeknights.tconstruct.library.modifiers.impl.NoLevelsModifier;
 //import slimeknights.tconstruct.library.modifiers.util.ModifierHookMap;
 import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
@@ -48,18 +48,24 @@ public class VoidModifier extends Modifier implements ProjectileHitModifierHook,
         return 120;
     }
     public VoidModifier() {
-        MinecraftForge.EVENT_BUS.addListener(this::leftClickBlock);
+        MinecraftForge.EVENT_BUS.addListener(this::leftBlockClick);
     }
+
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
         hookBuilder.addHook(this, ModifierHooks.MELEE_DAMAGE, ModifierHooks.PROJECTILE_HIT);
     }
 
-    protected void leftClickBlock(PlayerInteractEvent.LeftClickBlock event) {
+    private void leftBlockClick(PlayerInteractEvent.LeftClickBlock event) {
+        ToolStack tool = getHeldTool(event.getEntity(), InteractionHand.MAIN_HAND);
+        if (tool != null && tool.getModifierLevel(this) > 0)
+            bedrockBreaking(event);
+    }
+    protected void bedrockBreaking(PlayerInteractEvent.LeftClickBlock event) {
         BlockState state = event.getEntity().level.getBlockState(event.getPos());
         if (!event.getEntity().isCreative() && state.getDestroySpeed(event.getEntity().level, event.getPos()) < 0.0F) {
             ToolStack tool = getHeldTool(event.getEntity(), InteractionHand.MAIN_HAND);
-            if (tool == null || tool.isBroken() || tool.getModifierLevel(this) < 1)
+            if (tool == null || tool.isBroken())
                 return;
 
             Player player = event.getEntity();
@@ -185,8 +191,9 @@ public class VoidModifier extends Modifier implements ProjectileHitModifierHook,
         float voiddamage = damage * 0.05f * modifier.getLevel();
         LivingEntity entity = context.getLivingTarget();
         if (entity != null) {
+            int time = entity.invulnerableTime;
             entity.hurt(DamageSource.OUT_OF_WORLD,voiddamage);
-            entity.invulnerableTime = 0;
+            entity.invulnerableTime = time;
             return damage - voiddamage;
         }
         return damage;

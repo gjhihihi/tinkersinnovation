@@ -1,0 +1,10 @@
+{
+  "perStat": {
+    "tinkersinnovation:shield": [
+      {
+        "level": 1,
+        "name": "tconstruct:melee_protection"
+      }
+    ]
+  }
+}

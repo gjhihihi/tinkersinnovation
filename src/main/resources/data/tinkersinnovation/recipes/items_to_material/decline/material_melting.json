@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input": "tinkersinnovation:decline",
+  "temperature": 1200,
+  "result": {
+    "fluid": "tinkersinnovation:molten_decline",
+    "amount": 90
+  }
+}

@@ -17,6 +17,18 @@
         "name": "tinkersinnovation:enchantment_armor",
         "level": 1
       }
+    ],
+    "tinkersinnovation:shield": [
+      {
+        "name": "tinkersinnovation:enchantment_armor",
+        "level": 1
+      }
+    ],
+    "tinkers_ingenuity:curio": [
+      {
+        "name": "tinkersinnovation:enchantment_curio",
+        "level": 1
+      }
     ]
   }
 }

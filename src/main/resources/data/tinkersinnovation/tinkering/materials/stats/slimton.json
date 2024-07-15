@@ -16,7 +16,7 @@
     "tconstruct:limb": {
       "durability": 1200,
       "draw_speed": 0.8,
-      "velocity": -0.6,
+      "velocity": -0.45,
       "accuracy": 0.8
     },
     "tconstruct:grip": {
@@ -53,6 +53,22 @@
       "durability": 1451,
       "knockback_resistance": 0.05,
       "toughness": 5
+    },
+    "tinkersinnovation:shield_plate": {
+      "durability": 1451,
+      "armor": 7.0,
+      "toughness": 5,
+      "knockback_resistance": 0.05,
+      "block_amount": 0.25,
+      "shield_amount": 6
+    },
+    "tinkers_ingenuity:curio_extra": {},
+    "tinkers_ingenuity:curio_main": {
+      "movement_speed": 0.2,
+      "armor": 0.2,
+      "toughness": 0.45,
+      "attack": 0.05,
+      "arrow_damage": 0.75
     }
   }
 }

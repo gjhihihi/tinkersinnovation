@@ -1,0 +1,59 @@
+{
+  "fallbacks": [
+    "metal"
+  ],
+  "color": "FFBC327D",
+  "luminosity": 0,
+  "generator": {
+    "transformer": {
+      "type": "tconstruct:grey_to_sprite",
+      "palette": [
+        {
+          "grey": 0,
+          "color": "FF000000"
+        },
+        {
+          "grey": 63,
+          "path": "tinkersinnovation:item/materials/chaos/chaos1"
+        },
+        {
+          "grey": 102,
+          "path": "tinkersinnovation:item/materials/chaos/chaos2"
+        },
+        {
+          "grey": 140,
+          "path": "tinkersinnovation:item/materials/chaos/chaos3"
+        },
+        {
+          "grey": 178,
+          "path": "tinkersinnovation:item/materials/chaos/chaos"
+        },
+        {
+          "grey": 216,
+          "path": "tinkersinnovation:item/materials/chaos/chaos5"
+        },
+        {
+          "grey": 255,
+          "path": "tinkersinnovation:item/materials/chaos/chaos6"
+        }
+      ]
+    },
+    "supportedStats": [
+      "tconstruct:head",
+      "tconstruct:handle",
+      "tconstruct:binding",
+      "tconstruct:repair_kit",
+      "tconstruct:limb",
+      "tconstruct:grip",
+      "tconstruct:armor_plating",
+      "tconstruct:plating_boots",
+      "tconstruct:plating_leggings",
+      "tconstruct:plating_chestplate",
+      "tconstruct:plating_helmet",
+      "tconstruct:plating_shield",
+      "tconstruct:maille",
+      "tconstruct:armor_maille"
+    ],
+    "ignoreMaterialStats": false
+  }
+}

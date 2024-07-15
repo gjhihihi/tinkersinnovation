@@ -1,12 +1,10 @@
 {
-  "default": [
-    {
-      "name": "tinkersinnovation:vitality",
-      "level": 1
-    }
-  ],
   "perStat": {
     "tconstruct:melee_harvest": [
+      {
+        "name": "tinkersinnovation:vitality",
+        "level": 1
+      },
       {
         "name": "tinkersinnovation:super_undead",
         "level": 1
@@ -14,13 +12,37 @@
     ],
     "tconstruct:ranged": [
       {
+        "name": "tinkersinnovation:vitality",
+        "level": 1
+      },
+      {
         "name": "tinkersinnovation:super_undead",
         "level": 1
       }
     ],
     "tconstruct:armor": [
       {
+        "name": "tinkersinnovation:vitality",
+        "level": 1
+      },
+      {
         "name": "tinkersinnovation:vitality_armor",
+        "level": 1
+      }
+    ],
+    "tinkersinnovation:shield": [
+      {
+        "name": "tinkersinnovation:vitality",
+        "level": 1
+      },
+      {
+        "name": "tinkersinnovation:vitality_armor",
+        "level": 1
+      }
+    ],
+    "tinkers_ingenuity:curio": [
+      {
+        "name": "tinkersinnovation:vitality_curio",
         "level": 1
       }
     ]

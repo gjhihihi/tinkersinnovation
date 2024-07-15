@@ -15,7 +15,7 @@ import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 public class EternalModifier extends NoLevelsModifier implements ToolDamageModifierHook, DurabilityDisplayModifierHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
-        hookBuilder.addHook(this, ModifierHooks.TOOL_DAMAGE);
+        hookBuilder.addHook(this, ModifierHooks.TOOL_DAMAGE, ModifierHooks.DURABILITY_DISPLAY);
     }
     @Override
     public int getPriority() {

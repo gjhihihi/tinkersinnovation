@@ -8,18 +8,18 @@
   },
   "modifier_roots": ["tinkersinnovation:item/tool/round_shield/modifiers/"],
   "parts": [
-    {"name": "handle", "index": 0},
-    {"name": "plate_round", "index": 1},
+    {"name": "plate_round", "index": 0},
+    {"name": "handle", "index": 1},
     {"name": "plate_mid", "index": 2}
   ],
   "overrides": [
     {
       "predicate": { "tconstruct:charging": 2 },
-      "model": "tconstruct:item/tool/round_shield/blocking"
+      "model": "tinkersinnovation:item/tool/round_shield/blocking"
     },
     {
       "predicate": { "tconstruct:broken": 1 },
-      "model": "tconstruct:item/tool/round_shield/broken"
+      "model": "tinkersinnovation:item/tool/round_shield/broken"
     }
   ]
 }

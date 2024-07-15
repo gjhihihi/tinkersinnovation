@@ -32,6 +32,7 @@ import slimeknights.tconstruct.library.modifiers.impl.NoLevelsModifier;
 import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.context.ToolHarvestContext;
+import slimeknights.tconstruct.library.tools.helper.ToolDamageUtil;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 import slimeknights.tconstruct.library.tools.nbt.ToolStack;
@@ -48,10 +49,20 @@ import java.util.function.BiConsumer;
 import static com.gjhi.tinkersinnovation.register.TinkersInnovationModifiers.double_attack;
 import static java.lang.Math.min;
 
-public class DoubleAttackModifier extends NoLevelsModifier implements MeleeHitModifierHook, MeleeDamageModifierHook, ToolDamageModifierHook, BlockBreakModifierHook, BlockHarvestModifierHook, BreakSpeedModifierHook, AttributesModifierHook, InventoryTickModifierHook, ModifierRemovalHook {
+public class DoubleAttackModifier extends NoLevelsModifier implements MeleeHitModifierHook, MeleeDamageModifierHook, ToolDamageModifierHook, BlockBreakModifierHook, BlockHarvestModifierHook, BreakSpeedModifierHook, AttributesModifierHook, InventoryTickModifierHook, ModifierRemovalHook,RequirementsModifierHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
-        hookBuilder.addHook(this, ModifierHooks.MELEE_HIT, ModifierHooks.MELEE_DAMAGE, ModifierHooks.TOOL_DAMAGE, ModifierHooks.BLOCK_BREAK, ModifierHooks.BREAK_SPEED, ModifierHooks.BLOCK_HARVEST, ModifierHooks.INVENTORY_TICK, ModifierHooks.ATTRIBUTES, ModifierHooks.REMOVE);
+        hookBuilder.addHook(this, ModifierHooks.MELEE_HIT, ModifierHooks.MELEE_DAMAGE, ModifierHooks.TOOL_DAMAGE, ModifierHooks.BLOCK_BREAK, ModifierHooks.BREAK_SPEED, ModifierHooks.BLOCK_HARVEST, ModifierHooks.INVENTORY_TICK, ModifierHooks.ATTRIBUTES, ModifierHooks.REMOVE, ModifierHooks.REQUIREMENTS);
+    }
+    @Nullable
+    @Override
+    public Component requirementsError(ModifierEntry entry) {
+        return Component.translatable("recipe.tconstruct.modifier.double_attack");
+    }
+
+    @Override
+    public @NotNull List<ModifierEntry> displayModifiers(ModifierEntry entry) {
+        return List.of(new ModifierEntry(TinkerModifiers.dualWielding.getId(),1));
     }
     private final ResourceLocation KEY = new ResourceLocation("tinkersinnovation", "double_attack");
     @Override
@@ -72,10 +83,10 @@ public class DoubleAttackModifier extends NoLevelsModifier implements MeleeHitMo
                 if (offtool.getDefinition().equals(tool.getDefinition())) {
                     persistentData.putBoolean(KEY, true);
                 }else {
-                    persistentData.remove(KEY);
+                    persistentData.putBoolean(KEY, false);
                 }
             }else {
-                persistentData.remove(KEY);
+                persistentData.putBoolean(KEY, false);
             }
         }
     }
@@ -96,11 +107,7 @@ public class DoubleAttackModifier extends NoLevelsModifier implements MeleeHitMo
                     if (!(mod.getId().equals(double_attack.getId())))
                         offDamage = mod.getHook(ModifierHooks.TOOL_DAMAGE).onDamageTool(offtool, mod, offDamage, holder);
                 }
-                offDamage += offtool.getDamage();
-                offDamage = (int) min(offDamage, offtool.getStats().get(ToolStats.DURABILITY));
-                if (!offtool.isUnbreakable() && holder instanceof Player player && !player.isCreative()){
-                    offtool.setDamage(offDamage);
-                }
+                ToolDamageUtil.directDamage(offtool, offDamage, holder, holder.getItemInHand(InteractionHand.OFF_HAND));
             }
         }
         return amount;
@@ -235,4 +242,5 @@ public class DoubleAttackModifier extends NoLevelsModifier implements MeleeHitMo
             }
         }
     }
+
 }

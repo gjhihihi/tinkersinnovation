@@ -1,5 +1,14 @@
 {
   "replace": false,
   "values": [
+    "tconstruct:blazing_bone",
+    {
+      "id": "tinkers_ingenuity:blood_steel_ingot",
+      "required": false
+    },
+    {
+      "id": "tinkers_ingenuity:blood_binding_ingot",
+      "required": false
+    }
   ]
 }

@@ -17,11 +17,11 @@
   "overrides": [
     {
       "predicate": { "tconstruct:charging": 2 },
-      "model": "tconstruct:item/tool/claw/blocking"
+      "model": "tinkersinnovation:item/tool/claw/blocking"
     },
     {
       "predicate": { "tconstruct:broken": 1 },
-      "model": "tconstruct:item/tool/claw/broken"
+      "model": "tinkersinnovation:item/tool/claw/broken"
     }
   ]
 }

@@ -1,30 +1,34 @@
 {
     "replace": false,
     "parts": [
-        {"path": "tinkersinnovation:item/tool/parts/handguard", "statType": "tconstruct:handle"},
-        {"path": "tinkersinnovation:item/tool/parts/heavy_shield_plate", "statType": "tconstruct:head"},
-        {"path": "tinkersinnovation:item/tool/parts/light_shield_plate", "statType": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/parts/handguard", "stat_type": "tconstruct:handle"},
+        {"path": "tinkersinnovation:item/tool/parts/heavy_shield_plate", "stat_type": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/parts/light_shield_plate", "stat_type": "tconstruct:head"},
 
-        {"path": "tinkersinnovation:item/tool/heavy_shield/plate_up", "statType": "tconstruct:head"},
-        {"path": "tinkersinnovation:item/tool/heavy_shield/broken_plate_up", "statType": "tconstruct:head"},
-        {"path": "tinkersinnovation:item/tool/heavy_shield/plate_down", "statType": "tconstruct:head"},
-        {"path": "tinkersinnovation:item/tool/heavy_shield/broken_plate_down", "statType": "tconstruct:head"},
-        {"path": "tinkersinnovation:item/tool/heavy_shield/plate_mid", "statType": "tconstruct:head"},
-        {"path": "tinkersinnovation:item/tool/heavy_shield/broken_plate_mid","statType": "tconstruct:head"},
-        {"path": "tinkersinnovation:item/tool/heavy_shield/handle","statType": "tconstruct:handle"},
+        {"path": "tinkersinnovation:item/tool/heavy_shield/plate_up", "stat_type": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/heavy_shield/broken_plate_up", "stat_type": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/heavy_shield/plate_down", "stat_type": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/heavy_shield/broken_plate_down", "stat_type": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/heavy_shield/plate_mid", "stat_type": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/heavy_shield/broken_plate_mid","stat_type": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/heavy_shield/handle","stat_type": "tconstruct:handle"},
 
-        {"path": "tinkersinnovation:item/tool/round_shield/plate_round", "statType": "tconstruct:head"},
-        {"path": "tinkersinnovation:item/tool/round_shield/broken_plate_round", "statType": "tconstruct:head"},
-        {"path": "tinkersinnovation:item/tool/round_shield/plate_mid", "statType": "tconstruct:head"},
-        {"path": "tinkersinnovation:item/tool/round_shield/broken_plate_mid","statType": "tconstruct:head"},
-        {"path": "tinkersinnovation:item/tool/round_shield/handle","statType": "tconstruct:handle"},
+        {"path": "tinkersinnovation:item/tool/round_shield/plate_round", "stat_type": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/round_shield/broken_plate_round", "stat_type": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/round_shield/plate_mid", "stat_type": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/round_shield/broken_plate_mid","stat_type": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/round_shield/handle","stat_type": "tconstruct:handle"},
 
-        {"path": "tinkersinnovation:item/tool/claw/blade1", "statType": "tconstruct:head"},
-        {"path": "tinkersinnovation:item/tool/claw/broken_blade1", "statType": "tconstruct:head"},
-        {"path": "tinkersinnovation:item/tool/claw/blade2", "statType": "tconstruct:head"},
-        {"path": "tinkersinnovation:item/tool/claw/broken_blade2", "statType": "tconstruct:head"},
-        {"path": "tinkersinnovation:item/tool/claw/blade3", "statType": "tconstruct:head"},
-        {"path": "tinkersinnovation:item/tool/claw/broken_blade3", "statType": "tconstruct:head"},
-        {"path": "tinkersinnovation:item/tool/claw/handle", "statType": "tconstruct:handle"}
+        {"path": "tinkersinnovation:item/tool/claw/blade1", "stat_type": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/claw/broken_blade1", "stat_type": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/claw/blade2", "stat_type": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/claw/broken_blade2", "stat_type": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/claw/blade3", "stat_type": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/claw/broken_blade3", "stat_type": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/claw/handle", "stat_type": "tconstruct:handle"},
+
+        {"path": "tinkersinnovation:item/tool/teleport_staff/head", "stat_type": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/claw/broken_blade1", "stat_type": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/teleport_staff/broken_head", "stat_type": "tconstruct:handle"}
     ]
 }

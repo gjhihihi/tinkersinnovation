@@ -1,0 +1,18 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default-tool",
+  "textures": {
+    "staff_head": "tinkersinnovation:item/tool/teleport_staff/broken_head",
+    "teleport_core":  "tinkersinnovation:item/tool/teleport_staff/broken_core",
+    "handle": "tinkersinnovation:item/tool/teleport_staff/handle"
+  },
+  "modifier_roots": [
+    "tinkersinnovation:item/tool/teleport_staff/modifiers/broken/",
+    "tinkersinnovation:item/tool/teleport_staff/modifiers/"
+  ],
+  "parts": [
+    { "name": "staff_head",    "index": 0 },
+    { "name": "handle",   "index": 1 },
+    { "name": "teleport_core"}
+  ]
+}

@@ -15,7 +15,7 @@ import slimeknights.tconstruct.library.modifiers.impl.NoLevelsModifier;
 import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 
-public class VitalityArmorModifier extends NoLevelsModifier implements  InventoryTickModifierHook {
+public class VitalityArmorModifier extends Modifier implements  InventoryTickModifierHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
         hookBuilder.addHook(this, ModifierHooks.INVENTORY_TICK);
@@ -23,11 +23,9 @@ public class VitalityArmorModifier extends NoLevelsModifier implements  Inventor
 
     @Override
     public void onInventoryTick(@NotNull IToolStackView tool, @NotNull ModifierEntry modifier, Level world, LivingEntity holder, int itemSlot, boolean isSelected, boolean isCorrectSlot, ItemStack stack) {
-        if (!world.isClientSide && holder.tickCount % 20 == 0) {
-            for (ItemStack armor_slot : holder.getArmorSlots()) {
-                if (armor_slot.equals(stack) && holder.getHealth() != holder.getMaxHealth() && !tool.isBroken()) {
-                    holder.setHealth(holder.getHealth() + 1);
-                }
+        if (!world.isClientSide && holder.tickCount % 100 == 0) {
+            if (holder.getHealth() != holder.getMaxHealth() && !tool.isBroken()) {
+                holder.heal(modifier.getLevel());
             }
         }
         holder.removeEffect(MobEffects.WITHER);

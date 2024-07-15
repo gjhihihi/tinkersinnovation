@@ -1,7 +1,7 @@
 {
   "color": "FFB478ED",
   "fallbacks": [
-    "metal"
+    "crystal"
   ],
   "generator": {
     "ignoreMaterialStats": false,

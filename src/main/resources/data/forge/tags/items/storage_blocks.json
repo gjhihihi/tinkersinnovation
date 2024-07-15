@@ -2,7 +2,7 @@
   "replace": false,
   "values": [
     "#forge:storage_blocks/enchantment_essence",
-    "#forge:storage_blocks/ether",
+    "#forge:storage_blocks/decline",
     "#forge:storage_blocks/polychrome_alloy",
     "#forge:storage_blocks/slimton",
     "#forge:storage_blocks/void_crystal"

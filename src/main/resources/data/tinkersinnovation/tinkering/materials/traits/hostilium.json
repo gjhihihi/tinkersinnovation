@@ -1,0 +1,60 @@
+{
+  "perStat": {
+    "tconstruct:melee_harvest": [
+      {
+        "name": "tinkersinnovation:hostility",
+        "level": 2
+      },
+      {
+        "name": "tinkersinnovation:cruse_blade",
+        "level": 1
+      },
+      {
+        "name": "tinkersinnovation:arrogance",
+        "level": 1
+      }
+    ],
+    "tconstruct:ranged": [
+      {
+        "name": "tinkersinnovation:hostility",
+        "level": 2
+      },
+      {
+        "name": "tconstruct:pierce",
+        "level": 1
+      },
+      {
+        "name": "tinkersinnovation:arrogance",
+        "level": 1
+      }
+    ],
+    "tconstruct:armor": [
+      {
+        "name": "tinkersinnovation:hostility",
+        "level": 2
+      },
+      {
+        "name": "tconstruct:revitalizing",
+        "level": 1
+      },
+      {
+        "name": "tinkersinnovation:arrogance_armor",
+        "level": 1
+      }
+    ],
+    "tinkersinnovation:shield": [
+      {
+        "name": "tinkersinnovation:hostility",
+        "level": 2
+      },
+      {
+        "name": "tconstruct:revitalizing",
+        "level": 1
+      },
+      {
+        "name": "tinkersinnovation:arrogance_armor",
+        "level": 1
+      }
+    ]
+  }
+}

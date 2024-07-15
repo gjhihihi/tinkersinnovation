@@ -27,11 +27,11 @@
   "overrides": [
     {
       "predicate": { "tconstruct:charging": 2 },
-      "model": "tconstruct:item/tool/heavy_shield/blocking"
+      "model": "tinkersinnovation:item/tool/heavy_shield/blocking"
     },
     {
       "predicate": { "tconstruct:broken": 1 },
-      "model": "tconstruct:item/tool/heavy_shield/broken"
+      "model": "tinkersinnovation:item/tool/heavy_shield/broken"
     }
   ]
 }

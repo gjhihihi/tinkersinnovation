@@ -53,6 +53,22 @@
       "durability": 400,
       "knockback_resistance": 0.01,
       "toughness": 1
+    },
+    "tinkersinnovation:shield_plate": {
+      "durability": 400,
+      "armor": 2.0,
+      "toughness": 1.0,
+      "knockback_resistance": 0.01,
+      "block_amount": -0.1,
+      "shield_amount": 2
+    },
+    "tinkers_ingenuity:curio_extra": {},
+    "tinkers_ingenuity:curio_main": {
+      "movement_speed": 0.05,
+      "armor": 0.05,
+      "toughness": 0.1,
+      "attack": 0.1,
+      "arrow_damage": 0.05
     }
   }
 }

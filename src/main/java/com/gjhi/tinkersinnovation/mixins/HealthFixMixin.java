@@ -25,10 +25,10 @@ public abstract class HealthFixMixin {
 
     @Shadow public abstract boolean isAlive();
 
-    @Inject(at = @At("HEAD"), method = "setHealth", cancellable = true)
+    @Inject(at = @At("HEAD"), method = "heal", cancellable = true)
     public void onHealth(float health, CallbackInfo ci){
         LivingEntity entity = (LivingEntity) (Object) this;
-        if (this.getHealth() < health && !this.isAlive()){
+        if (health > 0 && !this.isAlive()){
             for (EquipmentSlot slot : EquipmentSlot.values()) {
                 ToolStack tool = getHeldTool(entity, slot);
                 if (tool != null)
@@ -37,12 +37,11 @@ public abstract class HealthFixMixin {
                             while (tool.getDamage() > 0){
                                 tool.setDamage((int) Math.max(0, tool.getDamage() - Math.pow(2, modifier.getLevel() - 1)));
                                 --health;
-                                if (health - this.getHealth() <= 0)ci.cancel();
+                                if (health <= 0)ci.cancel();
                             }
                         }
                     }
             }
-            if (health - this.getHealth() <= 0)ci.cancel();
         }
     }
 }

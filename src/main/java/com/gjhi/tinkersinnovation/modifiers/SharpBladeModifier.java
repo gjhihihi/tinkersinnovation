@@ -1,7 +1,7 @@
 package com.gjhi.tinkersinnovation.modifiers;
 
+import com.gjhi.tinkersinnovation.register.TinkersInnovationUtils;
 import dev.xkmc.l2complements.init.registrate.LCEffects;
-import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
@@ -20,7 +20,7 @@ public class SharpBladeModifier extends Modifier implements MeleeHitModifierHook
     public void afterMeleeHit(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float damageDealt) {
         LivingEntity target = context.getLivingTarget();
         if (target != null) {
-            target.addEffect(new MobEffectInstance(LCEffects.BLEED.get(), 100 * modifier.getLevel()));
+            TinkersInnovationUtils.updateEffect(target, LCEffects.BLEED.get(), 1, modifier.getLevel() * 3 - 1, 100);
         }
     }
 }

@@ -11,8 +11,8 @@
     "tinkersinnovation:item/tool/round_shield/modifiers/"
   ],
   "parts": [
-    {"name": "handle", "index": 0},
-    {"name": "plate_round", "index": 1},
+    {"name": "plate_round", "index": 0},
+    {"name": "handle", "index": 1},
     {"name": "plate_mid", "index": 2}
   ]
 }

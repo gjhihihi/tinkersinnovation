@@ -1,5 +1,14 @@
 {
   "replace": false,
   "values": [
+    "minecraft:gold_ingot",
+    {
+      "id": "l2complements:totemic_gold_ingot",
+      "required": false
+    },
+    {
+      "id": "tinkerscalibration:emperorslime_ingot",
+      "required": false
+    }
   ]
 }

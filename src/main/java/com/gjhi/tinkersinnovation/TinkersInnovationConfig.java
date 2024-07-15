@@ -103,10 +103,10 @@ public class TinkersInnovationConfig {
         public ApatiteBlockConfig(ForgeConfigSpec.Builder builder) {
             super(builder);
             this.enabled = builder.worldRestart().comment("Enable/Disable Void Crystal ore").define("VoidCrystalOreEnabled", true);
-            this.minY = builder.comment("Min Y level").defineInRange("minY", 16, 0, 128);
-            this.maxY = builder.comment("Max Y Level").defineInRange("maxY", 320, 256, 320);
+            this.minY = builder.comment("Min Y level").defineInRange("minY", 0, -16, 128);
+            this.maxY = builder.comment("Max Y Level").defineInRange("maxY", 128, 128, 320);
             this.count = builder.comment("Ore vein count").defineInRange("veinCount", 20, 1, 40);
-            this.size = builder.comment("Ore vein size").defineInRange("veinSize", 10, 1, 40);
+            this.size = builder.comment("Ore vein size").defineInRange("veinSize", 64, 16, 128);
         }
     }
     /*public static class CreateMaterialConfig extends MaterialConfig{

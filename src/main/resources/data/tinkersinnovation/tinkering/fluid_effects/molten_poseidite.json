@@ -1,0 +1,43 @@
+{
+  "block_effects": [
+    {
+      "type": "tconstruct:mob_effect_cloud",
+      "effects": [
+        {
+          "effect": "minecraft:conduit_power",
+          "level": 1,
+          "time": 100
+        },
+        {
+          "effect": "minecraft:dolphins_grace",
+          "level": 1,
+          "time": 100
+        }
+      ]
+    }
+  ],
+  "entity_effects": [
+    {
+      "type": "tconstruct:mob_effect",
+      "action": "set",
+      "effect": "minecraft:conduit_power",
+      "level": 1,
+      "time": 100
+    },
+    {
+      "type": "tconstruct:mob_effect",
+      "action": "set",
+      "effect": "minecraft:dolphins_grace",
+      "level": 1,
+      "time": 100
+    },
+    {
+      "type": "tconstruct:remove_effect",
+      "effect": "minecraft:mining_fatigue"
+    }
+  ],
+  "fluid": {
+    "amount": 10,
+    "tag": "tinkersinnovation:molten_poseidite"
+  }
+}

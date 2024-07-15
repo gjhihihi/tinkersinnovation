@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "tag": "tinkersinnovation:molten_miracle",
+    "amount": 90
+  },
+  "temperature": 1150,
+  "output": "tinkersinnovation:miracle"
+}

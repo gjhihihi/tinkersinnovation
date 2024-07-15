@@ -7,7 +7,8 @@
         "tinkersinnovation:heavy_shield_plate",
         "tinkersinnovation:heavy_shield_plate",
         "tconstruct:large_plate"
-      ]
+      ],
+      "primary_part": 0
     },
     {
       "type": "tconstruct:default_materials",
@@ -36,15 +37,17 @@
         "tconstruct:attack_damage": 5,
         "tconstruct:attack_speed": 0.6,
         "tconstruct:block_amount": 100.0,
-        "tconstruct:block_angle": 180.0
+        "tconstruct:block_angle": 180.0,
+        "tinkersinnovation:shield_amount": 2
       }
     },
     {
       "type": "tconstruct:multiply_stats",
       "multipliers": {
-        "tconstruct:attack_damage": 1.65,
+        "tconstruct:attack_damage": 3.75,
         "tconstruct:durability": 4.25,
-        "tconstruct:mining_speed": 0.3
+        "tconstruct:mining_speed": 0.3,
+        "tinkersinnovation:shield_amount": 1.5
       }
     },
     {
@@ -61,6 +64,10 @@
         {
           "level": 1,
           "name": "tconstruct:blocking"
+        },
+        {
+          "level": 1,
+          "name": "tinkersinnovation:shield_amount"
         }
       ]
     },

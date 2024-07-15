@@ -24,7 +24,8 @@ public class TinkersInnovationBlocks {
     public static RegistryObject<Block> void_crystal_block = BLOCKS.register("void_crystal_block", () -> new Block(METAL));
     public static RegistryObject<Block> enchantment_block = BLOCKS.register("enchantment_block", () -> new Block(METAL));
     public static RegistryObject<Block> slimton_block = BLOCKS.register("slimton_block", () -> new Block(METAL));
-    public static RegistryObject<Block> ether_block = BLOCKS.register("ether_block", () -> new Block(METAL));
+    public static RegistryObject<Block> decline_block = BLOCKS.register("decline_block", () -> new Block(METAL));
+    public static RegistryObject<Block> hostilium_block = BLOCKS.register("hostilium_block", () -> new Block(METAL));
 
     public static RegistryObject<Block> void_crystal_ore = BLOCKS.register("void_crystal_ore", () -> new Block(DEEPSLATE_ORE));
     public static RegistryObject<Block> apatite_block = BLOCKS.register("apatite_block", () -> new Block(ORE));

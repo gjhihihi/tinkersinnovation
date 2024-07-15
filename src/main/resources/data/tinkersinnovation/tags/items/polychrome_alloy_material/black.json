@@ -1,5 +1,11 @@
 {
   "replace": false,
   "values": [
+    "minecraft:netherite_ingot",
+    "tconstruct:hepatizon_ingot",
+    {
+      "id": "tinkerscalibration:witherium_ingot",
+      "required": false
+    }
   ]
 }

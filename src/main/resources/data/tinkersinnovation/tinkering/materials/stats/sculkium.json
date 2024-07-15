@@ -10,7 +10,7 @@
     "tconstruct:head": {
       "durability": 2000,
       "mining_speed": 12.5,
-      "mining_tier": "minecraft:diamond",
+      "mining_tier": "minecraft:netherite",
       "melee_attack": 5.0
     },
     "tconstruct:limb": {
@@ -53,6 +53,26 @@
       "durability": 666,
       "knockback_resistance": 1,
       "toughness": 4
+    },
+    "tinkersinnovation:shield_plate": {
+      "durability": 666,
+      "armor": 9.0,
+      "toughness": 4,
+      "knockback_resistance": 1,
+      "block_amount": 0.3,
+      "shield_amount": 12
+    },
+    "tinkers_ingenuity:laser_medium": {
+      "laser_range": 8,
+      "cooldown": 0.1
+    },
+    "tinkers_ingenuity:curio_extra": {},
+    "tinkers_ingenuity:curio_main": {
+      "movement_speed": 0.35,
+      "armor": 0.4,
+      "toughness": 0.3,
+      "attack": 0.4,
+      "arrow_damage": 0.25
     }
   }
 }

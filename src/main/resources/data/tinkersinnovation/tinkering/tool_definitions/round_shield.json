@@ -3,10 +3,11 @@
     {
       "type": "tconstruct:part_stats",
       "parts": [
-        "tconstruct:tough_handle",
         "tinkersinnovation:light_shield_plate",
+        "tconstruct:tough_handle",
         "tconstruct:round_plate"
-      ]
+      ],
+      "primary_part": 0
     },
     {
       "type": "tconstruct:default_materials",
@@ -30,7 +31,8 @@
       "stats": {
         "tconstruct:block_amount": 10.0,
         "tconstruct:block_angle": 90.0,
-        "tconstruct:use_item_speed": 1.0
+        "tconstruct:use_item_speed": 1.0,
+        "tinkersinnovation:shield_amount": 3
       }
     },
     {
@@ -50,7 +52,7 @@
         },
         {
           "level": 1,
-          "name": "tconstruct:tanned"
+          "name": "tinkersinnovation:shield_amount"
         }
       ]
     },
