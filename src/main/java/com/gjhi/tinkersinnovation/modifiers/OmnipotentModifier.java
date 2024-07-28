@@ -498,7 +498,7 @@ public class OmnipotentModifier extends Modifier implements VolatileDataModifier
         LivingEntity wearer = context.getEntity();
         int partnum;
         if ((partnum = comp(tool, "tinkers_ingenuity:crocell_material", TinkerTags.Items.ARMOR)) > 0) {
-            if (amount < 0.05 * partnum * modifier.getLevel()){
+            if (amount < 0.05 * partnum * modifier.getLevel() * target.getMaxHealth()){
                 wearer.setHealth(Math.min(wearer.getMaxHealth(), wearer.getHealth() + 5));
             }
         }

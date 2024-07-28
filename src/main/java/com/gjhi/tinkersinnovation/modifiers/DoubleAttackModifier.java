@@ -195,7 +195,7 @@ public class DoubleAttackModifier extends Modifier implements MeleeHitModifierHo
         Player player = event.getPlayer();
         if (player != null) {
             ToolStack offtool = getHeldTool(player, InteractionHand.OFF_HAND);
-            if (!(offtool.equals(tool)) && offtool.getDefinition().equals(tool.getDefinition())) {
+            if (offtool != null && !(offtool.equals(tool)) && offtool.getDefinition().equals(tool.getDefinition())) {
                 List<ModifierEntry> modifierList = new ArrayList<>(offtool.getModifierList());
                 modifierList.sort((o1, o2) -> o2.getModifier().getPriority() - o1.getModifier().getPriority());
                 for (ModifierEntry mod : modifierList) {
