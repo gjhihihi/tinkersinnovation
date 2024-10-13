@@ -1,0 +1,12 @@
+{
+  "default": [
+    {
+      "name": "tinkersinnovation:soul_devouring",
+      "level": 1
+    },
+    {
+      "name": "tinkersinnovation:soul_fixing",
+      "level": 1
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "item": "tconstruct:blazing_bone"
+  },
+  "cast_consumed": true,
+  "fluid": {
+    "name": "tinkersinnovation:molten_active_soul",
+    "amount": 200
+  },
+  "result": "tinkersinnovation:soul_bone",
+  "cooling_time": 60
+}

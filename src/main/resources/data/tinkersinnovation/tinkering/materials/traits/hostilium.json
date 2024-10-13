@@ -6,7 +6,7 @@
         "level": 2
       },
       {
-        "name": "tinkersinnovation:cruse_blade",
+        "name": "tinkersinnovation:no_sealed",
         "level": 1
       },
       {
@@ -20,7 +20,7 @@
         "level": 2
       },
       {
-        "name": "tconstruct:pierce",
+        "name": "tinkersinnovation:no_sealed",
         "level": 1
       },
       {
@@ -34,21 +34,7 @@
         "level": 2
       },
       {
-        "name": "tconstruct:revitalizing",
-        "level": 1
-      },
-      {
-        "name": "tinkersinnovation:arrogance_armor",
-        "level": 1
-      }
-    ],
-    "tinkersinnovation:shield": [
-      {
-        "name": "tinkersinnovation:hostility",
-        "level": 2
-      },
-      {
-        "name": "tconstruct:revitalizing",
+        "name": "tinkersinnovation:no_sealed",
         "level": 1
       },
       {

@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "amount": 250,
+    "tag": "forge:slime"
+  },
+  "input": "tconstruct:bone",
+  "output": "tinkersinnovation:slime_bone",
+  "temperature": 20
+}

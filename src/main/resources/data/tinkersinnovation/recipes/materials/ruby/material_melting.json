@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input": "tinkersinnovation:ruby",
+  "temperature": 1200,
+  "result": {
+    "fluid": "tinkersinnovation:molten_ruby",
+    "amount": 100
+  }
+}

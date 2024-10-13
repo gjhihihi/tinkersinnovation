@@ -1,0 +1,28 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:true"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XXX",
+          "XXX",
+          "XXX"
+        ],
+        "key": {
+          "X": {
+            "item": "tinkersinnovation:straddlite_alloy_nugget"
+          }
+        },
+        "result": {
+          "item": "tinkersinnovation:straddlite_alloy_ingot"
+        }
+      }
+    }
+  ]
+}

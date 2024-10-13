@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkersinnovation:farseeing_alloy_nugget"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:molten_farseeing_alloy",
+    "amount": 10
+  },
+  "temperature": 1650,
+  "time": 45
+}

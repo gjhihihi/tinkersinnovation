@@ -1,0 +1,16 @@
+{
+  "stats": {
+    "tinkersinnovation:bomb_core": {
+      "durability": 0.05,
+      "bomb_radius": 2,
+      "velocity": 0,
+      "accuracy": 0.1
+    },
+    "tinkersinnovation:bomb_shell": {
+      "durability": 400,
+      "piece_count": 2,
+      "piece_damage": 2,
+      "melee_range_damage": 1.5
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "tconstruct:casting_basin",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:storage_blocks/sapphire"
+      }
+    }
+  ],
+  "fluid": {
+    "tag": "forge:molten_sapphire",
+    "amount": 900
+  },
+  "result": {
+    "tag": "forge:storage_blocks/sapphire"
+  },
+  "cooling_time": 180
+}

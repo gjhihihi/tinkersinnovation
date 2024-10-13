@@ -1,0 +1,14 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default-tool",
+  "textures": {
+    "bomb": "tinkersinnovation:item/tool/tinker_bomb/broken_bomb"
+  },
+  "modifier_roots": [
+    "tinkersinnovation:item/tool/tinker_bomb/modifiers/broken/",
+    "tinkersinnovation:item/tool/tinker_bomb/modifiers/"
+  ],
+  "parts": [
+    { "name": "bomb",    "index": 1 }
+  ]
+}

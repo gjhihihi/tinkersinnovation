@@ -1,0 +1,30 @@
+{
+  "perStat": {
+    "tconstruct:melee_harvest": [
+      {
+        "name": "tinkersinnovation:mount_killer",
+        "level": 1
+      },
+      {
+        "name": "tinkersinnovation:fall_out",
+        "level": 1
+      }
+    ],
+    "tconstruct:ranged": [
+      {
+        "name": "tinkersinnovation:mount_killer",
+        "level": 1
+      },
+      {
+        "name": "tinkersinnovation:fall_out",
+        "level": 1
+      }
+    ],
+    "tconstruct:armor": [
+      {
+        "name": "tinkersinnovation:straddlite",
+        "level": 1
+      }
+    ]
+  }
+}

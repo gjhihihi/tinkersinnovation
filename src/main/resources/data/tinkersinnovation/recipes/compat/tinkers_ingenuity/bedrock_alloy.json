@@ -1,0 +1,19 @@
+{
+  "type": "tconstruct:casting_table",
+  "conditions": [
+    {
+      "modid": "tinkers_ingenuity",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "cast": {
+    "item": "tinkersinnovation:seared_bedrock"
+  },
+  "cast_consumed": true,
+  "fluid": {
+    "name": "tinkersinnovation:molten_polychrome_alloy",
+    "amount": 300
+  },
+  "result": "tinkers_ingenuity:bedrock_alloy_ingot",
+  "cooling_time": 400
+}

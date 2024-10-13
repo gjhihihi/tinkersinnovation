@@ -1,5 +1,5 @@
 {
-  "parent": "tinkersinnovation:item/claw",
+  "parent": "tinkersinnovation:item/teleport_staff",
   "display": {
     "firstperson_righthand": {
       "rotation": [ 0, 180, -5 ],

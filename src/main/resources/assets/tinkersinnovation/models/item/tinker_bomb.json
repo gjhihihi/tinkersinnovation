@@ -1,0 +1,21 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default-tool",
+  "textures": {
+    "bomb": "tinkersinnovation:item/tool/tinker_bomb/bomb"
+  },
+  "modifier_roots": [ "tinkersinnovation:item/tool/tinker_bomb/modifiers/" ],
+  "parts": [
+    { "name": "bomb",    "index": 1 }
+  ],
+  "overrides": [
+    {
+      "predicate": { "tconstruct:charging": 2 },
+      "model": "tinkersinnovation:item/tool/tinker_bomb/blocking"
+    },
+    {
+      "predicate": { "tconstruct:broken": 1 },
+      "model": "tinkersinnovation:item/tool/tinker_bomb/broken"
+    }
+  ]
+}

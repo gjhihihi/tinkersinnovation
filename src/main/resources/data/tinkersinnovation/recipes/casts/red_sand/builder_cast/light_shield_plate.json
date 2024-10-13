@@ -1,0 +1,8 @@
+{
+  "type": "tconstruct:item_part_builder",
+  "pattern": "tinkersinnovation:light_shield_plate",
+  "pattern_item": {
+    "tag": "tconstruct:casts/red_sand"
+  },
+  "result": "tinkersinnovation:light_shield_plate_red_sand_cast"
+}

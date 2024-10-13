@@ -1,0 +1,34 @@
+{
+  "perStat": {
+    "tconstruct:melee_harvest": [
+      {
+        "name": "tinkersinnovation:sunshine",
+        "level": 1
+      },
+      {
+        "name": "tinkersinnovation:soul_lover",
+        "level": 1
+      }
+    ],
+    "tconstruct:ranged": [
+      {
+        "name": "tinkersinnovation:sunshine",
+        "level": 1
+      },
+      {
+        "name": "tinkersinnovation:soul_lover",
+        "level": 1
+      }
+    ],
+    "tconstruct:armor": [
+      {
+        "name": "tinkersinnovation:sunshine_armor",
+        "level": 1
+      },
+      {
+        "name": "tinkersinnovation:soul_lover_armor",
+        "level": 1
+      }
+    ]
+  }
+}

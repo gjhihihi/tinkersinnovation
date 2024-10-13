@@ -1,0 +1,22 @@
+{
+  "type": "tconstruct:alloy",
+  "result": {
+    "fluid": "tinkersinnovation:molten_sunsoul_alloy",
+    "amount": 120
+  },
+  "inputs": [
+    {
+      "tag": "tinkersinnovation:molten_sun",
+      "amount": 180
+    },
+    {
+      "tag": "tinkersinnovation:molten_active_soul",
+      "amount": 180
+    },
+    {
+      "tag": "forge:molten_rose_gold",
+      "amount": 250
+    }
+  ],
+  "temperature": 3200
+}

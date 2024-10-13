@@ -9,7 +9,7 @@
     },
     "tconstruct:head": {
       "durability": 235,
-      "mining_speed": 6.5,
+      "mining_speed": 5,
       "mining_tier": "minecraft:iron",
       "melee_attack": 1.5
     },
@@ -26,7 +26,7 @@
     },
     "tconstruct:maille": {},
     "tconstruct:plating_boots": {
-      "armor": 1.0,
+      "armor": 2.0,
       "durability": 235,
       "knockback_resistance": 0,
       "toughness": 0
@@ -60,7 +60,19 @@
       "toughness": 0,
       "knockback_resistance": 0,
       "block_amount": 0.1,
-      "shield_amount": 2
+      "shield_amount": 16
+    },
+    "tinkersinnovation:bomb_core": {
+      "durability": 0.05,
+      "bomb_radius": 1,
+      "velocity": 0.1,
+      "accuracy": 0.05
+    },
+    "tinkersinnovation:bomb_shell": {
+      "durability": 235,
+      "piece_count": 3,
+      "piece_damage": 1,
+      "melee_range_damage": 1.5
     },
     "tinkers_ingenuity:curio_extra": {},
     "tinkers_ingenuity:curio_main": {

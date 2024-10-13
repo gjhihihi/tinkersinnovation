@@ -29,16 +29,6 @@
         "name": "tinkersinnovation:chaos_armor",
         "level": 1
       }
-    ],
-    "tinkersinnovation:shield": [
-      {
-        "name": "tinkersinnovation:hostility",
-        "level": 1
-      },
-      {
-        "name": "tinkersinnovation:chaos_armor",
-        "level": 1
-      }
     ]
   }
 }

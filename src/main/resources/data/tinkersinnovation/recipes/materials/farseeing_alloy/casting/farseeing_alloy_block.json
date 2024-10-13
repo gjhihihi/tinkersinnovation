@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:casting_basin",
+  "fluid": {
+    "name": "tinkersinnovation:molten_farseeing_alloy",
+    "amount": 810
+  },
+  "result": "tinkersinnovation:farseeing_alloy_block",
+  "cooling_time": 180
+}

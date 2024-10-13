@@ -1,0 +1,22 @@
+{
+  "type": "tconstruct:alloy",
+  "result": {
+    "fluid": "tinkersinnovation:molten_farseeing_alloy",
+    "amount": 120
+  },
+  "inputs": [
+    {
+      "tag": "tinkersinnovation:molten_farseer",
+      "amount": 250
+    },
+    {
+      "tag": "tinkersinnovation:molten_void_worm",
+      "amount": 200
+    },
+    {
+      "tag": "tconstruct:molten_debris",
+      "amount": 360
+    }
+  ],
+  "temperature": 1650
+}

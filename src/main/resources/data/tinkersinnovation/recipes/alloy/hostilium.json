@@ -2,21 +2,21 @@
   "type": "tconstruct:alloy",
   "result": {
     "fluid": "tinkersinnovation:molten_hostilium",
-    "amount": 120
+    "amount": 180
   },
   "inputs": [
     {
-      "name": "tinkersinnovation:molten_hostility",
+      "tag": "tinkersinnovation:molten_hostility",
       "amount": 240
     },
     {
-      "name": "tconstruct:molten_cobalt",
-      "amount": 120
+      "tag": "forge:molten_cobalt",
+      "amount": 150
     },
     {
-      "name": "tinkersinnovation:molten_sculkium",
-      "amount": 100
+      "tag": "tinkersinnovation:molten_sculkium",
+      "amount": 90
     }
   ],
-  "temperature": 1500
+  "temperature": 1750
 }

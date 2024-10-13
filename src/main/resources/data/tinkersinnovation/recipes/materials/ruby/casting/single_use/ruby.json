@@ -1,0 +1,24 @@
+{
+  "type": "tconstruct:casting_table",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:gems/ruby"
+      }
+    }
+  ],
+  "cast": {
+    "tag": "tconstruct:casts/single_use/gem"
+  },
+  "cast_consumed": true,
+  "fluid": {
+    "tag": "forge:molten_ruby",
+    "amount": 100
+  },
+  "result": {
+    "tag": "forge:gems/ruby"
+  },
+  "cooling_time": 90
+}

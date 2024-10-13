@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkersinnovation:farseeing_alloy_block"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:molten_farseeing_alloy",
+    "amount": 810
+  },
+  "temperature": 1650,
+  "time": 180
+}

@@ -4,7 +4,7 @@
     "tconstruct:handle": {
       "durability": 0.1,
       "mining_speed": 0.2,
-      "melee_speed": 0.1,
+      "melee_speed": 0.15,
       "melee_damage": 0.2
     },
     "tconstruct:head": {
@@ -15,13 +15,13 @@
     },
     "tconstruct:limb": {
       "durability": 800,
-      "draw_speed": -0.2,
+      "draw_speed": -0.1,
       "velocity": 0.1,
-      "accuracy": 0
+      "accuracy": 0.05
     },
     "tconstruct:grip": {
       "durability": 0.1,
-      "accuracy": 0,
+      "accuracy": 0.05,
       "melee_damage": 4
     },
     "tconstruct:maille": {},
@@ -60,7 +60,19 @@
       "toughness": 3.0,
       "knockback_resistance": 0,
       "block_amount": -0.1,
-      "shield_amount": 5
+      "shield_amount": 56
+    },
+    "tinkersinnovation:bomb_core": {
+      "durability": 0.1,
+      "bomb_radius": 3,
+      "velocity": 0.1,
+      "accuracy": 0.05
+    },
+    "tinkersinnovation:bomb_shell": {
+      "durability": 800,
+      "piece_count": 4,
+      "piece_damage": 2.5,
+      "melee_range_damage": 4
     }
   }
 }

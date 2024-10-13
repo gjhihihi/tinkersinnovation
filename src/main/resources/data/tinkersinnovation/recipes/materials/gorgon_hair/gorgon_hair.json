@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "item": "tinkersinnovation:gorgon_hair"
+  },
+  "value": 1,
+  "needed": 1,
+  "material": "tinkersinnovation:gorgon_hair"
+}

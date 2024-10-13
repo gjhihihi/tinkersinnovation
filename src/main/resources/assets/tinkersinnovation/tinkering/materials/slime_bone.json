@@ -1,0 +1,54 @@
+{
+  "color": "FF00E799",
+  "fallbacks": [
+    "bone",
+    "rock"
+  ],
+  "generator": {
+    "ignoreMaterialStats": false,
+    "supportedStats": [
+      "tconstruct:head",
+      "tconstruct:handle",
+      "tconstruct:binding",
+      "tconstruct:repair_kit",
+      "tconstruct:limb",
+      "tconstruct:grip"
+    ],
+    "transformer": {
+      "type": "tconstruct:recolor_sprite",
+      "color_mapping": {
+        "type": "tconstruct:grey_to_color",
+        "palette": [
+          {
+            "grey": 0,
+            "color": "FF000000"
+          },
+          {
+            "grey": 63,
+            "color": "FF008659"
+          },
+          {
+            "grey": 102,
+            "color": "FF00A76F"
+          },
+          {
+            "grey": 140,
+            "color": "FF00C281"
+          },
+          {
+            "grey": 178,
+            "color": "FF00E799"
+          },
+          {
+            "grey": 216,
+            "color": "FF24FFB5"
+          },
+          {
+            "grey": 255,
+            "color": "FF50FFC8"
+          }
+        ]
+      }
+    }
+  }
+}

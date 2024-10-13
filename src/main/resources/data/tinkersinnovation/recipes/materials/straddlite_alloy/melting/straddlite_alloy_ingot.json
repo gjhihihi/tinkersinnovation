@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkersinnovation:straddlite_alloy_ingot"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:molten_straddlite_alloy",
+    "amount": 90
+  },
+  "temperature": 1500,
+  "time": 90
+}

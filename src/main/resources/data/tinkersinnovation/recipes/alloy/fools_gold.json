@@ -1,0 +1,22 @@
+{
+  "type": "tconstruct:alloy",
+  "result": {
+    "fluid": "tinkersinnovation:molten_fools_gold",
+    "amount": 120
+  },
+  "inputs": [
+    {
+      "tag": "forge:molten_copper",
+      "amount": 30
+    },
+    {
+      "tag": "forge:molten_iron",
+      "amount": 90
+    },
+    {
+      "tag": "tconstruct:scorched_stone",
+      "amount": 180
+    }
+  ],
+  "temperature": 950
+}

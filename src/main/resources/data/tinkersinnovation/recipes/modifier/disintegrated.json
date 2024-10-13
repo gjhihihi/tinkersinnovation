@@ -1,0 +1,34 @@
+{
+  "type": "tconstruct:modifier",
+  "inputs": [
+    {
+      "item": "tinkersinnovation:fools_gold_nugget",
+      "amount_needed": 3
+    },
+    {
+      "tag": "forge:nuggets/manyullyn",
+      "amount_needed": 3
+    },
+    {
+      "tag": "forge:nuggets/queens_slime",
+      "amount_needed": 3
+    },
+    {
+      "item": "minecraft:glass"
+    },
+    {
+      "item": "minecraft:glass"
+    }
+  ],
+  "tools": {
+    "tag": "tinkersinnovation:modifiable/bomb"
+  },
+  "slots": {
+    "upgrades": 1
+  },
+  "allow_crystal": true,
+  "result": "tinkersinnovation:disintegrated",
+  "level": {
+    "max": 5
+  }
+}

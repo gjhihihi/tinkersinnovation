@@ -1,7 +1,6 @@
 {
   "stats": {
     "tconstruct:binding": {},
-    "tconstruct:bowstring": {},
     "tconstruct:handle": {
       "durability": 0.1,
       "mining_speed": -0.1,
@@ -14,15 +13,16 @@
       "mining_tier": "minecraft:diamond",
       "melee_attack": 2
     },
+    "tconstruct:bowstring": {},
     "tconstruct:limb": {
       "durability": 1250,
       "draw_speed": -0.15,
       "velocity": -0.15,
-      "accuracy": -0.15
+      "accuracy": 0.1
     },
     "tconstruct:grip": {
       "durability": 0.1,
-      "accuracy": -0.2,
+      "accuracy": 0.15,
       "melee_damage": 3.5
     },
     "tconstruct:maille": {},
@@ -61,7 +61,19 @@
       "toughness": 8,
       "knockback_resistance": 0.01,
       "block_amount": 0.2,
-      "shield_amount": 8
+      "shield_amount": 75
+    },
+    "tinkersinnovation:bomb_core": {
+      "durability": 0.1,
+      "bomb_radius": 4,
+      "velocity": -0.1,
+      "accuracy": 0.1
+    },
+    "tinkersinnovation:bomb_shell": {
+      "durability": 1250,
+      "piece_count": 3,
+      "piece_damage": 3,
+      "melee_range_damage": 3.5
     },
     "tinkers_ingenuity:battery": {
       "energy_capacity": 18000,

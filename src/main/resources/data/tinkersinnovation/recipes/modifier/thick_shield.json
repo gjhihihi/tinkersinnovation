@@ -1,0 +1,30 @@
+{
+  "type": "tconstruct:modifier",
+  "inputs": [
+    {
+      "item": "tconstruct:obsidian_pane",
+      "amount_needed": 4
+    },
+    {
+      "item": "minecraft:iron_ingot",
+      "amount_needed": 2
+    },
+    {
+      "tag": "forge:ingots/cobalt",
+      "amount_needed": 2
+    }
+  ],
+  "tools": [
+    {
+      "tag": "tconstruct:modifiable/shields"
+    }
+  ],
+  "slots": {
+    "upgrades": 1
+  },
+  "allow_crystal": true,
+  "result": "tinkersinnovation:thick_shield",
+  "level": {
+    "max": 3
+  }
+}

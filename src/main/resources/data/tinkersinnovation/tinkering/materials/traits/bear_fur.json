@@ -1,0 +1,16 @@
+{
+  "perStat": {
+    "tconstruct:melee_harvest": [
+      {
+        "name": "tinkersinnovation:no_knockback",
+        "level": 1
+      }
+    ],
+    "tconstruct:armor": [
+      {
+        "name": "tinkersinnovation:no_knockback_armor",
+        "level": 1
+      }
+    ]
+  }
+}

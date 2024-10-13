@@ -1,0 +1,8 @@
+{
+  "type": "tconstruct:item_part_builder",
+  "pattern": "tinkersinnovation:heavy_shield_plate",
+  "pattern_item": {
+    "tag": "tconstruct:casts/sand"
+  },
+  "result": "tinkersinnovation:heavy_shield_plate_sand_cast"
+}

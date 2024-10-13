@@ -1,0 +1,27 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "tconstruct:item/base/staff",
+  "textures": {
+    "cane": "tinkersinnovation:item/tool/mechanical_multifunctional_cane/cane",
+
+    "large_cane": "tinkersinnovation:item/tool/mechanical_multifunctional_cane/cane"
+  },
+  "modifier_roots": {
+    "small": ["tinkersinnovation:item/tool/mechanical_multifunctional_cane/modifiers/"],
+    "large": ["tinkersinnovation:item/tool/mechanical_multifunctional_cane/modifiers/"]
+  },
+  "parts": [
+    { "name": "cane" }
+  ],
+  "large": true,
+  "overrides": [
+    {
+      "predicate": { "tconstruct:charging": 2 },
+      "model": "tinkersinnovation:item/tool/mechanical_multifunctional_cane/blocking"
+    },
+    {
+      "predicate": { "tconstruct:broken": 1 },
+      "model": "tinkersinnovation:item/tool/mechanical_multifunctional_cane/broken"
+    }
+  ]
+}

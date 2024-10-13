@@ -1,6 +1,7 @@
 {
-  "color": "FF8D5992",
+  "color": "FF8E7BBD",
   "fallbacks": [
+    "slime_metal",
     "metal"
   ],
   "generator": {
@@ -33,27 +34,27 @@
           },
           {
             "grey": 63,
-            "color": "FF3F214D"
+            "color": "FF36396B"
           },
           {
             "grey": 102,
-            "color": "FF673A76"
+            "color": "FF605F99"
           },
           {
             "grey": 140,
-            "color": "FF844A83"
+            "color": "FF7871AB"
           },
           {
             "grey": 178,
-            "color": "FF8D5992"
+            "color": "FF8E7BBD"
           },
           {
             "grey": 216,
-            "color": "FF8F638F"
+            "color": "FFA789CC"
           },
           {
             "grey": 255,
-            "color": "FFAB84AA"
+            "color": "FFE4ADF7"
           }
         ]
       }

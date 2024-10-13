@@ -3,9 +3,9 @@
     {
       "type": "tconstruct:part_stats",
       "parts": [
-        "tconstruct:small_blade",
-        "tconstruct:small_blade",
-        "tconstruct:small_blade",
+        {"item": "tconstruct:small_blade", "scale": 0.5 },
+        {"item": "tconstruct:small_blade", "scale": 0.5 },
+        {"item": "tconstruct:small_blade", "scale": 0.5 },
         "tinkersinnovation:handguard"
       ],
       "primary_part": 0
@@ -43,9 +43,8 @@
     {
       "type": "tconstruct:multiply_stats",
       "multipliers": {
-        "tconstruct:attack_damage": 0.5,
         "tconstruct:durability": 0.75,
-        "tconstruct:mining_speed": 0.6
+        "tconstruct:mining_speed": 0.75
       }
     },
     {
@@ -58,10 +57,6 @@
     {
       "type": "tconstruct:traits",
       "traits": [
-        {
-          "level": 1,
-          "name": "tconstruct:padded"
-        },
         {
           "level": 1,
           "name": "tconstruct:offhand_attack"

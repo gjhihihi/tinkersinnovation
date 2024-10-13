@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "item": "tinkersinnovation:blood_bone"
+  },
+  "cast_consumed": true,
+  "fluid": {
+    "name": "tinkersinnovation:molten_hemolymph",
+    "amount": 250
+  },
+  "result": "tinkersinnovation:hemolymph_bone",
+  "cooling_time": 40
+}

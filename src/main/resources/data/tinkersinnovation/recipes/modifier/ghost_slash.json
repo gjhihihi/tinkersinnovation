@@ -1,0 +1,39 @@
+{
+  "type": "tconstruct:modifier",
+  "conditions": [
+    {
+      "modid": "l2complements",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "inputs": [
+    {
+      "item": "l2complements:sculkium_ingot"
+    },
+    {
+      "item": "l2complements:void_eye",
+      "amount_needed": 3
+    },
+    {
+      "item": "l2complements:storm_core",
+      "amount_needed": 2
+    },
+    {
+      "item": "l2complements:space_shard"
+    }
+  ],
+  "tools": [
+    {
+      "tag": "tconstruct:modifiable/melee"
+    },
+    {
+      "tag": "tconstruct:modifiable/harvest"
+    }
+  ],
+  "slots": {
+    "abilities": 1
+  },
+  "allow_crystal": true,
+  "result": "tinkersinnovation:ghost_slash",
+  "level": 1
+}

@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkersinnovation:fools_gold_ingot"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:molten_fools_gold",
+    "amount": 90
+  },
+  "temperature": 950,
+  "time": 90
+}

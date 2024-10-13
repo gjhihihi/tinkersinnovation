@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "amount": 250,
+    "tag": "forge:honey"
+  },
+  "input": "tconstruct:bone",
+  "output": "tinkersinnovation:honey_bone",
+  "temperature": 20
+}

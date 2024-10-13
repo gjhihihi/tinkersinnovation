@@ -1,0 +1,63 @@
+{
+  "color": "AA6836AA",
+  "fallbacks": [
+  ],
+  "generator": {
+    "ignoreMaterialStats": false,
+    "supportedStats": [
+      "tconstruct:head",
+      "tconstruct:handle",
+      "tconstruct:binding",
+      "tconstruct:repair_kit",
+      "tconstruct:limb",
+      "tconstruct:grip",
+      "tconstruct:armor_plating",
+      "tconstruct:plating_boots",
+      "tconstruct:plating_leggings",
+      "tconstruct:plating_chestplate",
+      "tconstruct:plating_helmet",
+      "tconstruct:plating_shield",
+      "tconstruct:maille",
+      "tconstruct:armor_maille"
+    ],
+    "transformer": {
+      "type": "tconstruct:grey_to_sprite",
+      "palette": [
+        {
+          "grey": 0,
+          "color": "FF000000"
+        },
+        {
+          "grey": 63,
+          "color": "FF303030",
+          "path": "tinkersinnovation:item/materials/capsid/capsid"
+        },
+        {
+          "grey": 102,
+          "color": "FF606060",
+          "path": "tinkersinnovation:item/materials/capsid/capsid"
+        },
+        {
+          "grey": 140,
+          "color": "FF909090",
+          "path": "tinkersinnovation:item/materials/capsid/capsid"
+        },
+        {
+          "grey": 178,
+          "color": "FFC0C0C0",
+          "path": "tinkersinnovation:item/materials/capsid/capsid"
+        },
+        {
+          "grey": 216,
+          "color": "FFF0F0F0",
+          "path": "tinkersinnovation:item/materials/capsid/capsid"
+        },
+        {
+          "grey": 255,
+          "path": "tinkersinnovation:item/materials/capsid/capsid"
+        }
+      ]
+    }
+  },
+  "luminosity": 10
+}

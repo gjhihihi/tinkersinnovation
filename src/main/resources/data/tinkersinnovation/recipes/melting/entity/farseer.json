@@ -1,0 +1,17 @@
+{
+  "type": "tconstruct:entity_melting",
+  "conditions": [
+    {
+      "modid": "alexsmobs",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "entity": {
+    "type": "alexsmobs:farseer"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:molten_farseer",
+    "amount": 10
+  },
+  "damage": 2
+}

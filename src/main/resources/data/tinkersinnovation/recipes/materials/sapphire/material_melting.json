@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input": "tinkersinnovation:sapphire",
+  "temperature": 1150,
+  "result": {
+    "fluid": "tinkersinnovation:molten_sapphire",
+    "amount": 100
+  }
+}

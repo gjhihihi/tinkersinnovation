@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:melting_fuel",
+  "duration": 200,
+  "fluid": {
+    "amount": 50,
+    "fluid": "tinkersinnovation:molten_active_soul"
+  },
+  "temperature": 2000
+}

@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkersinnovation:hostilium_block"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:molten_hostilium",
+    "amount": 810
+  },
+  "temperature": 1750,
+  "time": 180
+}

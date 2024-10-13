@@ -1,0 +1,22 @@
+{
+  "type": "tconstruct:modifier",
+  "inputs": [
+    {
+      "item": "tinkersinnovation:fools_gold_ingot",
+      "amount_needed": 5
+    },
+    {
+      "item": "tinkersinnovation:polychrome_alloy_ingot",
+      "amount_needed": 2
+    }
+  ],
+  "tools": {
+    "tag": "tinkersinnovation:modifiable/bomb"
+  },
+  "slots": {
+    "abilities": 1
+  },
+  "allow_crystal": true,
+  "result": "tinkersinnovation:bomb_lover",
+  "level": 1
+}

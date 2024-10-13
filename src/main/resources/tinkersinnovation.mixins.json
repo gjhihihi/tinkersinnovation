@@ -2,11 +2,12 @@
   "required": true,
   "minVersion": "0.8",
   "package": "com.gjhi.tinkersinnovation.mixins",
+  "refmap": "tinkersinnovation.refmap.json",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "DampenedMixin",
-    "HardenMixin",
-    "HealthFixMixin"
+    "ToolDamageMixin",
+    "NoSealedMixin"
   ],
   "client": [
     "TransparentMixin"

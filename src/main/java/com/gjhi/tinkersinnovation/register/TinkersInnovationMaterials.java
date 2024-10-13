@@ -30,4 +30,26 @@ public class TinkersInnovationMaterials {
     public static final MaterialId miracle = createMaterial("miracle");
     public static final MaterialId hostilium = createMaterial("hostilium");
     public static final MaterialId clonate = createMaterial("clonate");
+    public static final MaterialId gorgon_hair = createMaterial("gorgon_hair");
+    public static final MaterialId ruby = createMaterial("ruby");
+    public static final MaterialId sapphire = createMaterial("sapphire");
+    public static final MaterialId straddlite_alloy = createMaterial("straddlite_alloy");
+    public static final MaterialId bear_fur = createMaterial("bear_fur");
+    //public static final MaterialId zinc = createMaterial("zinc");
+    public static final MaterialId brass = createMaterial("brass");
+    public static final MaterialId farseeing_alloy = createMaterial("farseer_arm");
+    public static final MaterialId fools_gold = createMaterial("fools_gold");
+    public static final MaterialId blood_bone = createMaterial("blood_bone");
+    public static final MaterialId hemolymph_bone = createMaterial("hemolymph_bone");
+    public static final MaterialId soul_bone = createMaterial("soul_bone");
+    public static final MaterialId honey_bone = createMaterial("honey_bone");
+    public static final MaterialId cooked_bone = createMaterial("cooked_bone");
+    public static final MaterialId slime_bone = createMaterial("slime_bone");
+    public static final MaterialId sunsoul_alloy = createMaterial("sunsoul_alloy");
+    public static final MaterialId capsid = createMaterial("capsid");
+    public static final MaterialId elastic_tendon = createMaterial("elastic_tendon");
+    public static final MaterialId spacebreakium = createMaterial("spacebreakium");
+    public static final MaterialId witchium = createMaterial("witchium");
+    public static final MaterialId eteritchium = createMaterial("eteritchium");
+    public static final MaterialId blazing_steel = createMaterial("blazing_steel");
 }

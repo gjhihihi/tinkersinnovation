@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "tag": "forge:molten_ruby",
+    "amount": 100
+  },
+  "temperature": 1200,
+  "output": "tinkersinnovation:ruby"
+}

@@ -1,0 +1,34 @@
+{
+  "perStat": {
+    "tconstruct:melee_harvest": [
+      {
+        "name": "tinkersinnovation:dilapidation",
+        "level": 1
+      },
+      {
+        "level": 1,
+        "name": "tconstruct:magnetic"
+      }
+    ],
+    "tconstruct:ranged": [
+      {
+        "name": "tinkersinnovation:absorbed",
+        "level": 1
+      },
+      {
+        "level": 1,
+        "name": "tconstruct:magnetic"
+      }
+    ],
+    "tconstruct:armor": [
+      {
+        "level": 1,
+        "name": "tconstruct:blast_protection"
+      },
+      {
+        "level": 1,
+        "name": "tconstruct:piglin_disguise"
+      }
+    ]
+  }
+}

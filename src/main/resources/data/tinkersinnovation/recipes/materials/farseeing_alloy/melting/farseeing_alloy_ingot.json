@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkersinnovation:farseeing_alloy_ingot"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:molten_farseeing_alloy",
+    "amount": 90
+  },
+  "temperature": 1650,
+  "time": 90
+}

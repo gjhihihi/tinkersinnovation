@@ -1,5 +1,5 @@
 {
-  "color": "FFA89984",
+  "color": "FF27A9BB",
   "fallbacks": [
     "rock"
   ],
@@ -23,27 +23,27 @@
           },
           {
             "grey": 63,
-            "color": "FF98877A"
+            "color": "FF062165"
           },
           {
             "grey": 102,
-            "color": "FFA2917A"
+            "color": "FF185C93"
           },
           {
             "grey": 140,
-            "color": "FFA89984"
+            "color": "FF1F7DA5"
           },
           {
             "grey": 178,
-            "color": "FFB0A493"
+            "color": "FF27A9BB"
           },
           {
             "grey": 216,
-            "color": "FFBAAE9D"
+            "color": "FF2CC7C9"
           },
           {
             "grey": 255,
-            "color": "FFC4B0A7"
+            "color": "FF95FCFC"
           }
         ]
       }

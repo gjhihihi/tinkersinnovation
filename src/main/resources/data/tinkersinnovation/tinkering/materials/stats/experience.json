@@ -9,20 +9,20 @@
     },
     "tconstruct:head": {
       "durability": 180,
-      "mining_speed": 5.5,
+      "mining_speed": 3.5,
       "mining_tier": "minecraft:stone",
       "melee_attack": 1.0
     },
     "tconstruct:limb": {
       "durability": 180,
-      "draw_speed": -0.35,
-      "velocity": 0.25,
+      "draw_speed": 0.3,
+      "velocity": -0.2,
       "accuracy": -0.15
     },
     "tconstruct:grip": {
       "durability": 0.1,
       "accuracy": -0.2,
-      "melee_damage": 2
+      "melee_damage": 1
     },
     "tconstruct:maille": {},
     "tconstruct:plating_boots": {
@@ -60,7 +60,19 @@
       "toughness": 0,
       "knockback_resistance": 0,
       "block_amount": -0.2,
-      "shield_amount": 1
+      "shield_amount": 10
+    },
+    "tinkersinnovation:bomb_core": {
+      "durability": 0.1,
+      "bomb_radius": 1,
+      "velocity": -0.2,
+      "accuracy": -0.15
+    },
+    "tinkersinnovation:bomb_shell": {
+      "durability": 180,
+      "piece_count": 2,
+      "piece_damage": 0.5,
+      "melee_range_damage": 1
     },
     "tinkers_ingenuity:curio_extra": {},
     "tinkers_ingenuity:curio_main": {

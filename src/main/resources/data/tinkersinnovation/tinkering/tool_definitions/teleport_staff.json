@@ -44,8 +44,22 @@
       }
     },
     {
+      "type": "tconstruct:material_repair",
+      "durability": 50,
+      "material": "tinkerinnovation:teleport_core"
+    },
+    {
+      "type": "tconstruct:material_repair",
+      "durability": 10,
+      "material": "minecraft:ender_pearl"
+    },
+    {
       "type": "tconstruct:traits",
       "traits": [
+        {
+          "level": 1,
+          "name": "tinkersinnovation:teleport"
+        }
       ]
     }
   ]

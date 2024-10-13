@@ -1,0 +1,16 @@
+{
+  "type": "tconstruct:severing",
+  "conditions": [
+    {
+      "modid": "iceandfire",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "entity": {
+    "type": "iceandfire:gorgon"
+  },
+  "result": {
+    "count": 5,
+    "item": "tinkersinnovation:gorgon_hair"
+  }
+}

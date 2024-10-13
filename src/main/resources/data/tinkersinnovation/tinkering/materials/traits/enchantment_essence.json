@@ -4,11 +4,19 @@
       {
         "name": "tinkersinnovation:enchantment",
         "level": 1
+      },
+      {
+        "name": "tconstruct:shiny",
+        "level": 1
       }
     ],
     "tconstruct:ranged": [
       {
         "name": "tinkersinnovation:enchantment",
+        "level": 1
+      },
+      {
+        "name": "tconstruct:shiny",
         "level": 1
       }
     ],
@@ -16,17 +24,19 @@
       {
         "name": "tinkersinnovation:enchantment_armor",
         "level": 1
-      }
-    ],
-    "tinkersinnovation:shield": [
+      },
       {
-        "name": "tinkersinnovation:enchantment_armor",
+        "name": "tconstruct:shiny",
         "level": 1
       }
     ],
     "tinkers_ingenuity:curio": [
       {
         "name": "tinkersinnovation:enchantment_curio",
+        "level": 1
+      },
+      {
+        "name": "tconstruct:shiny",
         "level": 1
       }
     ]

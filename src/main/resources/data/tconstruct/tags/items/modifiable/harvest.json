@@ -2,6 +2,9 @@
   "replace": false,
   "values": [
     "tinkersinnovation:claw",
-    "tinkersinnovation:teleport_staff"
+    "tinkersinnovation:teleport_staff",
+    "tinkersinnovation:tinker_bomb",
+    "tinkersinnovation:skelewag_sword",
+    "tinkersinnovation:mechanical_multifunctional_cane"
   ]
 }

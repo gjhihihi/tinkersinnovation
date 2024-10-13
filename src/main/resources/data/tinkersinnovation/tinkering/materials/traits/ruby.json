@@ -1,0 +1,22 @@
+{
+  "perStat": {
+    "tconstruct:melee_harvest": [
+      {
+        "name": "tinkersinnovation:focusing",
+        "level": 1
+      }
+    ],
+    "tconstruct:ranged": [
+      {
+        "name": "tinkersinnovation:focusing",
+        "level": 1
+      }
+    ],
+    "tconstruct:armor": [
+      {
+        "name": "tinkersinnovation:flame_burning",
+        "level": 1
+      }
+    ]
+  }
+}

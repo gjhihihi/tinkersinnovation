@@ -2,10 +2,10 @@
   "stats": {
     "tconstruct:binding": {},
     "tconstruct:handle": {
-      "durability": 0.1,
+      "durability": -0.1,
       "mining_speed": 1,
       "melee_speed": 0.1,
-      "melee_damage": 0.1
+      "melee_damage": 0.35
     },
     "tconstruct:head": {
       "durability": 2000,
@@ -16,11 +16,11 @@
     "tconstruct:limb": {
       "durability": 2000,
       "draw_speed": -0.25,
-      "velocity": -0.1,
+      "velocity": 0.1,
       "accuracy": -0.05
     },
     "tconstruct:grip": {
-      "durability": 0.1,
+      "durability": -0.1,
       "accuracy": -0.05,
       "melee_damage": 5.0
     },
@@ -60,7 +60,19 @@
       "toughness": 4,
       "knockback_resistance": 1,
       "block_amount": 0.3,
-      "shield_amount": 12
+      "shield_amount": 95
+    },
+    "tinkersinnovation:bomb_core": {
+      "durability": -0.1,
+      "bomb_radius": 4,
+      "velocity": 0.1,
+      "accuracy": -0.05
+    },
+    "tinkersinnovation:bomb_shell": {
+      "durability": 2000,
+      "piece_count": 5,
+      "piece_damage": 2.25,
+      "melee_range_damage": 5
     },
     "tinkers_ingenuity:laser_medium": {
       "laser_range": 8,

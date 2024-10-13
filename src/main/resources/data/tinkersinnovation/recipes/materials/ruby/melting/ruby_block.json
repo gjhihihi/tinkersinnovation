@@ -1,0 +1,21 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:storage_blocks/ruby"
+      }
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:storage_blocks/ruby"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:molten_ruby",
+    "amount": 900
+  },
+  "temperature": 1200,
+  "time": 180
+}

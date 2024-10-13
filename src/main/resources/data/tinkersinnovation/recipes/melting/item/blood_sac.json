@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "modid": "alexsmobs",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "ingredient": {
+    "item": "alexsmobs:blood_sac"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:molten_blood",
+    "amount": 250
+  },
+  "temperature": 100,
+  "time": 40
+}

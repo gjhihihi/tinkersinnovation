@@ -1,0 +1,17 @@
+{
+  "type": "tconstruct:entity_melting",
+  "conditions": [
+    {
+      "modid": "iceandfire",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "entity": {
+    "type": "iceandfire:gorgon"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:molten_gorgon",
+    "amount": 10
+  },
+  "damage": 2
+}

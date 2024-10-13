@@ -4,8 +4,8 @@
       "type": "tconstruct:part_stats",
       "parts": [
         "tinkersinnovation:light_shield_plate",
-        "tconstruct:tough_handle",
-        "tconstruct:round_plate"
+        "tconstruct:maille",
+        "tconstruct:shield_core"
       ],
       "primary_part": 0
     },
@@ -32,7 +32,13 @@
         "tconstruct:block_amount": 10.0,
         "tconstruct:block_angle": 90.0,
         "tconstruct:use_item_speed": 1.0,
-        "tinkersinnovation:shield_amount": 3
+        "tinkersinnovation:shield_amount": 20
+      }
+    },
+    {
+      "type": "tconstruct:multiply_stats",
+      "multipliers": {
+        "tinkersinnovation:shield_amount": 0.75
       }
     },
     {

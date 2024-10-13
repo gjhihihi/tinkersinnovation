@@ -2,15 +2,9 @@
   "stats": {
     "tconstruct:head": {
       "durability": 90,
-      "mining_speed": 5.5,
+      "mining_speed": 3,
       "mining_tier": "minecraft:stone",
       "melee_attack": 2
-    },
-    "tconstruct:limb": {
-      "durability": 90,
-      "draw_speed": 0.15,
-      "velocity": -0.1,
-      "accuracy": -0.1
     },
     "tconstruct:shield_core": {}
   }

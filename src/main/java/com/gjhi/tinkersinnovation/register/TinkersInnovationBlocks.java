@@ -1,5 +1,6 @@
 package com.gjhi.tinkersinnovation.register;
 
+import net.minecraft.world.level.block.AbstractGlassBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
@@ -22,13 +23,18 @@ public class TinkersInnovationBlocks {
 
     public static RegistryObject<Block> polychrome_alloy_block = BLOCKS.register("polychrome_alloy_block", () -> new Block(METAL));
     public static RegistryObject<Block> void_crystal_block = BLOCKS.register("void_crystal_block", () -> new Block(METAL));
-    public static RegistryObject<Block> enchantment_block = BLOCKS.register("enchantment_block", () -> new Block(METAL));
+    public static RegistryObject<Block> enchantment_block = BLOCKS.register("enchantment_block", () -> new AbstractGlassBlock(METAL) {
+    });
     public static RegistryObject<Block> slimton_block = BLOCKS.register("slimton_block", () -> new Block(METAL));
     public static RegistryObject<Block> decline_block = BLOCKS.register("decline_block", () -> new Block(METAL));
-    public static RegistryObject<Block> hostilium_block = BLOCKS.register("hostilium_block", () -> new Block(METAL));
+    public static RegistryObject<Block> hostilium_block = BLOCKS.register("hostilium_block", () -> new AbstractGlassBlock(METAL) {
+    });
+    public static RegistryObject<Block> fools_gold_block = BLOCKS.register("fools_gold_block", () -> new Block(METAL));
+    public static RegistryObject<Block> farseeing_alloy_block = BLOCKS.register("farseeing_alloy_block", () -> new Block(METAL));
+    public static RegistryObject<Block> sunsoul_alloy_block = BLOCKS.register("sunsoul_alloy_block", () -> new Block(METAL));
+    public static RegistryObject<Block> straddlite_alloy_block = BLOCKS.register("straddlite_alloy_block", () -> new Block(METAL));
 
     public static RegistryObject<Block> void_crystal_ore = BLOCKS.register("void_crystal_ore", () -> new Block(DEEPSLATE_ORE));
-    public static RegistryObject<Block> apatite_block = BLOCKS.register("apatite_block", () -> new Block(ORE));
     public static RegistryObject<Block> seared_bedrock = BLOCKS.register("seared_bedrock", () -> new Block(BEDROCK));
     public static RegistryObject<Block> scorched_bedrock = BLOCKS.register("scorched_bedrock", () -> new Block(BEDROCK));
 

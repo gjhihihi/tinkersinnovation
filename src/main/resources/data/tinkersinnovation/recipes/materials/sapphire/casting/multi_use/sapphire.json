@@ -1,0 +1,24 @@
+{
+  "type": "tconstruct:casting_table",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:gems/sapphire"
+      }
+    }
+  ],
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/gem"
+  },
+  "cast_consumed": false,
+  "fluid": {
+    "tag": "forge:molten_sapphire",
+    "amount": 100
+  },
+  "result": {
+    "tag": "forge:gems/sapphire"
+  },
+  "cooling_time": 90
+}

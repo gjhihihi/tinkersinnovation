@@ -4,17 +4,19 @@
         {"path": "tinkersinnovation:item/tool/parts/handguard", "stat_type": "tconstruct:handle"},
         {"path": "tinkersinnovation:item/tool/parts/heavy_shield_plate", "stat_type": "tconstruct:head"},
         {"path": "tinkersinnovation:item/tool/parts/light_shield_plate", "stat_type": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/parts/staff_head", "stat_type": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/parts/bomb_core", "stat_type": "tconstruct:head"},
 
-        {"path": "tinkersinnovation:item/tool/heavy_shield/plate_up", "stat_type": "tconstruct:head"},
-        {"path": "tinkersinnovation:item/tool/heavy_shield/broken_plate_up", "stat_type": "tconstruct:head"},
-        {"path": "tinkersinnovation:item/tool/heavy_shield/plate_down", "stat_type": "tconstruct:head"},
-        {"path": "tinkersinnovation:item/tool/heavy_shield/broken_plate_down", "stat_type": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/heavy_shield/plate_up", "stat_type": "tconstruct:plating_shield"},
+        {"path": "tinkersinnovation:item/tool/heavy_shield/broken_plate_up", "stat_type": "tconstruct:plating_shield"},
+        {"path": "tinkersinnovation:item/tool/heavy_shield/plate_down", "stat_type": "tconstruct:plating_shield"},
+        {"path": "tinkersinnovation:item/tool/heavy_shield/broken_plate_down", "stat_type": "tconstruct:plating_shield"},
         {"path": "tinkersinnovation:item/tool/heavy_shield/plate_mid", "stat_type": "tconstruct:head"},
         {"path": "tinkersinnovation:item/tool/heavy_shield/broken_plate_mid","stat_type": "tconstruct:head"},
         {"path": "tinkersinnovation:item/tool/heavy_shield/handle","stat_type": "tconstruct:handle"},
 
-        {"path": "tinkersinnovation:item/tool/round_shield/plate_round", "stat_type": "tconstruct:head"},
-        {"path": "tinkersinnovation:item/tool/round_shield/broken_plate_round", "stat_type": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/round_shield/plate_round", "stat_type": "tconstruct:plating_shield"},
+        {"path": "tinkersinnovation:item/tool/round_shield/broken_plate_round", "stat_type": "tconstruct:plating_shield"},
         {"path": "tinkersinnovation:item/tool/round_shield/plate_mid", "stat_type": "tconstruct:head"},
         {"path": "tinkersinnovation:item/tool/round_shield/broken_plate_mid","stat_type": "tconstruct:head"},
         {"path": "tinkersinnovation:item/tool/round_shield/handle","stat_type": "tconstruct:handle"},
@@ -28,7 +30,13 @@
         {"path": "tinkersinnovation:item/tool/claw/handle", "stat_type": "tconstruct:handle"},
 
         {"path": "tinkersinnovation:item/tool/teleport_staff/head", "stat_type": "tconstruct:head"},
-        {"path": "tinkersinnovation:item/tool/claw/broken_blade1", "stat_type": "tconstruct:head"},
-        {"path": "tinkersinnovation:item/tool/teleport_staff/broken_head", "stat_type": "tconstruct:handle"}
+        {"path": "tinkersinnovation:item/tool/teleport_staff/broken_head", "stat_type": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/teleport_staff/handle", "stat_type": "tconstruct:handle"},
+
+        {"path": "tinkersinnovation:item/tool/tinker_bomb/bomb", "stat_type": "tconstruct:head"},
+        {"path": "tinkersinnovation:item/tool/tinker_bomb/broken_bomb", "stat_type": "tconstruct:head"},
+
+        {"path": "tinkersinnovation:item/tool/skelewag_sword/blade", "stat_type": "tconstruct:blade"},
+        {"path": "tinkersinnovation:item/tool/skelewag_sword/broken_blade", "stat_type": "tconstruct:blade"}
     ]
 }

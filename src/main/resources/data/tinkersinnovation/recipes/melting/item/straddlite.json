@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "modid": "alexsmobs",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "ingredient": {
+    "item": "alexsmobs:straddlite"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:molten_straddlite",
+    "amount": 90
+  },
+  "temperature": 1050,
+  "time": 200
+}

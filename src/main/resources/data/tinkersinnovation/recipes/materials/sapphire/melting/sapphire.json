@@ -1,0 +1,21 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:gems/sapphire"
+      }
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:gems/sapphire"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:molten_sapphire",
+    "amount": 100
+  },
+  "temperature": 1150,
+  "time": 90
+}

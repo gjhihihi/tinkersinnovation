@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:melting_fuel",
+  "duration": 300,
+  "fluid": {
+    "amount": 20,
+    "fluid": "tinkersinnovation:molten_sun"
+  },
+  "temperature": 5000
+}

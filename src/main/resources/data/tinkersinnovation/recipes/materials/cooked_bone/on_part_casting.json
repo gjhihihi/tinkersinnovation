@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "amount": 500,
+    "tag": "tconstruct:meat_soup"
+  },
+  "input": "tconstruct:bone",
+  "output": "tinkersinnovation:cooked_bone",
+  "temperature": 100
+}

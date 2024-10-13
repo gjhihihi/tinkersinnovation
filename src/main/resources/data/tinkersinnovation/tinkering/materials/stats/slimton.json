@@ -3,8 +3,8 @@
     "tconstruct:binding": {},
     "tconstruct:handle": {
       "durability": 0.1,
-      "mining_speed": 0,
-      "melee_speed": 0,
+      "mining_speed": 0.1,
+      "melee_speed": -0.05,
       "melee_damage": -0.1
     },
     "tconstruct:head": {
@@ -15,9 +15,9 @@
     },
     "tconstruct:limb": {
       "durability": 1200,
-      "draw_speed": 0.8,
-      "velocity": -0.45,
-      "accuracy": 0.8
+      "draw_speed": 0.6,
+      "velocity": -0.2,
+      "accuracy": 0.6
     },
     "tconstruct:grip": {
       "durability": 0.5,
@@ -60,7 +60,19 @@
       "toughness": 5,
       "knockback_resistance": 0.05,
       "block_amount": 0.25,
-      "shield_amount": 6
+      "shield_amount": 62
+    },
+    "tinkersinnovation:bomb_core": {
+      "durability": 0.5,
+      "bomb_radius": 5,
+      "velocity": -0.5,
+      "accuracy": 0.8
+    },
+    "tinkersinnovation:bomb_shell": {
+      "durability": 1200,
+      "piece_count": 10,
+      "piece_damage": 2,
+      "melee_range_damage": 1.2
     },
     "tinkers_ingenuity:curio_extra": {},
     "tinkers_ingenuity:curio_main": {

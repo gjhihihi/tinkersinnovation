@@ -1,5 +1,5 @@
 {
-  "color": "FFB478ED",
+  "color": "EEB478ED",
   "fallbacks": [
     "crystal"
   ],
@@ -12,6 +12,7 @@
       "tconstruct:repair_kit",
       "tconstruct:limb",
       "tconstruct:grip",
+      "tconstruct:bowstring",
       "tconstruct:armor_plating",
       "tconstruct:plating_boots",
       "tconstruct:plating_leggings",

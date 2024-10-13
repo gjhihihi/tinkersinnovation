@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input": "tinkersinnovation:sunsoul_alloy",
+  "temperature": 3200,
+  "result": {
+    "fluid": "tinkersinnovation:molten_sunsoul_alloy",
+    "amount": 90
+  }
+}

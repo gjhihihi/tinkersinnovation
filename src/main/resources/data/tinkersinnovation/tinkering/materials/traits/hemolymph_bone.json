@@ -1,0 +1,12 @@
+{
+  "default": [
+    {
+      "name": "tinkersinnovation:raging",
+      "level": 2
+    },
+    {
+      "name": "tinkersinnovation:inflammation",
+      "level": 1
+    }
+  ]
+}

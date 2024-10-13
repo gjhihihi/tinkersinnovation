@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "amount": 250,
+    "tag": "tinkersinnovation:molten_hemolymph"
+  },
+  "input": "tinkersinnovation:blood_bone",
+  "output": "tinkersinnovation:hemolymph_bone",
+  "temperature": 42
+}

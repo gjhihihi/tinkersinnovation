@@ -3,8 +3,13 @@
   "values": [
     "tinkersinnovation:polychrome_alloy_block",
     "tinkersinnovation:slimton_block",
+    "tinkersinnovation:enchantment_block",
     "tinkersinnovation:decline_block",
     "tinkersinnovation:hostilium_block",
+    "tinkersinnovation:fools_gold_block",
+    "tinkersinnovation:farseeing_alloy_block",
+    "tinkersinnovation:sunsoul_alloy_block",
+    "tinkersinnovation:straddlite_alloy_block",
     {
       "id": "l2complements:totemic_gold_block",
       "required": false

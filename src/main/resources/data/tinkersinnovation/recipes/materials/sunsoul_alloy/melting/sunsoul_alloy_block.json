@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkersinnovation:sunsoul_alloy_block"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:molten_sunsoul_alloy",
+    "amount": 810
+  },
+  "temperature": 3200,
+  "time": 180
+}

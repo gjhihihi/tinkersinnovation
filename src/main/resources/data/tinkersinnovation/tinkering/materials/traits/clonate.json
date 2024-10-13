@@ -1,8 +1,46 @@
 {
-  "default": [
-    {
-      "name": "tconstruct:sturdy",
-      "level": 1
-    }
-  ]
+  "perStat": {
+    "tconstruct:melee_harvest": [
+      {
+        "level": 1,
+        "name": "tconstruct:overslime"
+      },
+      {
+        "name": "tinkersinnovation:over_imitate",
+        "level": 1
+      },
+      {
+        "name": "tinkersinnovation:backtrack",
+        "level": 1
+      }
+    ],
+    "tconstruct:ranged": [
+      {
+        "level": 1,
+        "name": "tconstruct:overslime"
+      },
+      {
+        "name": "tinkersinnovation:over_imitate",
+        "level": 1
+      },
+      {
+        "name": "tinkersinnovation:backtrack",
+        "level": 1
+      }
+    ],
+    "tconstruct:armor": [
+      {
+        "level": 1,
+        "name": "tconstruct:overslime"
+      },
+      {
+        "name": "tinkersinnovation:over_imitate_armor",
+        "level": 1
+      },
+      {
+        "name": "tinkersinnovation:backtrack",
+        "level": 1
+      }
+    ]
+  }
 }

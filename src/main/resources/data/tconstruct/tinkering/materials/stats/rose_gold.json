@@ -6,7 +6,19 @@
       "toughness": 0,
       "knockback_resistance": 0,
       "block_amount": -0.05,
-      "shield_amount": 3
+      "shield_amount": 28
+    },
+    "tinkersinnovation:bomb_core": {
+      "durability": -0.4,
+      "bomb_radius": 2,
+      "velocity": -0.25,
+      "accuracy": 0.15
+    },
+    "tinkersinnovation:bomb_shell": {
+      "durability": 175,
+      "piece_count": 3,
+      "piece_damage": 1,
+      "melee_range_damage": 1
     }
   }
 }

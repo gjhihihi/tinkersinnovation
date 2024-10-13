@@ -1,0 +1,46 @@
+{
+  "perStat": {
+    "tconstruct:melee_harvest": [
+      {
+        "name": "tinkersinnovation:split",
+        "level": 1
+      },
+      {
+        "name": "tinkersinnovation:transmutation",
+        "level": 1
+      },
+      {
+        "name": "tinkersinnovation:farseeing",
+        "level": 1
+      }
+    ],
+    "tconstruct:ranged": [
+      {
+        "name": "tinkersinnovation:split",
+        "level": 1
+      },
+      {
+        "name": "tinkersinnovation:transmutation",
+        "level": 1
+      },
+      {
+        "name": "tinkersinnovation:farseeing",
+        "level": 1
+      }
+    ],
+    "tconstruct:armor": [
+      {
+        "name": "tinkersinnovation:split",
+        "level": 1
+      },
+      {
+        "name": "tinkersinnovation:transmutation_armor",
+        "level": 1
+      },
+      {
+        "name": "tinkersinnovation:farseeing_armor",
+        "level": 1
+      }
+    ]
+  }
+}

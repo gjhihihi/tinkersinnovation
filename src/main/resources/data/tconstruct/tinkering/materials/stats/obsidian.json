@@ -6,7 +6,7 @@
       "toughness": 0,
       "knockback_resistance": 0.15,
       "block_amount": 0.1,
-      "shield_amount": 4
+      "shield_amount": 48
     }
   }
 }

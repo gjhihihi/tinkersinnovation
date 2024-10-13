@@ -1,0 +1,17 @@
+{
+  "type": "tconstruct:entity_melting",
+  "conditions": [
+    {
+      "modid": "alexsmobs",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "entity": {
+    "type": "alexsmobs:void_worm"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:molten_void_worm",
+    "amount": 10
+  },
+  "damage": 2
+}

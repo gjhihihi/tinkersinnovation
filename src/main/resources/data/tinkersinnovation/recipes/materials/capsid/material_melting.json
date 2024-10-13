@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input": "tinkersinnovation:capsid",
+  "temperature": 500,
+  "result": {
+    "fluid": "tinkersinnovation:molten_capsid",
+    "amount": 90
+  }
+}

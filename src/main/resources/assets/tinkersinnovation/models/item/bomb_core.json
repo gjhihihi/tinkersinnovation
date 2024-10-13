@@ -1,0 +1,7 @@
+{
+  "loader": "tconstruct:material",
+  "parent": "forge:item/default",
+  "textures": {
+    "texture": "tinkersinnovation:item/tool/parts/bomb_core"
+  }
+}

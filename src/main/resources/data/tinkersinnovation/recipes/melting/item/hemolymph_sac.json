@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "modid": "alexsmobs",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "ingredient": {
+    "item": "alexsmobs:hemolymph_sac"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:molten_hemolymph",
+    "amount": 250
+  },
+  "temperature": 100,
+  "time": 40
+}

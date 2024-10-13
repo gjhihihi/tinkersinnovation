@@ -1,0 +1,17 @@
+{
+  "type": "tconstruct:entity_melting",
+  "conditions": [
+    {
+      "modid": "alexsmobs",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "entity": {
+    "type": "alexsmobs:sun_bird"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:molten_sun",
+    "amount": 1
+  },
+  "damage": 10
+}

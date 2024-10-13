@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:material",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:nuggets/brass"
+      }
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:nuggets/brass"
+  },
+  "value": 1,
+  "needed": 9,
+  "material": "tinkersinnovation:brass"
+}

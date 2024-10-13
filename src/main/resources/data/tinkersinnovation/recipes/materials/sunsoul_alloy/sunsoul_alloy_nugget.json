@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "item": "tinkersinnovation:sunsoul_alloy_nugget"
+  },
+  "value": 1,
+  "needed": 9,
+  "material": "tinkersinnovation:sunsoul_alloy"
+}

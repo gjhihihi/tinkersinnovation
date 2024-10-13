@@ -1,0 +1,21 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:gems/ruby"
+      }
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:gems/ruby"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:molten_ruby",
+    "amount": 100
+  },
+  "temperature": 1200,
+  "time": 90
+}

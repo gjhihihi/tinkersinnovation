@@ -1,0 +1,15 @@
+{
+  "type": "tconstruct:material",
+  "conditions": [
+    {
+      "modid": "alexsmobs",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "ingredient": {
+    "item": "alexsmobs:elastic_tendon"
+  },
+  "value": 1,
+  "needed": 1,
+  "material": "tinkersinnovation:elastic_tendon"
+}

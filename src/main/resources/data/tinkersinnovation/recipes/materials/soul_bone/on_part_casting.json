@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "amount": 200,
+    "tag": "tinkersinnovation:molten_active_soul"
+  },
+  "input": "tconstruct:blazing_bone",
+  "output": "tinkersinnovation:soul_bone",
+  "temperature": 200
+}

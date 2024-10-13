@@ -1,9 +1,0 @@
-{
-  "type": "tconstruct:material_melting",
-  "input": "tinkersinnovation:hostilium",
-  "temperature": 1500,
-  "result": {
-    "fluid": "tinkersinnovation:molten_hostilium",
-    "amount": 90
-  }
-}

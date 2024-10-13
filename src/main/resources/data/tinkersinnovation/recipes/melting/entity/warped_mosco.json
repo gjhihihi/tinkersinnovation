@@ -1,0 +1,17 @@
+{
+  "type": "tconstruct:entity_melting",
+  "conditions": [
+    {
+      "modid": "alexsmobs",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "entity": {
+    "type": "alexsmobs:warped_mosco"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:molten_hemolymph",
+    "amount": 10
+  },
+  "damage": 2
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "tag": "tinkersinnovation:molten_fools_gold",
+    "amount": 90
+  },
+  "temperature": 950,
+  "output": "tinkersinnovation:fools_gold"
+}

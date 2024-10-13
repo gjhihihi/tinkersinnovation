@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/nugget"
+  },
+  "cast_consumed": false,
+  "fluid": {
+    "name": "tinkersinnovation:molten_farseeing_alloy",
+    "amount": 10
+  },
+  "result": "tinkersinnovation:farseeing_alloy_nugget",
+  "cooling_time": 45
+}

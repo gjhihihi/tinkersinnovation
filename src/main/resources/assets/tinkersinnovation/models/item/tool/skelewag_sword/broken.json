@@ -1,0 +1,26 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default-tool",
+  "textures": {
+    "blade":  "tinkersinnovation:item/tool/skelewag_sword/broken_blade",
+    "handle": "tinkersinnovation:item/tool/skelewag_sword/handle",
+
+    "large_blade":  "tinkersinnovation:item/tool/skelewag_sword/broken_blade",
+    "large_handle": "tinkersinnovation:item/tool/skelewag_sword/handle"
+  },
+  "modifier_roots": {
+    "small": [
+      "tinkersinnovation:item/tool/skelewag_sword/modifiers/broken/",
+      "tinkersinnovation:item/tool/skelewag_sword/modifiers/"
+    ],
+    "large": [
+      "tinkersinnovation:item/tool/skelewag_sword/modifiers/broken/",
+      "tinkersinnovation:item/tool/skelewag_sword/modifiers/"
+    ]
+  },
+  "parts": [
+    { "name": "blade",    "index": 0},
+    { "name": "handle" }
+  ],
+  "large": true
+}
