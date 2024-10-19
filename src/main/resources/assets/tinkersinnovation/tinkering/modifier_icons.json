@@ -16,7 +16,7 @@
   "tinkersinnovation:supersonic_speed": ["tinkersinnovation:item/modifiers/supersonic_speed"],
   "tinkersinnovation:hold_steady": ["tinkersinnovation:item/modifiers/hold_steady"],
   "tinkersinnovation:heirophant_green": ["tinkersinnovation:item/modifiers/heirophant_green", "tconstruct:gui/modifiers/book"],
-  "tinkersinnovation:eternal_weaker": ["tinkersinnovation:item/modifiers/eternal_weaker", "tconstruct:gui/modifiers/book"],
+  "tinkersinnovation:eternal_weaker": ["tinkersinnovation:item/reinforcement/eternium", "tconstruct:gui/modifiers/book"],
   "tinkersinnovation:life_fixing": ["tinkersinnovation:item/reinforcement/totemic_gold", "tconstruct:gui/modifiers/book"],
   "tinkersinnovation:dampened": ["tinkersinnovation:item/reinforcement/sculkium", "tconstruct:gui/modifiers/book"],
   "tinkersinnovation:harden": ["tinkersinnovation:item/reinforcement/shulkerate", "tconstruct:gui/modifiers/book"],

@@ -25,7 +25,7 @@ public class SpeedyTraitModifier extends Modifier implements AttributesModifierH
     }
     @Override
     public void addAttributes(IToolStackView tool, ModifierEntry modifier, EquipmentSlot slot, BiConsumer<Attribute, AttributeModifier> consumer) {
-        if (TinkersInnovationUtils.isInArmorSlots(slot)) {
+        if (TinkersInnovationUtils.isInArmorSlots(slot) || TinkersInnovationUtils.isShieldInHandSlots(tool, slot)) {
             consumer.accept(Attributes.MOVEMENT_SPEED, new AttributeModifier(UUID.fromString("5aee711f-684a-45a9-b767-b2c052b06ad7"), Attributes.MOVEMENT_SPEED.getDescriptionId(), LHConfig.COMMON.speedy.get() * modifier.getLevel(), AttributeModifier.Operation.MULTIPLY_BASE));
         }
     }

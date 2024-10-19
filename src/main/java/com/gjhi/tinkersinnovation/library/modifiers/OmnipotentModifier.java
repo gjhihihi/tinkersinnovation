@@ -770,6 +770,79 @@ public class OmnipotentModifier extends Modifier implements VolatileDataModifier
             if (getMaterialCount(tool, hostilium.toString()) > 0) {
                 tooltip.add(Component.translatable(PATH + "tinkersinnovation.hostilium"));
             }
+            if (getMaterialCount(tool, farseeing_alloy.toString()) > 0) {
+                tooltip.add(Component.translatable(PATH + "tinkersinnovation.farseeing_alloy"));
+            }
+            if (getMaterialCount(tool, sunsoul_alloy.toString()) > 0) {
+                tooltip.add(Component.translatable(PATH + "tinkersinnovation.sunsoul_alloy"));
+            }
+            if (getMaterialCount(tool, straddlite_alloy.toString()) > 0) {
+                tooltip.add(Component.translatable(PATH + "tinkersinnovation.straddlite_alloy"));
+            }
+            if (getMaterialCount(tool, hemolymph_bone.toString()) > 0) {
+                tooltip.add(Component.translatable(PATH + "tinkersinnovation.hemolymph_bone"));
+            }
+            if (getMaterialCount(tool, soul_bone.toString()) > 0) {
+                tooltip.add(Component.translatable(PATH + "tinkersinnovation.soul_bone"));
+            }
+            if (getMaterialCount(tool, "tinkerscalibration:mangobberslime") > 0) {
+                tooltip.add(Component.translatable(PATH + "tinkerscalibration.mangobberslime"));
+            }
+            if (getMaterialCount(tool, "tinkerscalibration:mandite") > 0) {
+                tooltip.add(Component.translatable(PATH + "tinkerscalibration.mandite"));
+            }
+            if (getMaterialCount(tool, "tinkerscalibration:darkmatter") > 0) {
+                tooltip.add(Component.translatable(PATH + "tinkerscalibration.darkmatter"));
+            }
+            if (getMaterialCount(tool, "tinkerscalibration:redmatter") > 0) {
+                tooltip.add(Component.translatable(PATH + "tinkerscalibration.redmatter"));
+            }
+            if (getMaterialCount(tool, "tinkerscalibration:emperorslime") > 0) {
+                tooltip.add(Component.translatable(PATH + "tinkerscalibration.emperorslime"));
+            }
+            int partnum;
+            partnum = getMaterialCount(tool, "tinkerscalibration:netherite");
+            partnum += getMaterialCount(tool, "tinkerscalibration:bnetherite");
+            partnum += getMaterialCount(tool, "tinkerscalibration:fnetherite");
+            partnum += getMaterialCount(tool, "tinkerscalibration:gnetherite");
+            partnum += getMaterialCount(tool, "tinkerscalibration:wnetherite");
+            partnum += getMaterialCount(tool, "tinkerscalibration:snetherite");
+            partnum += getMaterialCount(tool, "tinkerscalibration:pnetherite");
+            partnum += getMaterialCount(tool, "tinkerscalibration:prnetherite");
+            partnum += getMaterialCount(tool, "tinkerscalibration:enetherite");
+            if (partnum > 0) {
+                tooltip.add(Component.translatable(PATH + "tinkerscalibration.netherites"));
+            }
+            if (getMaterialCount(tool, "tinkerscalibration:fazelle") > 0) {
+                tooltip.add(Component.translatable(PATH + "tinkerscalibration.fazelle"));
+            }
+            if (getMaterialCount(tool, "tinkerscalibration:breashell") > 0) {
+                tooltip.add(Component.translatable(PATH + "tinkerscalibration.breashell"));
+            }
+            if (getMaterialCount(tool, "tinkerscalibration:gobbernether") > 0) {
+                tooltip.add(Component.translatable(PATH + "tinkerscalibration.gobbernether"));
+            }
+            if (getMaterialCount(tool, "tinkerscalibration:oraclium") > 0) {
+                tooltip.add(Component.translatable(PATH + "tinkerscalibration.oraclium"));
+            }
+            if (getMaterialCount(tool, "tinkerscalibration:soulgold") > 0) {
+                tooltip.add(Component.translatable(PATH + "tinkerscalibration.soulgold"));
+            }
+            if (getMaterialCount(tool, "tinkerscalibration:jazz") > 0) {
+                tooltip.add(Component.translatable(PATH + "tinkerscalibration.jazz"));
+            }
+            if (getMaterialCount(tool, "tinkerscalibration:wither") > 0) {
+                tooltip.add(Component.translatable(PATH + "tinkerscalibration.wither"));
+            }
+            if (getMaterialCount(tool, "tinkerscalibration:gravity") > 0) {
+                tooltip.add(Component.translatable(PATH + "tinkerscalibration.gravity"));
+            }
+            if (getMaterialCount(tool, "tinkerscalibration:lindsteel") > 0) {
+                tooltip.add(Component.translatable(PATH + "tinkerscalibration.lindsteel"));
+            }
+            if (getMaterialCount(tool, "tinkers_thinking:stewium") > 0) {
+                tooltip.add(Component.translatable(PATH + "tinkers_thinking.stewium"));
+            }
         }
     }
 

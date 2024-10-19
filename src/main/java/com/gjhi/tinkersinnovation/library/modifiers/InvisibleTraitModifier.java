@@ -24,7 +24,7 @@ public class InvisibleTraitModifier extends NoLevelsModifier implements Inventor
 
     @Override
     public void onInventoryTick(IToolStackView tool, ModifierEntry modifier, Level world, LivingEntity holder, int itemSlot, boolean isSelected, boolean isCorrectSlot, ItemStack stack) {
-        if (TinkersInnovationUtils.isInArmorSlots(holder, stack)){
+        if (TinkersInnovationUtils.isInArmorSlots(holder, stack) || TinkersInnovationUtils.isShieldInHandSlots(tool, holder, stack)){
             holder.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 20));
         }
     }

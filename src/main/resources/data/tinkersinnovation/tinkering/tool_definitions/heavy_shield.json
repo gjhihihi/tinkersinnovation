@@ -47,7 +47,7 @@
         "tconstruct:attack_damage": 2.25,
         "tconstruct:durability": 4.25,
         "tconstruct:mining_speed": 0.3,
-        "tinkersinnovation:shield_amount": 1.5
+        "tinkersinnovation:shield_amount": 3
       }
     },
     {

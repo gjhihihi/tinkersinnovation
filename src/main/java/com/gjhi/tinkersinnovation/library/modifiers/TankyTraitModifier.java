@@ -25,7 +25,7 @@ public class TankyTraitModifier extends Modifier implements AttributesModifierHo
     }
     @Override
     public void addAttributes(IToolStackView tool, ModifierEntry modifier, EquipmentSlot slot, BiConsumer<Attribute, AttributeModifier> consumer) {
-        if (TinkersInnovationUtils.isInArmorSlots(slot)) {
+        if (TinkersInnovationUtils.isInArmorSlots(slot) || TinkersInnovationUtils.isShieldInHandSlots(tool, slot)) {
             consumer.accept(Attributes.MAX_HEALTH, new AttributeModifier(UUID.fromString("56512da5-7c4a-4905-b91f-6bf2928ca95a"), Attributes.MAX_HEALTH.getDescriptionId(), LHConfig.COMMON.tankHealth.get() * modifier.getLevel(), AttributeModifier.Operation.MULTIPLY_BASE));
             consumer.accept(Attributes.ARMOR, new AttributeModifier(UUID.fromString("181ca485-b2b9-4e29-9d0e-c6e3d7b1e871"), Attributes.ARMOR.getDescriptionId(), LHConfig.COMMON.tankArmor.get() * modifier.getLevel(), AttributeModifier.Operation.ADDITION));
             consumer.accept(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(UUID.fromString("8c0224b7-3ca6-439f-9e4c-60589bcbc48c"), Attributes.ARMOR_TOUGHNESS.getDescriptionId(), LHConfig.COMMON.tankTough.get() * modifier.getLevel(), AttributeModifier.Operation.ADDITION));
