@@ -23,7 +23,7 @@ public class RegenerateTraitModifier extends Modifier implements InventoryTickMo
 
     @Override
     public void onInventoryTick(IToolStackView tool, ModifierEntry modifier, Level world, LivingEntity holder, int itemSlot, boolean isSelected, boolean isCorrectSlot, ItemStack stack) {
-        if (TinkersInnovationUtils.isInArmorSlots(holder, stack)){
+        if (TinkersInnovationUtils.isInArmorSlots(holder, stack) || TinkersInnovationUtils.isShieldInHandSlots(tool, holder, stack)){
             if (holder.tickCount % 20 == 0 && !holder.hasEffect(LCEffects.CURSE.get())){
                 holder.heal((float) (holder.getMaxHealth() * LHConfig.COMMON.regen.get() * modifier.getLevel()));
             }
