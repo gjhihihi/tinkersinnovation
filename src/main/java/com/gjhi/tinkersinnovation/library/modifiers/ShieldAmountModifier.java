@@ -31,6 +31,11 @@ public class ShieldAmountModifier extends DurabilityShieldModifier implements In
     }
 
     @Override
+    public int getPriority() {
+        return 1000;
+    }
+
+    @Override
     public int getShieldCapacity(IToolStackView tool, ModifierEntry modifier) {
         return tool.getStats().get(SHIELD_AMOUNT).intValue();
     }

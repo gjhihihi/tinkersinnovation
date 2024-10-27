@@ -50,7 +50,7 @@ public class SweetModifier extends NoLevelsModifier implements GeneralInteractio
                 Level world = entity.getLevel();
                 List<MobEffect> effects = new ArrayList<>();
                 for (MobEffectInstance effect : entity.getActiveEffects()){
-                    if (effect.getEffect().getCategory().equals(MobEffectCategory.HARMFUL) && effect.getCurativeItems().contains(new ItemStack(Items.MILK_BUCKET))){
+                    if (effect.getEffect().getCategory().equals(MobEffectCategory.HARMFUL)){
                         effects.add(effect.getEffect());
                     }
                 }

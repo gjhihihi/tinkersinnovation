@@ -25,11 +25,7 @@ public interface TinkersBombHook {
         for (int i = 0; i < count; i++) {
             LivingEntity entity = TinkersInnovationUtils.getRandomInList(targets);
             if (entity != null) {
-                if (hitted.containsKey(entity)){
-                    hitted.put(entity, hitted.get(entity) + 1);
-                }else {
-                    hitted.put(entity, 1);
-                }
+                hitted.put(entity, hitted.getOrDefault(entity, 0) + 1);
             }
         }
     }

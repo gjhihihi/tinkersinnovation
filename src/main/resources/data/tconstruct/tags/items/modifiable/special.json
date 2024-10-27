@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "tinkersinnovation:tinker_bomb",
     "tinkersinnovation:teleport_staff",
     "tinkersinnovation:mechanical_multifunctional_cane"
   ]

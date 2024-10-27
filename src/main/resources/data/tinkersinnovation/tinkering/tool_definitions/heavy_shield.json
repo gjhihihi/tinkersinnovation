@@ -44,7 +44,7 @@
     {
       "type": "tconstruct:multiply_stats",
       "multipliers": {
-        "tconstruct:attack_damage": 2.25,
+        "tconstruct:attack_damage": 1.8,
         "tconstruct:durability": 4.25,
         "tconstruct:mining_speed": 0.3,
         "tinkersinnovation:shield_amount": 3

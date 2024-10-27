@@ -18,6 +18,12 @@ public class OwnerProtectionModifier extends NoLevelsModifier implements DamageB
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
         hookBuilder.addHook(this, ModifierHooks.DAMAGE_BLOCK);
     }
+
+    @Override
+    public int getPriority() {
+        return 1000;
+    }
+
     public boolean isDamageBlocked(IToolStackView tool, ModifierEntry modifier, EquipmentContext context, EquipmentSlot slotType, DamageSource source, float amount) {
         LivingEntity target = null;
         LivingEntity player = context.getEntity();

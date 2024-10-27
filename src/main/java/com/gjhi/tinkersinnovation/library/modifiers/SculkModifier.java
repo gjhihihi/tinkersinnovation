@@ -68,6 +68,15 @@ public class SculkModifier extends NoLevelsModifier implements AttributesModifie
                 }
             }
         }
+        if (TinkersInnovationUtils.isShieldInHandSlots(tool, slot)){
+            switch (slot){
+                case MAINHAND,OFFHAND -> {
+                    consumer.accept(Attributes.ATTACK_SPEED, new AttributeModifier(UUID.fromString("154de1d5-370b-4f8a-b317-1e3914c350f9"), Attributes.ATTACK_SPEED.getDescriptionId(), 0.05, AttributeModifier.Operation.MULTIPLY_BASE));
+                    consumer.accept(Attributes.MOVEMENT_SPEED, new AttributeModifier(UUID.fromString("922ee974-e7ce-47a6-8500-4b267b6fdf88"), Attributes.MOVEMENT_SPEED.getDescriptionId(), 0.1, AttributeModifier.Operation.MULTIPLY_BASE));
+                    consumer.accept(Attributes.MAX_HEALTH, new AttributeModifier(UUID.fromString("50612a79-ec41-4ecf-bcd4-af7f158a0854"), Attributes.MAX_HEALTH.getDescriptionId(), 5, AttributeModifier.Operation.ADDITION));
+                }
+            }
+        }
     }
     @Override
     public Component onRemoved(IToolStackView tool, Modifier modifier) {

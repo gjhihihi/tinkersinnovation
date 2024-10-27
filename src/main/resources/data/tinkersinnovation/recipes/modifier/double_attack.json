@@ -17,17 +17,15 @@
       "item": "minecraft:lead"
     }
   ],
-  "tools": [
-    {
-      "tag": "tconstruct:modifiable/melee"
+  "tools": {
+    "type": "forge:difference",
+    "base": {
+      "tag": "tinkersinnovation:modifiable/double_attackable"
     },
-    {
-      "tag": "tconstruct:modifiable/harvest"
-    },
-    {
-      "tag": "tconstruct:modifiable/ranged"
+    "subtracted": {
+      "item": "tinkersinnovation:claw"
     }
-  ],
+  },
   "requirements": {
     "name": "tconstruct:dual_wielding",
     "level": 1,

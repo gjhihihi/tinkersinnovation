@@ -53,6 +53,7 @@ public class TraderModifier extends Modifier implements ProcessLootModifierHook 
     }
     @Override
     public void processLoot(@NotNull IToolStackView tool, ModifierEntry modifier, List<ItemStack> generatedLoot, @NotNull LootContext context) {
+        generatedLoot.clear();
         if(RANDOM.nextFloat() < 0.2 * modifier.getLevel()){
             generatedLoot.add(new ItemStack(Items.EMERALD));
         }

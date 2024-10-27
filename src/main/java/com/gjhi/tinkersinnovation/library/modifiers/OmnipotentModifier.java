@@ -1,10 +1,8 @@
 package com.gjhi.tinkersinnovation.library.modifiers;
 
 import com.gjhi.tinkersinnovation.library.hooks.ModifyDamageSourceModifierHook;
-import com.gjhi.tinkersinnovation.register.TinkersInnovationHooks;
-import com.gjhi.tinkersinnovation.register.TinkersInnovationModifiers;
-import com.gjhi.tinkersinnovation.register.TinkersInnovationSlots;
-import com.gjhi.tinkersinnovation.register.TinkersInnovationUtils;
+import com.gjhi.tinkersinnovation.register.*;
+import dev.xkmc.l2hostility.content.logic.DifficultyLevel;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.tags.TagKey;
@@ -16,6 +14,7 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.boss.wither.WitherBoss;
 import net.minecraft.world.entity.monster.EnderMan;
 import net.minecraft.world.entity.monster.Shulker;
@@ -452,7 +451,7 @@ public class OmnipotentModifier extends Modifier implements VolatileDataModifier
     public float getMeleeDamage(@NotNull IToolStackView tool, @NotNull ModifierEntry modifier, ToolAttackContext context, float baseDamage, float damage) {
         int partnum;
         LivingEntity target = context.getLivingTarget();
-        Player player = context.getPlayerAttacker();
+        LivingEntity attacker = context.getAttacker();
         if (target != null && (partnum = getMaterialCount(tool, manyullyn.toString(), TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
             damage += (target.getMaxHealth() - target.getHealth()) * (0.1f + 0.05f * modifier.getLevel() * partnum);
         }
@@ -465,13 +464,13 @@ public class OmnipotentModifier extends Modifier implements VolatileDataModifier
             if (target.isOnFire())
                 damage *= 1.2f;
         }
-        if (player != null && (partnum = getMaterialCount(tool, "tinkers_ingenuity:knight_crystal_material", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
-            damage += (player.getMaxHealth() - player.getHealth()) * (0.25f * modifier.getLevel() * partnum);
+        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:knight_crystal_material", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
+            damage += (attacker.getMaxHealth() - attacker.getHealth()) * (0.25f * modifier.getLevel() * partnum);
         }
-        if (player != null && target != null && (partnum = getMaterialCount(tool, "tinkerscalibration:gravity", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
+        if (target != null && (partnum = getMaterialCount(tool, "tinkerscalibration:gravity", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
             damage += target.fallDistance * partnum;
-            damage += player.fallDistance * partnum;
-            player.resetFallDistance();
+            damage += attacker.fallDistance * partnum;
+            attacker.resetFallDistance();
         }
         if (target != null && (partnum = getMaterialCount(tool, "tinkerscalibration:jazz", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
             damage += damage * RANDOM.nextFloat();
@@ -507,7 +506,7 @@ public class OmnipotentModifier extends Modifier implements VolatileDataModifier
                 }
             }
         }
-        if (target != null && getMaterialCount(tool, "tinkerscalibration:mandite") > 0) {
+        if (target != null && getMaterialCount(tool, "tinkerscalibration:mandite", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED) > 0) {
             target.invulnerableTime = 0;
         }
         if ((partnum = getMaterialCount(tool, decline.toString(), TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
@@ -522,6 +521,11 @@ public class OmnipotentModifier extends Modifier implements VolatileDataModifier
                 if (target instanceof WitherBoss){
                     damage += 4 * partnum * modifier.getLevel();
                 }
+            }
+        }
+        if ((partnum = getMaterialCount(tool, hostilium.toString(), TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
+            if (TinkersInnovationCompat.L2Hostility.isLoaded()){
+                damage += DifficultyLevel.ofAny(attacker) * damage * 0.02f * partnum * modifier.getLevel();
             }
         }
         return damage;
@@ -720,6 +724,13 @@ public class OmnipotentModifier extends Modifier implements VolatileDataModifier
     @Override
     public void addAttributes(IToolStackView tool, ModifierEntry modifier, EquipmentSlot slot, BiConsumer<Attribute, AttributeModifier> consumer) {
         int partnum;
+        if ((partnum = getMaterialCount(tool, hostilium.toString(), TinkerTags.Items.ARMOR)) > 0) {
+            //if (TinkersInnovationCompat.L2Hostility.isLoaded()){
+                if (TinkersInnovationUtils.isInArmorSlots(slot) || TinkersInnovationUtils.isShieldInHandSlots(tool, slot)){
+                    consumer.accept(Attributes.MAX_HEALTH, new AttributeModifier(UUID.fromString("8d2ff7e1-278e-43c4-9633-b67f7dc9c51e"), Attributes.MAX_HEALTH.getDescriptionId(), 10 * partnum * modifier.getLevel(), AttributeModifier.Operation.ADDITION));
+                }
+            //}
+        }
     }
 
     @Override

@@ -32,7 +32,7 @@ public class TinkersInnovationModifiers {
     public static StaticModifier<DampenedModifier> dampened = MODIFIERS.register("dampened", DampenedModifier::new);
     public static StaticModifier<TransparentModifier> transparent = MODIFIERS.register("transparent", TransparentModifier::new);
     public static StaticModifier<ResonanceModifier> resonance = MODIFIERS.register("resonance", ResonanceModifier::new);
-    public static StaticModifier<SuperUndeadHitModifier> super_undead = MODIFIERS.register("super_undead", SuperUndeadHitModifier::new);
+    public static StaticModifier<SuperUndeadKillerModifier> super_undead_killer = MODIFIERS.register("super_undead_killer", SuperUndeadKillerModifier::new);
     public static StaticModifier<HealthFixingModifier> health_fixing = MODIFIERS.register("health_fixing", HealthFixingModifier::new);
     public static StaticModifier<SupersonicSpeedModifier> supersonic_speed = MODIFIERS.register("supersonic_speed", SupersonicSpeedModifier::new);
     public static StaticModifier<WindPowerModifier> wind_power = MODIFIERS.register("wind_power", WindPowerModifier::new);

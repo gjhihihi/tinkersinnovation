@@ -3,6 +3,7 @@ package com.gjhi.tinkersinnovation.library.modifiers;
 import com.gjhi.tinkersinnovation.library.entitys.entitys.tinker_bomb.EBomb;
 import com.gjhi.tinkersinnovation.library.hooks.TinkersBombHook;
 import com.gjhi.tinkersinnovation.register.TinkersInnovationHooks;
+import com.gjhi.tinkersinnovation.register.TinkersInnovationUtils;
 import net.minecraft.world.entity.LivingEntity;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.impl.NoLevelsModifier;
@@ -22,6 +23,6 @@ public class BombLoverModifier extends NoLevelsModifier implements TinkersBombHo
     public void beforeBombPiecesHit(ModifierNBT modifiers, NamespacedNBT persistentData, ModifierEntry modifier, EBomb bomb, LivingEntity attacker, List<LivingEntity> targets, Map<LivingEntity, Integer> hitted) {
         int count = hitted.get(attacker);
         hitted.remove(attacker);
-        TinkersBombHook.pieceHitting(hitted, targets, count);
+        TinkersBombHook.pieceHitting(hitted, TinkersInnovationUtils.without(targets, attacker), count);
     }
 }

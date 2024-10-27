@@ -34,7 +34,7 @@ public class ArroganceModifier extends Modifier implements MeleeDamageModifierHo
     @Override
     public boolean onProjectileHitEntity(ModifierNBT modifiers, NamespacedNBT persistentData, ModifierEntry modifier, Projectile projectile, EntityHitResult hit, @Nullable LivingEntity attacker, @Nullable LivingEntity target) {
         if (target != null && projectile instanceof AbstractArrow arrow){
-            arrow.setBaseDamage(arrow.getBaseDamage() * DifficultyLevel.ofAny(target) / 50f * modifier.getLevel());
+            arrow.setBaseDamage(arrow.getBaseDamage() + arrow.getBaseDamage() * DifficultyLevel.ofAny(target) * 0.02 * modifier.getLevel());
         }
         return false;
     }
@@ -43,7 +43,7 @@ public class ArroganceModifier extends Modifier implements MeleeDamageModifierHo
     public float getMeleeDamage(@NotNull IToolStackView tool, @NotNull ModifierEntry modifier, ToolAttackContext context, float baseDamage, float damage) {
         LivingEntity target = context.getLivingTarget();
         if (target != null){
-            damage += damage * DifficultyLevel.ofAny(target) / 50f * modifier.getLevel();
+            damage += damage * DifficultyLevel.ofAny(target) * 0.02f * modifier.getLevel();
         }
         return damage;
     }

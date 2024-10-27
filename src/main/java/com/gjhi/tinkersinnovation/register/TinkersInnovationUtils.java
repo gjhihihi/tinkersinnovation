@@ -29,6 +29,7 @@ import slimeknights.tconstruct.library.tools.stat.ToolStats;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -69,6 +70,15 @@ public class TinkersInnovationUtils {
     }
     public static boolean isInSlots(LivingEntity entity, ItemStack item){
         return isInHandSlots(entity, item) || isInArmorSlots(entity, item);
+    }
+    @Nullable
+    public static EquipmentSlot inWhichSlot(LivingEntity entity, ItemStack item){
+        for (EquipmentSlot slot : EquipmentSlot.values()){
+            if (entity.getItemBySlot(slot).equals(item)){
+                return slot;
+            }
+        }
+        return null;
     }
     @Nullable
     public static ToolStack getToolFromHand(LivingEntity entity){
@@ -115,7 +125,14 @@ public class TinkersInnovationUtils {
     public static float manhattanDistance(float x1, float y1, float z1, float x2, float y2, float z2){
         return Math.abs(x1 - x2) + Math.abs(y1 - y2) + Math.abs(z1 - z2);
     }
-
+    @SafeVarargs
+    public static <T> List<T> without(List<T> origin, T...members){
+        List<T> list = new ArrayList<>(origin);
+        for (T member : members){
+            list.remove(member);
+        }
+        return list;
+    }
     public static boolean noMixinDirectDamage(IToolStackView tool, int amount, @Nullable LivingEntity entity, @Nullable ItemStack stack) {
         if (entity instanceof Player && ((Player)entity).isCreative()) {
             return false;

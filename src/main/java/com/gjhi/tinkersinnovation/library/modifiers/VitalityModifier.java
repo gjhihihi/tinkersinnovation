@@ -1,24 +1,14 @@
 package com.gjhi.tinkersinnovation.library.modifiers;
 
-import net.minecraft.world.effect.MobEffect;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Level;
-import org.apache.commons.lang3.math.NumberUtils;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.ModifierHooks;
 import slimeknights.tconstruct.library.modifiers.hook.behavior.ToolDamageModifierHook;
-import slimeknights.tconstruct.library.modifiers.hook.interaction.InventoryTickModifierHook;
-import slimeknights.tconstruct.library.modifiers.impl.NoLevelsModifier;
 import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
-import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
-import slimeknights.tconstruct.tools.TinkerModifiers;
-import slimeknights.tconstruct.tools.modifiers.slotless.OverslimeModifier;
 
 public class VitalityModifier extends Modifier implements ToolDamageModifierHook {
     @Override
