@@ -38,8 +38,8 @@ public class TinkersInnovationWorldGen {
     public static final ConfiguredFeatureDeferredRegister CONFIGURED_FEATURES = new ConfiguredFeatureDeferredRegister(MOD_ID);
     public static final PlacedFeatureDeferredRegister PLACED_FEATURES = new PlacedFeatureDeferredRegister(MOD_ID);
 
-    public static RegistryObject<ConfiguredFeature<OreConfiguration, Feature<OreConfiguration>>> VOID_CRYSTAL_ORE = CONFIGURED_FEATURES.registerSupplier("void_crystal_ore", () -> Feature.ORE, () -> new OreConfiguration(voiReplace.get(), TinkersInnovationConfig.COMMON.voidcrystalOre.getSize()));
-    public static RegistryObject<PlacedFeature> placedVoidcrystalOre = PLACED_FEATURES.register("void_crystal_ore", VOID_CRYSTAL_ORE, CountPlacement.of(TinkersInnovationConfig.COMMON.voidcrystalOre.getCount()), InSquarePlacement.spread(), BiomeFilter.biome(), HeightRangePlacement.uniform(VerticalAnchor.absolute(TinkersInnovationConfig.COMMON.voidcrystalOre.getMinY()), VerticalAnchor.absolute(TinkersInnovationConfig.COMMON.voidcrystalOre.getMaxY())));
+   //public static RegistryObject<ConfiguredFeature<OreConfiguration, Feature<OreConfiguration>>> VOID_CRYSTAL_ORE = CONFIGURED_FEATURES.registerSupplier("void_crystal_ore", () -> Feature.ORE, () -> new OreConfiguration(voiReplace.get(), TinkersInnovationConfig.COMMON.voidcrystalOre.getSize()));
+   //public static RegistryObject<PlacedFeature> placedVoidcrystalOre = PLACED_FEATURES.register("void_crystal_ore", VOID_CRYSTAL_ORE, CountPlacement.of(TinkersInnovationConfig.COMMON.voidcrystalOre.getCount()), InSquarePlacement.spread(), BiomeFilter.biome(), HeightRangePlacement.uniform(VerticalAnchor.absolute(TinkersInnovationConfig.COMMON.voidcrystalOre.getMinY()), VerticalAnchor.absolute(TinkersInnovationConfig.COMMON.voidcrystalOre.getMaxY())));
 
 
 }
