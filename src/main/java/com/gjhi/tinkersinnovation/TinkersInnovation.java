@@ -13,6 +13,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
+import net.minecraftforge.fml.event.config.ModConfigEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -31,8 +32,9 @@ public class TinkersInnovation {
     public static final Logger tinkers_logger = LogManager.getLogger("tinkersinnovation");
 
     public TinkersInnovation() {
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, TinkersInnovationConfig.config);
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::onModConfigEvent);
         MinecraftForge.EVENT_BUS.register(this);
         bus.addListener(this::setup);
         bus.addListener(this::setupClient);
@@ -91,4 +93,14 @@ public class TinkersInnovation {
             return TinkersInnovationItems.claw.get().getRenderTool();
         }
     };
+    static {
+        // 注册配置文件
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, TinkersInnovationConfig.CONFIG);
+    }
+    private void onModConfigEvent(ModConfigEvent event) {
+        if (event.getConfig().getSpec() == TinkersInnovationConfig.CONFIG) {
+            // 配置更改后的逻辑
+            tinkers_logger.info("Configuration file loaded or changed.");
+        }
+    }
 }
