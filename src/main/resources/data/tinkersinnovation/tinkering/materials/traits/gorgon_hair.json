@@ -9,6 +9,10 @@
     "tconstruct:skull": [
       {
         "level": 1,
+        "name": "tinkersinnovation:gorgon_disguise"
+      },
+      {
+        "level": 1,
         "name": "tinkersinnovation:petrified_slimeskull"
       }
     ]

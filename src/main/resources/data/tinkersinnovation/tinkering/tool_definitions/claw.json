@@ -6,7 +6,7 @@
         {"item": "tconstruct:small_blade", "scale": 0.5 },
         {"item": "tconstruct:small_blade", "scale": 0.5 },
         {"item": "tconstruct:small_blade", "scale": 0.5 },
-        "tinkersinnovation:handguard"
+        "tconstruct:tool_handle"
       ],
       "primary_part": 0
     },

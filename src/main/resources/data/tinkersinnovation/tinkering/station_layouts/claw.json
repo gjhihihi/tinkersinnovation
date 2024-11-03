@@ -34,12 +34,12 @@
       }
     },
     {
-      "icon": "tinkersinnovation:handguard",
-      "translation_key": "item.tinkersinnovation.handguard",
+      "icon": "tconstruct:tool_handle",
+      "translation_key": "item.tconstruct.tool_handle",
       "x": 43,
       "y": 48,
       "filter": {
-        "item": "tinkersinnovation:handguard"
+        "item": "tconstruct:tool_handle"
       }
     }
   ]

@@ -1,5 +1,9 @@
 {
   "default": [
+      {
+        "level": 1,
+        "name": "tconstruct:overslime"
+      },
     {
       "name": "tinkersinnovation:slippery",
       "level": 1

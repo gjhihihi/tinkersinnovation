@@ -1,0 +1,11 @@
+{
+  "type": "tconstruct:composable",
+  "level_display": "tconstruct:single_level",
+  "modules": [
+    {
+      "type": "tconstruct:mob_disguise",
+      "entity": "iceandfire:gorgon"
+    }
+  ],
+  "tooltip_display": "always"
+}

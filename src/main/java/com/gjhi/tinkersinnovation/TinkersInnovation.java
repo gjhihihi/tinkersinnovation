@@ -33,10 +33,9 @@ public class TinkersInnovation {
 
     public TinkersInnovation() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::onModConfigEvent);
         MinecraftForge.EVENT_BUS.register(this);
         bus.addListener(this::setup);
+        bus.addListener(this::onModConfigEvent);
         bus.addListener(this::setupClient);
         TinkersInnovationModifiers.MODIFIERS.register(bus);
         TinkersInnovationBlocks.BLOCKS.register(bus);

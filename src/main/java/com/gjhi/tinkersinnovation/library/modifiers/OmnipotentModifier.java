@@ -124,40 +124,40 @@ public class OmnipotentModifier extends Modifier implements VolatileDataModifier
             //tinkers thinking
             "tinkers_thinking:stewium",
             //tinkers ingenuity
-            "tinkers_ingenuity:bedrock_alloy_material",
-            "tinkers_ingenuity:blood_binding_material",
-            "tinkers_ingenuity:blood_steel_material",
-            "tinkers_ingenuity:blue_sky_material",
-            "tinkers_ingenuity:crocell_material",
-            "tinkers_ingenuity:crystal_matrix_material",
-            "tinkers_ingenuity:dye_fire_material",
-            "tinkers_ingenuity:etherium_material",
-            "tinkers_ingenuity:evil_material",
-            "tinkers_ingenuity:fire_steel_material",
-            "tinkers_ingenuity:gaia_material",
-            "tinkers_ingenuity:glasya_material",
-            "tinkers_ingenuity:gleiter_material",
-            "tinkers_ingenuity:ice_steel_material",
-            "tinkers_ingenuity:ignitium_material",
-            "tinkers_ingenuity:infinity_material",
-            "tinkers_ingenuity:knight_crystal_material",
-            "tinkers_ingenuity:lighting_steel_material",
-            "tinkers_ingenuity:neutronium_material",
-            "tinkers_ingenuity:ocean_alloy_material",
-            "tinkers_ingenuity:prince_slime_material",
-            "tinkers_ingenuity:sea_dream_material",
-            "tinkers_ingenuity:shine_alloy_material",
-            "tinkers_ingenuity:shine_gold_material",
-            "tinkers_ingenuity:simir_material",
-            "tinkers_ingenuity:sunlit_material",
-            "tinkers_ingenuity:teslin_alloy_material",
-            "tinkers_ingenuity:twilight_material",
-            "tinkers_ingenuity:xuan_ming_material",
-            "tinkers_ingenuity:zesley_material",
-            //"tinkers_ingenuity:star_alloy_material",
-            //"tinkers_ingenuity:splendid_material"
-            //"tinkers_ingenuity:dread_steel_material"
-            //"tinkers_ingenuity:frost_alloy_material"
+            "tinkers_ingenuity:bedrock_alloy",
+            "tinkers_ingenuity:blood_binding",
+            "tinkers_ingenuity:blood_steel",
+            "tinkers_ingenuity:blue_sky",
+            "tinkers_ingenuity:crocell",
+            "tinkers_ingenuity:crystal_matrix",
+            "tinkers_ingenuity:dye_fire",
+            "tinkers_ingenuity:etherium",
+            "tinkers_ingenuity:evil",
+            "tinkers_ingenuity:fire_steel",
+            "tinkers_ingenuity:gaia",
+            "tinkers_ingenuity:glasya",
+            "tinkers_ingenuity:gleiter",
+            "tinkers_ingenuity:ice_steel",
+            "tinkers_ingenuity:ignitium",
+            "tinkers_ingenuity:infinity",
+            "tinkers_ingenuity:knight_crystal",
+            "tinkers_ingenuity:lighting_steel",
+            "tinkers_ingenuity:neutronium",
+            "tinkers_ingenuity:ocean_alloy",
+            "tinkers_ingenuity:prince_slime",
+            "tinkers_ingenuity:sea_dream",
+            "tinkers_ingenuity:shine_alloy",
+            "tinkers_ingenuity:shine_gold",
+            "tinkers_ingenuity:simir",
+            "tinkers_ingenuity:sunlit",
+            "tinkers_ingenuity:teslin_alloy",
+            "tinkers_ingenuity:twilight",
+            "tinkers_ingenuity:xuan_ming",
+            "tinkers_ingenuity:zesley",
+            //"tinkers_ingenuity:star_alloy",
+            //"tinkers_ingenuity:splendid"
+            //"tinkers_ingenuity:dread_steel"
+            //"tinkers_ingenuity:frost_alloy"
     };
 
     private String PATH = "tooltip.tinkersinnovation.omnipotent.material.";
@@ -209,12 +209,12 @@ public class OmnipotentModifier extends Modifier implements VolatileDataModifier
         LivingEntity target = context.getLivingTarget();
         Player player = context.getPlayerAttacker();
         int partnum;
-        if (player != null && (partnum = getMaterialCount(tool, "tinkers_ingenuity:etherium_material", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
+        if (player != null && (partnum = getMaterialCount(tool, "tinkers_ingenuity:etherium", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
             if (player.level.dimension().equals(OVERWORLD)) {
                 knockback += partnum;
             }
         }
-        if (player != null && (partnum = getMaterialCount(tool, "tinkers_ingenuity:sea_dream_material", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
+        if (player != null && (partnum = getMaterialCount(tool, "tinkers_ingenuity:sea_dream", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
             player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE,partnum*100,modifier.getLevel()-1));
             player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED,partnum*100,modifier.getLevel()-1));
             player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST,partnum*100,modifier.getLevel()-1));
@@ -230,7 +230,7 @@ public class OmnipotentModifier extends Modifier implements VolatileDataModifier
         if (target != null && (partnum = getMaterialCount(tool, blazingBone.toString(), TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
             target.setSecondsOnFire(5 * partnum * modifier.getLevel());
         }
-        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:blood_steel_material", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
+        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:blood_steel", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
             if (RANDOM.nextFloat() > 0.1 * partnum * modifier.getLevel())
                 tool.setDamage(Math.max(0, tool.getDamage() - 1));
         }
@@ -240,18 +240,18 @@ public class OmnipotentModifier extends Modifier implements VolatileDataModifier
             player.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 20 * partnum));
             player.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 40 * partnum));
         }
-        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:blue_sky_material", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
+        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:blue_sky", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
             if (!player.isOnGround())
                 player.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 20 * partnum));
         }
-        if (target != null && (partnum = getMaterialCount(tool, "tinkers_ingenuity:shine_gold_material", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
+        if (target != null && (partnum = getMaterialCount(tool, "tinkers_ingenuity:shine_gold", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
             target.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 100 * partnum, modifier.getLevel() - 1));
         }
-        if (target != null && (partnum = getMaterialCount(tool, "tinkers_ingenuity:simir_material", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
+        if (target != null && (partnum = getMaterialCount(tool, "tinkers_ingenuity:simir", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
             target.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 100 * partnum, modifier.getLevel() - 1));
             player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 100 * partnum, modifier.getLevel() - 1));
         }
-        if (target != null && (partnum = getMaterialCount(tool, "tinkers_ingenuity:teslin_alloy_material", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
+        if (target != null && (partnum = getMaterialCount(tool, "tinkers_ingenuity:teslin_alloy", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
             target.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 100 * partnum, modifier.getLevel() - 1));
         }
         if ((partnum = getMaterialCount(tool, "tinkerscalibration:soulgold", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
@@ -262,7 +262,7 @@ public class OmnipotentModifier extends Modifier implements VolatileDataModifier
                 player.invulnerableTime = 20 * partnum;
             }
         }
-        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:sunlit_material", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
+        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:sunlit", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
             if (player.level.isDay() && player.level.canSeeSky(player.blockPosition()) && !player.level.isRaining() && !player.level.isThundering()) {
                 if (target != null) {
                     target.hurt(DamageSource.MAGIC, damageDealt * 0.1f);
@@ -272,19 +272,19 @@ public class OmnipotentModifier extends Modifier implements VolatileDataModifier
         if (target != null && getMaterialCount(tool, "tinkerscalibration:mandite", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED) > 0) {
             target.invulnerableTime = 0;
         }
-        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:crocell_material", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
+        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:crocell", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
             if (target != null && damageDealt < 0.05 * partnum * modifier.getLevel() * target.getMaxHealth()) {
                 player.heal(5);
             }
         }
-        if (target != null && (partnum = getMaterialCount(tool, "tinkers_ingenuity:evil_material", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED )) > 0) {
+        if (target != null && (partnum = getMaterialCount(tool, "tinkers_ingenuity:evil", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED )) > 0) {
             if (target instanceof Shulker || target instanceof EnderMan){
                 target.kill();
             }
         }
-        partnum = getMaterialCount(tool, "tinkers_ingenuity:fire_steel_material", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED);
-        partnum += getMaterialCount(tool, "tinkers_ingenuity:ice_steel_material", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED);
-        partnum += getMaterialCount(tool, "tinkers_ingenuity:lighting_steel_material", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED);
+        partnum = getMaterialCount(tool, "tinkers_ingenuity:fire_steel", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED);
+        partnum += getMaterialCount(tool, "tinkers_ingenuity:ice_steel", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED);
+        partnum += getMaterialCount(tool, "tinkers_ingenuity:lighting_steel", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED);
         if (target != null && partnum > 0) {
             target.addEffect(new MobEffectInstance(MobEffects.HARM));
         }
@@ -310,16 +310,16 @@ public class OmnipotentModifier extends Modifier implements VolatileDataModifier
         if (player != null && (partnum = getMaterialCount(tool, "tinkerscalibration:fazelle")) > 0) {
             player.setSpeed(player.getSpeed() + player.getSpeed() * modifier.getLevel() * partnum * 0.1f);
         }
-        if (player != null && (partnum = getMaterialCount(tool, "tinkers_ingenuity:blood_binding_material")) > 0) {
+        if (player != null && (partnum = getMaterialCount(tool, "tinkers_ingenuity:blood_binding")) > 0) {
             if (RANDOM.nextFloat() < 0.1 * partnum * modifier.getLevel())
                 player.heal(1);
         }
-        if (player != null && (partnum = getMaterialCount(tool, "tinkers_ingenuity:prince_slime_material")) > 0) {
+        if (player != null && (partnum = getMaterialCount(tool, "tinkers_ingenuity:prince_slime")) > 0) {
             OverslimeModifier overslime = TinkerModifiers.overslime.get();
             if (RANDOM.nextFloat() < 0.8 * ((double) overslime.getShield(tool) /overslime.getShield(tool)))
                 overslime.addOverslime(tool, modifier, 2 * partnum);
         }
-        if (player != null && (partnum = getMaterialCount(tool, "tinkers_ingenuity:neutronium_material")) > 0) {
+        if (player != null && (partnum = getMaterialCount(tool, "tinkers_ingenuity:neutronium")) > 0) {
             if (RANDOM.nextFloat() < 0.75)
                 return 0;
         }
@@ -355,16 +355,16 @@ public class OmnipotentModifier extends Modifier implements VolatileDataModifier
             ToolStats.ARMOR.add(builder, modifier.getLevel() * partnum * 2);
             ToolStats.ARMOR_TOUGHNESS.add(builder, modifier.getLevel() * partnum);
         }
-        if ((partnum = getMaterialCount(context, "tinkers_ingenuity:gaia_material", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
+        if ((partnum = getMaterialCount(context, "tinkers_ingenuity:gaia", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
             ToolStats.ATTACK_SPEED.multiply(builder,  1 + 0.25 * modifier.getLevel());
         }
-        if ((partnum = getMaterialCount(context, "tinkers_ingenuity:glasya_material", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
+        if ((partnum = getMaterialCount(context, "tinkers_ingenuity:glasya", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
             ToolStats.ATTACK_DAMAGE.multiply(builder, 1 + 0.2 * partnum);
         }
-        if ((partnum = getMaterialCount(context, "tinkers_ingenuity:gleiter_material", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
+        if ((partnum = getMaterialCount(context, "tinkers_ingenuity:gleiter", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
             ToolStats.ATTACK_DAMAGE.multiply(builder, 1 + 0.2 * partnum);
         }
-        if ((partnum = getMaterialCount(context, "tinkers_ingenuity:twilight_material", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
+        if ((partnum = getMaterialCount(context, "tinkers_ingenuity:twilight", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
             ToolStats.ATTACK_SPEED.add(builder, 0.5);
         }
         if ((partnum = getMaterialCount(context, queensSlime.toString())) > 0) {
@@ -385,15 +385,15 @@ public class OmnipotentModifier extends Modifier implements VolatileDataModifier
         if ((partnum = getMaterialCount(context, sculkium.toString())) > 0) {
             ToolStats.VELOCITY.multiply(builder, 1 + 0.2 * modifier.getLevel() * partnum);
         }
-        partnum = getMaterialCount(context, "tinkers_ingenuity:fire_steel_material");
-        partnum += getMaterialCount(context, "tinkers_ingenuity:ice_steel_material");
-        partnum += getMaterialCount(context, "tinkers_ingenuity:lighting_steel_material");
+        partnum = getMaterialCount(context, "tinkers_ingenuity:fire_steel");
+        partnum += getMaterialCount(context, "tinkers_ingenuity:ice_steel");
+        partnum += getMaterialCount(context, "tinkers_ingenuity:lighting_steel");
         if (partnum > 0) {
             ToolStats.ATTACK_DAMAGE.add(builder, modifier.getLevel() * partnum * 2);
             ToolStats.PROJECTILE_DAMAGE.add(builder, modifier.getLevel() * partnum);
             ToolStats.ARMOR.add(builder, modifier.getLevel() * partnum * 2);
         }
-        if ((partnum = getMaterialCount(context, "tinkers_ingenuity:bedrock_alloy_material")) > 0) {
+        if ((partnum = getMaterialCount(context, "tinkers_ingenuity:bedrock_alloy")) > 0) {
             ToolStats.DURABILITY.multiply(builder, 2);
             ToolStats.ATTACK_DAMAGE.multiply(builder, 1.2);
         }
@@ -429,17 +429,17 @@ public class OmnipotentModifier extends Modifier implements VolatileDataModifier
         if (partnum > 0 && player != null && player.getY() < 64) {
             event.setNewSpeed((float) (event.getNewSpeed() + event.getNewSpeed() * partnum * modifier.getLevel() * 0.01 * (64 - player.getY())));
         }
-        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:etherium_material", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST)) > 0) {
+        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:etherium", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST)) > 0) {
             if (player != null && player.level.dimension().equals(OVERWORLD)) {
                 event.setNewSpeed(event.getNewSpeed() + event.getNewSpeed() * 0.5f * partnum);
             }
         }
-        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:shine_alloy_material", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST)) > 0) {
+        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:shine_alloy", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST)) > 0) {
             if (player != null && player.level.isDay()) {
                 event.setNewSpeed(event.getNewSpeed() + event.getNewSpeed() * 0.1f * partnum * modifier.getLevel());
             }
         }
-        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:zesley_material", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST)) > 0) {
+        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:zesley", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST)) > 0) {
             if (player != null) {
                 float num = (player.getMaxHealth() - player.getHealth()) / 2;
                 event.setNewSpeed(event.getNewSpeed() + event.getNewSpeed() * Math.min( 0.75f, 0.075f * num) * partnum);
@@ -464,7 +464,7 @@ public class OmnipotentModifier extends Modifier implements VolatileDataModifier
             if (target.isOnFire())
                 damage *= 1.2f;
         }
-        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:knight_crystal_material", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
+        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:knight_crystal", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
             damage += (attacker.getMaxHealth() - attacker.getHealth()) * (0.25f * modifier.getLevel() * partnum);
         }
         if (target != null && (partnum = getMaterialCount(tool, "tinkerscalibration:gravity", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
@@ -475,20 +475,20 @@ public class OmnipotentModifier extends Modifier implements VolatileDataModifier
         if (target != null && (partnum = getMaterialCount(tool, "tinkerscalibration:jazz", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
             damage += damage * RANDOM.nextFloat();
         }
-        if (target != null && (partnum = getMaterialCount(tool, "tinkers_ingenuity:crystal_matrix_material", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
+        if (target != null && (partnum = getMaterialCount(tool, "tinkers_ingenuity:crystal_matrix", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
             if (tool.getDamage() * 2 > tool.getCurrentDurability())
                 damage += damage * 0.2f * partnum;
         }
-        if (target != null && (partnum = getMaterialCount(tool, "tinkers_ingenuity:ocean_alloy_material", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
+        if (target != null && (partnum = getMaterialCount(tool, "tinkers_ingenuity:ocean_alloy", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
             if (target.isInWaterOrBubble()){
                 damage += damage * 0.2f * partnum;
             }
         }
-        if (target != null && (partnum = getMaterialCount(tool, "tinkers_ingenuity:dye_fire_material", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
+        if (target != null && (partnum = getMaterialCount(tool, "tinkers_ingenuity:dye_fire", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
             if (target.isOnFire() || target.isInWaterRainOrBubble())
                 damage += 3 * partnum;
         }
-        if (target != null && (partnum = getMaterialCount(tool, "tinkers_ingenuity:ignitium_material", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
+        if (target != null && (partnum = getMaterialCount(tool, "tinkers_ingenuity:ignitium", TinkerTags.Items.MELEE, TinkerTags.Items.HARVEST, TinkerTags.Items.RANGED)) > 0) {
             if (target.isOnFire()){
                 damage += 4 * partnum * modifier.getLevel();
             }
@@ -550,7 +550,7 @@ public class OmnipotentModifier extends Modifier implements VolatileDataModifier
         if ((partnum = getMaterialCount(context, miracle.toString())) > 0) {
             volatileData.addSlots(TinkersInnovationSlots.HOSTILITY, partnum * modifier.getLevel());
         }
-        if (getMaterialCount(context, "tinkers_ingenuity:infinity_material") > 0) {
+        if (getMaterialCount(context, "tinkers_ingenuity:infinity") > 0) {
             volatileData.addSlots(SlotType.ABILITY, 2);
         }
     }
@@ -561,17 +561,17 @@ public class OmnipotentModifier extends Modifier implements VolatileDataModifier
         if (source.getEntity() instanceof LivingEntity entity)
             target = entity;
         int partnum;
-        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:blue_sky_material", TinkerTags.Items.ARMOR)) > 0) {
+        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:blue_sky", TinkerTags.Items.ARMOR)) > 0) {
             wearer.resetFallDistance();
             if (target != null) {
                 target.fallDistance *= 1.5f;
             }
         }
-        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:knight_crystal_material", TinkerTags.Items.ARMOR)) > 0) {
+        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:knight_crystal", TinkerTags.Items.ARMOR)) > 0) {
             //wearer.addEffect(new MobEffectInstance(MobEffects.ABSORPTION,200 * modifier.getLevel(), partnum - 1));
             wearer.setAbsorptionAmount(wearer.getAbsorptionAmount() + 4 * partnum);
         }
-        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:simir_material", TinkerTags.Items.ARMOR)) > 0) {
+        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:simir", TinkerTags.Items.ARMOR)) > 0) {
             //wearer.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 200, partnum - 1));
             wearer.setAbsorptionAmount(wearer.getAbsorptionAmount() + 4 * partnum);
         }
@@ -580,7 +580,7 @@ public class OmnipotentModifier extends Modifier implements VolatileDataModifier
                 target.setSecondsOnFire(5 * modifier.getLevel() * partnum);
             }
         }
-        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:sunlit_material", TinkerTags.Items.ARMOR)) > 0) {
+        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:sunlit", TinkerTags.Items.ARMOR)) > 0) {
             if (RANDOM.nextFloat() < 0.1 * partnum * modifier.getLevel()) {
                 wearer.setSecondsOnFire(10);
                 if (target != null) {
@@ -601,7 +601,7 @@ public class OmnipotentModifier extends Modifier implements VolatileDataModifier
                 }
             }
         }
-        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:teslin_alloy_material", TinkerTags.Items.ARMOR)) > 0) {
+        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:teslin_alloy", TinkerTags.Items.ARMOR)) > 0) {
             if (RANDOM.nextFloat() < 0.1 * partnum * modifier.getLevel()){
                 tool.setDamage(tool.getDamage()-10);
             }
@@ -614,12 +614,12 @@ public class OmnipotentModifier extends Modifier implements VolatileDataModifier
     public void onDamageDealt(IToolStackView tool, ModifierEntry modifier, EquipmentContext context, EquipmentSlot slotType, @NotNull LivingEntity target, DamageSource source, float amount, boolean isDirectDamage) {
         LivingEntity wearer = context.getEntity();
         int partnum;
-        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:crocell_material", TinkerTags.Items.ARMOR)) > 0) {
+        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:crocell", TinkerTags.Items.ARMOR)) > 0) {
             if (amount < 0.05 * partnum * modifier.getLevel() * target.getMaxHealth()){
                 wearer.heal(5);
             }
         }
-        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:shine_gold_material", TinkerTags.Items.ARMOR)) > 0) {
+        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:shine_gold", TinkerTags.Items.ARMOR)) > 0) {
             target.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 100 * partnum, modifier.getLevel() - 1));
         }
         if ((partnum = getMaterialCount(tool, "tinkerscalibration:soulgold", TinkerTags.Items.ARMOR)) > 0) {
@@ -639,7 +639,7 @@ public class OmnipotentModifier extends Modifier implements VolatileDataModifier
     public boolean isDamageBlocked(IToolStackView tool, ModifierEntry modifier, EquipmentContext context, EquipmentSlot slotType, DamageSource source, float amount) {
         LivingEntity wearer = context.getEntity();
         int partnum;
-        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:dye_fire_material", TinkerTags.Items.ARMOR)) > 0) {
+        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:dye_fire", TinkerTags.Items.ARMOR)) > 0) {
             return source.isFire();
         }
         if ((partnum = getMaterialCount(tool, "tinkerscalibration:redmatter", TinkerTags.Items.ARMOR)) > 0) {
@@ -694,19 +694,19 @@ public class OmnipotentModifier extends Modifier implements VolatileDataModifier
     @Override
     public void onInventoryTick(IToolStackView tool, ModifierEntry modifier, Level world, LivingEntity holder, int itemSlot, boolean isSelected, boolean isCorrectSlot, ItemStack stack){
         int partnum;
-        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:ocean_alloy_material", TinkerTags.Items.ARMOR)) > 0) {
+        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:ocean_alloy", TinkerTags.Items.ARMOR)) > 0) {
             if (holder.isInWater() && !holder.hasEffect(MobEffects.WATER_BREATHING)){
                 holder.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 20));
             }
         }
-        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:shine_alloy_material", TinkerTags.Items.ARMOR)) > 0) {
+        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:shine_alloy", TinkerTags.Items.ARMOR)) > 0) {
             if (world.isDay() && world.canSeeSky(holder.blockPosition()) && !world.isRaining() && !world.isThundering()){
                 if (RANDOM.nextFloat() < 0.005){
                     holder.heal(partnum);
                 }
             }
         }
-        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:xuan_ming_material", TinkerTags.Items.ARMOR)) > 0) {
+        if ((partnum = getMaterialCount(tool, "tinkers_ingenuity:xuan_ming", TinkerTags.Items.ARMOR)) > 0) {
             if (holder.getMaxHealth() == holder.getHealth()){
                 if (RANDOM.nextFloat() < 0.005){
                     tool.setDamage(Math.max(0, tool.getDamage() - partnum));
