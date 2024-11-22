@@ -20,7 +20,7 @@ public class StoneCageModifier extends Modifier implements MeleeHitModifierHook 
     public void afterMeleeHit(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float damageDealt) {
         LivingEntity target = context.getLivingTarget();
         if (target != null) {
-            target.addEffect(new MobEffectInstance(LCEffects.STONE_CAGE.get(), 10 * modifier.getLevel()));
+            target.addEffect(new MobEffectInstance(LCEffects.STONE_CAGE.get(), 40 * modifier.getLevel()));
         }
     }
 }

@@ -45,6 +45,7 @@ public class TinkersInnovationModifiers {
     public static StaticModifier<WitherProtectionModifier> wither_protection = MODIFIERS.register("wither_protection", WitherProtectionModifier::new);
     public static StaticModifier<SculkModifier> sculk = MODIFIERS.register("sculk", SculkModifier::new);
     public static StaticModifier<EnvironmentRejectModifier> environment_reject = MODIFIERS.register("environment_reject", EnvironmentRejectModifier::new);
+    public static StaticModifier<ProjectileRejectModifier> projectile_reject = MODIFIERS.register("projectile_reject", ProjectileRejectModifier::new);
     public static StaticModifier<FireRejectModifier> fire_reject = MODIFIERS.register("fire_reject", FireRejectModifier::new);
     public static StaticModifier<ExplosionRejectModifier> explosion_reject = MODIFIERS.register("explosion_reject", ExplosionRejectModifier::new);
     public static StaticModifier<MagicRejectModifier> magic_reject = MODIFIERS.register("magic_reject", MagicRejectModifier::new);
