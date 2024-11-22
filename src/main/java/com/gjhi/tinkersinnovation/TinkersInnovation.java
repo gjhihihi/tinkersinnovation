@@ -1,6 +1,7 @@
 package com.gjhi.tinkersinnovation;
 
 import com.gjhi.tinkersinnovation.register.*;
+import com.gjhi.tinkersinnovation.world.features.ores.TIOreFeature;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
@@ -26,25 +27,24 @@ import org.apache.logging.log4j.Logger;
 public class TinkersInnovation {
     public static final String MOD_ID = "tinkersinnovation";
     private static final Logger LOGGER = LogManager.getLogger();
+    public static TinkersInnovationConfig config;
+
     public static Logger getLogger() {
         return LOGGER;
     }
     public static final Logger tinkers_logger = LogManager.getLogger("tinkersinnovation");
 
     public TinkersInnovation() {
+        config = new TinkersInnovationConfig(ModLoadingContext.get());
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         MinecraftForge.EVENT_BUS.register(this);
         bus.addListener(this::setup);
-        bus.addListener(this::onModConfigEvent);
         bus.addListener(this::setupClient);
         TinkersInnovationModifiers.MODIFIERS.register(bus);
         TinkersInnovationBlocks.BLOCKS.register(bus);
         TinkersInnovationItems.ITEMS.register(bus);
         TinkersInnovationFluids.FLUIDS.register(bus);
         TinkersInnovationEntityTypes.ENTITY_TYPES.register(bus);
-        TinkersInnovationWorldGen.CONFIGURED_FEATURES.register(bus);
-        TinkersInnovationWorldGen.PLACED_FEATURES.register(bus);
-        TinkersInnovationWorldGen.BLOCKS.register(bus);
         TinkersInnovationEffects.MOB_EFFECTS.register(bus);
         TinkersInnovationPotions.POTIONS.register(bus);
         TinkersInnovationTags.init();
@@ -92,14 +92,4 @@ public class TinkersInnovation {
             return TinkersInnovationItems.claw.get().getRenderTool();
         }
     };
-    static {
-        // 注册配置文件
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, TinkersInnovationConfig.CONFIG);
-    }
-    private void onModConfigEvent(ModConfigEvent event) {
-        if (event.getConfig().getSpec() == TinkersInnovationConfig.CONFIG) {
-            // 配置更改后的逻辑
-            tinkers_logger.info("Configuration file loaded or changed.");
-        }
-    }
 }

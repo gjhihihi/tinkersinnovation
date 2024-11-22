@@ -169,6 +169,7 @@ dependencies {
     implementation fg.deobf("curse.maven:create-328085:4835190")
     //implementation fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}")
     compileOnly fileTree(dir: 'lib',includes: ['*.jar'])
+    runtimeOnly fg.deobf("curse.maven:configured-457570:4462837")
 
     // Real mod deobf dependency examples - these get remapped to your current mappings
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency
