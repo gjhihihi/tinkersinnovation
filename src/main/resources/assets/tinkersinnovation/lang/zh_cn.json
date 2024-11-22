@@ -806,9 +806,9 @@
   "modifier.tinkersinnovation.shield_break": "破盾",
   "modifier.tinkersinnovation.shield_break.flavor": "。",
   "modifier.tinkersinnovation.shield_break.description": "。",
-  "modifier.tinkersinnovation.whirlwind": "旋风",,
-  "modifier.tinkersinnovation.whirlwind.flavor": "打击一切，蔓延在整个宇宙！"
-  "modifier.tinkersinnovation.whirlwind.description": "使用工具时，附近的敌人将被击退并受到范围伤害。"
+  "modifier.tinkersinnovation.whirlwind": "旋风",
+  "modifier.tinkersinnovation.whirlwind.flavor": "打击一切，蔓延在整个宇宙！",
+  "modifier.tinkersinnovation.whirlwind.description": "使用工具时，附近的敌人将被击退并受到范围伤害。",
 
   "modifier.tinkersinnovation.shield_amount": "盾值",
   "modifier.tinkersinnovation.shield_amount.flavor": "盾牌的生命值。",
