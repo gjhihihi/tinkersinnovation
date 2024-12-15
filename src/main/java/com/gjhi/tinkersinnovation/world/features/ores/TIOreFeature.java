@@ -29,7 +29,7 @@ public class TIOreFeature {
                     Feature.ORE, new OreConfiguration(
                     // 使用 OreConfiguration.target 方法创建 TargetBlockState
                     List.of(OreConfiguration.target(
-                            new BlockMatchTest(Blocks.STONE), // 匹配 STONE 方块
+                            new BlockMatchTest(Blocks.STONE), // 匹配 STONE 方块 
                             TinkersInnovationBlocks.void_crystal_ore.get().defaultBlockState() // 替换为自定义矿石方块
                     )),
                     TinkersInnovationConfig.Common.voidCrystalOreSize.get() // 矿脉大小

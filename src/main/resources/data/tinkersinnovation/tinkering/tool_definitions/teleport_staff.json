@@ -1,12 +1,12 @@
 {
   "modules": [
     {
-      "type": "tconstruct:part_stats",
-      "parts": [
-        "tconstruct:tough_handle",
-        "tinkersinnovation:staff_head"
-      ],
-      "primary_part": 0
+      "type": "tconstruct:material_stats",
+      "primary_part": -1,
+      "stat_types": [
+        "tconstruct:head",
+        "tconstruct:handle"
+      ]
     },
     {
       "type": "tconstruct:default_materials",
@@ -20,6 +20,24 @@
           "tier": 1
         }
       ]
+    },
+    {
+      "type": "tconstruct:material_traits",
+      "hooks": [
+        "tconstruct:tool_traits",
+        "tconstruct:rebalanced_trait"
+      ],
+      "material_index": 0,
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "type": "tconstruct:material_traits",
+      "hooks": [
+        "tconstruct:tool_traits",
+        "tconstruct:rebalanced_trait"
+      ],
+      "material_index": 1,
+      "stat_type": "tconstruct:handle"
     },
     {
       "type": "tconstruct:base_stats",
@@ -47,11 +65,6 @@
       "type": "tconstruct:material_repair",
       "durability": 50,
       "material": "tinkerinnovation:teleport_core"
-    },
-    {
-      "type": "tconstruct:material_repair",
-      "durability": 10,
-      "material": "minecraft:ender_pearl"
     },
     {
       "type": "tconstruct:traits",

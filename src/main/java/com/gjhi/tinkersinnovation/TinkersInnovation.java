@@ -59,7 +59,7 @@ public class TinkersInnovation {
         event.enqueueWork(TinkersInnovationMaterialStats::setup);
         TinkersInnovationPotions.recipesInit();
         TinkersInnovationCompat.L2Complements.init();
-        TinkersInnovationCompat.TinkersIngenuity.init();
+        //TinkersInnovationCompat.TinkersIngenuity.init();
         TinkersInnovationCompat.L2Hostility.init();
         TinkersInnovationCompat.IceAndFire.init();
         TinkersInnovationCompat.AlexsMobs.init();

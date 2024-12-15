@@ -1,9 +1,7 @@
 {
   "replace": false,
   "values": [
-    "#tconstruct:casts/single_use/handguard",
     "#tconstruct:casts/single_use/heavy_shield_plate",
-    "#tconstruct:casts/single_use/light_shield_plate",
-    "#tconstruct:casts/single_use/staff_head"
+    "#tconstruct:casts/single_use/light_shield_plate"
   ]
 }

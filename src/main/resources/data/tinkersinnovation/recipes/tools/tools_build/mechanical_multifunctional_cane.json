@@ -7,22 +7,13 @@
     }
   ],
   "pattern": [
-    "MSM",
-    "AJA",
-    "CNC",
-    "#N#",
-    "HGH"
+    " S ",
+    " J ",
+    "CHC",
+    " H ",
+    " N "
   ],
   "key": {
-    "M": {
-      "item": "create:polished_rose_quartz"
-    },
-    "G": {
-      "item": "create:refined_radiance"
-    },
-    "A": {
-      "item": "create:shadow_steel"
-    },
     "J": {
       "item": "create:precision_mechanism"
     },
@@ -31,9 +22,6 @@
     },
     "C": {
       "item": "create:cogwheel"
-    },
-    "#": {
-      "item": "create:shaft"
     },
     "H": {
       "tag": "forge:ingots/brass"

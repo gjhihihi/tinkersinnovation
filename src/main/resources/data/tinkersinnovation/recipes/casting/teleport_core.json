@@ -1,7 +1,7 @@
 {
   "type": "tconstruct:casting_table",
   "cast": {
-    "item": "minecraft:chorus_fruit"
+    "tag": "tinkersinnovation:teleport_core_material"
   },
   "cast_consumed": true,
   "fluid": {

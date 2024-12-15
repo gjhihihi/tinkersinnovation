@@ -12,7 +12,7 @@ public class TinkersInnovationConfig {
         public static ForgeConfigSpec.ConfigValue<Integer> voidCrystalOreMinHeight;
         public static ForgeConfigSpec.ConfigValue<Integer> voidCrystalOreCount;
         public Common(ForgeConfigSpec.Builder builder){
-            builder.comment("Server Config");
+            builder.comment("Common Config");
             voidCrystalOreCount =builder.comment("Maximum Count number of refreshes for ore")
                     .defineInRange("Count",32,0,32);
             voidCrystalOreSize = builder.comment("Maximum Size number of refreshes for ore")

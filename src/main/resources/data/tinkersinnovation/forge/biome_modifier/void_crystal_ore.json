@@ -2,7 +2,7 @@
   "type": "forge:add_features",
   "biomes": "#minecraft:is_overworld",
   "features": [
-    "tinkersinnovation:void_crystal_ore"
+    "tinkersinnovation:void_crystal_ore_placed"
   ],
   "step": "underground_decoration"
 }

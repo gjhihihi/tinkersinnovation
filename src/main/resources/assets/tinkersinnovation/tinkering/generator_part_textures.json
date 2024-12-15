@@ -1,10 +1,8 @@
 {
     "replace": false,
     "parts": [
-        {"path": "tinkersinnovation:item/tool/parts/handguard", "stat_type": "tconstruct:handle"},
         {"path": "tinkersinnovation:item/tool/parts/heavy_shield_plate", "stat_type": "tconstruct:head"},
         {"path": "tinkersinnovation:item/tool/parts/light_shield_plate", "stat_type": "tconstruct:head"},
-        {"path": "tinkersinnovation:item/tool/parts/staff_head", "stat_type": "tconstruct:head"},
         {"path": "tinkersinnovation:item/tool/parts/bomb_core", "stat_type": "tconstruct:head"},
 
         {"path": "tinkersinnovation:item/tool/heavy_shield/plate_up", "stat_type": "tconstruct:plating_shield"},

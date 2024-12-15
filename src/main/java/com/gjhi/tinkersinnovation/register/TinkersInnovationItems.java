@@ -83,10 +83,6 @@ public class TinkersInnovationItems {
     //ores
     public static RegistryObject<Item> void_crystal_ore = ITEMS.register("void_crystal_ore", () -> register_block(TinkersInnovationBlocks.void_crystal_ore.get()));
     //tool parts
-    public static final RegistryObject<ToolPartItem> handguard = ITEMS.register("handguard", () -> new ToolPartItem(PARTS_PROPS, HandleMaterialStats.ID));
-    public static RegistryObject<Item> handguard_cast = ITEMS.register("handguard_cast", TinkersInnovationItems::register_item);
-    public static RegistryObject<Item> handguard_sand_cast = ITEMS.register("handguard_sand_cast", TinkersInnovationItems::register_item);
-    public static RegistryObject<Item> handguard_red_sand_cast = ITEMS.register("handguard_red_sand_cast", TinkersInnovationItems::register_item);
     public static final RegistryObject<ToolPartItem> light_shield_plate = ITEMS.register("light_shield_plate", () -> new ToolPartItem(PARTS_PROPS, ShieldMaterialStats.ID));
     public static RegistryObject<Item> light_shield_plate_cast = ITEMS.register("light_shield_plate_cast", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> light_shield_plate_sand_cast = ITEMS.register("light_shield_plate_sand_cast", TinkersInnovationItems::register_item);
@@ -95,10 +91,6 @@ public class TinkersInnovationItems {
     public static RegistryObject<Item> heavy_shield_plate_cast = ITEMS.register("heavy_shield_plate_cast", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> heavy_shield_plate_sand_cast = ITEMS.register("heavy_shield_plate_sand_cast", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> heavy_shield_plate_red_sand_cast = ITEMS.register("heavy_shield_plate_red_sand_cast", TinkersInnovationItems::register_item);
-    public static final RegistryObject<ToolPartItem> staff_head = ITEMS.register("staff_head", () -> new ToolPartItem(PARTS_PROPS, HeadMaterialStats.ID));
-    public static RegistryObject<Item> staff_head_plate_cast = ITEMS.register("staff_head_cast", TinkersInnovationItems::register_item);
-    public static RegistryObject<Item> staff_head_plate_sand_cast = ITEMS.register("staff_head_sand_cast", TinkersInnovationItems::register_item);
-    public static RegistryObject<Item> staff_head_plate_red_sand_cast = ITEMS.register("staff_head_red_sand_cast", TinkersInnovationItems::register_item);
     public static final RegistryObject<ToolPartItem> bomb_core = ITEMS.register("bomb_core", () -> new ToolPartItem(PARTS_PROPS, BombCoreStats.ID));
     //tools
     public static final RegistryObject<ModifiableItem> claw = ITEMS.register("claw", () -> new ModifiableItem(TOOL, TinkersInnovationToolsDefinition.Claw));
