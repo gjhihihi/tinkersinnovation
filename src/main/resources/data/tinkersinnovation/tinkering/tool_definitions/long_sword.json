@@ -31,7 +31,9 @@
       "stats": {
         "tconstruct:attack_damage": 2.0,
         "tconstruct:attack_speed": 1.8,
-        "tconstruct:accuracy": 0.75
+        "tconstruct:accuracy": 0.5,
+        "tconstruct:block_amount": 15.0,
+        "tconstruct:use_item_speed": 0.4
       }
     },
     {
@@ -44,8 +46,9 @@
     {
       "type": "tconstruct:modifier_slots",
       "slots": {
+        "defense": 1,
         "abilities": 1,
-        "upgrades": 3
+        "upgrades": 2
       }
     },
     {

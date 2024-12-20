@@ -1,0 +1,18 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default-tool",
+  "textures": {
+    "head":   "tinkersinnovation:item/tool/long_sword/broken_blade",
+    "handle": "tinkersinnovation:item/tool/long_sword/handle",
+    "guard":  "tinkersinnovation:item/tool/long_sword/guard"
+  },
+  "modifier_roots": [
+    "tinkersinnovation:item/tool/long_sword/modifiers/broken/",
+    "tinkersinnovation:item/tool/long_sword/modifiers/"
+  ],
+  "parts": [
+    { "name": "handle", "index": 1 },
+    { "name": "head",   "index": 0 },
+    { "name": "guard",  "index": 2 }
+  ],
+}

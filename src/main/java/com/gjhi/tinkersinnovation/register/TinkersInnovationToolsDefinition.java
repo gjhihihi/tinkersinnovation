@@ -11,4 +11,5 @@ public class TinkersInnovationToolsDefinition {
     public static final ToolDefinition TinkerBomb = ToolDefinition.create(TinkersInnovationItems.tinker_bomb);
     public static final ToolDefinition SkelewagSword = ToolDefinition.create(TinkersInnovationItems.skelewag_sword);
     public static final ToolDefinition MechanicalMultifunctionalCane = ToolDefinition.create(TinkersInnovationItems.mechanical_multifunctional_cane);
+    public static final ToolDefinition LongSword = ToolDefinition.create(TinkersInnovationItems.long_sword);
 }

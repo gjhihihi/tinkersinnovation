@@ -103,6 +103,7 @@ public class TinkersInnovationItems {
     public static RegistryObject<Item> skelewag_sword_hand = ITEMS.register("skelewag_sword_hand", () -> new Item(new Item.Properties()));
     public static RegistryObject<Item> skelewag_sword_inventory = ITEMS.register("skelewag_sword_inventory", () -> new Item(new Item.Properties()));
     public static final RegistryObject<ModifiableItem> mechanical_multifunctional_cane = ITEMS.register("mechanical_multifunctional_cane", () -> new ModifiableItem(TOOL, TinkersInnovationToolsDefinition.MechanicalMultifunctionalCane));
+    public static final RegistryObject<ModifiableItem> long_sword = ITEMS.register("long_sword", () -> new ModifiableItem(TOOL, TinkersInnovationToolsDefinition.LongSword));
     //reinforcement
     public static RegistryObject<Item> totemic_gold_reinforcement = ITEMS.register("totemic_gold_reinforcement", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> shulkerate_reinforcement = ITEMS.register("shulkerate_reinforcement", TinkersInnovationItems::register_item);
