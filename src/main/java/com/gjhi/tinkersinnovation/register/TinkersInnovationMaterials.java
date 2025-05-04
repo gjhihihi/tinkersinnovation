@@ -49,7 +49,6 @@ public class TinkersInnovationMaterials {
     public static final MaterialId capsid = createMaterial("capsid");
     public static final MaterialId elastic_tendon = createMaterial("elastic_tendon");
     public static final MaterialId spacebreakium = createMaterial("spacebreakium");
-    public static final MaterialId witchium = createMaterial("witchium");
-    public static final MaterialId eteritchium = createMaterial("eteritchium");
     public static final MaterialId blazing_steel = createMaterial("blazing_steel");
+    public static final MaterialId machine = createMaterial("machine");
 }

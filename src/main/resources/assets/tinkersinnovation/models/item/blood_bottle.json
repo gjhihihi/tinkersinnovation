@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tinkersinnovation:item/bottle/blood",
+    "layer1": "item/potion"
+  }
+}

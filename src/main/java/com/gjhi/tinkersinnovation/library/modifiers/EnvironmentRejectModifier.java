@@ -2,6 +2,7 @@ package com.gjhi.tinkersinnovation.library.modifiers;
 
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.ModifierHooks;
@@ -23,6 +24,6 @@ public class EnvironmentRejectModifier extends NoLevelsModifier implements Damag
     }
 
     public boolean isDamageBlocked(IToolStackView tool, ModifierEntry modifier, EquipmentContext context, EquipmentSlot slotType, DamageSource source, float amount) {
-        return source.getEntity() == null;
+        return !(source.getEntity() instanceof LivingEntity);
     }
 }

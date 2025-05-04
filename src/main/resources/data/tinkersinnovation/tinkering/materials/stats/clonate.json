@@ -49,6 +49,11 @@
       "knockback_resistance": 0.1,
       "toughness": 2
     },
+    "tconstruct:plating_shield": {
+      "durability": 2000,
+      "knockback_resistance": 0.1,
+      "toughness": 2.0
+    },
     "tinkersinnovation:shield_plate": {
       "durability": 2000,
       "armor": 5.0,

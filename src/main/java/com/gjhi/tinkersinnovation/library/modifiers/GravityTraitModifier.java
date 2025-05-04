@@ -16,9 +16,7 @@ import slimeknights.tconstruct.library.modifiers.hook.interaction.InventoryTickM
 import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 
-import java.util.Iterator;
-
-public class GravityModifier extends Modifier implements InventoryTickModifierHook {
+public class GravityTraitModifier extends Modifier implements InventoryTickModifierHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
         hookBuilder.addHook(this, ModifierHooks.INVENTORY_TICK);

@@ -11,16 +11,19 @@ public class TinkersInnovationConfig {
         public static ForgeConfigSpec.ConfigValue<Integer> voidCrystalOreMaxHeight;
         public static ForgeConfigSpec.ConfigValue<Integer> voidCrystalOreMinHeight;
         public static ForgeConfigSpec.ConfigValue<Integer> voidCrystalOreCount;
+        public static ForgeConfigSpec.ConfigValue<Integer> OmnipotentMaxLevel;
         public Common(ForgeConfigSpec.Builder builder){
             builder.comment("Common Config");
-            voidCrystalOreCount =builder.comment("Maximum Count number of refreshes for ore")
+            voidCrystalOreCount =builder.comment("Maximum Count number of refreshes for void crystal ore")
                     .defineInRange("Count",32,0,32);
-            voidCrystalOreSize = builder.comment("Maximum Size number of refreshes for ore")
+            voidCrystalOreSize = builder.comment("Maximum Size number of refreshes for void crystal ore")
                     .defineInRange("Size", 32, 0, 32);
-            voidCrystalOreMaxHeight = builder.comment("Upper limit of height")
+            voidCrystalOreMaxHeight = builder.comment("Upper limit of height for void crystal ore")
                     .defineInRange("HeightMax", 128, -64, 128);
-            voidCrystalOreMinHeight = builder.comment("lower limit of height")
+            voidCrystalOreMinHeight = builder.comment("Lower limit of height for void crystal ore")
                     .defineInRange("HeightMin", -64, -64, 128);
+            OmnipotentMaxLevel = builder.comment("The max level of omnipotent modifier")
+                    .defineInRange("MaxLevel", 2, 1, Integer.MAX_VALUE);
         }
     }
     public static class Client {

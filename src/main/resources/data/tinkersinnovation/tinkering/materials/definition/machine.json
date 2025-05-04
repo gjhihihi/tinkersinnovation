@@ -6,13 +6,13 @@
         "type": "tconstruct:config"
       },
       {
-        "modid": "l2hostility",
+        "modid": "create",
         "type": "forge:mod_loaded"
       }
     ],
     "type": "forge:or"
   },
-  "craftable": false,
+  "craftable": true,
   "tier": 4,
   "sortOrder": 5,
   "hidden": true

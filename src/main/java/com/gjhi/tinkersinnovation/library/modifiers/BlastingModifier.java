@@ -32,7 +32,7 @@ public class BlastingModifier extends NoLevelsModifier implements MeleeHitModifi
         if (tool != null && tool.getModifier(this).getLevel() > 0){
             event.getEntity().level.explode(null, event.getPos().getX(), event.getPos().getY(), event.getPos().getZ(), 4, false, Explosion.BlockInteraction.BREAK);
             if (!event.getEntity().isCreative())
-                ToolDamageUtil.damageAnimated(tool, 10, event.getEntity(), (InteractionHand) null);
+                ToolDamageUtil.damage(tool, 10, event.getEntity(), event.getItemStack());
         }
     }
 

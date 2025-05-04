@@ -2,11 +2,13 @@
   "loader": "tconstruct:tool",
   "parent": "forge:item/default-tool",
   "textures": {
-    "bomb": "tinkersinnovation:item/tool/tinker_bomb/bomb"
+    "shell": "tinkersinnovation:item/tool/tinker_bomb/shell",
+    "core": "tinkersinnovation:item/tool/tinker_bomb/core"
   },
   "modifier_roots": [ "tinkersinnovation:item/tool/tinker_bomb/modifiers/" ],
   "parts": [
-    { "name": "bomb",    "index": 1 }
+    { "name": "core",    "index": 0 },
+    { "name": "shell",    "index": 1 }
   ],
   "overrides": [
     {

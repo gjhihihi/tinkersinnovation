@@ -1,9 +1,9 @@
 package com.gjhi.tinkersinnovation.library.modifiers;
 
 import com.gjhi.tinkersinnovation.TinkersInnovation;
-import com.xiaoyue.tinkers_ingenuity.content.library.context.CurioAttributeContext;
-import com.xiaoyue.tinkers_ingenuity.content.library.init.TIHooks;
-import com.xiaoyue.tinkers_ingenuity.generic.Interface.curio.TinkerCurioHook;
+import com.xiaoyue.tingenuity_library.library.hook.curio.CurioBuilderHook;
+import com.xiaoyue.tingenuity_library.library.logic.context.AttributeData;
+import com.xiaoyue.tingenuity_library.register.LibraryHooks;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
@@ -21,16 +21,16 @@ import top.theillusivec4.curios.api.SlotContext;
 
 import java.util.UUID;
 
-public class NEOCurioModifier extends NoLevelsModifier implements ModifierRemovalHook, TinkerCurioHook {
+public class NEOCurioModifier extends NoLevelsModifier implements ModifierRemovalHook, CurioBuilderHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
-        hookBuilder.addHook(this, ModifierHooks.REMOVE, TIHooks.TINKER_CURIO_HOOK);
+        hookBuilder.addHook(this, ModifierHooks.REMOVE, LibraryHooks.CURIO_BUILDER);
     }
     private final ResourceLocation KEY = new ResourceLocation(TinkersInnovation.MOD_ID, "neo_curio");
 
 
     @Override
-    public void addCurioAttribute(IToolStackView curio, SlotContext context, LivingEntity entity, int level, ItemStack stack, CurioAttributeContext attr) {
+    public void addCurioAttribute(IToolStackView curio, SlotContext context, LivingEntity entity, int level, AttributeData attr) {
         if (curio.getPersistentData().getBoolean(KEY)) {
             attr.map().put(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(UUID.fromString("3367bbc2-913d-4b6b-9229-6cc3ff6f4bc6"), Attributes.ARMOR_TOUGHNESS.getDescriptionId(), 0.5, AttributeModifier.Operation.MULTIPLY_BASE));
         }

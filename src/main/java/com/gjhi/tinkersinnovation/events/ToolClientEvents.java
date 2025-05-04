@@ -25,6 +25,7 @@ public class ToolClientEvents {
             TinkerItemProperties.registerToolProperties(TinkersInnovationItems.tinker_bomb.get().asItem());
             TinkerItemProperties.registerToolProperties(TinkersInnovationItems.skelewag_sword.get().asItem());
             TinkerItemProperties.registerToolProperties(TinkersInnovationItems.mechanical_multifunctional_cane.get().asItem());
+            TinkerItemProperties.registerToolProperties(TinkersInnovationItems.long_sword.get().asItem());
         });
     }
 }

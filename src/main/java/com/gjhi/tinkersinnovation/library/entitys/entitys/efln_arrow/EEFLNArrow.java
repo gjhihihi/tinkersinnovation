@@ -15,16 +15,16 @@ import net.minecraft.world.phys.EntityHitResult;
 public class EEFLNArrow extends AbstractArrow {
     public EEFLNArrow(Level level, LivingEntity livingEntity) {
         super(TinkersInnovationEntityTypes.EFLN_ARROW_ENTITY.get(), livingEntity, level);
-        this.setBaseDamage(1.0);
+        this.setBaseDamage(2.0);
     }
     public EEFLNArrow(EntityType<EEFLNArrow> type, Level level) {
         super(type, level);
-        this.setBaseDamage(1.0);
+        this.setBaseDamage(2.0);
     }
 
     public EEFLNArrow(double x, double y, double z, Level level) {
         super(TinkersInnovationEntityTypes.EFLN_ARROW_ENTITY.get(), x, y, z, level);
-        this.setBaseDamage(1.0);
+        this.setBaseDamage(2.0);
     }
 
     @Override
@@ -42,5 +42,6 @@ public class EEFLNArrow extends AbstractArrow {
     protected void onHitBlock(BlockHitResult result) {
         this.level.explode(this, this.getX(), this.getY(), this.getZ(), 2, Explosion.BlockInteraction.BREAK);
         super.onHitBlock(result);
+        this.discard();
     }
 }

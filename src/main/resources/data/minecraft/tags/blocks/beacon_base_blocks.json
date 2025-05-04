@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "tinkersinnovation:polychrome_alloy_block",
+    "tinkersinnovation:void_crystal_block",
+    "tinkersinnovation:enchantment_block",
+    "tinkersinnovation:slimton_block",
+    "tinkersinnovation:decline_block",
+    "tinkersinnovation:hostilium_block",
+    "tinkersinnovation:fools_gold_block",
+    "tinkersinnovation:straddlite_alloy_block"
+  ]
+}

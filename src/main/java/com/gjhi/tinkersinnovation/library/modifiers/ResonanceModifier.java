@@ -35,7 +35,7 @@ public class ResonanceModifier extends Modifier implements MeleeHitModifierHook,
     public boolean onProjectileHitEntity(ModifierNBT modifiers, NamespacedNBT persistentData, ModifierEntry modifier, Projectile projectile, EntityHitResult hit, @Nullable LivingEntity attacker, @Nullable LivingEntity target) {
         if (target != null && projectile instanceof AbstractArrow) {
             target.invulnerableTime = 0;
-            target.hurt(DamageSource.sonicBoom(projectile), 3 * modifier.getLevel());
+            target.hurt(DamageSource.sonicBoom(attacker != null ? attacker : projectile), 3 * modifier.getLevel());
         }
         return false;
     }

@@ -1,6 +1,6 @@
 package com.gjhi.tinkersinnovation.library.modifiers;
 
-import com.xiaoyue.tinkers_ingenuity.content.library.init.TIToolStats;
+import com.xiaoyue.tinkers_ingenuity.library.init.TIToolStats;
 import net.minecraft.world.entity.LivingEntity;
 import org.jetbrains.annotations.NotNull;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;

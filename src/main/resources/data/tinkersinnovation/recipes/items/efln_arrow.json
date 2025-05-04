@@ -1,16 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " Y ",
-    "Y#Y",
-    " Y "
+    "#",
+    "Y",
+    "Z"
   ],
   "key": {
     "#": {
       "item": "tconstruct:efln_ball"
     },
     "Y": {
-      "item": "minecraft:arrow"
+      "item": "minecraft:stick"
+    },
+    "Z": {
+      "item": "minecraft:feather"
     }
   },
   "result": {

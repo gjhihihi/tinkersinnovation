@@ -1,7 +1,7 @@
 package com.gjhi.tinkersinnovation.library.modifiers;
 
-import com.xiaoyue.tinkers_ingenuity.content.library.init.TIHooks;
-import com.xiaoyue.tinkers_ingenuity.generic.Interface.curio.TinkerCurioHook;
+import com.xiaoyue.tingenuity_library.library.hook.curio.CurioBuilderHook;
+import com.xiaoyue.tingenuity_library.register.LibraryHooks;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
@@ -10,10 +10,10 @@ import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import top.theillusivec4.curios.api.SlotContext;
 
-public class VitalityCurioModifier  extends Modifier implements TinkerCurioHook {
+public class VitalityCurioModifier extends Modifier implements CurioBuilderHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder builder) {
-        builder.addHook(this, TIHooks.TINKER_CURIO_HOOK);
+        builder.addHook(this, LibraryHooks.CURIO_BUILDER);
     }
     @Override
     public void onCurioTick(IToolStackView curio, SlotContext context, LivingEntity entity, int level, ItemStack stack) {

@@ -86,8 +86,8 @@ public class TinkerBombItem extends ModifiableLauncherItem {
                     level.addFreshEntity(arrow);
                     level.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.ARROW_SHOOT  , SoundSource.PLAYERS, 1.0F, 1.0F / (level.getRandom().nextFloat() * 0.4F + 1.2F) * 0.5F + angle / 10.0F);
                 }
-                ToolDamageUtil.damageAnimated(tool, ammo.getCount() * 10, player, hand);
-                player.getCooldowns().addCooldown(this, 20);
+                ToolDamageUtil.damageAnimated(tool, ammo.getCount(), player, hand);
+                player.getCooldowns().addCooldown(this, 30);
                 return InteractionResultHolder.consume(itemStack);
             }
         }else {

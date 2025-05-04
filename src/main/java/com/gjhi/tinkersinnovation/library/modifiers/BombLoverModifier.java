@@ -23,6 +23,5 @@ public class BombLoverModifier extends NoLevelsModifier implements TinkersBombHo
     public void beforeBombPiecesHit(ModifierNBT modifiers, NamespacedNBT persistentData, ModifierEntry modifier, EBomb bomb, LivingEntity attacker, List<LivingEntity> targets, Map<LivingEntity, Integer> hitted) {
         int count = hitted.get(attacker);
         hitted.remove(attacker);
-        TinkersBombHook.pieceHitting(hitted, TinkersInnovationUtils.without(targets, attacker), count);
     }
 }

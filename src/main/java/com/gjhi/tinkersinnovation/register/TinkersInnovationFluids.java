@@ -42,7 +42,7 @@ public class TinkersInnovationFluids {
     public static FlowingFluidObject<ForgeFlowingFluid> farseeing_alloy = register("molten_farseeing_alloy", 1650);
     public static FlowingFluidObject<ForgeFlowingFluid> blood = register("molten_blood", 50);
     public static FlowingFluidObject<ForgeFlowingFluid> hemolymph = register("molten_hemolymph", 75);
-    public static FlowingFluidObject<ForgeFlowingFluid> active_soul = register("molten_active_soul", 2000);
+    public static FlowingFluidObject<ForgeFlowingFluid> blazing_soul = register("molten_blazing_soul", 2000);
     public static FlowingFluidObject<ForgeFlowingFluid> capsid = register("molten_capsid", 500);
     public static FlowingFluidObject<ForgeFlowingFluid> sun = register("molten_sun", 5000);
     public static FlowingFluidObject<ForgeFlowingFluid> sunsoul_alloy = register("molten_sunsoul_alloy", 3200);

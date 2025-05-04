@@ -6,6 +6,8 @@
         "tconstruct:accuracy": 1.2,
         "tconstruct:projectile_damage": 2.0,
         "tconstruct:durability": 1000,
+        "tconstruct:harvest_tier": "minecraft:gold",
+        "tconstruct:mining_speed": 3.0,
         "tconstruct:block_amount": 20.0,
         "tconstruct:use_item_speed": 0.5
       }

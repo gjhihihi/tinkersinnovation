@@ -1,0 +1,11 @@
+{
+  "type": "mantle:fill_item",
+  "filled": "tinkersinnovation:blood_bottle",
+  "fluid": {
+    "amount": 250,
+    "tag": "forge:blood"
+  },
+  "input": {
+    "item": "minecraft:glass_bottle"
+  }
+}

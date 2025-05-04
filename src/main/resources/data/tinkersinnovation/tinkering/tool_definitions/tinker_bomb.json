@@ -36,13 +36,14 @@
     {
       "type": "tconstruct:multiply_stats",
       "multipliers": {
-        "tconstruct:durability": 0.75,
+        "tconstruct:durability": 0.1,
+        "tconstruct:overslime": 0.1,
         "tconstruct:velocity": 0.3
       }
     },
     {
       "type": "tconstruct:material_repair",
-      "durability": 10,
+      "durability": 1,
       "material": "minecraft:tnt"
     },
     {

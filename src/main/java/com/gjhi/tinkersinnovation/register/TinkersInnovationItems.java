@@ -6,19 +6,16 @@ import com.gjhi.tinkersinnovation.library.items.tinker_bomb.IBomb;
 import com.gjhi.tinkersinnovation.library.items.tinker_bomb.TinkerBombItem;
 import com.gjhi.tinkersinnovation.library.stats.BombCoreStats;
 import com.gjhi.tinkersinnovation.library.stats.ShieldMaterialStats;
-import net.minecraft.world.item.ArrowItem;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
+import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import slimeknights.tconstruct.fluids.item.ContainerFoodItem;
 import slimeknights.tconstruct.library.tools.item.ModifiableItem;
 import slimeknights.tconstruct.library.tools.item.ranged.ModifiableLauncherItem;
 import slimeknights.tconstruct.library.tools.part.ToolPartItem;
-import slimeknights.tconstruct.tools.stats.HandleMaterialStats;
-import slimeknights.tconstruct.tools.stats.HeadMaterialStats;
 
 import static com.gjhi.tinkersinnovation.TinkersInnovation.*;
 
@@ -82,6 +79,8 @@ public class TinkersInnovationItems {
     public static RegistryObject<Item> straddlite_alloy_block = ITEMS.register("straddlite_alloy_block", () -> register_block(TinkersInnovationBlocks.straddlite_alloy_block.get()));
     //ores
     public static RegistryObject<Item> void_crystal_ore = ITEMS.register("void_crystal_ore", () -> register_block(TinkersInnovationBlocks.void_crystal_ore.get()));
+    public static RegistryObject<Item> seared_bedrock = ITEMS.register("seared_bedrock", () -> register_block(TinkersInnovationBlocks.seared_bedrock.get()));
+    public static RegistryObject<Item> scorched_bedrock = ITEMS.register("scorched_bedrock", () -> register_block(TinkersInnovationBlocks.scorched_bedrock.get()));
     //tool parts
     public static final RegistryObject<ToolPartItem> light_shield_plate = ITEMS.register("light_shield_plate", () -> new ToolPartItem(PARTS_PROPS, ShieldMaterialStats.ID));
     public static RegistryObject<Item> light_shield_plate_cast = ITEMS.register("light_shield_plate_cast", TinkersInnovationItems::register_item);
@@ -109,15 +108,15 @@ public class TinkersInnovationItems {
     public static RegistryObject<Item> shulkerate_reinforcement = ITEMS.register("shulkerate_reinforcement", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> sculkium_reinforcement = ITEMS.register("sculkium_reinforcement", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> eternium_reinforcement = ITEMS.register("eternium_reinforcement", TinkersInnovationItems::register_item);
+    public static RegistryObject<Item> polychrome_alloy_reinforcement = ITEMS.register("polychrome_alloy_reinforcement", TinkersInnovationItems::register_item);
     //arrow
     public static RegistryObject<Item> efln_arrow = ITEMS.register("efln_arrow", IEFLNArrow::new);
     //others
-    public static RegistryObject<Item> seared_bedrock = ITEMS.register("seared_bedrock", () -> register_block(TinkersInnovationBlocks.seared_bedrock.get()));
-    public static RegistryObject<Item> scorched_bedrock = ITEMS.register("scorched_bedrock", () -> register_block(TinkersInnovationBlocks.scorched_bedrock.get()));
     public static RegistryObject<Item> polychrome_mix = ITEMS.register("polychrome_mix", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> raw_void_crystal = ITEMS.register("raw_void_crystal", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> teleport_core = ITEMS.register("teleport_core", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> gorgon_hair = ITEMS.register("gorgon_hair", TinkersInnovationItems::register_item);
+    public static RegistryObject<Item> blood_bottle = ITEMS.register("blood_bottle", () -> new ContainerFoodItem.FluidContainerFoodItem((new Item.Properties()).food(TinkersInnovationFoods.BLOOD_BOTTLE).tab(itemGroup).stacksTo(1).craftRemainder(Items.GLASS_BOTTLE), () -> new FluidStack(TinkersInnovationFluids.blood.get(), 250)));
     public static RegistryObject<Item> blood_bone = ITEMS.register("blood_bone", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> hemolymph_bone = ITEMS.register("hemolymph_bone", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> soul_bone = ITEMS.register("soul_bone", TinkersInnovationItems::register_item);

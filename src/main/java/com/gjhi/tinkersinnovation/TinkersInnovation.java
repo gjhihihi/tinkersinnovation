@@ -1,7 +1,7 @@
 package com.gjhi.tinkersinnovation;
 
 import com.gjhi.tinkersinnovation.register.*;
-import com.gjhi.tinkersinnovation.world.features.ores.TIOreFeature;
+import com.gjhi.tinkersinnovation.world.features.ores.TinkersInnovationOreFeatures;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
@@ -13,8 +13,6 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
-import net.minecraftforge.fml.event.config.ModConfigEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -47,6 +45,9 @@ public class TinkersInnovation {
         TinkersInnovationEntityTypes.ENTITY_TYPES.register(bus);
         TinkersInnovationEffects.MOB_EFFECTS.register(bus);
         TinkersInnovationPotions.POTIONS.register(bus);
+        TinkersInnovationOreFeatures.CONFIGURED_FEATURES.register(bus);
+        TinkersInnovationOreFeatures.PLACED_FEATURES.register(bus);
+        TinkersInnovationRecipes.RECIPE_SERIALIZERS.register(bus);
         TinkersInnovationTags.init();
         TinkersInnovationToolStats.init();
         TinkersInnovationSlots.init();
@@ -59,7 +60,7 @@ public class TinkersInnovation {
         event.enqueueWork(TinkersInnovationMaterialStats::setup);
         TinkersInnovationPotions.recipesInit();
         TinkersInnovationCompat.L2Complements.init();
-        //TinkersInnovationCompat.TinkersIngenuity.init();
+        TinkersInnovationCompat.TinkersIngenuity.init();
         TinkersInnovationCompat.L2Hostility.init();
         TinkersInnovationCompat.IceAndFire.init();
         TinkersInnovationCompat.AlexsMobs.init();

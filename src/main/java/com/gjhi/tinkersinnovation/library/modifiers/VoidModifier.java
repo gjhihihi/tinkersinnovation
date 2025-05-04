@@ -192,7 +192,7 @@ public class VoidModifier extends Modifier implements ProjectileHitModifierHook,
         LivingEntity entity = context.getLivingTarget();
         if (entity != null) {
             int time = entity.invulnerableTime;
-            entity.hurt(DamageSource.OUT_OF_WORLD,voiddamage);
+            entity.hurt(DamageSource.mobAttack(context.getAttacker()).bypassArmor().bypassInvul(), voiddamage);
             entity.invulnerableTime = time;
             return damage - voiddamage;
         }

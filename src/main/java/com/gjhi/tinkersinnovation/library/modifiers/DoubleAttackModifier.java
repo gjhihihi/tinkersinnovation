@@ -53,21 +53,12 @@ import java.util.function.BiConsumer;
 import static com.gjhi.tinkersinnovation.register.TinkersInnovationModifiers.double_attack;
 import static java.lang.Math.min;
 
-public class DoubleAttackModifier extends NoLevelsModifier implements MeleeHitModifierHook, MeleeDamageModifierHook, ToolDamageModifierHook, BlockBreakModifierHook, BlockHarvestModifierHook, BreakSpeedModifierHook, AttributesModifierHook, InventoryTickModifierHook, ModifierRemovalHook, RequirementsModifierHook, ModifyDamageSourceModifierHook {
+public class DoubleAttackModifier extends NoLevelsModifier implements MeleeHitModifierHook, MeleeDamageModifierHook, ToolDamageModifierHook, BlockBreakModifierHook, BlockHarvestModifierHook, BreakSpeedModifierHook, AttributesModifierHook, InventoryTickModifierHook, ModifierRemovalHook, ModifyDamageSourceModifierHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
-        hookBuilder.addHook(this, ModifierHooks.MELEE_HIT, ModifierHooks.MELEE_DAMAGE, ModifierHooks.TOOL_DAMAGE, ModifierHooks.BLOCK_BREAK, ModifierHooks.BREAK_SPEED, ModifierHooks.BLOCK_HARVEST, ModifierHooks.INVENTORY_TICK, ModifierHooks.ATTRIBUTES, ModifierHooks.REMOVE, ModifierHooks.REQUIREMENTS, TinkersInnovationHooks.MODIFY_SOURCE);
-    }
-    @Nullable
-    @Override
-    public Component requirementsError(ModifierEntry entry) {
-        return Component.translatable("recipe.tconstruct.modifier.double_attack");
+        hookBuilder.addHook(this, ModifierHooks.MELEE_HIT, ModifierHooks.MELEE_DAMAGE, ModifierHooks.TOOL_DAMAGE, ModifierHooks.BLOCK_BREAK, ModifierHooks.BREAK_SPEED, ModifierHooks.BLOCK_HARVEST, ModifierHooks.INVENTORY_TICK, ModifierHooks.ATTRIBUTES, ModifierHooks.REMOVE, TinkersInnovationHooks.MODIFY_SOURCE);
     }
 
-    @Override
-    public @NotNull List<ModifierEntry> displayModifiers(ModifierEntry entry) {
-        return List.of(new ModifierEntry(TinkerModifiers.dualWielding.getId(),1));
-    }
     private final ResourceLocation KEY = new ResourceLocation(TinkersInnovation.MOD_ID, "double_attack");
     @Override
     public void addAttributes(IToolStackView tool, ModifierEntry modifier, EquipmentSlot slot, BiConsumer<Attribute,AttributeModifier> consumer) {

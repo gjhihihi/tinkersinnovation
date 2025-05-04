@@ -24,6 +24,6 @@ public class PrecisionModifier extends Modifier implements RepairFactorModifierH
 
     @Override
     public void addToolStats(IToolContext context, ModifierEntry modifier, ModifierStatsBuilder builder) {
-        ToolStats.DURABILITY.multiply(builder, 0.05 * modifier.getLevel());
+        ToolStats.DURABILITY.multiply(builder, 1 + 0.05 * modifier.getLevel());
     }
 }

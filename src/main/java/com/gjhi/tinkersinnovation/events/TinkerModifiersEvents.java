@@ -19,7 +19,7 @@ import static slimeknights.tconstruct.library.modifiers.Modifier.getHeldTool;
 public class TinkerModifiersEvents {
 
     @SubscribeEvent
-    public void onHealing(LivingHealEvent event) {
+    public static void onHealing(LivingHealEvent event) {
         LivingEntity entity = event.getEntity();
         float health = event.getAmount();
         if (health > 0 && entity.isAlive()) {
@@ -40,4 +40,5 @@ public class TinkerModifiersEvents {
             event.setAmount(health);
         }
     }
+
 }

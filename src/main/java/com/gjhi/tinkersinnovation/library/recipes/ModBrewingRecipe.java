@@ -1,4 +1,4 @@
-package com.gjhi.tinkersinnovation.library;
+package com.gjhi.tinkersinnovation.library.recipes;
 
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.alchemy.PotionUtils;

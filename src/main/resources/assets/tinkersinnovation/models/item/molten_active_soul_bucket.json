@@ -1,5 +1,5 @@
 {
   "parent": "forge:item/bucket_drip",
   "loader": "forge:bucket",
-  "fluid": "tinkersinnovation:molten_active_soul"
+  "fluid": "tinkersinnovation:molten_blazing_soul"
 }

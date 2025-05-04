@@ -3,7 +3,6 @@
   "values": [
     "tinkersinnovation:claw",
     "tinkersinnovation:skelewag_sword",
-    "tinkersinnovation:tinker_bomb",
     "tinkersinnovation:mechanical_multifunctional_cane",
     "tconstruct:pickaxe",
     "tconstruct:mattock",
@@ -12,6 +11,8 @@
     "tconstruct:kama",
     "tconstruct:sword",
     "tconstruct:dagger",
-    "tconstruct:flint_and_brick"
+    "tconstruct:flint_and_brick",
+    "tconstruct:battlesign",
+    "tconstruct:war_pick"
   ]
 }

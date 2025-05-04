@@ -15,7 +15,7 @@ public class TinkersInnovationModifiers {
     public static StaticModifier<EnchantmentArmorModifier> enchantment_armor = MODIFIERS.register("enchantment_armor", EnchantmentArmorModifier::new);
     public static StaticModifier<VitalityModifier> vitality = MODIFIERS.register("vitality", VitalityModifier::new);
     public static StaticModifier<VitalityArmorModifier> vitality_armor = MODIFIERS.register("vitality_armor", VitalityArmorModifier::new);
-    public static StaticModifier<OmnipotentModifier> omnipotent = MODIFIERS.register("omnipotent", OmnipotentModifier::new);
+    public static StaticModifier<OmnipotentNewModifier> omnipotent = MODIFIERS.register("omnipotent", OmnipotentNewModifier::new);
     public static StaticModifier<BigHeartModifier> big_heart = MODIFIERS.register("big_heart", BigHeartModifier::new);
     public static StaticModifier<FastEatModifier> fast_eat = MODIFIERS.register("fast_eat", FastEatModifier::new);
     public static StaticModifier<ChromaticAberrationModifier> chromatic_aberration = MODIFIERS.register("chromatic_aberration", ChromaticAberrationModifier::new);
@@ -99,6 +99,7 @@ public class TinkersInnovationModifiers {
     public static StaticModifier<HoldSteadyModifier> thick_shield = MODIFIERS.register("thick_shield", HoldSteadyModifier::new);
     public static StaticModifier<OverCushionModifier> over_cushion = MODIFIERS.register("over_cushion", OverCushionModifier::new);
     public static StaticModifier<ShieldBreakModifier> shield_break = MODIFIERS.register("shield_break", ShieldBreakModifier::new);
+    public static StaticModifier<MachineAddingModifier> machine_adding = MODIFIERS.register("machine_adding", MachineAddingModifier::new);
     public static class L2ComplementsModifier {
         public static ModifierDeferredRegister L2C_MODIFIERS = ModifierDeferredRegister.create(MOD_ID);
         public static void init() {
