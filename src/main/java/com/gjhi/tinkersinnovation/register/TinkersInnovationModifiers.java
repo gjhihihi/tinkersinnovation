@@ -21,7 +21,7 @@ public class TinkersInnovationModifiers {
     public static StaticModifier<ChromaticAberrationModifier> chromatic_aberration = MODIFIERS.register("chromatic_aberration", ChromaticAberrationModifier::new);
     public static StaticModifier<BerserkerModifier> berserker = MODIFIERS.register("berserker", BerserkerModifier::new);
     public static StaticModifier<MountedStrikeModifier> mounted_strike = MODIFIERS.register("mounted_strike", MountedStrikeModifier::new);
-    public static StaticModifier<TraderModifier> trader = MODIFIERS.register("trader", TraderModifier::new);
+    public static StaticModifier<DealMakerModifier> deal_maker = MODIFIERS.register("deal_maker", DealMakerModifier::new);
     public static StaticModifier<BIGSHOTModifier> BIGSHOT = MODIFIERS.register("big_shot", BIGSHOTModifier::new);
     public static StaticModifier<DoubleAttackModifier> double_attack = MODIFIERS.register("double_attack", DoubleAttackModifier::new);
     public static StaticModifier<RipeningModifier> ripening = MODIFIERS.register("ripening", RipeningModifier::new);
@@ -70,7 +70,7 @@ public class TinkersInnovationModifiers {
     public static StaticModifier<FlameBurningModifier> flame_burning = MODIFIERS.register("flame_burning", FlameBurningModifier::new);
     public static StaticModifier<MoisturizingModifier> moisturizing = MODIFIERS.register("moisturizing", MoisturizingModifier::new);
     public static StaticModifier<DilapidationModifier> dilapidation = MODIFIERS.register("dilapidation", DilapidationModifier::new);
-    public static StaticModifier<AbsorbedModifier> absorbed = MODIFIERS.register("absorbed", AbsorbedModifier::new);
+    public static StaticModifier<CalibrationModifier> calibration = MODIFIERS.register("calibration", CalibrationModifier::new);
     public static StaticModifier<PrecisionModifier> precision = MODIFIERS.register("precision", PrecisionModifier::new);
     public static StaticModifier<RagingModifier> raging = MODIFIERS.register("raging", RagingModifier::new);
     public static StaticModifier<NotHungryModifier> not_hungry = MODIFIERS.register("not_hungry", NotHungryModifier::new);
@@ -99,7 +99,7 @@ public class TinkersInnovationModifiers {
     public static StaticModifier<HoldSteadyModifier> thick_shield = MODIFIERS.register("thick_shield", HoldSteadyModifier::new);
     public static StaticModifier<OverCushionModifier> over_cushion = MODIFIERS.register("over_cushion", OverCushionModifier::new);
     public static StaticModifier<ShieldBreakModifier> shield_break = MODIFIERS.register("shield_break", ShieldBreakModifier::new);
-    public static StaticModifier<MachineAddingModifier> machine_adding = MODIFIERS.register("machine_adding", MachineAddingModifier::new);
+    public static StaticModifier<MachineAddingModifier> mechanism_adding = MODIFIERS.register("mechanism_adding", MachineAddingModifier::new);
     public static class L2ComplementsModifier {
         public static ModifierDeferredRegister L2C_MODIFIERS = ModifierDeferredRegister.create(MOD_ID);
         public static void init() {

@@ -44,7 +44,7 @@ public class SlipperyModifier extends Modifier implements ToolDamageModifierHook
 
     @Override
     public int onDamageTool(IToolStackView tool, ModifierEntry modifier, int amount, @Nullable LivingEntity holder) {
-        if (holder != null && RANDOM.nextFloat() < 0.05){
+        if (holder != null && RANDOM.nextFloat() < 0.02){
             int level = modifier.getLevel();
             level = RANDOM.nextInt(level, 2 * level);
             //ModifierUtil.dropItem(holder, new ItemStack(Items.SLIME_BALL));

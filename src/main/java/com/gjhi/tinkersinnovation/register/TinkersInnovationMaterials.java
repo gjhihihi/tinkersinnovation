@@ -50,5 +50,5 @@ public class TinkersInnovationMaterials {
     public static final MaterialId elastic_tendon = createMaterial("elastic_tendon");
     public static final MaterialId spacebreakium = createMaterial("spacebreakium");
     public static final MaterialId blazing_steel = createMaterial("blazing_steel");
-    public static final MaterialId machine = createMaterial("machine");
+    public static final MaterialId mechanism = createMaterial("mechanism");
 }

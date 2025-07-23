@@ -50,10 +50,10 @@ public class TinkersInnovation {
         TinkersInnovationRecipes.RECIPE_SERIALIZERS.register(bus);
         TinkersInnovationTags.init();
         TinkersInnovationToolStats.init();
-        TinkersInnovationSlots.init();
     }
 
     private void setupClient(FMLClientSetupEvent event) {
+        TinkersInnovationSlots.init();
     }
 
     private void setup(FMLCommonSetupEvent event) {

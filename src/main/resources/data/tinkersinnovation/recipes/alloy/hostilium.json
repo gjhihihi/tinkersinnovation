@@ -7,7 +7,7 @@
   "inputs": [
     {
       "tag": "tinkersinnovation:molten_hostility",
-      "amount": 240
+      "amount": 1000
     },
     {
       "tag": "forge:molten_cobalt",

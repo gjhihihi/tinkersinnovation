@@ -3,14 +3,14 @@
   "parent": "tconstruct:item/base/shield",
   "textures": {
     "plate_round": "tinkersinnovation:item/tool/round_shield/plate_round",
-    "plate_mid": "tinkersinnovation:item/tool/round_shield/plate_mid",
-    "handle": "tinkersinnovation:item/tool/round_shield/handle"
+    "shield_core1": "tinkersinnovation:item/tool/round_shield/shield_core1",
+    "shield_core2": "tinkersinnovation:item/tool/round_shield/shield_core2"
   },
   "modifier_roots": ["tinkersinnovation:item/tool/round_shield/modifiers/"],
   "parts": [
     {"name": "plate_round", "index": 0},
-    {"name": "handle", "index": 1},
-    {"name": "plate_mid", "index": 2}
+    {"name": "shield_core1", "index": 1},
+    {"name": "shield_core2", "index": 2}
   ],
   "overrides": [
     {

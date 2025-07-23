@@ -26,7 +26,7 @@ public class SoulDevouringModifier extends Modifier implements MeleeHitModifierH
     @Override
     public boolean onProjectileHitEntity(ModifierNBT modifiers, NamespacedNBT persistentData, ModifierEntry modifier, Projectile projectile, EntityHitResult hit, @Nullable LivingEntity attacker, @Nullable LivingEntity target) {
         if (target != null){
-            TinkersInnovationUtils.updateEffect(target, TinkersInnovationEffects.soulDevouringEffect.get(), 1, 1 + modifier.getLevel(), 600);
+            TinkersInnovationUtils.updateEffect(target, TinkersInnovationEffects.soulDevouringEffect.get(), 1, 2 * modifier.getLevel(), 600);
         }
         return false;
     }
@@ -35,7 +35,7 @@ public class SoulDevouringModifier extends Modifier implements MeleeHitModifierH
     public void afterMeleeHit(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float damageDealt) {
         LivingEntity target = context.getLivingTarget();
         if (target != null){
-            TinkersInnovationUtils.updateEffect(target, TinkersInnovationEffects.soulDevouringEffect.get(), 1, 1 + modifier.getLevel(), 600);
+            TinkersInnovationUtils.updateEffect(target, TinkersInnovationEffects.soulDevouringEffect.get(), 1, 2 * modifier.getLevel(), 600);
         }
     }
 }

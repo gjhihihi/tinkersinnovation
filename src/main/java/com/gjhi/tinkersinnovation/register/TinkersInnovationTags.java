@@ -22,8 +22,8 @@ public class TinkersInnovationTags {
         }
     }
     public static class Items{
-        public static final TagKey<Item> DIFFICULT_MATERIAL = tag("modifiers_restructuring/difficult_material");
-        public static final TagKey<Item> EXPENSIVE_MATERIAL = tag("modifiers_restructuring/expensive_material");
+        public static final TagKey<Item> DIFFICULT_MATERIAL = tag("traits_restructuring/difficult_material");
+        public static final TagKey<Item> EXPENSIVE_MATERIAL = tag("traits_restructuring/expensive_material");
         private static TagKey<Item> tag(String path) {
             return TagKey.create(Registry.ITEM_REGISTRY, TinkersInnovation.getResource(path));
         }

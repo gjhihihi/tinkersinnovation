@@ -5,7 +5,7 @@
   "input": {
     "item": "tinkersinnovation:shulkerate_reinforcement"
   },
-  "needed_per_level": 20,
+  "needed_per_level": 5,
   "slots": {
     "abilities": 1
   },

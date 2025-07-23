@@ -19,7 +19,7 @@ public abstract class ToolDamageMixin {
     @Inject(at = @At(value = "HEAD"), method = "directDamage", cancellable = true)
     private static void ToolDamage(IToolStackView tool, int amount, LivingEntity entity, ItemStack stack, CallbackInfoReturnable<Boolean> ci){
         if (tool.getModifierLevel(TinkersInnovationModifiers.eternal.get()) > 0){
-            ci.setReturnValue(true);
+            ci.setReturnValue(false);
         }
         if (tool.getModifierLevel(TinkersInnovationModifiers.harden.get()) > 0){
             amount = Math.min(amount, 1);
@@ -27,13 +27,13 @@ public abstract class ToolDamageMixin {
         }
     }
 
-    @Inject(at = @At(value = "HEAD"), method = "breakTool", cancellable = true)
+    @Inject(at = @At(value = "HEAD"), method = "breakTool"/*, cancellable = true*/)
     private static void ToolBreak(ItemStack stack, CallbackInfo ci){
-        if (stack.getItem() instanceof IModifiable) {
+        /*if (stack.getItem() instanceof IModifiable) {
             ToolStack tool = ToolStack.from(stack);
             if (tool.getModifierLevel(TinkersInnovationModifiers.eternal.get()) > 0) {
                 ci.cancel();
             }
-        }
+        }*/
     }
 }

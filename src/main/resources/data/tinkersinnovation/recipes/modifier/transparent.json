@@ -3,11 +3,11 @@
   "inputs": [
     {
       "item": "tinkersinnovation:shulkerate_reinforcement",
-      "amount_needed": 10
+      "amount_needed": 2
     },
     {
       "item": "tinkersinnovation:sculkium_reinforcement",
-      "amount_needed": 10
+      "amount_needed": 3
     }
   ],
   "tools": {

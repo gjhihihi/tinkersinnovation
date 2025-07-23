@@ -52,16 +52,6 @@ public class EnchantmentModifier extends Modifier implements MeleeHitModifierHoo
         }
     }
     @Override
-    public void failedMeleeHit(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float damageAttempted) {
-        LivingEntity player = context.getAttacker();
-        LivingEntity target = context.getLivingTarget();
-        if (target != null) {
-            MobEffectInstance effect = new MobEffectInstance(MobEffects.CONFUSION, 1200 * modifier.getLevel() ,2);
-            //effect.setCurativeItems(List.of());
-            target.addEffect(effect);
-        }
-    }
-    @Override
     public boolean onProjectileHitEntity(ModifierNBT modifiers, NamespacedNBT persistentData, @NotNull ModifierEntry modifier, @NotNull Projectile projectile, EntityHitResult hit, @Nullable LivingEntity player, @Nullable LivingEntity target) {
         int level = modifier.getLevel();
         if (target != null) {

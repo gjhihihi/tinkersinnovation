@@ -81,6 +81,9 @@
     {
       "type": "tconstruct:sweep_melee",
       "range": 1.0
+    },
+    {
+      "type": "tconstruct:dual_option_interaction"
     }
   ]
 }

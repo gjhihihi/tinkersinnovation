@@ -6,11 +6,11 @@
     },
     {
       "item": "tinkersinnovation:shulkerate_reinforcement",
-      "amount_needed": 5
+      "amount_needed": 2
     },
     {
       "item": "tconstruct:cobalt_reinforcement",
-      "amount_needed": 5
+      "amount_needed": 3
     }
   ],
   "tools": {

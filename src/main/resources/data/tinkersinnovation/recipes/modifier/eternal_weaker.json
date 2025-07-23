@@ -9,14 +9,14 @@
   "inputs": [
     {
       "item": "tinkersinnovation:eternium_reinforcement",
-      "amount_needed": 20
+      "amount_needed": 5
     }
   ],
   "tools": {
     "tag": "tconstruct:modifiable/durability"
   },
   "slots": {
-    "abilities": 1
+    "abilities": 2
   },
   "allow_crystal": true,
   "result": "tinkersinnovation:eternal_weaker",

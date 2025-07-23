@@ -6,7 +6,7 @@
   "cast_consumed": true,
   "cooling_time": 35,
   "fluid": {
-    "amount": 60,
+    "amount": 90,
     "tag": "tinkersinnovation:molten_eternium"
   },
   "result": "tinkersinnovation:eternium_reinforcement"

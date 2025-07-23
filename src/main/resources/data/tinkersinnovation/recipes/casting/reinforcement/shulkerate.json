@@ -6,7 +6,7 @@
   "cast_consumed": true,
   "cooling_time": 35,
   "fluid": {
-    "amount": 40,
+    "amount": 90,
     "tag": "tinkersinnovation:molten_shulkerate"
   },
   "result": "tinkersinnovation:shulkerate_reinforcement"

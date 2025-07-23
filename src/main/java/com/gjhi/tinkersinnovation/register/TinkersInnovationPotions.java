@@ -29,9 +29,9 @@ public class TinkersInnovationPotions {
         BrewingRecipeRegistry.addRecipe(new ModBrewingRecipe(inputPot, Ingredient.of(item), PotionUtils.setPotion(new ItemStack(Items.POTION), pot)));
     }
     private enum PotionType{
-        COMMON(1200, 0),
-        LONG(400, 1),
-        STRONG(2400, 0);
+        COMMON(3600, 0),
+        LONG(1800, 1),
+        STRONG(9600, 0);
 
         final int time;
         final int level;

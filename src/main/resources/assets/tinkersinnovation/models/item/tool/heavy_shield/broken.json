@@ -5,11 +5,13 @@
     "plate_up": "tinkersinnovation:item/tool/heavy_shield/broken_plate_up",
     "plate_down": "tinkersinnovation:item/tool/heavy_shield/broken_plate_down",
     "plate_mid": "tinkersinnovation:item/tool/heavy_shield/broken_plate_mid",
+    "shield_core": "tinkersinnovation:item/tool/heavy_shield/broken_shield_core",
     "handle": "tinkersinnovation:item/tool/heavy_shield/handle",
 
     "large_plate_up": "tinkersinnovation:item/tool/heavy_shield/broken_plate_up",
     "large_plate_down": "tinkersinnovation:item/tool/heavy_shield/broken_plate_down",
     "large_plate_mid": "tinkersinnovation:item/tool/heavy_shield/broken_plate_mid",
+    "large_shield_core": "tinkersinnovation:item/tool/heavy_shield/broken_shield_core",
     "large_handle": "tinkersinnovation:item/tool/heavy_shield/handle"
   },
   "modifier_roots": {
@@ -23,10 +25,11 @@
     ]
   },
   "parts": [
-    {"name": "handle", "index": 0},
-    {"name": "plate_up", "index": 1},
-    {"name": "plate_down", "index": 2},
-    {"name": "plate_mid", "index": 3}
+    {"name": "plate_up", "index": 0},
+    {"name": "plate_down", "index": 1},
+    {"name": "shield_core", "index": 2},
+    {"name": "plate_mid", "index": 3},
+    {"name": "handle", "index": 4}
   ],
   "large": true,
   "large_offset": [-8, 0]

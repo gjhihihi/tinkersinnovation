@@ -6,7 +6,7 @@
   "cast_consumed": true,
   "cooling_time": 35,
   "fluid": {
-    "amount": 80,
+    "amount": 90,
     "tag": "tinkersinnovation:molten_polychrome_alloy"
   },
   "result": "tinkersinnovation:polychrome_alloy_reinforcement"

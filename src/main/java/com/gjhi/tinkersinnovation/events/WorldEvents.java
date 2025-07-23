@@ -27,7 +27,7 @@ public class WorldEvents {
     public static void rightClick(PlayerInteractEvent.RightClickItem event){
         Player player = event.getEntity();
         ItemStack item = player.getMainHandItem();
-        if (player.hasEffect(TinkerModifiers.bleeding.get()) && item.is(Items.GLASS_BOTTLE)){
+        if (player.hasEffect(TinkerModifiers.bleeding.get()) && item.is(Items.GLASS_BOTTLE) && !player.getCooldowns().isOnCooldown(item.getItem())){
             item.shrink(1);
             ItemStack newitem = new ItemStack(TinkersInnovationItems.blood_bottle.get());
             Inventory inventory = player.getInventory();
@@ -35,6 +35,7 @@ public class WorldEvents {
                 ModifierUtil.dropItem(player, newitem);
             }
             player.hurt(new DamageSource(TConstruct.prefix("bleed")).bypassArmor().bypassMagic(), 5f);
+            player.getCooldowns().addCooldown(item.getItem(), 20);
         }
     }
 }

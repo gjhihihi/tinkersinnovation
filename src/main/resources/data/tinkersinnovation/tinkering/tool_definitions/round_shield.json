@@ -4,7 +4,7 @@
       "type": "tconstruct:part_stats",
       "parts": [
         "tinkersinnovation:light_shield_plate",
-        "tconstruct:maille",
+        "tconstruct:shield_core",
         "tconstruct:shield_core"
       ],
       "primary_part": 0
@@ -46,7 +46,7 @@
       "slots": {
         "defense": 2,
         "abilities": 1,
-        "upgrades": 3
+        "upgrades": 1
       }
     },
     {

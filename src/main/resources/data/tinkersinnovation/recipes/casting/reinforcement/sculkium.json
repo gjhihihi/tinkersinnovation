@@ -6,7 +6,7 @@
   "cast_consumed": true,
   "cooling_time": 35,
   "fluid": {
-    "amount": 30,
+    "amount": 90,
     "tag": "tinkersinnovation:molten_sculkium"
   },
   "result": "tinkersinnovation:sculkium_reinforcement"

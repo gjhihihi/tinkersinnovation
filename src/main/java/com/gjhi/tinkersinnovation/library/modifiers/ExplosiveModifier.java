@@ -30,8 +30,8 @@ public class ExplosiveModifier extends NoLevelsModifier implements OnAttackedMod
         if (source.getEntity() instanceof LivingEntity entity){
             target = entity;
         }
-        if (target != null) {
-            target.level.explode(null, target.getX(), target.getY(), target.getZ(), 2, Explosion.BlockInteraction.NONE);
+        if (target != null && isDirectDamage && !source.isExplosion()) {
+            target.level.explode(player, target.getX(), target.getY(), target.getZ(), 2, Explosion.BlockInteraction.NONE);
             if (!(player instanceof Player) || (player instanceof Player p && !p.isCreative()))
                 ToolDamageUtil.damageAnimated(tool, 10, player, slotType);
         }

@@ -56,7 +56,7 @@ public class ShieldAmountModifier extends DurabilityShieldModifier implements In
         int shield = this.getShield(tool);
         if (holder instanceof Player player) {
             if (shield > 0 && !player.getCooldowns().isOnCooldown(tool.getItem())) {
-                if (!(holder.getMainHandItem().is(tool.getItem()) || holder.getOffhandItem().is(tool.getItem()))) {
+                if (!(holder.isBlocking())) {
                     if (holder.tickCount % 10 == 0)
                         this.addShield(tool, modifier, 1);
                 }
