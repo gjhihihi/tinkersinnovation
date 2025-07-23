@@ -1,0 +1,25 @@
+{
+  "type": "tconstruct:modifier",
+  "conditions": [
+    {
+      "modid": "create",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "allow_crystal": false,
+  "inputs": [
+    {
+      "item": "create:mechanical_saw"
+    }
+  ],
+  "level": {
+    "max": 3
+  },
+  "result": "tconstruct:severing",
+  "slots": {
+    "mechanisms": 1
+  },
+  "tools": {
+    "tag": "tconstruct:modifiable/melee"
+  }
+}

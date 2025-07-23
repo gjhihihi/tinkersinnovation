@@ -1,0 +1,17 @@
+{
+  "type": "tconstruct:modifier",
+  "inputs": [
+    {
+      "item": "minecraft:water_bucket"
+    },
+    {
+      "item": "tconstruct:sky_slime"
+    }
+  ],
+  "tools": {
+    "tag": "tinkersinnovation:modifiable/bomb"
+  },
+  "allow_crystal": true,
+  "result": "tinkersinnovation:no_blocks_break",
+  "level": 1
+}

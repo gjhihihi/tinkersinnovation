@@ -1,0 +1,36 @@
+{
+  "type": "tconstruct:modifier",
+  "conditions": [
+    {
+      "modid": "create",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "allow_crystal": false,
+  "inputs": [
+    {
+      "item": "create:fluid_tank"
+    }
+  ],
+  "result": "tconstruct:tank",
+  "slots": {
+    "mechanisms": 1
+  },
+  "tools": [
+    {
+      "tag": "tconstruct:modifiable/interactable"
+    },
+    {
+      "tag": "tconstruct:modifiable/armor/helmets"
+    },
+    {
+      "tag": "tconstruct:modifiable/armor/chestplate"
+    },
+    {
+      "tag": "tconstruct:modifiable/armor/leggings"
+    },
+    {
+      "tag": "tconstruct:modifiable/shields"
+    }
+  ]
+}

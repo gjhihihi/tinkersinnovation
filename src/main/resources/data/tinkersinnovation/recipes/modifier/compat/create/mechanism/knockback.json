@@ -1,0 +1,30 @@
+{
+  "type": "tconstruct:modifier",
+  "conditions": [
+    {
+      "modid": "create",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "allow_crystal": false,
+  "inputs": [
+    {
+      "item": "create:extendo_grip"
+    }
+  ],
+  "level": {
+    "max": 3
+  },
+  "result": "tconstruct:knockback",
+  "slots": {
+    "mechanisms": 1
+  },
+  "tools": [
+    {
+      "tag": "tconstruct:modifiable/melee"
+    },
+    {
+      "tag": "tconstruct:modifiable/armor/chestplate"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "type": "tconstruct:modifier",
+  "inputs": [
+    {
+      "item": "tinkersinnovation:slimton_ingot"
+    },
+    {
+      "tag": "forge:ingots/amethyst_bronze",
+      "amount_needed": 2
+    }
+  ],
+  "tools": {
+    "tag": "tinkersinnovation:modifiable/bomb"
+  },
+  "slots": {
+    "upgrades": 1
+  },
+  "allow_crystal": true,
+  "result": "tinkersinnovation:far_throw",
+  "level": {
+    "max": 4
+  }
+}

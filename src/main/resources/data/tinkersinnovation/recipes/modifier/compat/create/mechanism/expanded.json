@@ -1,0 +1,22 @@
+{
+  "type": "tconstruct:modifier",
+  "conditions": [
+    {
+      "modid": "create",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "allow_crystal": false,
+  "inputs": [
+    {
+      "item": "create:mechanical_arm"
+    }
+  ],
+  "result": "tconstruct:expanded",
+  "slots": {
+    "mechanisms": 1
+  },
+  "tools": {
+    "tag": "tconstruct:modifiable/aoe"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "tconstruct:modifier",
+  "conditions": [
+    {
+      "modid": "create",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "allow_crystal": false,
+  "inputs": [
+    {
+      "item": "create:deployer"
+    }
+  ],
+  "result": "tconstruct:reach",
+  "slots": {
+    "mechanisms": 1
+  },
+  "tools": {
+    "tag": "tconstruct:modifiable/armor/chestplate"
+  }
+}

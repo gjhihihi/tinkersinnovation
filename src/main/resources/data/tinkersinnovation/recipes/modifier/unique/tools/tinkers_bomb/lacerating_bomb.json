@@ -1,0 +1,20 @@
+{
+  "type": "tconstruct:modifier",
+  "inputs": [
+    {
+      "item": "tconstruct:nahuatl",
+      "amount_needed": 20
+    }
+  ],
+  "tools": {
+    "tag": "tinkersinnovation:modifiable/bomb"
+  },
+  "slots": {
+    "upgrades": 1
+  },
+  "allow_crystal": true,
+  "result": "tinkersinnovation:lacerating_bomb",
+  "level": {
+    "max": 3
+  }
+}
