@@ -1,6 +1,8 @@
 {
   "color": "FFC4BFA5",
   "fallbacks": [
+    "vine",
+    "primitive"
   ],
   "generator": {
     "ignoreMaterialStats": false,

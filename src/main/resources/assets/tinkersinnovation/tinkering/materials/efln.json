@@ -1,7 +1,5 @@
 {
   "color": "FF980000",
-  "fallbacks": [
-  ],
   "generator": {
     "ignoreMaterialStats": false,
     "supportedStats": [
