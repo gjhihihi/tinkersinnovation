@@ -9,6 +9,7 @@ import slimeknights.tconstruct.library.modifiers.hook.build.VolatileDataModifier
 import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.nbt.IToolContext;
 import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
+import slimeknights.tconstruct.library.tools.nbt.ToolDataNBT;
 
 public class HostilityModifier extends Modifier implements VolatileDataModifierHook {
     @Override
@@ -17,7 +18,7 @@ public class HostilityModifier extends Modifier implements VolatileDataModifierH
     }
 
     @Override
-    public void addVolatileData(@NotNull IToolContext context, @NotNull ModifierEntry modifier, @NotNull ModDataNBT volatileData) {
+    public void addVolatileData(@NotNull IToolContext context, @NotNull ModifierEntry modifier, @NotNull ToolDataNBT volatileData) {
         volatileData.addSlots(TinkersInnovationSlots.HOSTILITY, modifier.getLevel());
     }
 }

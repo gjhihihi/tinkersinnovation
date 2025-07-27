@@ -1,8 +1,10 @@
 package com.gjhi.tinkersinnovation.library.modifiers;
 
+import com.gjhi.tinkersinnovation.register.TinkersInnovationDamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
+import slimeknights.tconstruct.common.TinkerDamageTypes;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.hook.armor.OnAttackedModifierHook;
 import slimeknights.tconstruct.library.modifiers.impl.NoLevelsModifier;
@@ -19,7 +21,7 @@ public class FarseeingArmorModifier extends NoLevelsModifier implements OnAttack
         }
         if (target != null && target.distanceToSqr(wearer) < 5){
             double damage = amount * 0.2 * (5 - target.distanceToSqr(wearer));
-            target.hurt(DamageSource.MAGIC.bypassArmor().bypassMagic(), (float) damage);
+            target.hurt(TinkerDamageTypes.source(target.level().registryAccess(), TinkersInnovationDamageTypes.FARSEE), (float) damage);
         }
     }
 }

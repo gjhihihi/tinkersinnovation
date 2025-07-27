@@ -1,5 +1,6 @@
 package com.gjhi.tinkersinnovation.library.modifiers;
 
+import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EquipmentSlot;
 import slimeknights.tconstruct.library.modifiers.Modifier;
@@ -23,6 +24,6 @@ public class MagicRejectModifier extends NoLevelsModifier implements DamageBlock
     }
 
     public boolean isDamageBlocked(IToolStackView tool, ModifierEntry modifier, EquipmentContext context, EquipmentSlot slotType, DamageSource source, float amount) {
-        return source.isMagic();
+        return source.is(DamageTypeTags.WITCH_RESISTANT_TO);
     }
 }

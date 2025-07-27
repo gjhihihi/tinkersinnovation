@@ -23,7 +23,7 @@ public class RagnarokTraitModifier extends Modifier implements MeleeHitModifierH
     public void afterMeleeHit(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float damageDealt) {
         LivingEntity target = context.getLivingTarget();
         if (target != null){
-            if (CurioCompat.hasItem(target, LHItems.ABRAHADABRA.get()))return;
+            if (CurioCompat.hasItemInCurio(target, LHItems.ABRAHADABRA.get()))return;
             RagnarokTrait trait = new RagnarokTrait(ChatFormatting.BLACK);
             trait.postHurtImpl(modifier.getLevel(), context.getAttacker(), target);
         }

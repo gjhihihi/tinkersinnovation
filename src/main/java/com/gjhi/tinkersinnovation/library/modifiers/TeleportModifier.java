@@ -34,6 +34,7 @@ import slimeknights.tconstruct.library.tools.definition.module.weapon.MeleeHitTo
 import slimeknights.tconstruct.library.tools.helper.ToolDamageUtil;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
+import slimeknights.tconstruct.shared.TinkerEffects;
 import slimeknights.tconstruct.tools.TinkerModifiers;
 
 import javax.annotation.Nullable;
@@ -64,8 +65,8 @@ public class TeleportModifier extends NoLevelsModifier implements GeneralInterac
     public InteractionResult onToolUse(IToolStackView tool, ModifierEntry modifier, Player player, InteractionHand hand, InteractionSource source) {
         if (source == InteractionSource.RIGHT_CLICK && !tool.isBroken()) {
             if (player.isCrouching()) {
-                if (!player.getLevel().isClientSide) {
-                    Level world = player.getLevel();
+                if (!player.level().isClientSide) {
+                    Level world = player.level();
                     ModDataNBT data = tool.getPersistentData();
                     data.putFloat(X, (float) player.getX());
                     data.putFloat(Y, (float) player.getY());
@@ -76,8 +77,8 @@ public class TeleportModifier extends NoLevelsModifier implements GeneralInterac
                     player.displayClientMessage(Component.translatable(LINK_SUCCEED, data.getFloat(X), data.getFloat(Y), data.getFloat(Z)), true);
                 }
             }else {
-                if (!player.hasEffect(TinkerModifiers.teleportCooldownEffect.get()) || !player.hasEffect(TinkerModifiers.enderferenceEffect.get())) {
-                        Level world = player.getLevel();
+                if (!player.hasEffect(TinkerModifiers.teleportCooldownEffect.get()) || !player.hasEffect(TinkerEffects.enderference.get())) {
+                        Level world = player.level();
                         ModDataNBT data = tool.getPersistentData();
                         if (data.contains(X, Tag.TAG_FLOAT) && data.contains(Y, Tag.TAG_FLOAT) && data.contains(Z, Tag.TAG_FLOAT) && data.contains(WORLD, Tag.TAG_STRING)) {
                             if (data.getString(WORLD).equals(world.dimension().location().getPath())) {
@@ -102,8 +103,8 @@ public class TeleportModifier extends NoLevelsModifier implements GeneralInterac
     public float beforeMeleeHit(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float damage, float baseKnockback, float knockback) {
         LivingEntity target = context.getLivingTarget();
         if (!tool.isBroken()) {
-            if (target != null && !target.hasEffect(TinkerModifiers.enderferenceEffect.get())) {
-                    Level world = target.getLevel();
+            if (target != null && !target.hasEffect(TinkerEffects.enderference.get())) {
+                    Level world = target.level();
                     ModDataNBT data = tool.getPersistentData();
                     if (data.contains(X, Tag.TAG_FLOAT) && data.contains(Y, Tag.TAG_FLOAT) && data.contains(Z, Tag.TAG_FLOAT) && data.contains(WORLD, Tag.TAG_STRING)) {
                         if (data.getString(WORLD).equals(world.dimension().location().getPath())) {

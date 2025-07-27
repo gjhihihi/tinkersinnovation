@@ -8,7 +8,8 @@ import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
-import slimeknights.tconstruct.library.tools.nbt.NamespacedNBT;
+import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
+import slimeknights.tconstruct.shared.TinkerEffects;
 import slimeknights.tconstruct.tools.TinkerModifiers;
 
 public class LaceratingBombModifier extends Modifier implements TinkersBombHook {
@@ -18,7 +19,7 @@ public class LaceratingBombModifier extends Modifier implements TinkersBombHook 
     }
 
     @Override
-    public void afterBombPiecesHit(ModifierNBT modifiers, NamespacedNBT persistentData, ModifierEntry modifier, EBomb bomb, LivingEntity attacker, LivingEntity target, int hitcount) {
-        TinkerModifiers.bleeding.get().apply(target, 200, modifier.getLevel() * hitcount - 1);
+    public void afterBombPiecesHit(ModifierNBT modifiers, ModDataNBT persistentData, ModifierEntry modifier, EBomb bomb, LivingEntity attacker, LivingEntity target, int hitcount) {
+        TinkerEffects.bleeding.get().apply(target, 200, modifier.getLevel() * hitcount - 1);
     }
 }

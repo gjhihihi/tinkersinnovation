@@ -46,8 +46,8 @@ public record BombCoreStats(float durability, float bomb_radius, float velocity,
     public void apply(ModifierStatsBuilder builder, float scale) {
         ToolStats.DURABILITY.percent(builder, this.durability * scale);
         TinkersInnovationToolStats.BOMB_RADIUS.update(builder, this.bomb_radius * scale);
-        ToolStats.VELOCITY.percent(builder, this.velocity * scale);
-        ToolStats.ACCURACY.percent(builder, this.accuracy * scale);
+        ToolStats.VELOCITY.add(builder, this.velocity * scale);
+        ToolStats.ACCURACY.add(builder, this.accuracy * scale);
     }
 
 }

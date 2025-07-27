@@ -74,14 +74,6 @@
       "piece_count": 3,
       "piece_damage": 1.5,
       "melee_range_damage": 1.2
-    },
-    "tinkers_ingenuity:curio_extra": {},
-    "tinkers_ingenuity:curio_main": {
-      "movement_speed": 0.05,
-      "armor": 0.05,
-      "toughness": 0.1,
-      "attack": 0.1,
-      "arrow_damage": 0.05
     }
   }
 }

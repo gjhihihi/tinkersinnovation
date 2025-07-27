@@ -64,8 +64,8 @@ public class DoubleAttackModifier extends NoLevelsModifier implements MeleeHitMo
     public void addAttributes(IToolStackView tool, ModifierEntry modifier, EquipmentSlot slot, BiConsumer<Attribute,AttributeModifier> consumer) {
         if (slot == EquipmentSlot.MAINHAND) {
             if (tool.getPersistentData().getBoolean(KEY)) {
-                consumer.accept(ForgeMod.ATTACK_RANGE.get(), new AttributeModifier(UUID.fromString("70cf6c97-410d-4bc4-a341-495aa6f2c994"), ForgeMod.ATTACK_RANGE.get().getDescriptionId(),  1, AttributeModifier.Operation.ADDITION));
-                consumer.accept(ForgeMod.REACH_DISTANCE.get(), new AttributeModifier(UUID.fromString("0dd9a257-7513-4e84-ac78-1f576b89675d"), ForgeMod.REACH_DISTANCE.get().getDescriptionId(), 1, AttributeModifier.Operation.ADDITION));
+                consumer.accept(ForgeMod.ENTITY_REACH.get(), new AttributeModifier(UUID.fromString("70cf6c97-410d-4bc4-a341-495aa6f2c994"), ForgeMod.ENTITY_REACH.get().getDescriptionId(),  1, AttributeModifier.Operation.ADDITION));
+                consumer.accept(ForgeMod.BLOCK_REACH.get(), new AttributeModifier(UUID.fromString("0dd9a257-7513-4e84-ac78-1f576b89675d"), ForgeMod.BLOCK_REACH.get().getDescriptionId(), 1, AttributeModifier.Operation.ADDITION));
             }
         }
     }
@@ -218,14 +218,14 @@ public class DoubleAttackModifier extends NoLevelsModifier implements MeleeHitMo
     }
 
     @Override
-    public void finishHarvest(IToolStackView tool, ModifierEntry modifier, ToolHarvestContext context, boolean didHarvest) {
+    public void finishHarvest(IToolStackView tool, ModifierEntry modifier, ToolHarvestContext context, int harvested) {
         Player player = context.getPlayer();
         if (player != null) {
             ToolStack offtool = getHeldTool(player, InteractionHand.OFF_HAND);
             if (offtool != null && !(offtool.equals(tool)) && offtool.getDefinition().equals(tool.getDefinition()) && offtool.getModifierLevel(double_attack.getId()) > 0) {
                 for (ModifierEntry mod : offtool.getModifierList()) {
                     if (!(mod.getId().equals(double_attack.getId())))
-                        mod.getHook(ModifierHooks.BLOCK_HARVEST).finishHarvest(offtool, mod, context, didHarvest);
+                        mod.getHook(ModifierHooks.BLOCK_HARVEST).finishHarvest(offtool, mod, context, harvested);
                 }
             }
         }

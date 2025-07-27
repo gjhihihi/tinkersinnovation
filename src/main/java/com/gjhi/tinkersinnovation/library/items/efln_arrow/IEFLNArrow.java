@@ -8,11 +8,9 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
-import static com.gjhi.tinkersinnovation.TinkersInnovation.itemGroup;
-
 public class IEFLNArrow extends ArrowItem {
     public IEFLNArrow() {
-        super(new Item.Properties().tab(itemGroup));
+        super(new Item.Properties());
     }
 
     @Override

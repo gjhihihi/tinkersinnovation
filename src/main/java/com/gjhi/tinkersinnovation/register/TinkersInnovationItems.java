@@ -6,33 +6,40 @@ import com.gjhi.tinkersinnovation.library.items.tinker_bomb.IBomb;
 import com.gjhi.tinkersinnovation.library.items.tinker_bomb.TinkerBombItem;
 import com.gjhi.tinkersinnovation.library.stats.BombCoreStats;
 import com.gjhi.tinkersinnovation.library.stats.ShieldMaterialStats;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import slimeknights.mantle.registration.deferred.SynchronizedDeferredRegister;
 import slimeknights.tconstruct.fluids.item.ContainerFoodItem;
 import slimeknights.tconstruct.library.tools.item.ModifiableItem;
 import slimeknights.tconstruct.library.tools.item.ranged.ModifiableLauncherItem;
 import slimeknights.tconstruct.library.tools.part.ToolPartItem;
+import slimeknights.tconstruct.tools.TinkerToolParts;
 
 import static com.gjhi.tinkersinnovation.TinkersInnovation.*;
 
 public class TinkersInnovationItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MOD_ID);
+    public static final DeferredRegister<Item> NOTDISPLAYS = DeferredRegister.create(ForgeRegistries.ITEMS, MOD_ID);
+    public static final DeferredRegister<Item> TOOLS = DeferredRegister.create(ForgeRegistries.ITEMS, MOD_ID);
     private static Item register_item() {
-        return new Item(new Item.Properties().tab(itemGroup));
+        return new Item(new Item.Properties());
     }
-    private static final Item.Properties TOOL = new Item.Properties().stacksTo(1).tab(toolGroup);
-    private static final Item.Properties PARTS_PROPS = new Item.Properties().tab(toolGroup);
+    private static final Item.Properties TOOL = new Item.Properties().stacksTo(1);
+    private static final Item.Properties PARTS_PROPS = new Item.Properties();
     private static BlockItem register_block(Block block) {
-        return new BlockItem(block, new Item.Properties().tab(itemGroup));
+        return new BlockItem(block, new Item.Properties());
     }
     //ingots
     public static RegistryObject<Item> polychrome_alloy_ingot = ITEMS.register("polychrome_alloy_ingot", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> void_crystal_ingot = ITEMS.register("void_crystal_ingot", TinkersInnovationItems::register_item);
-    public static RegistryObject<Item> enchantment_ingot = ITEMS.register("enchantment_ingot", () -> new Item(new Item.Properties().tab(itemGroup)){
+    public static RegistryObject<Item> enchantment_ingot = ITEMS.register("enchantment_ingot", () -> new Item(new Item.Properties()){
         @Override
         public boolean isFoil(ItemStack item) {
             return true;
@@ -48,7 +55,7 @@ public class TinkersInnovationItems {
     //nuggets
     public static RegistryObject<Item> polychrome_alloy_nugget = ITEMS.register("polychrome_alloy_nugget", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> void_crystal_nugget = ITEMS.register("void_crystal_nugget", TinkersInnovationItems::register_item);
-    public static RegistryObject<Item> enchantment_nugget = ITEMS.register("enchantment_nugget", () -> new Item(new Item.Properties().tab(itemGroup)){
+    public static RegistryObject<Item> enchantment_nugget = ITEMS.register("enchantment_nugget", () -> new Item(new Item.Properties()){
         @Override
         public boolean isFoil(ItemStack item) {
             return true;
@@ -64,7 +71,7 @@ public class TinkersInnovationItems {
     //blocks
     public static RegistryObject<Item> polychrome_alloy_block = ITEMS.register("polychrome_alloy_block", () -> register_block(TinkersInnovationBlocks.polychrome_alloy_block.get()));
     public static RegistryObject<Item> void_crystal_block = ITEMS.register("void_crystal_block", () -> register_block(TinkersInnovationBlocks.void_crystal_block.get()));
-    public static RegistryObject<Item> enchantment_block = ITEMS.register("enchantment_block", () -> new BlockItem(TinkersInnovationBlocks.enchantment_block.get(), new Item.Properties().tab(itemGroup)){
+    public static RegistryObject<Item> enchantment_block = ITEMS.register("enchantment_block", () -> new BlockItem(TinkersInnovationBlocks.enchantment_block.get(), new Item.Properties()){
         @Override
         public boolean isFoil(ItemStack item) {
             return true;
@@ -82,27 +89,27 @@ public class TinkersInnovationItems {
     public static RegistryObject<Item> seared_bedrock = ITEMS.register("seared_bedrock", () -> register_block(TinkersInnovationBlocks.seared_bedrock.get()));
     public static RegistryObject<Item> scorched_bedrock = ITEMS.register("scorched_bedrock", () -> register_block(TinkersInnovationBlocks.scorched_bedrock.get()));
     //tool parts
-    public static final RegistryObject<ToolPartItem> light_shield_plate = ITEMS.register("light_shield_plate", () -> new ToolPartItem(PARTS_PROPS, ShieldMaterialStats.ID));
+    public static final RegistryObject<ToolPartItem> light_shield_plate = TOOLS.register("light_shield_plate", () -> new ToolPartItem(PARTS_PROPS, ShieldMaterialStats.ID));
     public static RegistryObject<Item> light_shield_plate_cast = ITEMS.register("light_shield_plate_cast", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> light_shield_plate_sand_cast = ITEMS.register("light_shield_plate_sand_cast", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> light_shield_plate_red_sand_cast = ITEMS.register("light_shield_plate_red_sand_cast", TinkersInnovationItems::register_item);
-    public static final RegistryObject<ToolPartItem> heavy_shield_plate = ITEMS.register("heavy_shield_plate", () -> new ToolPartItem(PARTS_PROPS, ShieldMaterialStats.ID));
+    public static final RegistryObject<ToolPartItem> heavy_shield_plate = TOOLS.register("heavy_shield_plate", () -> new ToolPartItem(PARTS_PROPS, ShieldMaterialStats.ID));
     public static RegistryObject<Item> heavy_shield_plate_cast = ITEMS.register("heavy_shield_plate_cast", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> heavy_shield_plate_sand_cast = ITEMS.register("heavy_shield_plate_sand_cast", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> heavy_shield_plate_red_sand_cast = ITEMS.register("heavy_shield_plate_red_sand_cast", TinkersInnovationItems::register_item);
-    public static final RegistryObject<ToolPartItem> bomb_core = ITEMS.register("bomb_core", () -> new ToolPartItem(PARTS_PROPS, BombCoreStats.ID));
+    public static final RegistryObject<ToolPartItem> bomb_core = TOOLS.register("bomb_core", () -> new ToolPartItem(PARTS_PROPS, BombCoreStats.ID));
     //tools
-    public static final RegistryObject<ModifiableItem> claw = ITEMS.register("claw", () -> new ModifiableItem(TOOL, TinkersInnovationToolsDefinition.Claw));
-    public static final RegistryObject<ModifiableItem> heavy_shield = ITEMS.register("heavy_shield", () -> new ModifiableItem(TOOL, TinkersInnovationToolsDefinition.HeavyShield));
-    public static final RegistryObject<ModifiableItem> round_shield = ITEMS.register("round_shield", () -> new ModifiableItem(TOOL, TinkersInnovationToolsDefinition.RoundShield));
-    public static final RegistryObject<ModifiableItem> teleport_staff = ITEMS.register("teleport_staff", () -> new ModifiableItem(TOOL, TinkersInnovationToolsDefinition.TeleportStaff));
-    public static final RegistryObject<ModifiableLauncherItem> tinker_bomb = ITEMS.register("tinker_bomb", () -> new TinkerBombItem(TOOL, TinkersInnovationToolsDefinition.TinkerBomb));
-    public static RegistryObject<Item> bomb_item = ITEMS.register("bomb_item", IBomb::new);
-    public static final RegistryObject<ModifiableItem> skelewag_sword = ITEMS.register("skelewag_sword", () -> new SkelewagSwordItem(TOOL, TinkersInnovationToolsDefinition.SkelewagSword));
-    public static RegistryObject<Item> skelewag_sword_hand = ITEMS.register("skelewag_sword_hand", () -> new Item(new Item.Properties()));
-    public static RegistryObject<Item> skelewag_sword_inventory = ITEMS.register("skelewag_sword_inventory", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<ModifiableItem> mechanical_multifunctional_cane = ITEMS.register("mechanical_multifunctional_cane", () -> new ModifiableItem(TOOL, TinkersInnovationToolsDefinition.MechanicalMultifunctionalCane));
-    public static final RegistryObject<ModifiableItem> long_sword = ITEMS.register("long_sword", () -> new ModifiableItem(TOOL, TinkersInnovationToolsDefinition.LongSword));
+    public static final RegistryObject<ModifiableItem> claw = TOOLS.register("claw", () -> new ModifiableItem(TOOL, TinkersInnovationToolsDefinition.Claw));
+    public static final RegistryObject<ModifiableItem> heavy_shield = TOOLS.register("heavy_shield", () -> new ModifiableItem(TOOL, TinkersInnovationToolsDefinition.HeavyShield));
+    public static final RegistryObject<ModifiableItem> round_shield = TOOLS.register("round_shield", () -> new ModifiableItem(TOOL, TinkersInnovationToolsDefinition.RoundShield));
+    public static final RegistryObject<ModifiableItem> teleport_staff = TOOLS.register("teleport_staff", () -> new ModifiableItem(TOOL, TinkersInnovationToolsDefinition.TeleportStaff));
+    public static final RegistryObject<ModifiableLauncherItem> tinker_bomb = TOOLS.register("tinker_bomb", () -> new TinkerBombItem(TOOL, TinkersInnovationToolsDefinition.TinkerBomb));
+    public static RegistryObject<Item> bomb_item = NOTDISPLAYS.register("bomb_item", IBomb::new);
+    public static final RegistryObject<ModifiableItem> skelewag_sword = TOOLS.register("skelewag_sword", () -> new SkelewagSwordItem(TOOL, TinkersInnovationToolsDefinition.SkelewagSword));
+    public static RegistryObject<Item> skelewag_sword_hand = NOTDISPLAYS.register("skelewag_sword_hand", () -> new Item(new Item.Properties()));
+    public static RegistryObject<Item> skelewag_sword_inventory = NOTDISPLAYS.register("skelewag_sword_inventory", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<ModifiableItem> mechanical_multifunctional_cane = TOOLS.register("mechanical_multifunctional_cane", () -> new ModifiableItem(TOOL, TinkersInnovationToolsDefinition.MechanicalMultifunctionalCane));
+    public static final RegistryObject<ModifiableItem> long_sword = TOOLS.register("long_sword", () -> new ModifiableItem(TOOL, TinkersInnovationToolsDefinition.LongSword));
     //reinforcement
     public static RegistryObject<Item> totemic_gold_reinforcement = ITEMS.register("totemic_gold_reinforcement", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> shulkerate_reinforcement = ITEMS.register("shulkerate_reinforcement", TinkersInnovationItems::register_item);
@@ -116,7 +123,7 @@ public class TinkersInnovationItems {
     public static RegistryObject<Item> raw_void_crystal = ITEMS.register("raw_void_crystal", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> teleport_core = ITEMS.register("teleport_core", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> gorgon_hair = ITEMS.register("gorgon_hair", TinkersInnovationItems::register_item);
-    public static RegistryObject<Item> blood_bottle = ITEMS.register("blood_bottle", () -> new ContainerFoodItem.FluidContainerFoodItem((new Item.Properties()).food(TinkersInnovationFoods.BLOOD_BOTTLE).tab(itemGroup).stacksTo(1).craftRemainder(Items.GLASS_BOTTLE), () -> new FluidStack(TinkersInnovationFluids.blood.get(), 250)));
+    public static RegistryObject<Item> blood_bottle = ITEMS.register("blood_bottle", () -> new ContainerFoodItem.FluidContainerFoodItem((new Item.Properties()).food(TinkersInnovationFoods.BLOOD_BOTTLE).stacksTo(1).craftRemainder(Items.GLASS_BOTTLE), () -> new FluidStack(TinkersInnovationFluids.blood.get(), 250)));
     public static RegistryObject<Item> blood_bone = ITEMS.register("blood_bone", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> hemolymph_bone = ITEMS.register("hemolymph_bone", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> soul_bone = ITEMS.register("soul_bone", TinkersInnovationItems::register_item);

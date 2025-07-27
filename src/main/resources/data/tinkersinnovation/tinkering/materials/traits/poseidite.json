@@ -17,22 +17,6 @@
         "name": "tinkersinnovation:poseidite_blessing",
         "level": 1
       }
-    ],
-    "tinkers_ingenuity:laser_gun": [
-      {
-        "name": "tinkersinnovation:water_cool",
-        "level": 1
-      },
-      {
-        "name": "tinkersinnovation:poseidite_weapon",
-        "level": 1
-      }
-    ],
-    "tinkers_ingenuity:curio": [
-      {
-        "name": "tinkersinnovation:poseidite_blessing_curio",
-        "level": 1
-      }
     ]
   }
 }

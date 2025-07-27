@@ -9,7 +9,7 @@ import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.impl.NoLevelsModifier;
 import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
-import slimeknights.tconstruct.library.tools.nbt.NamespacedNBT;
+import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public class BombLoverModifier extends NoLevelsModifier implements TinkersBombHo
         hookBuilder.addHook(this, TinkersInnovationHooks.TINKER_BOMB);
     }
     @Override
-    public void beforeBombPiecesHit(ModifierNBT modifiers, NamespacedNBT persistentData, ModifierEntry modifier, EBomb bomb, LivingEntity attacker, List<LivingEntity> targets, Map<LivingEntity, Integer> hitted) {
+    public void beforeBombPiecesHit(ModifierNBT modifiers, ModDataNBT persistentData, ModifierEntry modifier, EBomb bomb, LivingEntity attacker, List<LivingEntity> targets, Map<LivingEntity, Integer> hitted) {
         int count = hitted.get(attacker);
         hitted.remove(attacker);
     }

@@ -17,8 +17,8 @@ import slimeknights.tconstruct.library.modifiers.hook.ranged.ProjectileHitModifi
 import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
+import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
-import slimeknights.tconstruct.library.tools.nbt.NamespacedNBT;
 
 public class ArroganceModifier extends Modifier implements MeleeDamageModifierHook, ProjectileHitModifierHook {
     @Override
@@ -32,7 +32,7 @@ public class ArroganceModifier extends Modifier implements MeleeDamageModifierHo
     }
 
     @Override
-    public boolean onProjectileHitEntity(ModifierNBT modifiers, NamespacedNBT persistentData, ModifierEntry modifier, Projectile projectile, EntityHitResult hit, @Nullable LivingEntity attacker, @Nullable LivingEntity target) {
+    public boolean onProjectileHitEntity(ModifierNBT modifiers, ModDataNBT persistentData, ModifierEntry modifier, Projectile projectile, EntityHitResult hit, @Nullable LivingEntity attacker, @Nullable LivingEntity target) {
         if (target != null && projectile instanceof AbstractArrow arrow){
             arrow.setBaseDamage(arrow.getBaseDamage() + arrow.getBaseDamage() * DifficultyLevel.ofAny(target) * 0.02 * modifier.getLevel());
         }

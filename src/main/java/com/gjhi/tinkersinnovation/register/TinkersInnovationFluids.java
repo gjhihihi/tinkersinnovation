@@ -2,7 +2,7 @@ package com.gjhi.tinkersinnovation.register;
 
 import com.gjhi.tinkersinnovation.TinkersInnovation;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.common.SoundActions;
 import net.minecraftforge.fluids.FluidType;
 import net.minecraftforge.fluids.ForgeFlowingFluid;
@@ -69,6 +69,6 @@ public class TinkersInnovationFluids {
     }
 
     private static FlowingFluidObject<ForgeFlowingFluid> register(String name, int temperature) {
-        return FLUIDS.register(name).type(hot(name).temperature(temperature).lightLevel(12)).block(Material.LAVA, 12).bucket().flowing();
+        return FLUIDS.register(name).type(hot(name).temperature(temperature).lightLevel(12)).block(MapColor.COLOR_RED, 12).bucket().flowing();
     }
 }

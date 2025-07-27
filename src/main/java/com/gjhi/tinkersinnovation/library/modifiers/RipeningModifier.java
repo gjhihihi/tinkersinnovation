@@ -4,7 +4,10 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.tags.BiomeTags;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionResult;
@@ -17,6 +20,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.block.BaseCoralWallFanBlock;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.state.BlockState;
@@ -129,14 +133,14 @@ public class RipeningModifier extends Modifier implements MeleeHitModifierHook, 
                     }
 
                     Holder<Biome> holder = world.getBiome(blockpos);
-                    if (holder.is(Biomes.WARM_OCEAN)) {
+                    if (holder.is(BiomeTags.PRODUCES_CORALS_FROM_BONEMEAL)) {
                         if (i == 0 && direction != null && direction.getAxis().isHorizontal()) {
-                            blockstate = Registry.BLOCK.getTag(BlockTags.WALL_CORALS).flatMap((block) -> block.getRandomElement(world.random)).map((p_204100_) -> p_204100_.value().defaultBlockState()).orElse(blockstate);
+                            blockstate = BuiltInRegistries.BLOCK.getTag(BlockTags.WALL_CORALS).flatMap((p_204098_) -> p_204098_.getRandomElement(world.random)).map((p_204100_) -> p_204100_.value().defaultBlockState()).orElse(blockstate);
                             if (blockstate.hasProperty(BaseCoralWallFanBlock.FACING)) {
                                 blockstate = blockstate.setValue(BaseCoralWallFanBlock.FACING, direction);
                             }
                         } else if (random.nextInt(4) == 0) {
-                            blockstate = Registry.BLOCK.getTag(BlockTags.UNDERWATER_BONEMEALS).flatMap((block) -> block.getRandomElement(world.random)).map((p_204095_) -> p_204095_.value().defaultBlockState()).orElse(blockstate);
+                            blockstate = BuiltInRegistries.BLOCK.getTag(BlockTags.UNDERWATER_BONEMEALS).flatMap((p_204091_) -> p_204091_.getRandomElement(world.random)).map((p_204095_) -> p_204095_.value().defaultBlockState()).orElse(blockstate);
                         }
                     }
 

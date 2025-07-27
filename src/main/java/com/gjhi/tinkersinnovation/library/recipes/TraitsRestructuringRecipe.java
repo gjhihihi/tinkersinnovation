@@ -2,8 +2,10 @@ package com.gjhi.tinkersinnovation.library.recipes;
 
 import com.gjhi.tinkersinnovation.register.TinkersInnovationItems;
 import com.gjhi.tinkersinnovation.register.TinkersInnovationModifiers;
-import com.gjhi.tinkersinnovation.register.TinkersInnovationRecipes;
 import com.gjhi.tinkersinnovation.register.TinkersInnovationSlots;
+import com.google.gson.JsonObject;
+import net.minecraft.core.RegistryAccess;
+import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
@@ -11,6 +13,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import slimeknights.tconstruct.TConstruct;
 import slimeknights.tconstruct.common.TinkerTags;
 import slimeknights.tconstruct.library.materials.MaterialRegistry;
@@ -20,6 +24,7 @@ import slimeknights.tconstruct.library.recipe.tinkerstation.IMutableTinkerStatio
 import slimeknights.tconstruct.library.recipe.tinkerstation.ITinkerStationContainer;
 import slimeknights.tconstruct.library.recipe.tinkerstation.ITinkerStationRecipe;
 import slimeknights.tconstruct.library.tools.definition.module.material.ToolPartsHook;
+import slimeknights.tconstruct.library.tools.nbt.LazyToolStack;
 import slimeknights.tconstruct.library.tools.nbt.ToolStack;
 import slimeknights.tconstruct.library.tools.part.IToolPart;
 
@@ -79,7 +84,7 @@ public class TraitsRestructuringRecipe implements ITinkerStationRecipe {
     }
 
     @Override
-    public RecipeResult<ItemStack> getValidatedResult(ITinkerStationContainer inv) {
+    public RecipeResult<LazyToolStack> getValidatedResult(ITinkerStationContainer inv, RegistryAccess access) {
         ToolStack tool = inv.getTinkerable();
         ItemStack name_tag = ItemStack.EMPTY;
         ItemStack part = ItemStack.EMPTY;
@@ -114,14 +119,14 @@ public class TraitsRestructuringRecipe implements ITinkerStationRecipe {
             ToolStack newTool = tool.copy();
             newTool.addModifier(trait.getId(), trait.getLevel());
             newTool.getPersistentData().addSlots(TinkersInnovationSlots.OMNIPOTENT, -1);
-            return RecipeResult.success(newTool.createStack());
+            return ITinkerStationRecipe.success(newTool, inv);
         }else {
             return RecipeResult.failure(Component.translatable("recipe.tconstruct.modifier.traits_restructuring.not_included"));
         }
     }
 
     @Override
-    public void updateInputs(ItemStack result, IMutableTinkerStationContainer inv, boolean isServer) {
+    public void updateInputs(@NotNull LazyToolStack result, IMutableTinkerStationContainer inv, boolean isServer) {
         for(int index = 0; index < inv.getInputCount(); ++index) {
             if (inv.getInput(index).getItem().equals(TinkersInnovationItems.polychrome_alloy_reinforcement.get())){
                 inv.shrinkInput(index, reinforcement_count);
@@ -132,7 +137,7 @@ public class TraitsRestructuringRecipe implements ITinkerStationRecipe {
     }
 
     @Override
-    public ItemStack getResultItem() {
+    public ItemStack getResultItem(RegistryAccess access) {
         return ItemStack.EMPTY;
     }
 
@@ -143,6 +148,23 @@ public class TraitsRestructuringRecipe implements ITinkerStationRecipe {
 
     @Override
     public RecipeSerializer<?> getSerializer() {
-        return TinkersInnovationRecipes.TRAITS_RESTRUCTURING_RECIPE.get();
+        return TRSerializer.INSTANCE;
+    }
+
+    public static class TRSerializer implements RecipeSerializer<TraitsRestructuringRecipe>{
+        public static final TRSerializer INSTANCE = new TRSerializer();
+        @Override
+        public TraitsRestructuringRecipe fromJson(ResourceLocation resource, JsonObject json) {
+            return new TraitsRestructuringRecipe(resource);
+        }
+
+        @Override
+        public @Nullable TraitsRestructuringRecipe fromNetwork(ResourceLocation resource, FriendlyByteBuf buffer) {
+            return new TraitsRestructuringRecipe(resource);
+        }
+
+        @Override
+        public void toNetwork(FriendlyByteBuf buffer, TraitsRestructuringRecipe recipe) {
+        }
     }
 }

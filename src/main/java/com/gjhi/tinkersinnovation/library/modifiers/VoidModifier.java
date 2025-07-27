@@ -10,12 +10,14 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.loot.BuiltInLootTables;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
@@ -62,14 +64,14 @@ public class VoidModifier extends Modifier implements ProjectileHitModifierHook,
             bedrockBreaking(event);
     }
     protected void bedrockBreaking(PlayerInteractEvent.LeftClickBlock event) {
-        BlockState state = event.getEntity().level.getBlockState(event.getPos());
-        if (!event.getEntity().isCreative() && state.getDestroySpeed(event.getEntity().level, event.getPos()) < 0.0F) {
+        BlockState state = event.getEntity().level().getBlockState(event.getPos());
+        if (!event.getEntity().isCreative() && state.getDestroySpeed(event.getEntity().level(), event.getPos()) < 0.0F) {
             ToolStack tool = getHeldTool(event.getEntity(), InteractionHand.MAIN_HAND);
             if (tool == null || tool.isBroken())
                 return;
 
             Player player = event.getEntity();
-            Level world = player.getLevel();
+            Level world = player.level();
             BlockPos pos = event.getPos();
 
             state.getBlock().playerWillDestroy(world, pos, state, player);
@@ -77,27 +79,29 @@ public class VoidModifier extends Modifier implements ProjectileHitModifierHook,
                 ItemStack toolStack = player.getItemBySlot(EquipmentSlot.MAINHAND);
                 Direction sideHit = BlockSideHitListener.getSideHit(player);
                 ToolHarvestContext context = new ToolHarvestContext((ServerLevel) world, player, state, pos, sideHit, true, true);
-
+                UseOnContext context1 = new UseOnContext(world, player, InteractionHand.MAIN_HAND, toolStack, new BlockHitResult(player.getEyePosition(), sideHit, pos, false));
+                int count = 1;
                 for (ModifierEntry entry : tool.getModifierList()) {
                     entry.getModifier().getHook(ModifierHooks.BLOCK_HARVEST).startHarvest(tool, entry, context);
                 }
                 if (breakBlock(tool, toolStack, context)) {
-                    Iterable<BlockPos> extraBlocks = tool.getHook(ToolHooks.AOE_ITERATOR).getBlocks(tool, toolStack, player, state, world, pos, sideHit, AreaOfEffectIterator.AOEMatchType.BREAKING);
+                    Iterable<BlockPos> extraBlocks = tool.getHook(ToolHooks.AOE_ITERATOR).getBlocks(tool, context1, state,/* world, pos, sideHit,*/ AreaOfEffectIterator.AOEMatchType.BREAKING);
                     for (BlockPos extraPos : extraBlocks) {
                         BlockState extraState = world.getBlockState(extraPos);
                         if (!extraState.isAir()) {
                             ToolHarvestLogic.breakExtraBlock(tool, toolStack, context.forPosition(extraPos.immutable(), extraState));
+                            ++count;
                         }
                     }
                     for (ModifierEntry entry : tool.getModifierList()) {
-                        entry.getModifier().getHook(ModifierHooks.BLOCK_HARVEST).finishHarvest(tool, entry, context, true);
+                        entry.getModifier().getHook(ModifierHooks.BLOCK_HARVEST).finishHarvest(tool, entry, context, count);
                     }
                     if (state.getBlock().getLootTable() == BuiltInLootTables.EMPTY) {
                         Block.popResource(world, pos, new ItemStack(state.getBlock()));
                     }
                 }else {
                     for (ModifierEntry entry : tool.getModifierList()) {
-                        entry.getModifier().getHook(ModifierHooks.BLOCK_HARVEST).finishHarvest(tool, entry, context, false);
+                        entry.getModifier().getHook(ModifierHooks.BLOCK_HARVEST).finishHarvest(tool, entry, context, count);
                     }
                 }
             }
@@ -191,9 +195,7 @@ public class VoidModifier extends Modifier implements ProjectileHitModifierHook,
         float voiddamage = damage * 0.05f * modifier.getLevel();
         LivingEntity entity = context.getLivingTarget();
         if (entity != null) {
-            int time = entity.invulnerableTime;
-            entity.hurt(DamageSource.mobAttack(context.getAttacker()).bypassArmor().bypassInvul(), voiddamage);
-            entity.invulnerableTime = time;
+            entity.hurt(context.getAttacker().damageSources().fellOutOfWorld(), voiddamage);
             return damage - voiddamage;
         }
         return damage;

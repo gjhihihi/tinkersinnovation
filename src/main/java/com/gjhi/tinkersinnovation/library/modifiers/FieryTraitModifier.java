@@ -3,6 +3,7 @@ package com.gjhi.tinkersinnovation.library.modifiers;
 import dev.xkmc.l2hostility.compat.curios.CurioCompat;
 import dev.xkmc.l2hostility.init.data.LHConfig;
 import dev.xkmc.l2hostility.init.registrate.LHItems;
+import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -28,17 +29,17 @@ public class FieryTraitModifier extends NoLevelsModifier implements OnAttackedMo
             target = entity;
         }
         if (target != null){
-            if (CurioCompat.hasItem(target, LHItems.ABRAHADABRA.get()))return;
+            if (CurioCompat.hasItemInCurio(target, LHItems.ABRAHADABRA.get()))return;
             target.setSecondsOnFire(LHConfig.COMMON.fieryTime.get());
         }
     }
     @Override
     public void onDamageDealt(IToolStackView tool, ModifierEntry modifier, EquipmentContext context, EquipmentSlot slotType, LivingEntity target, DamageSource source, float amount, boolean isDirectDamage) {
-        if (CurioCompat.hasItem(target, LHItems.ABRAHADABRA.get()))return;
+        if (CurioCompat.hasItemInCurio(target, LHItems.ABRAHADABRA.get()))return;
         target.setSecondsOnFire(LHConfig.COMMON.fieryTime.get());
     }
     @Override
     public boolean isDamageBlocked(IToolStackView tool, ModifierEntry modifier, EquipmentContext context, EquipmentSlot slotType, DamageSource source, float amount) {
-        return source.isFire();
+        return source.is(DamageTypeTags.IS_FIRE);
     }
 }

@@ -35,21 +35,6 @@ public class TinkersInnovationCompat {
         }
     }
 
-    public static class TinkersIngenuity {
-        public static String getModId(){
-            return "tinkers_ingenuity";
-        }
-        public static boolean isLoaded(){
-            return ModList.get().isLoaded(getModId());
-        }
-        public static void init(){
-            if (TinkersIngenuity.isLoaded()){
-                tinkers_logger.info("Found Tinkers' Ingenuity, integration initializing……");
-                TinkersInnovationModifiers.TinkersIngenuityModifiers.init();
-            }
-        }
-    }
-
     public static class IceAndFire {
         public static String getModId(){
             return "iceandfire";

@@ -25,8 +25,8 @@ public class GravityTraitModifier extends Modifier implements InventoryTickModif
     @Override
     public void onInventoryTick(IToolStackView tool, ModifierEntry modifier, Level world, LivingEntity holder, int itemSlot, boolean isSelected, boolean isCorrectSlot, ItemStack stack) {
         for (LivingEntity target: TinkersInnovationUtils.getLivingEntitiesInRange(holder, LHConfig.COMMON.range.get("gravity").get(), false)){
-            if (CurioCompat.hasItem(target, LHItems.RING_REFLECTION.get()))continue;
-            if (CurioCompat.hasItem(target, LHItems.ABRAHADABRA.get()))continue;
+            if (CurioCompat.hasItemInCurio(target, LHItems.RING_REFLECTION.get()))continue;
+            if (CurioCompat.hasItemInCurio(target, LHItems.ABRAHADABRA.get()))continue;
             target.addEffect(new MobEffectInstance(LHEffects.GRAVITY.get(), 20, modifier.getLevel() - 1));
         }
     }

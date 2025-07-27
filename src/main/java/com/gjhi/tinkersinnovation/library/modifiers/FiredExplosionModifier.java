@@ -13,8 +13,9 @@ import slimeknights.tconstruct.library.modifiers.ModifierHooks;
 import slimeknights.tconstruct.library.modifiers.hook.display.RequirementsModifierHook;
 import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
-import slimeknights.tconstruct.library.tools.nbt.NamespacedNBT;
+import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 import slimeknights.tconstruct.tools.TinkerModifiers;
+import slimeknights.tconstruct.tools.data.ModifierIds;
 
 import java.util.List;
 
@@ -26,7 +27,7 @@ public class FiredExplosionModifier extends Modifier implements TinkersBombHook,
 
     @Override
     public List<ModifierEntry> displayModifiers(ModifierEntry entry) {
-        return List.of(new ModifierEntry(TinkerModifiers.fiery.getId(), entry.getLevel()));
+        return List.of(new ModifierEntry(ModifierIds.fiery, entry.getLevel()));
     }
 
     @Override
@@ -35,12 +36,12 @@ public class FiredExplosionModifier extends Modifier implements TinkersBombHook,
     }
 
     @Override
-    public void onTinkersBombExplosion(ModifierNBT modifiers, NamespacedNBT persistentData, ModifierEntry modifier, EBomb bomb, LivingEntity attacker, BombExplodeContext context) {
+    public void onTinkersBombExplosion(ModifierNBT modifiers, ModDataNBT persistentData, ModifierEntry modifier, EBomb bomb, LivingEntity attacker, BombExplodeContext context) {
         context.setFired(true);
     }
 
     @Override
-    public void afterTinkersBombExplode(ModifierNBT modifiers, NamespacedNBT persistentData, ModifierEntry modifier, EBomb bomb, LivingEntity attacker, List<LivingEntity> targets) {
+    public void afterTinkersBombExplode(ModifierNBT modifiers, ModDataNBT persistentData, ModifierEntry modifier, EBomb bomb, LivingEntity attacker, List<LivingEntity> targets) {
         for (LivingEntity target : targets){
             target.setSecondsOnFire(5 * modifier.getLevel());
         }

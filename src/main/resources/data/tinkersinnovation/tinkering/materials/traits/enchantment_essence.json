@@ -29,16 +29,6 @@
         "name": "tconstruct:shiny",
         "level": 1
       }
-    ],
-    "tinkers_ingenuity:curio": [
-      {
-        "name": "tinkersinnovation:enchantment_curio",
-        "level": 1
-      },
-      {
-        "name": "tconstruct:shiny",
-        "level": 1
-      }
     ]
   }
 }

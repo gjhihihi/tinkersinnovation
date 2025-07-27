@@ -29,7 +29,6 @@
       "bomb_radius": 3,
       "velocity": 0.25,
       "accuracy": -0.15
-    },
-    "tinkers_ingenuity:curio_extra": {}
+    }
   }
 }

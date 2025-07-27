@@ -41,7 +41,7 @@ public class PetrifiedSlimeSkullModifier extends NoLevelsModifier implements Key
         //if (player.getCooldowns().isOnCooldown(tool.getItem()))return false;
         if (player.hasEffect(TinkersInnovationEffects.petrifiedCooldownEffect.get()))return false;
         double dist = 32;
-        Level worldIn = player.level;
+        Level worldIn = player.level();
         Vec3 Vector3d = player.getEyePosition(1.0F);
         Vec3 Vector3d1 = player.getViewVector(1.0F);
         Vec3 Vector3d2 = Vector3d.add(Vector3d1.x * dist, Vector3d1.y * dist, Vector3d1.z * dist);

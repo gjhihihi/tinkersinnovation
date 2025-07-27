@@ -3,7 +3,6 @@ package com.gjhi.tinkersinnovation.library.entitys.render.tinker_bomb;
 import com.gjhi.tinkersinnovation.library.entitys.entitys.tinker_bomb.EBomb;
 import com.gjhi.tinkersinnovation.register.TinkersInnovationItems;
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.math.Vector3f;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.block.model.ItemTransforms;
 import net.minecraft.client.renderer.entity.ArrowRenderer;
@@ -14,6 +13,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.inventory.InventoryMenu;
+import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 
 public class RBomb extends ArrowRenderer<EBomb> {
@@ -40,9 +40,9 @@ public class RBomb extends ArrowRenderer<EBomb> {
             matrixStackIn.translate(-0.03125, -0.09375, 0.0);
             Entity var8 = entity.getOwner();
             if (var8 instanceof LivingEntity owner) {
-                this.itemRenderer.renderStatic(this.getRender(owner), ItemTransforms.TransformType.GROUND, packedLightIn, OverlayTexture.NO_OVERLAY, matrixStackIn, bufferIn, entity.getId());
+                this.itemRenderer.renderStatic(this.getRender(owner), ItemDisplayContext.GROUND, packedLightIn, OverlayTexture.NO_OVERLAY, matrixStackIn, bufferIn, entity.level(), entity.getId());
             } else {
-                this.itemRenderer.renderStatic(TinkersInnovationItems.tinker_bomb.get().getRenderTool(), ItemTransforms.TransformType.GROUND, packedLightIn, OverlayTexture.NO_OVERLAY, matrixStackIn, bufferIn, entity.getId());
+                this.itemRenderer.renderStatic(TinkersInnovationItems.tinker_bomb.get().getRenderTool(), ItemDisplayContext.GROUND, packedLightIn, OverlayTexture.NO_OVERLAY, matrixStackIn, bufferIn, entity.level(), entity.getId());
             }
             matrixStackIn.popPose();
         }

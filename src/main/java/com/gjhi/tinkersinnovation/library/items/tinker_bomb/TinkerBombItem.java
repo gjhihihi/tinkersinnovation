@@ -19,7 +19,6 @@ import slimeknights.tconstruct.library.tools.helper.ToolDamageUtil;
 import slimeknights.tconstruct.library.tools.item.ranged.ModifiableLauncherItem;
 import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
-import slimeknights.tconstruct.library.tools.nbt.NamespacedNBT;
 import slimeknights.tconstruct.library.tools.nbt.ToolStack;
 import slimeknights.tconstruct.library.tools.stat.ToolStats;
 
@@ -77,7 +76,7 @@ public class TinkerBombItem extends ModifiableLauncherItem {
                     arrow.getCapability(EntityModifierCapability.CAPABILITY).ifPresent((cap) -> {
                         cap.setModifiers(modifiers);
                     });
-                    NamespacedNBT arrowData = PersistentDataCapability.getOrWarn(arrow);
+                    ModDataNBT arrowData = PersistentDataCapability.getOrWarn(arrow);
 
                     for (ModifierEntry entry : modifiers.getModifiers()) {
                         entry.getHook(ModifierHooks.PROJECTILE_LAUNCH).onProjectileLaunch(tool, entry, player, arrow, arrow, arrowData, arrowIndex == primaryIndex);

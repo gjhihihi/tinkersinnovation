@@ -4,13 +4,5 @@
       "name": "tconstruct:experienced",
       "level": 2
     }
-  ],
-  "perStat": {
-    "tinkers_ingenuity:curio": [
-      {
-        "name": "tinkers_ingenuity:curio_experienced",
-        "level": 2
-      }
-    ]
-  }
+  ]
 }

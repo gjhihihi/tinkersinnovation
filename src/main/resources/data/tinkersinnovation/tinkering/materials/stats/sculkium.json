@@ -73,18 +73,6 @@
       "piece_count": 5,
       "piece_damage": 2.25,
       "melee_range_damage": 5
-    },
-    "tinkers_ingenuity:laser_medium": {
-      "laser_range": 8,
-      "cooldown": 0.1
-    },
-    "tinkers_ingenuity:curio_extra": {},
-    "tinkers_ingenuity:curio_main": {
-      "movement_speed": 0.35,
-      "armor": 0.4,
-      "toughness": 0.3,
-      "attack": 0.4,
-      "arrow_damage": 0.25
     }
   }
 }

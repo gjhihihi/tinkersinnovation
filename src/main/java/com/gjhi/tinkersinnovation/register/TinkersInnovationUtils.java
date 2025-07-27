@@ -97,21 +97,21 @@ public class TinkersInnovationUtils {
     }
 
     public static List<LivingEntity> getLivingEntitiesInRange(Entity center, double range, boolean includeCenter) {
-        List<LivingEntity> list = center.level.getEntitiesOfClass(LivingEntity.class, center.getBoundingBox().inflate(range), (entity) -> entity instanceof LivingEntity);
+        List<LivingEntity> list = center.level().getEntitiesOfClass(LivingEntity.class, center.getBoundingBox().inflate(range), (entity) -> entity instanceof LivingEntity);
         if (!includeCenter && center instanceof LivingEntity) {
             list.remove(center);
         }
         return list;
     }
     public static List<Player> getPlayersInRange(Entity center, double range, boolean includeCenter) {
-        List<Player> list = center.level.getEntitiesOfClass(Player.class, center.getBoundingBox().inflate(range), (entity) -> entity instanceof Player);
+        List<Player> list = center.level().getEntitiesOfClass(Player.class, center.getBoundingBox().inflate(range), (entity) -> entity instanceof Player);
         if (!includeCenter && center instanceof Player) {
             list.remove(center);
         }
         return list;
     }
     public static List<Monster> getMonstersInRange(Entity center, double range, boolean includeCenter) {
-        List<Monster> list = center.level.getEntitiesOfClass(Monster.class, center.getBoundingBox().inflate(range), (entity) -> entity instanceof Monster);
+        List<Monster> list = center.level().getEntitiesOfClass(Monster.class, center.getBoundingBox().inflate(range), (entity) -> entity instanceof Monster);
         if (!includeCenter && center instanceof Monster) {
             list.remove(center);
         }

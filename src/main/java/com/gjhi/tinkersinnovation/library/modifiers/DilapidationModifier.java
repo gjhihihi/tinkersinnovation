@@ -36,7 +36,7 @@ public class DilapidationModifier extends Modifier implements BreakSpeedModifier
     @Override
     public void onBreakSpeed(IToolStackView tool, ModifierEntry modifier, PlayerEvent.BreakSpeed event, Direction sideHit, boolean isEffective, float miningSpeedModifier) {
         if (event.getPosition().isPresent()) {
-            String world = event.getEntity().level.dimension().location().getPath();
+            String world = event.getEntity().level().dimension().location().getPath();
             BlockPos pos = event.getPosition().get();
             ModDataNBT data = tool.getPersistentData();
             if (data.contains(X, Tag.TAG_FLOAT) && data.contains(Y, Tag.TAG_FLOAT) && data.contains(Z, Tag.TAG_FLOAT) && data.contains(WORLD, Tag.TAG_STRING)) {
@@ -54,6 +54,6 @@ public class DilapidationModifier extends Modifier implements BreakSpeedModifier
         data.putFloat(X, pos.getX());
         data.putFloat(Y, pos.getY());
         data.putFloat(Z, pos.getZ());
-        data.putString(WORLD, context.getLiving().level.dimension().location().getPath());
+        data.putString(WORLD, context.getLiving().level().dimension().location().getPath());
     }
 }

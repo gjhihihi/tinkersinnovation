@@ -11,12 +11,6 @@
         "name": "tinkersinnovation:void",
         "level": 1
       }
-    ],
-    "tinkers_ingenuity:curio": [
-      {
-        "name": "tinkersinnovation:void_curio",
-        "level": 1
-      }
     ]
   }
 }

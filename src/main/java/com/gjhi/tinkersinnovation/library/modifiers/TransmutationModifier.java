@@ -14,6 +14,7 @@ import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.storage.loot.LootContext;
 import slimeknights.tconstruct.TConstruct;
+import slimeknights.tconstruct.common.TinkerDamageTypes;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.ModifierHooks;
@@ -24,6 +25,7 @@ import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.helper.ToolDamageUtil;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
+import slimeknights.tconstruct.shared.TinkerEffects;
 import slimeknights.tconstruct.tools.TinkerModifiers;
 
 import java.util.ArrayList;
@@ -42,7 +44,6 @@ public class TransmutationModifier extends Modifier implements InventoryTickModi
 
     private final ResourceLocation TRAN_KEY = new ResourceLocation(TinkersInnovation.MOD_ID, "transmutation");
     private final ResourceLocation EXP_KEY = new ResourceLocation(TinkersInnovation.MOD_ID, "transmutation_explode");
-    static final DamageSource TRANSMUTATION_DAMAGE = new DamageSource(TConstruct.prefix("transmutation")).bypassArmor().bypassMagic().bypassInvul();
 
     public void setExperienceLevel(IToolStackView tool, int value){
         tool.getPersistentData().putInt(TRAN_KEY, Math.max(value, 0));
@@ -84,18 +85,18 @@ public class TransmutationModifier extends Modifier implements InventoryTickModi
             addExperienceLevel(tool, -exp);
             ToolDamageUtil.damage(tool, modifier.getLevel(), player, stack);
             if (RANDOM.nextFloat() < 0.05){
-                MobEffectInstance effect = new MobEffectInstance(TinkerModifiers.selfDestructiveEffect.get(), 200 - 20 * (modifier.getLevel() - 1));
+                MobEffectInstance effect = new MobEffectInstance(TinkerEffects.selfDestructing.get(), 200 - 20 * (modifier.getLevel() - 1));
                 effect.setCurativeItems(List.of(new ItemStack(Items.MILK_BUCKET)));
                 holder.addEffect(effect);
             }
         }
         if (getExperienceLevel(tool) > 10){
-            holder.hurt(TRANSMUTATION_DAMAGE, Integer.MAX_VALUE);
+            holder.hurt(TinkerDamageTypes.source(holder.level().registryAccess(), TinkerDamageTypes.SELF_DESTRUCT), Integer.MAX_VALUE);
             setExperienceLevel(tool, 10);
         }
         if (tool.isBroken() && data.getBoolean(EXP_KEY)){
-            holder.hurt(TRANSMUTATION_DAMAGE, Integer.MAX_VALUE);
-            holder.level.explode(null, holder.getX(), holder.getY(), holder.getZ(), 2, Explosion.BlockInteraction.DESTROY);
+            holder.hurt(TinkerDamageTypes.source(holder.level().registryAccess(), TinkerDamageTypes.SELF_DESTRUCT), Integer.MAX_VALUE);
+            holder.level().explode(null, holder.getX(), holder.getY(), holder.getZ(), 2, Level.ExplosionInteraction.BLOCK);
             data.putBoolean(EXP_KEY, false);
         }
     }

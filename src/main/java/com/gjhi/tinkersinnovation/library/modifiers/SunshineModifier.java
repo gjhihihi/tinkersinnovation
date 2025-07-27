@@ -17,7 +17,7 @@ import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
-import slimeknights.tconstruct.library.tools.nbt.NamespacedNBT;
+import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 
 public class SunshineModifier extends Modifier implements MeleeDamageModifierHook, ProjectileHitModifierHook {
     @Override
@@ -28,7 +28,7 @@ public class SunshineModifier extends Modifier implements MeleeDamageModifierHoo
     public float getMeleeDamage(@NotNull IToolStackView tool, @NotNull ModifierEntry modifier, ToolAttackContext context, float baseDamage, float damage) {
         LivingEntity target = context.getLivingTarget();
         if (target != null){
-            if (!target.isOnGround() && !target.isInWaterOrBubble()){
+            if (target.isFallFlying() && !target.isInWaterOrBubble()){
                 damage += damage * 0.2f * modifier.getLevel();
                 target.addEffect(new MobEffectInstance(AMEffectRegistry.SUNBIRD_CURSE.get(), 100 * modifier.getLevel()));
             }
@@ -37,9 +37,9 @@ public class SunshineModifier extends Modifier implements MeleeDamageModifierHoo
     }
 
     @Override
-    public boolean onProjectileHitEntity(ModifierNBT modifiers, NamespacedNBT persistentData, ModifierEntry modifier, Projectile projectile, EntityHitResult hit, @Nullable LivingEntity attacker, @Nullable LivingEntity target) {
+    public boolean onProjectileHitEntity(ModifierNBT modifiers, ModDataNBT persistentData, ModifierEntry modifier, Projectile projectile, EntityHitResult hit, @Nullable LivingEntity attacker, @Nullable LivingEntity target) {
         if (target != null){
-            if (!target.isOnGround() && !target.isInWaterOrBubble()){
+            if (target.isFallFlying() && !target.isInWaterOrBubble()){
                 if (projectile instanceof AbstractArrow arrow){
                     arrow.setBaseDamage(arrow.getBaseDamage() * (1 + 0.2 * modifier.getLevel()));
                 }

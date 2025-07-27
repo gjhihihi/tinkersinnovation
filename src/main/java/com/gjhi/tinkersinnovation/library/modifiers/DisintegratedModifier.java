@@ -9,7 +9,7 @@ import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
-import slimeknights.tconstruct.library.tools.nbt.NamespacedNBT;
+import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 
 public class DisintegratedModifier extends Modifier implements TinkersBombHook {
     @Override
@@ -18,7 +18,7 @@ public class DisintegratedModifier extends Modifier implements TinkersBombHook {
     }
 
     @Override
-    public void onTinkersBombExplosion(ModifierNBT modifiers, NamespacedNBT persistentData, ModifierEntry modifier, EBomb bomb, LivingEntity attacker, BombExplodeContext context) {
+    public void onTinkersBombExplosion(ModifierNBT modifiers, ModDataNBT persistentData, ModifierEntry modifier, EBomb bomb, LivingEntity attacker, BombExplodeContext context) {
         context.setPieceCount(context.getPieceCount() * (int)Math.pow(2, modifier.getLevel()));
         context.setPieceDamage(context.getPieceDamage() * (float)Math.pow(0.5, modifier.getLevel()));
     }

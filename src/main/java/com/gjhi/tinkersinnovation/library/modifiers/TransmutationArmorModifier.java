@@ -1,24 +1,20 @@
 package com.gjhi.tinkersinnovation.library.modifiers;
 
 import com.gjhi.tinkersinnovation.TinkersInnovation;
-import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.storage.loot.LootContext;
+import slimeknights.tconstruct.common.TinkerDamageTypes;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.ModifierHooks;
 import slimeknights.tconstruct.library.modifiers.hook.armor.OnAttackedModifierHook;
-import slimeknights.tconstruct.library.modifiers.hook.behavior.ProcessLootModifierHook;
 import slimeknights.tconstruct.library.modifiers.hook.build.ModifierRemovalHook;
 import slimeknights.tconstruct.library.modifiers.hook.interaction.InventoryTickModifierHook;
 import slimeknights.tconstruct.library.module.ModuleHookMap;
@@ -26,13 +22,7 @@ import slimeknights.tconstruct.library.tools.context.EquipmentContext;
 import slimeknights.tconstruct.library.tools.helper.ToolDamageUtil;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
-import slimeknights.tconstruct.tools.TinkerModifiers;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
-import static com.gjhi.tinkersinnovation.library.modifiers.TransmutationModifier.TRANSMUTATION_DAMAGE;
 
 public class TransmutationArmorModifier extends Modifier implements InventoryTickModifierHook, OnAttackedModifierHook, ModifierRemovalHook {
     @Override
@@ -50,8 +40,8 @@ public class TransmutationArmorModifier extends Modifier implements InventoryTic
             data.putBoolean(EXP_KEY, true);
         }
         if (tool.isBroken() && data.getBoolean(EXP_KEY)){
-            holder.hurt(TRANSMUTATION_DAMAGE, Integer.MAX_VALUE);
-            holder.level.explode(null, holder.getX(), holder.getY(), holder.getZ(), 2, Explosion.BlockInteraction.DESTROY);
+            holder.hurt(TinkerDamageTypes.source(holder.level().registryAccess(), TinkerDamageTypes.SELF_DESTRUCT), Integer.MAX_VALUE);
+            holder.level().explode(null, holder.getX(), holder.getY(), holder.getZ(), 2, Level.ExplosionInteraction.BLOCK);
             data.putBoolean(EXP_KEY, false);
         }
     }

@@ -1,7 +1,5 @@
 package com.gjhi.tinkersinnovation.library.modifiers;
 
-import com.gjhi.tinkersinnovation.library.modifiers.base.ChaosDamageSourcesBase;
-import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
@@ -17,8 +15,8 @@ import slimeknights.tconstruct.library.modifiers.hook.ranged.ProjectileHitModifi
 import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
+import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
-import slimeknights.tconstruct.library.tools.nbt.NamespacedNBT;
 
 public class ChaosModifier extends Modifier implements MeleeDamageModifierHook, ProjectileHitModifierHook {
     @Override
@@ -31,11 +29,8 @@ public class ChaosModifier extends Modifier implements MeleeDamageModifierHook, 
         return 120;
     }
     @Override
-    public boolean onProjectileHitEntity(ModifierNBT modifiers, NamespacedNBT persistentData, ModifierEntry modifier, Projectile projectile, EntityHitResult hit, @Nullable LivingEntity attacker, @Nullable LivingEntity target) {
+    public boolean onProjectileHitEntity(ModifierNBT modifiers, ModDataNBT persistentData, ModifierEntry modifier, Projectile projectile, EntityHitResult hit, @Nullable LivingEntity attacker, @Nullable LivingEntity target) {
         if (target != null && attacker != null && projectile instanceof AbstractArrow arrow) {
-            int time = target.invulnerableTime;
-            target.hurt(ChaosDamageSourcesBase.randomSource(DamageSource.arrow(arrow, attacker)), 2 * modifier.getLevel());
-            target.invulnerableTime = time;
         }
         return false;
     }
@@ -45,9 +40,6 @@ public class ChaosModifier extends Modifier implements MeleeDamageModifierHook, 
         Player player = context.getPlayerAttacker();
         LivingEntity target = context.getLivingTarget();
         if (target != null) {
-            int time = target.invulnerableTime;
-            target.hurt(ChaosDamageSourcesBase.randomSource(DamageSource.mobAttack(context.getAttacker())), 2 * modifier.getLevel());
-            target.invulnerableTime = time;
         }
         return damage;
     }

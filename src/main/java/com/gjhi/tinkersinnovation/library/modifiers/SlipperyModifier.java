@@ -21,9 +21,9 @@ public class SlipperyModifier extends Modifier implements ToolDamageModifierHook
     }
 
     public void spawnSlime(Entity summoner) {
-        Slime slime = EntityType.SLIME.create(summoner.level);
+        Slime slime = EntityType.SLIME.create(summoner.level());
         if (slime != null) {
-            summoner.level.addFreshEntity(slime);
+            summoner.level().addFreshEntity(slime);
             int size;
             float ran = RANDOM.nextFloat();
             if (ran < 0.5){

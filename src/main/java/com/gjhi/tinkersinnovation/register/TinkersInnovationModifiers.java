@@ -15,7 +15,7 @@ public class TinkersInnovationModifiers {
     public static StaticModifier<EnchantmentArmorModifier> enchantment_armor = MODIFIERS.register("enchantment_armor", EnchantmentArmorModifier::new);
     public static StaticModifier<VitalityModifier> vitality = MODIFIERS.register("vitality", VitalityModifier::new);
     public static StaticModifier<VitalityArmorModifier> vitality_armor = MODIFIERS.register("vitality_armor", VitalityArmorModifier::new);
-    public static StaticModifier<OmnipotentNewModifier> omnipotent = MODIFIERS.register("omnipotent", OmnipotentNewModifier::new);
+    public static StaticModifier<OmnipotentModifier> omnipotent = MODIFIERS.register("omnipotent", OmnipotentModifier::new);
     public static StaticModifier<BigHeartModifier> big_heart = MODIFIERS.register("big_heart", BigHeartModifier::new);
     public static StaticModifier<FastEatModifier> fast_eat = MODIFIERS.register("fast_eat", FastEatModifier::new);
     public static StaticModifier<ChromaticAberrationModifier> chromatic_aberration = MODIFIERS.register("chromatic_aberration", ChromaticAberrationModifier::new);
@@ -38,7 +38,6 @@ public class TinkersInnovationModifiers {
     public static StaticModifier<WindPowerModifier> wind_power = MODIFIERS.register("wind_power", WindPowerModifier::new);
     public static StaticModifier<HoldSteadyModifier> hold_steady = MODIFIERS.register("hold_steady", HoldSteadyModifier::new);
     public static StaticModifier<BlastingModifier> blasting = MODIFIERS.register("blasting", BlastingModifier::new);
-    public static StaticModifier<DetonationModifier> detonation = MODIFIERS.register("detonation", DetonationModifier::new);
     public static StaticModifier<ExplosiveModifier> explosive = MODIFIERS.register("explosive", ExplosiveModifier::new);
     public static StaticModifier<WitherKillerModifier> wither_killer = MODIFIERS.register("wither_killer", WitherKillerModifier::new);
     public static StaticModifier<WitherSkullModifier> wither_skull = MODIFIERS.register("wither_skull", WitherSkullModifier::new);
@@ -76,7 +75,6 @@ public class TinkersInnovationModifiers {
     public static StaticModifier<NotHungryModifier> not_hungry = MODIFIERS.register("not_hungry", NotHungryModifier::new);
     public static StaticModifier<SweetModifier> sweet = MODIFIERS.register("sweet", SweetModifier::new);
     public static StaticModifier<SoulDevouringModifier> soul_devouring = MODIFIERS.register("soul_devouring", SoulDevouringModifier::new);
-    public static StaticModifier<SoulFixingModifier> soul_fixing = MODIFIERS.register("soul_fixing", SoulFixingModifier::new);
     public static StaticModifier<ElasticModifier> elastic = MODIFIERS.register("elastic", ElasticModifier::new);
     public static StaticModifier<InflammationModifier> inflammation = MODIFIERS.register("inflammation", InflammationModifier::new);
     public static StaticModifier<SlipperyModifier> slippery = MODIFIERS.register("slippery", SlipperyModifier::new);
@@ -113,20 +111,6 @@ public class TinkersInnovationModifiers {
         public static StaticModifier<SoulFlameThornModifier> soul_flame_thorn = L2C_MODIFIERS.register("soul_flame_thorn", SoulFlameThornModifier::new);
         public static StaticModifier<IceThornModifier> ice_thorn = L2C_MODIFIERS.register("ice_thorn", IceThornModifier::new);
         public static StaticModifier<StoneCageModifier> stone_cage = L2C_MODIFIERS.register("stone_cage", StoneCageModifier::new);
-    }
-    public static class TinkersIngenuityModifiers {
-        public static ModifierDeferredRegister TIY_MODIFIERS = ModifierDeferredRegister.create(MOD_ID);
-        public static void init() {
-            TIY_MODIFIERS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        }
-        public static StaticModifier<VitalityCurioModifier> vitality_curio = TIY_MODIFIERS.register("vitality_curio", VitalityCurioModifier::new);
-        public static StaticModifier<SculkCurioModifier> sculk_curio = TIY_MODIFIERS.register("sculk_curio", SculkCurioModifier::new);
-        public static StaticModifier<WaterCoolModifier> water_cool = TIY_MODIFIERS.register("water_cool", WaterCoolModifier::new);
-        public static StaticModifier<VoidCurioModifier> void_curio = TIY_MODIFIERS.register("void_curio", VoidCurioModifier::new);
-        public static StaticModifier<PoseiditeBlessingCurioModifier> poseidite_blessing_curio = TIY_MODIFIERS.register("poseidite_blessing_curio", PoseiditeBlessingCurioModifier::new);
-        public static StaticModifier<NEOCurioModifier> NEO_curio = TIY_MODIFIERS.register("neo_curio", NEOCurioModifier::new);
-        public static StaticModifier<EnchantmentCurioModifier> enchantment_curio = TIY_MODIFIERS.register("enchantment_curio", EnchantmentCurioModifier::new);
-        public static StaticModifier<WitherCurioModifier> wither_curio = TIY_MODIFIERS.register("wither_curio", WitherCurioModifier::new);
     }
     public static class L2HostilityModifiers {
         public static ModifierDeferredRegister L2H_MODIFIERS = ModifierDeferredRegister.create(MOD_ID);

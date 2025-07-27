@@ -5,6 +5,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.phys.EntityHitResult;
 import org.jetbrains.annotations.Nullable;
+import slimeknights.tconstruct.common.TinkerDamageTypes;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.ModifierHooks;
@@ -14,7 +15,7 @@ import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
-import slimeknights.tconstruct.library.tools.nbt.NamespacedNBT;
+import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 
 public class FocusingModifier extends Modifier implements MeleeHitModifierHook, ProjectileHitModifierHook {
     @Override
@@ -23,12 +24,11 @@ public class FocusingModifier extends Modifier implements MeleeHitModifierHook, 
     }
 
     @Override
-    public boolean onProjectileHitEntity(ModifierNBT modifiers, NamespacedNBT persistentData, ModifierEntry modifier, Projectile projectile, EntityHitResult hit, @Nullable LivingEntity attacker, @Nullable LivingEntity target) {
+    public boolean onProjectileHitEntity(ModifierNBT modifiers, ModDataNBT persistentData, ModifierEntry modifier, Projectile projectile, EntityHitResult hit, @Nullable LivingEntity attacker, @Nullable LivingEntity target) {
         if (target != null){
             int time = target.getRemainingFireTicks();
             if (time > 0){
-                target.invulnerableTime = 0;
-                target.hurt(DamageSource.ON_FIRE, time / 200f);
+                target.hurt(target.damageSources().onFire(), time / 200f);
             }
             target.setRemainingFireTicks(target.getRemainingFireTicks() + 60);
         }
@@ -42,7 +42,7 @@ public class FocusingModifier extends Modifier implements MeleeHitModifierHook, 
             int time = target.getRemainingFireTicks();
             if (time > 0){
                 target.invulnerableTime = 0;
-                target.hurt(DamageSource.ON_FIRE, time / 200f);
+                target.hurt(target.damageSources().onFire(), time / 200f);
             }
             target.setRemainingFireTicks(target.getRemainingFireTicks() + 60);
         }

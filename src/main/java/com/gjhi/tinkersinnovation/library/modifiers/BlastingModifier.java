@@ -5,6 +5,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Explosion;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import slimeknights.tconstruct.library.modifiers.Modifier;
@@ -30,7 +31,7 @@ public class BlastingModifier extends NoLevelsModifier implements MeleeHitModifi
     private void leftClickBlock(PlayerInteractEvent.LeftClickBlock event) {
         ToolStack tool = getHeldTool(event.getEntity(), InteractionHand.MAIN_HAND);
         if (tool != null && tool.getModifier(this).getLevel() > 0){
-            event.getEntity().level.explode(null, event.getPos().getX(), event.getPos().getY(), event.getPos().getZ(), 4, false, Explosion.BlockInteraction.BREAK);
+            event.getEntity().level().explode(null, event.getPos().getX(), event.getPos().getY(), event.getPos().getZ(), 4, false, Level.ExplosionInteraction.MOB);
             if (!event.getEntity().isCreative())
                 ToolDamageUtil.damage(tool, 10, event.getEntity(), event.getItemStack());
         }
@@ -41,7 +42,7 @@ public class BlastingModifier extends NoLevelsModifier implements MeleeHitModifi
         LivingEntity target = context.getLivingTarget();
         Player player = context.getPlayerAttacker();
         if (target != null && !tool.isBroken()){
-            target.level.explode(target, target.getX(), target.getY(), target.getZ(), 2, false, Explosion.BlockInteraction.NONE);
+            target.level().explode(target, target.getX(), target.getY(), target.getZ(), 2, false, Level.ExplosionInteraction.MOB);
             if (player != null && !player.isCreative())
                 ToolDamageUtil.damageAnimated(tool, 10, context.getAttacker(), context.getHand());
         }

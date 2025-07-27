@@ -17,8 +17,8 @@ import slimeknights.tconstruct.library.modifiers.hook.ranged.ProjectileHitModifi
 import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
+import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
-import slimeknights.tconstruct.library.tools.nbt.NamespacedNBT;
 import slimeknights.tconstruct.library.tools.nbt.ToolStack;
 
 import java.util.ArrayList;
@@ -32,10 +32,14 @@ public class ResonanceModifier extends Modifier implements MeleeHitModifierHook,
         hookBuilder.addHook(this, ModifierHooks.PROJECTILE_HIT, ModifierHooks.MELEE_HIT);
     }
     @Override
-    public boolean onProjectileHitEntity(ModifierNBT modifiers, NamespacedNBT persistentData, ModifierEntry modifier, Projectile projectile, EntityHitResult hit, @Nullable LivingEntity attacker, @Nullable LivingEntity target) {
+    public boolean onProjectileHitEntity(ModifierNBT modifiers, ModDataNBT persistentData, ModifierEntry modifier, Projectile projectile, EntityHitResult hit, @Nullable LivingEntity attacker, @Nullable LivingEntity target) {
         if (target != null && projectile instanceof AbstractArrow) {
             target.invulnerableTime = 0;
-            target.hurt(DamageSource.sonicBoom(attacker != null ? attacker : projectile), 3 * modifier.getLevel());
+            if (attacker != null) {
+                target.hurt(attacker.damageSources().sonicBoom(attacker), 3 * modifier.getLevel());
+            }else {
+                target.hurt(projectile.damageSources().sonicBoom(projectile), 3 * modifier.getLevel());
+            }
         }
         return false;
     }
@@ -45,7 +49,7 @@ public class ResonanceModifier extends Modifier implements MeleeHitModifierHook,
         LivingEntity attacker = context.getAttacker();
         if (target != null) {
             target.invulnerableTime = 0;
-            target.hurt(DamageSource.sonicBoom(attacker), 2 * modifier.getLevel());
+            target.hurt(attacker.damageSources().sonicBoom(attacker), 2 * modifier.getLevel());
         }
     }
 }

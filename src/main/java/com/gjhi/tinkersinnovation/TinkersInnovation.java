@@ -1,11 +1,8 @@
 package com.gjhi.tinkersinnovation;
 
 import com.gjhi.tinkersinnovation.register.*;
-import com.gjhi.tinkersinnovation.world.features.ores.TinkersInnovationOreFeatures;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
@@ -41,12 +38,13 @@ public class TinkersInnovation {
         TinkersInnovationModifiers.MODIFIERS.register(bus);
         TinkersInnovationBlocks.BLOCKS.register(bus);
         TinkersInnovationItems.ITEMS.register(bus);
+        TinkersInnovationItems.TOOLS.register(bus);
+        TinkersInnovationItems.NOTDISPLAYS.register(bus);
+        TinkersInnovationTabs.CREATIVE_TABS.register(bus);
         TinkersInnovationFluids.FLUIDS.register(bus);
         TinkersInnovationEntityTypes.ENTITY_TYPES.register(bus);
         TinkersInnovationEffects.MOB_EFFECTS.register(bus);
         TinkersInnovationPotions.POTIONS.register(bus);
-        TinkersInnovationOreFeatures.CONFIGURED_FEATURES.register(bus);
-        TinkersInnovationOreFeatures.PLACED_FEATURES.register(bus);
         TinkersInnovationRecipes.RECIPE_SERIALIZERS.register(bus);
         TinkersInnovationTags.init();
         TinkersInnovationToolStats.init();
@@ -60,7 +58,6 @@ public class TinkersInnovation {
         event.enqueueWork(TinkersInnovationMaterialStats::setup);
         TinkersInnovationPotions.recipesInit();
         TinkersInnovationCompat.L2Complements.init();
-        TinkersInnovationCompat.TinkersIngenuity.init();
         TinkersInnovationCompat.L2Hostility.init();
         TinkersInnovationCompat.IceAndFire.init();
         TinkersInnovationCompat.AlexsMobs.init();
@@ -81,16 +78,4 @@ public class TinkersInnovation {
         if (event.includeServer()) {
         } //两个大括号内的内容暂时不用填写
     }
-    public static final CreativeModeTab itemGroup = new CreativeModeTab("TinkersInnovationItemGroup") {
-        @Override
-        public ItemStack makeIcon() {
-            return new ItemStack(TinkersInnovationItems.polychrome_alloy_ingot.get());
-        }
-    };
-    public static final CreativeModeTab toolGroup = new CreativeModeTab("TinkersInnovationToolGroup") {
-        @Override
-        public ItemStack makeIcon() {
-            return TinkersInnovationItems.claw.get().getRenderTool();
-        }
-    };
 }

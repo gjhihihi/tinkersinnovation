@@ -3,18 +3,19 @@ package com.gjhi.tinkersinnovation.library.modifiers;
 import com.gjhi.tinkersinnovation.contexts.BombExplodeContext;
 import com.gjhi.tinkersinnovation.library.entitys.entitys.tinker_bomb.EBomb;
 import com.gjhi.tinkersinnovation.library.hooks.TinkersBombHook;
+import com.gjhi.tinkersinnovation.register.TinkersInnovationDamageTypes;
 import com.gjhi.tinkersinnovation.register.TinkersInnovationHooks;
 import com.gjhi.tinkersinnovation.register.TinkersInnovationToolStats;
 import com.gjhi.tinkersinnovation.register.TinkersInnovationUtils;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.level.Explosion;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import org.jetbrains.annotations.Nullable;
 import slimeknights.tconstruct.TConstruct;
+import slimeknights.tconstruct.common.TinkerDamageTypes;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.ModifierHooks;
 import slimeknights.tconstruct.library.modifiers.hook.build.ConditionalStatModifierHook;
@@ -22,9 +23,8 @@ import slimeknights.tconstruct.library.modifiers.hook.ranged.ProjectileHitModifi
 import slimeknights.tconstruct.library.modifiers.impl.NoLevelsModifier;
 import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
-import slimeknights.tconstruct.library.tools.nbt.NamespacedNBT;
+import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 import slimeknights.tconstruct.library.tools.nbt.ToolStack;
-import slimeknights.tconstruct.tools.TinkerModifiers;
 
 import java.util.HashMap;
 import java.util.List;
@@ -41,22 +41,21 @@ public class BombModifier extends NoLevelsModifier implements ProjectileHitModif
         return 1;
     }
 
-    protected DamageSource BOMB_PIECE = new DamageSource(TConstruct.prefix("tinker_bomb_piece")).bypassMagic();
-    private boolean onBombHit (ModifierNBT modifiers, NamespacedNBT persistentData, ModifierEntry modifier, Projectile projectile, @Nullable LivingEntity attacker){
+    private boolean onBombHit (ModifierNBT modifiers, ModDataNBT persistentData, ModifierEntry modifier, Projectile projectile, @Nullable LivingEntity attacker){
         if (attacker != null && projectile instanceof EBomb bomb) {
             ToolStack tool = getHeldTool(attacker, attacker.getUsedItemHand());
             if (tool != null) {
                 float bomb_radius = ConditionalStatModifierHook.getModifiedStat(tool, attacker, TinkersInnovationToolStats.BOMB_RADIUS);
                 int piece_count = (int) ConditionalStatModifierHook.getModifiedStat(tool, attacker, TinkersInnovationToolStats.PIECE_COUNT);
                 float piece_damage = ConditionalStatModifierHook.getModifiedStat(tool, attacker, TinkersInnovationToolStats.PIECE_DAMAGE);
-                BombExplodeContext context = new BombExplodeContext(bomb_radius, piece_count, piece_damage, false, Explosion.BlockInteraction.BREAK);
+                BombExplodeContext context = new BombExplodeContext(bomb_radius, piece_count, piece_damage, false, Level.ExplosionInteraction.BLOCK);
                 for (ModifierEntry mod : modifiers.getModifiers()){
                     mod.getModifier().getHook(TinkersInnovationHooks.TINKER_BOMB).onTinkersBombExplosion(modifiers, persistentData, mod, bomb, attacker, context);
                 }
                 bomb_radius = context.getRadius();
                 piece_count = context.getPieceCount();
                 piece_damage = context.getPieceDamage();
-                bomb.level.explode(attacker, bomb.getX(), bomb.getY(), bomb.getZ(), bomb_radius, context.isFired(), context.getType());
+                bomb.level().explode(attacker, bomb.getX(), bomb.getY(), bomb.getZ(), bomb_radius, context.isFired(), context.getType());
                 List<LivingEntity> entities = TinkersInnovationUtils.getLivingEntitiesInRange(bomb, bomb_radius, false);
                 for (ModifierEntry mod : modifiers.getModifiers()){
                     mod.getModifier().getHook(TinkersInnovationHooks.TINKER_BOMB).afterTinkersBombExplode(modifiers, persistentData, mod, bomb, attacker, entities);
@@ -68,8 +67,7 @@ public class BombModifier extends NoLevelsModifier implements ProjectileHitModif
                 }
                 for (Map.Entry<LivingEntity, Integer> entity: hitted.entrySet()){
                     for (int i = 0; i < entity.getValue(); i++) {
-                        entity.getKey().invulnerableTime = 0;
-                        entity.getKey().hurt(BOMB_PIECE, piece_damage);
+                        entity.getKey().hurt(TinkerDamageTypes.source(attacker.level().registryAccess(), TinkersInnovationDamageTypes.BOMB_PIECE), piece_damage);
                     }
                     for (ModifierEntry mod : modifiers.getModifiers()){
                         mod.getModifier().getHook(TinkersInnovationHooks.TINKER_BOMB).afterBombPiecesHit(modifiers, persistentData, mod, bomb, attacker, entity.getKey(), entity.getValue());
@@ -82,12 +80,12 @@ public class BombModifier extends NoLevelsModifier implements ProjectileHitModif
         return false;
     }
     @Override
-    public boolean onProjectileHitEntity(ModifierNBT modifiers, NamespacedNBT persistentData, ModifierEntry modifier, Projectile projectile, EntityHitResult hit, @Nullable LivingEntity attacker, @Nullable LivingEntity target) {
+    public boolean onProjectileHitEntity(ModifierNBT modifiers, ModDataNBT persistentData, ModifierEntry modifier, Projectile projectile, EntityHitResult hit, @Nullable LivingEntity attacker, @Nullable LivingEntity target) {
         return onBombHit(modifiers, persistentData, modifier, projectile, attacker);
     }
 
     @Override
-    public boolean onProjectileHitBlock(ModifierNBT modifiers, NamespacedNBT persistentData, ModifierEntry modifier, Projectile projectile, BlockHitResult hit, @Nullable LivingEntity attacker) {
-        return onBombHit(modifiers, persistentData, modifier, projectile, attacker);
+    public void onProjectileHitBlock(ModifierNBT modifiers, ModDataNBT persistentData, ModifierEntry modifier, Projectile projectile, BlockHitResult hit, @Nullable LivingEntity attacker) {
+        onBombHit(modifiers, persistentData, modifier, projectile, attacker);
     }
 }

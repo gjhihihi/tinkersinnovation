@@ -3,6 +3,7 @@ package com.gjhi.tinkersinnovation.library.modifiers;
 import com.github.alexthe666.alexsmobs.effect.AMEffectRegistry;
 import com.gjhi.tinkersinnovation.register.TinkersInnovationUtils;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -27,7 +28,7 @@ public class SunshineArmorModifier extends NoLevelsModifier implements Inventory
 
     @Override
     public boolean isDamageBlocked(IToolStackView tool, ModifierEntry modifier, EquipmentContext context, EquipmentSlot slotType, DamageSource source, float amount) {
-        return source.equals(DamageSource.FLY_INTO_WALL);
+        return source.type().equals(DamageTypes.FLY_INTO_WALL);
     }
 
     @Override

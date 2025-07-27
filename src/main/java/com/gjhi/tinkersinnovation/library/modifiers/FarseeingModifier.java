@@ -14,7 +14,7 @@ import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
-import slimeknights.tconstruct.library.tools.nbt.NamespacedNBT;
+import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 
 public class FarseeingModifier extends NoLevelsModifier implements MeleeHitModifierHook, ProjectileHitModifierHook {
     @Override
@@ -29,16 +29,16 @@ public class FarseeingModifier extends NoLevelsModifier implements MeleeHitModif
         if (target != null){
             double damage = target.getMaxHealth() * Math.min(0.01 * target.distanceToSqr(attacker), 0.1);
             target.invulnerableTime = 0;
-            target.hurt(DamageSource.mobAttack(attacker).bypassArmor().bypassMagic(), (float) damage);
+            target.hurt(attacker.damageSources().mobAttack(attacker), (float) damage);
         }
     }
 
     @Override
-    public boolean onProjectileHitEntity(ModifierNBT modifiers, NamespacedNBT persistentData, ModifierEntry modifier, Projectile projectile, EntityHitResult hit, @Nullable LivingEntity attacker, @Nullable LivingEntity target) {
+    public boolean onProjectileHitEntity(ModifierNBT modifiers, ModDataNBT persistentData, ModifierEntry modifier, Projectile projectile, EntityHitResult hit, @Nullable LivingEntity attacker, @Nullable LivingEntity target) {
         if (target != null && attacker != null){
             double damage = target.getMaxHealth() * Math.min(0.002 * target.distanceToSqr(attacker), 0.1);
             target.invulnerableTime = 0;
-            target.hurt(DamageSource.mobAttack(attacker).bypassArmor().bypassMagic().setProjectile(), (float) damage);
+            target.hurt(attacker.damageSources().mobAttack(attacker), (float) damage);
         }
         return false;
     }

@@ -1,5 +1,6 @@
 package com.gjhi.tinkersinnovation.library.modifiers;
 
+import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EquipmentSlot;
 import slimeknights.tconstruct.library.modifiers.Modifier;
@@ -22,7 +23,7 @@ public class ExplosionRejectModifier extends Modifier implements DamageBlockModi
     }
 
     public boolean isDamageBlocked(IToolStackView tool, ModifierEntry modifier, EquipmentContext context, EquipmentSlot slotType, DamageSource source, float amount) {
-        return source.isExplosion();
+        return source.is(DamageTypeTags.IS_EXPLOSION);
     }
 }
 

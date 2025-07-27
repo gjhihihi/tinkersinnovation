@@ -40,7 +40,7 @@ public class AbyssResonanceModifier extends NoLevelsModifier implements ModifyDa
         MobEffectInstance effect = attacker.getEffect(TinkerModifiers.insatiableEffect.get(ToolType.MELEE));
         if (effect != null) {
             if (effect.getAmplifier() >= 4){
-                source.bypassMagic();
+                //source.bypassMagic();
             }
         }
     }

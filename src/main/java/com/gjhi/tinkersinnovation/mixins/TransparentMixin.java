@@ -9,6 +9,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.HumanoidArm;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -24,7 +25,7 @@ import static slimeknights.tconstruct.library.modifiers.Modifier.getHeldTool;
 @Mixin(ItemInHandLayer.class)
 public abstract class TransparentMixin {
     @Inject(at = @At("HEAD"), method = "renderArmWithItem", cancellable = true)
-    public void hideInvisibleItem(LivingEntity entity, ItemStack stack, ItemTransforms.TransformType type, HumanoidArm arm, PoseStack pose, MultiBufferSource buffer, int light, CallbackInfo ci) {
+    public void hideInvisibleItem(LivingEntity entity, ItemStack stack, ItemDisplayContext context, HumanoidArm arm, PoseStack pose, MultiBufferSource buffer, int light, CallbackInfo ci) {
         if (stack.getItem() instanceof IModifiable && entity.hasEffect(MobEffects.INVISIBILITY)){
             ToolStack tool = ToolStack.from(stack);
             for (ModifierEntry modifier: tool.getModifiers().getModifiers()){

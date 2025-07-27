@@ -8,6 +8,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.phys.EntityHitResult;
@@ -25,7 +26,7 @@ import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
-import slimeknights.tconstruct.library.tools.nbt.NamespacedNBT;
+import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 
 import java.util.List;
 
@@ -50,11 +51,11 @@ public class OverImitateModifier extends Modifier implements MeleeHitModifierHoo
         }
     }
     @Override
-    public boolean onProjectileHitEntity(ModifierNBT modifiers, NamespacedNBT persistentData, ModifierEntry modifier, Projectile projectile, EntityHitResult hit, @Nullable LivingEntity attacker, @Nullable LivingEntity target) {
+    public boolean onProjectileHitEntity(ModifierNBT modifiers, ModDataNBT persistentData, ModifierEntry modifier, Projectile projectile, EntityHitResult hit, @Nullable LivingEntity attacker, @Nullable LivingEntity target) {
         if (target != null){
-            int time = target.invulnerableTime;
-            target.hurt(DamageSource.indirectMobAttack(projectile, attacker).setProjectile(), persistentData.getFloat(KEY_ATTACK_DAMAGE));
-            target.invulnerableTime = time;
+            if (projectile instanceof AbstractArrow arrow){
+                arrow.setBaseDamage(arrow.getBaseDamage() + persistentData.getFloat(KEY_ATTACK_DAMAGE));
+            }
             AttributeInstance attribute = target.getAttribute(Attributes.ATTACK_DAMAGE);
             if (attribute != null){
                 persistentData.putFloat(KEY_ATTACK_DAMAGE, (float) attribute.getValue() * 0.2f * modifier.getLevel());

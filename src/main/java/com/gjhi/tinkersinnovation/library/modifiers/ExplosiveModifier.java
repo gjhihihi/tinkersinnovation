@@ -1,10 +1,12 @@
 package com.gjhi.tinkersinnovation.library.modifiers;
 
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Explosion;
+import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
@@ -30,8 +32,8 @@ public class ExplosiveModifier extends NoLevelsModifier implements OnAttackedMod
         if (source.getEntity() instanceof LivingEntity entity){
             target = entity;
         }
-        if (target != null && isDirectDamage && !source.isExplosion()) {
-            target.level.explode(player, target.getX(), target.getY(), target.getZ(), 2, Explosion.BlockInteraction.NONE);
+        if (target != null && isDirectDamage && !source.is(DamageTypes.EXPLOSION)) {
+            target.level().explode(player, target.getX(), target.getY(), target.getZ(), 2, Level.ExplosionInteraction.MOB);
             if (!(player instanceof Player) || (player instanceof Player p && !p.isCreative()))
                 ToolDamageUtil.damageAnimated(tool, 10, player, slotType);
         }

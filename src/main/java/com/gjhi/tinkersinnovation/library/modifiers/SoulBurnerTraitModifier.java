@@ -23,8 +23,8 @@ public class SoulBurnerTraitModifier extends Modifier implements MeleeHitModifie
     public void afterMeleeHit(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float damageDealt) {
         LivingEntity target = context.getLivingTarget();
         if (target != null) {
-            if (CurioCompat.hasItem(target, LHItems.RING_REFLECTION.get()))return;
-            if (CurioCompat.hasItem(target, LHItems.ABRAHADABRA.get()))return;
+            if (CurioCompat.hasItemInCurio(target, LHItems.RING_REFLECTION.get()))return;
+            if (CurioCompat.hasItemInCurio(target, LHItems.ABRAHADABRA.get()))return;
             TinkersInnovationUtils.updateEffect(target, LCEffects.FLAME.get(), 1, modifier.getLevel(), LHConfig.COMMON.soulBurnerTime.get());
         }
     }

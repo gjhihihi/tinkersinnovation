@@ -74,14 +74,6 @@
       "piece_count": 3,
       "piece_damage": 3,
       "melee_range_damage": 3.5
-    },
-    "tinkers_ingenuity:battery": {
-      "energy_capacity": 18000,
-      "durability": 0.1
-    },
-    "tinkers_ingenuity:laser_medium": {
-      "laser_range": 35,
-      "cooldown": 0.5
     }
   }
 }

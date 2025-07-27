@@ -39,12 +39,6 @@
         "name": "tinkersinnovation:vitality_armor",
         "level": 1
       }
-    ],
-    "tinkers_ingenuity:curio": [
-      {
-        "name": "tinkersinnovation:vitality_curio",
-        "level": 1
-      }
     ]
   }
 }

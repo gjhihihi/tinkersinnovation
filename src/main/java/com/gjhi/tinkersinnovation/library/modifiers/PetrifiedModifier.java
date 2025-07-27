@@ -19,7 +19,7 @@ import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.helper.ToolDamageUtil;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
-import slimeknights.tconstruct.library.tools.nbt.NamespacedNBT;
+import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 
 public class PetrifiedModifier extends Modifier implements MeleeHitModifierHook, ProjectileHitModifierHook {
     @Override
@@ -35,7 +35,7 @@ public class PetrifiedModifier extends Modifier implements MeleeHitModifierHook,
             if (target instanceof Player) {
                 wasSuccessful = target.hurt(IafDamageRegistry.causeGorgonDamage(target), Integer.MAX_VALUE);
             } else {
-                if (!target.level.isClientSide)
+                if (!target.level().isClientSide)
                     target.remove(Entity.RemovalReason.KILLED);
             }
             if (wasSuccessful) {
@@ -43,8 +43,8 @@ public class PetrifiedModifier extends Modifier implements MeleeHitModifierHook,
                 EntityStoneStatue statue = EntityStoneStatue.buildStatueEntity(target);
                 statue.absMoveTo(target.getX(), target.getY(), target.getZ(), target.getYRot(), target.getXRot());
                 statue.yBodyRot = target.getYRot();
-                if (!target.level.isClientSide) {
-                    target.level.addFreshEntity(statue);
+                if (!target.level().isClientSide) {
+                    target.level().addFreshEntity(statue);
                 }
                 ToolDamageUtil.damageAnimated(tool, 20, context.getAttacker(), context.getHand());
                 return 0;
@@ -54,13 +54,13 @@ public class PetrifiedModifier extends Modifier implements MeleeHitModifierHook,
     }
 
     @Override
-    public boolean onProjectileHitEntity(ModifierNBT modifiers, NamespacedNBT persistentData, ModifierEntry modifier, Projectile projectile, EntityHitResult hit, @Nullable LivingEntity attacker, @Nullable LivingEntity target) {
+    public boolean onProjectileHitEntity(ModifierNBT modifiers, ModDataNBT persistentData, ModifierEntry modifier, Projectile projectile, EntityHitResult hit, @Nullable LivingEntity attacker, @Nullable LivingEntity target) {
         if (target != null && RANDOM.nextFloat() < 0.1 * modifier.getLevel()){
             boolean wasSuccessful = true;
             if (target instanceof Player) {
                 wasSuccessful = target.hurt(IafDamageRegistry.causeGorgonDamage(target), Integer.MAX_VALUE);
             } else {
-                if (!target.level.isClientSide)
+                if (!target.level().isClientSide)
                     target.remove(Entity.RemovalReason.KILLED);
             }
             if (wasSuccessful) {
@@ -68,8 +68,8 @@ public class PetrifiedModifier extends Modifier implements MeleeHitModifierHook,
                 EntityStoneStatue statue = EntityStoneStatue.buildStatueEntity(target);
                 statue.absMoveTo(target.getX(), target.getY(), target.getZ(), target.getYRot(), target.getXRot());
                 statue.yBodyRot = target.getYRot();
-                if (!target.level.isClientSide) {
-                    target.level.addFreshEntity(statue);
+                if (!target.level().isClientSide) {
+                    target.level().addFreshEntity(statue);
                 }
             }
         }

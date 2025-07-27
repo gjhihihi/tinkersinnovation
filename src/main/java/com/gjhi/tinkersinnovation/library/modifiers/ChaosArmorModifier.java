@@ -1,6 +1,5 @@
 package com.gjhi.tinkersinnovation.library.modifiers;
 
-import com.gjhi.tinkersinnovation.library.modifiers.base.ChaosDamageSourcesBase;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -31,9 +30,6 @@ public class ChaosArmorModifier extends Modifier implements OnAttackedModifierHo
             target = entity;
         }
         if (target != null){
-            int time = target.invulnerableTime;
-            target.hurt(ChaosDamageSourcesBase.randomSource(source), 2 * modifier.getLevel());
-            target.invulnerableTime = time;
         }
     }
 }

@@ -3,7 +3,6 @@ package com.gjhi.tinkersinnovation.library.modifiers;
 import dev.xkmc.l2hostility.compat.curios.CurioCompat;
 import dev.xkmc.l2hostility.init.data.LHConfig;
 import dev.xkmc.l2hostility.init.registrate.LHItems;
-import net.minecraft.world.damagesource.EntityDamageSource;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -34,8 +33,8 @@ public class ErosionTraitModifier extends Modifier implements MeleeHitModifierHo
     public void afterMeleeHit(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float damageDealt) {
         LivingEntity target = context.getLivingTarget();
         if (target instanceof Player player){
-            if (CurioCompat.hasItem(target, LHItems.RING_REFLECTION.get()))return;
-            if (CurioCompat.hasItem(target, LHItems.ABRAHADABRA.get()))return;
+            if (CurioCompat.hasItemInCurio(target, LHItems.RING_REFLECTION.get()))return;
+            if (CurioCompat.hasItemInCurio(target, LHItems.ABRAHADABRA.get()))return;
             List<ItemStack> inv = new ArrayList<>();
             Inventory inventory = player.getInventory();
             inv.addAll(inventory.items);
@@ -56,7 +55,7 @@ public class ErosionTraitModifier extends Modifier implements MeleeHitModifierHo
                         ToolStack itool = ToolStack.from(item);
                         if (sametools.containsKey(item)) {
                             target.invulnerableTime = 0;
-                            target.hurt(new EntityDamageSource("erosion", context.getAttacker()), (float) (damageDealt * LHConfig.COMMON.erosionDamage.get() * modifier.getLevel()));
+                            //target.hurt(new EntityDamageSource("erosion", context.getAttacker()), (float) (damageDealt * LHConfig.COMMON.erosionDamage.get() * modifier.getLevel()));
                         } else {
                             amount = (int) ((itool.getCurrentDurability() - itool.getDamage()) * LHConfig.COMMON.erosionDurability.get() * modifier.getLevel());
                             sametools.put(item, amount);
@@ -65,7 +64,7 @@ public class ErosionTraitModifier extends Modifier implements MeleeHitModifierHo
                     } else {
                         if (sametools.containsKey(item)) {
                             target.invulnerableTime = 0;
-                            target.hurt(new EntityDamageSource("erosion", context.getAttacker()), (float) (damageDealt * LHConfig.COMMON.erosionDamage.get() * modifier.getLevel() * modifier.getLevel()));
+                            //target.hurt(new EntityDamageSource("erosion", context.getAttacker()), (float) (damageDealt * LHConfig.COMMON.erosionDamage.get() * modifier.getLevel() * modifier.getLevel()));
                         } else {
                             amount = (int) ((item.getMaxDamage() - item.getDamageValue()) * LHConfig.COMMON.erosionDurability.get() * modifier.getLevel());
                             sametools.put(item, amount);
@@ -75,7 +74,7 @@ public class ErosionTraitModifier extends Modifier implements MeleeHitModifierHo
                 }
             }else {
                 target.invulnerableTime = 0;
-                target.hurt(new EntityDamageSource("erosion", context.getAttacker()), (float) (damageDealt * LHConfig.COMMON.erosionDamage.get() * modifier.getLevel() * modifier.getLevel()));
+                //target.hurt(new EntityDamageSource("erosion", context.getAttacker()), (float) (damageDealt * LHConfig.COMMON.erosionDamage.get() * modifier.getLevel() * modifier.getLevel()));
             }
         }
     }

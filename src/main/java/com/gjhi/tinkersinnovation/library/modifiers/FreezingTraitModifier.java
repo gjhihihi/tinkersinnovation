@@ -23,8 +23,8 @@ public class FreezingTraitModifier extends Modifier implements MeleeHitModifierH
     public void afterMeleeHit(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float damageDealt) {
         LivingEntity target = context.getLivingTarget();
         if (target != null) {
-            if (CurioCompat.hasItem(target, LHItems.RING_REFLECTION.get()))return;
-            if (CurioCompat.hasItem(target, LHItems.ABRAHADABRA.get()))return;
+            if (CurioCompat.hasItemInCurio(target, LHItems.RING_REFLECTION.get()))return;
+            if (CurioCompat.hasItemInCurio(target, LHItems.ABRAHADABRA.get()))return;
             target.addEffect(new MobEffectInstance(LCEffects.ICE.get(), LHConfig.COMMON.freezingTime.get() * modifier.getLevel()));
         }
     }

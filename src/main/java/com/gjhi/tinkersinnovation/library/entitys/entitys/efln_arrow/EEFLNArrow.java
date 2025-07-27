@@ -34,13 +34,13 @@ public class EEFLNArrow extends AbstractArrow {
 
     @Override
     protected void onHitEntity(EntityHitResult result) {
-        this.level.explode(this, this.getX(), this.getY(), this.getZ(), 2, Explosion.BlockInteraction.BREAK);
+        this.level().explode(this, this.getX(), this.getY(), this.getZ(), 2, Level.ExplosionInteraction.BLOCK);
         super.onHitEntity(result);
     }
 
     @Override
     protected void onHitBlock(BlockHitResult result) {
-        this.level.explode(this, this.getX(), this.getY(), this.getZ(), 2, Explosion.BlockInteraction.BREAK);
+        this.level().explode(this, this.getX(), this.getY(), this.getZ(), 2, Level.ExplosionInteraction.BLOCK);
         super.onHitBlock(result);
         this.discard();
     }

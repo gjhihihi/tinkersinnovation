@@ -1,6 +1,8 @@
 package com.gjhi.tinkersinnovation.library.modifiers;
 
+import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import slimeknights.tconstruct.common.TinkerTags;
@@ -19,6 +21,6 @@ public class ProjectileRejectModifier extends NoLevelsModifier implements Damage
         hookBuilder.addHook(this, ModifierHooks.DAMAGE_BLOCK);
     }
     public boolean isDamageBlocked(IToolStackView tool, ModifierEntry modifier, EquipmentContext context, EquipmentSlot slotType, DamageSource source, float amount) {
-        return source.isProjectile();
+        return source.is(DamageTypeTags.IS_PROJECTILE);
     }
 }

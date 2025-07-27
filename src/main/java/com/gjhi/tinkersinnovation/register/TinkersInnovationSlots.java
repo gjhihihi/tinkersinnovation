@@ -20,7 +20,7 @@ public class TinkersInnovationSlots {
                 OMNIPOTENT.getName(), TinkersInnovation.getResource("item/slots/omnipotent")
         );
     }
-    public static SlotType HOSTILITY = SlotType.create("hostilities",0xFF0000);
-    public static SlotType MECHANISM = SlotType.create("mechanisms",0x5E6963);
-    public static SlotType OMNIPOTENT = SlotType.create("omnipotent",0xFFFFFF);
+    public static SlotType HOSTILITY = SlotType.getOrCreate("hostilities");
+    public static SlotType MECHANISM = SlotType.getOrCreate("mechanisms");
+    public static SlotType OMNIPOTENT = SlotType.getOrCreate("omnipotent");
 }

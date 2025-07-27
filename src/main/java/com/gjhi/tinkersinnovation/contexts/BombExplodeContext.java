@@ -1,15 +1,16 @@
 package com.gjhi.tinkersinnovation.contexts;
 
 import net.minecraft.world.level.Explosion;
+import net.minecraft.world.level.Level;
 
 public class BombExplodeContext {
     private float bomb_radius;
     private int piece_count;
     private float piece_damage;
     private boolean is_fired;
-    private Explosion.BlockInteraction type;
+    private Level.ExplosionInteraction type;
 
-    public BombExplodeContext(float bomb_radius, int piece_count, float piece_damage, boolean is_fired, Explosion.BlockInteraction type) {
+    public BombExplodeContext(float bomb_radius, int piece_count, float piece_damage, boolean is_fired, Level.ExplosionInteraction type) {
         this.bomb_radius = bomb_radius;
         this.piece_count = piece_count;
         this.piece_damage = piece_damage;
@@ -45,10 +46,10 @@ public class BombExplodeContext {
         is_fired = fire;
     }
 
-    public Explosion.BlockInteraction getType() {
+    public Level.ExplosionInteraction getType() {
         return type;
     }
-    public void setType(Explosion.BlockInteraction type) {
+    public void setType(Level.ExplosionInteraction type) {
         this.type = type;
     }
 }

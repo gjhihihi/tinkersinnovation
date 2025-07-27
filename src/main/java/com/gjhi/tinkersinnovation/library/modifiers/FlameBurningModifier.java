@@ -27,7 +27,7 @@ public class FlameBurningModifier extends Modifier implements OnAttackedModifier
         if (target != null){
             int time = target.getRemainingFireTicks();
             if (time > 0){
-                target.hurt(DamageSource.ON_FIRE, time / 200.0f);
+                target.hurt(target.damageSources().onFire(), time / 200.0f);
             }
             target.setRemainingFireTicks(target.getRemainingFireTicks() + 60);
         }

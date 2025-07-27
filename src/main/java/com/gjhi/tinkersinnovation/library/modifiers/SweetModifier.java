@@ -47,7 +47,7 @@ public class SweetModifier extends NoLevelsModifier implements GeneralInteractio
         int level = modifier.intEffectiveLevel();
         if (level > 0 && entity instanceof Player player) {
             if (player.canEat(false)) {
-                Level world = entity.getLevel();
+                Level world = entity.level();
                 List<MobEffect> effects = new ArrayList<>();
                 for (MobEffectInstance effect : entity.getActiveEffects()){
                     if (effect.getEffect().getCategory().equals(MobEffectCategory.HARMFUL)){
