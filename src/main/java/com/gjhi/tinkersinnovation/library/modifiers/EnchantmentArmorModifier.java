@@ -30,9 +30,11 @@ public class EnchantmentArmorModifier extends Modifier implements OnAttackedModi
             target = entity;
         }
         if (target != null) {
-            for (MobEffect effect : EnchantmentEffectsBase.getBadEffectsByCopy()){
-                if (RANDOM.nextFloat() < 0.1){
-                    TinkersInnovationUtils.updateEffect(target, effect, 1, 2 * level, 40 * level);
+            if (target.isAlive()) {
+                for (MobEffect effect : EnchantmentEffectsBase.getBadEffectsByCopy()) {
+                    if (RANDOM.nextFloat() < 0.1) {
+                        TinkersInnovationUtils.updateEffect(target, effect, 1, 2 * level, 40 * level);
+                    }
                 }
             }
             for (MobEffect effect : EnchantmentEffectsBase.getGoodEffectsByCopy()){
