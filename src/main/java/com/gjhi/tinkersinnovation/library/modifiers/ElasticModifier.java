@@ -25,8 +25,10 @@ public class ElasticModifier extends Modifier implements ToolStatsModifierHook {
         ToolStats.ATTACK_SPEED.percent(builder, getBonus(modifier));
         ToolStats.DRAW_SPEED.percent(builder, getBonus(modifier));
         ToolStats.VELOCITY.percent(builder, getBonus(modifier));
+        ToolStats.ARMOR_TOUGHNESS.percent(builder, getBonus(modifier));
         ToolStats.ATTACK_DAMAGE.percent(builder, -getBonus(modifier));
         ToolStats.MINING_SPEED.percent(builder, -getBonus(modifier));
         ToolStats.ACCURACY.percent(builder, -getBonus(modifier));
+        ToolStats.ARMOR.percent(builder, -getBonus(modifier));
     }
 }

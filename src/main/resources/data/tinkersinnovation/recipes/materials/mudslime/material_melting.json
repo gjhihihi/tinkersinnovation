@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input": "tinkersinnovation:mudslime",
+  "temperature": 560,
+  "result": {
+    "fluid": "tinkersinnovation:molten_mudslime",
+    "amount": 90
+  }
+}

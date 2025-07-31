@@ -1,27 +1,18 @@
 package com.gjhi.tinkersinnovation.register;
 
-import com.github.alexthe666.citadel.repack.jcodec.codecs.mpeg4.es.SL;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.advancements.CriteriaTriggers;
-import net.minecraft.network.protocol.game.ClientboundExplodePacket;
+import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Explosion;
-import net.minecraft.world.level.ExplosionDamageCalculator;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.event.ForgeEventFactory;
 import slimeknights.tconstruct.common.TinkerTags;
-import slimeknights.tconstruct.gadgets.entity.EFLNExplosion;
 import slimeknights.tconstruct.library.tools.definition.ToolDefinition;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ToolStack;
@@ -147,15 +138,38 @@ public class TinkersInnovationUtils {
                     if (stack == null) {
                         stack = entity.getMainHandItem();
                     }
-
                     CriteriaTriggers.ITEM_DURABILITY_CHANGED.trigger((ServerPlayer)entity, stack, newDamage);
                 }
-
                 tool.setDamage(newDamage);
                 return newDamage >= durability;
             } else {
                 return false;
             }
         }
+    }
+    public static boolean spawnLightningBolt(Level world, int x, int y, int z, MobSpawnType type, float damage){
+        if (world instanceof ServerLevel level) {
+            LightningBolt flash = EntityType.LIGHTNING_BOLT.spawn(level, new BlockPos(x, y, z), type);
+            if (flash != null) {
+                flash.setDamage(damage);
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
+    public static boolean spawnLightningBolt(Entity entity, MobSpawnType type, float damage){
+        return spawnLightningBolt(entity.level(), entity.getBlockX(), entity.getBlockY(), entity.getBlockZ(), type, damage);
+    }
+    public static boolean spawnLightningBolt(Level world, int x, int y, int z, MobSpawnType type){
+        return spawnLightningBolt(world, x, y, z, type, getLightningBoltDamage());
+    }
+    public static boolean spawnLightningBolt(Entity entity, MobSpawnType type){
+        return spawnLightningBolt(entity.level(), entity.getBlockX(), entity.getBlockY(), entity.getBlockZ(), type, getLightningBoltDamage());
+    }
+    public static float getLightningBoltDamage(){
+        return 5;
     }
 }

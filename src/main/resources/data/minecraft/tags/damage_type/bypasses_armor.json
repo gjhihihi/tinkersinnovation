@@ -1,6 +1,9 @@
 {
   "values": [
     "tinkersinnovation:berserker",
-    "tinkersinnovation:farsee"
+    "tinkersinnovation:farsee",
+    "tinkersinnovation:resonance",
+    "tinkersinnovation:void",
+    "minecraft:lightning_bolt"
   ]
 }

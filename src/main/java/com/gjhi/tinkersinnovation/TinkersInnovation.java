@@ -1,6 +1,10 @@
 package com.gjhi.tinkersinnovation;
 
+import com.gjhi.tinkersinnovation.library.fluid_effects.SpawnLightningBoltFluidEffect;
+import com.gjhi.tinkersinnovation.library.modules.FieryBombModule;
+import com.gjhi.tinkersinnovation.library.modules.FreezingBombModule;
 import com.gjhi.tinkersinnovation.register.*;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
@@ -13,8 +17,11 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.RegisterEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import slimeknights.tconstruct.library.modifiers.fluid.FluidEffect;
+import slimeknights.tconstruct.library.modifiers.modules.ModifierModule;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(TinkersInnovation.MOD_ID)
@@ -35,6 +42,7 @@ public class TinkersInnovation {
         MinecraftForge.EVENT_BUS.register(this);
         bus.addListener(this::setup);
         bus.addListener(this::setupClient);
+        bus.addListener(this::registerSerializers);
         TinkersInnovationModifiers.MODIFIERS.register(bus);
         TinkersInnovationBlocks.BLOCKS.register(bus);
         TinkersInnovationItems.ITEMS.register(bus);
@@ -77,5 +85,12 @@ public class TinkersInnovation {
         }
         if (event.includeServer()) {
         } //两个大括号内的内容暂时不用填写
+    }
+    void registerSerializers(RegisterEvent event){
+        if (event.getRegistryKey() == Registries.RECIPE_SERIALIZER){
+            FluidEffect.registerGeneral(TinkersInnovation.getResource("spawn_lightning_bolt"), SpawnLightningBoltFluidEffect.LOADER);
+            ModifierModule.LOADER.register(TinkersInnovation.getResource("fiery_bomb"), FieryBombModule.LOADER);
+            ModifierModule.LOADER.register(TinkersInnovation.getResource("freezing_bomb"), FreezingBombModule.LOADER);
+        }
     }
 }

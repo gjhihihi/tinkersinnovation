@@ -1,8 +1,10 @@
 package com.gjhi.tinkersinnovation.library.modifiers;
 
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
+import slimeknights.tconstruct.common.TinkerDamageTypes;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.ModifierHooks;
@@ -27,7 +29,7 @@ public class FlameBurningModifier extends Modifier implements OnAttackedModifier
         if (target != null){
             int time = target.getRemainingFireTicks();
             if (time > 0){
-                target.hurt(target.damageSources().onFire(), time / 200.0f);
+                target.hurt(TinkerDamageTypes.source(target.level().registryAccess(), DamageTypes.ON_FIRE, context.getEntity()), time / 200.0f);
             }
             target.setRemainingFireTicks(target.getRemainingFireTicks() + 60);
         }

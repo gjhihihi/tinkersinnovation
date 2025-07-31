@@ -1,6 +1,0 @@
-{
-  "parent": "forge:item/bucket_drip",
-  "flip_gas": false,
-  "loader": "tconstruct:fluid_container",
-  "fluid": "tinkersinnovation:molten_blood"
-}

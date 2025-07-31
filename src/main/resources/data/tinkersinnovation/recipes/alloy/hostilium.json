@@ -1,5 +1,11 @@
 {
   "type": "tconstruct:alloy",
+  "conditions": [
+    {
+      "modid": "l2hostility",
+      "type": "forge:mod_loaded"
+    }
+  ],
   "result": {
     "fluid": "tinkersinnovation:molten_hostilium",
     "amount": 180

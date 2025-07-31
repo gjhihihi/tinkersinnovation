@@ -1,0 +1,24 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:true"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "tinkersinnovation:mudslime_block"
+          }
+        ],
+        "result": {
+          "item": "tinkersinnovation:mudslime_ingot",
+          "count": 9
+        }
+      }
+    }
+  ]
+}

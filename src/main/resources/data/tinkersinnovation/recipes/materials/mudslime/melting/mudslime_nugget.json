@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkersinnovation:mudslime_nugget"
+  },
+  "result": {
+    "fluid": "tinkersinnovation:molten_mudslime",
+    "amount": 10
+  },
+  "temperature": 560,
+  "time": 45
+}

@@ -1,5 +1,7 @@
 package com.gjhi.tinkersinnovation.library.modifiers;
 
+import com.gjhi.tinkersinnovation.library.modifiers.base.ChaosDamageTypesBase;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
@@ -7,6 +9,7 @@ import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.phys.EntityHitResult;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import slimeknights.tconstruct.common.TinkerDamageTypes;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.ModifierHooks;
@@ -30,16 +33,17 @@ public class ChaosModifier extends Modifier implements MeleeDamageModifierHook, 
     }
     @Override
     public boolean onProjectileHitEntity(ModifierNBT modifiers, ModDataNBT persistentData, ModifierEntry modifier, Projectile projectile, EntityHitResult hit, @Nullable LivingEntity attacker, @Nullable LivingEntity target) {
-        if (target != null && attacker != null && projectile instanceof AbstractArrow arrow) {
+        if (target != null && projectile instanceof AbstractArrow arrow) {
+            target.hurt(TinkerDamageTypes.source(target.level().registryAccess(), ChaosDamageTypesBase.getChaosDamageType(), projectile, attacker), 2 * modifier.getLevel());
         }
         return false;
     }
 
     @Override
     public float getMeleeDamage(@NotNull IToolStackView tool, @NotNull ModifierEntry modifier, ToolAttackContext context, float baseDamage, float damage) {
-        Player player = context.getPlayerAttacker();
         LivingEntity target = context.getLivingTarget();
         if (target != null) {
+            target.hurt(TinkerDamageTypes.source(target.level().registryAccess(), ChaosDamageTypesBase.getChaosDamageType(), context.getAttacker()), 2 * modifier.getLevel());
         }
         return damage;
     }

@@ -4,25 +4,23 @@ import com.gjhi.tinkersinnovation.library.items.efln_arrow.IEFLNArrow;
 import com.gjhi.tinkersinnovation.library.items.skelewag_sword.SkelewagSwordItem;
 import com.gjhi.tinkersinnovation.library.items.tinker_bomb.IBomb;
 import com.gjhi.tinkersinnovation.library.items.tinker_bomb.TinkerBombItem;
-import com.gjhi.tinkersinnovation.library.stats.BombCoreStats;
 import com.gjhi.tinkersinnovation.library.stats.ShieldMaterialStats;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.*;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import slimeknights.mantle.registration.deferred.SynchronizedDeferredRegister;
 import slimeknights.tconstruct.fluids.item.ContainerFoodItem;
 import slimeknights.tconstruct.library.tools.item.ModifiableItem;
 import slimeknights.tconstruct.library.tools.item.ranged.ModifiableLauncherItem;
 import slimeknights.tconstruct.library.tools.part.ToolPartItem;
-import slimeknights.tconstruct.tools.TinkerToolParts;
+import slimeknights.tconstruct.tools.stats.LimbMaterialStats;
 
-import static com.gjhi.tinkersinnovation.TinkersInnovation.*;
+import static com.gjhi.tinkersinnovation.TinkersInnovation.MOD_ID;
 
 public class TinkersInnovationItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MOD_ID);
@@ -52,6 +50,7 @@ public class TinkersInnovationItems {
     public static RegistryObject<Item> farseeing_alloy_ingot = ITEMS.register("farseeing_alloy_ingot", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> sunsoul_alloy_ingot = ITEMS.register("sunsoul_alloy_ingot", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> straddlite_alloy_ingot = ITEMS.register("straddlite_alloy_ingot", TinkersInnovationItems::register_item);
+    public static RegistryObject<Item> mudslime_ingot = ITEMS.register("mudslime_ingot", TinkersInnovationItems::register_item);
     //nuggets
     public static RegistryObject<Item> polychrome_alloy_nugget = ITEMS.register("polychrome_alloy_nugget", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> void_crystal_nugget = ITEMS.register("void_crystal_nugget", TinkersInnovationItems::register_item);
@@ -68,6 +67,7 @@ public class TinkersInnovationItems {
     public static RegistryObject<Item> farseeing_alloy_nugget = ITEMS.register("farseeing_alloy_nugget", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> sunsoul_alloy_nugget = ITEMS.register("sunsoul_alloy_nugget", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> straddlite_alloy_nugget = ITEMS.register("straddlite_alloy_nugget", TinkersInnovationItems::register_item);
+    public static RegistryObject<Item> mudslime_nugget= ITEMS.register("mudslime_nugget", TinkersInnovationItems::register_item);
     //blocks
     public static RegistryObject<Item> polychrome_alloy_block = ITEMS.register("polychrome_alloy_block", () -> register_block(TinkersInnovationBlocks.polychrome_alloy_block.get()));
     public static RegistryObject<Item> void_crystal_block = ITEMS.register("void_crystal_block", () -> register_block(TinkersInnovationBlocks.void_crystal_block.get()));
@@ -84,6 +84,7 @@ public class TinkersInnovationItems {
     public static RegistryObject<Item> farseeing_alloy_block = ITEMS.register("farseeing_alloy_block", () -> register_block(TinkersInnovationBlocks.farseeing_alloy_block.get()));
     public static RegistryObject<Item> sunsoul_alloy_block = ITEMS.register("sunsoul_alloy_block", () -> register_block(TinkersInnovationBlocks.sunsoul_alloy_block.get()));
     public static RegistryObject<Item> straddlite_alloy_block = ITEMS.register("straddlite_alloy_block", () -> register_block(TinkersInnovationBlocks.straddlite_alloy_block.get()));
+    public static RegistryObject<Item> mudslime_block = ITEMS.register("mudslime_block", () -> register_block(TinkersInnovationBlocks.mudslime_block.get()));
     //ores
     public static RegistryObject<Item> void_crystal_ore = ITEMS.register("void_crystal_ore", () -> register_block(TinkersInnovationBlocks.void_crystal_ore.get()));
     public static RegistryObject<Item> seared_bedrock = ITEMS.register("seared_bedrock", () -> register_block(TinkersInnovationBlocks.seared_bedrock.get()));
@@ -97,7 +98,7 @@ public class TinkersInnovationItems {
     public static RegistryObject<Item> heavy_shield_plate_cast = ITEMS.register("heavy_shield_plate_cast", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> heavy_shield_plate_sand_cast = ITEMS.register("heavy_shield_plate_sand_cast", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> heavy_shield_plate_red_sand_cast = ITEMS.register("heavy_shield_plate_red_sand_cast", TinkersInnovationItems::register_item);
-    public static final RegistryObject<ToolPartItem> bomb_core = TOOLS.register("bomb_core", () -> new ToolPartItem(PARTS_PROPS, BombCoreStats.ID));
+    public static final RegistryObject<ToolPartItem> bomb_core = TOOLS.register("bomb_core", () -> new ToolPartItem(PARTS_PROPS, LimbMaterialStats.ID));
     //tools
     public static final RegistryObject<ModifiableItem> claw = TOOLS.register("claw", () -> new ModifiableItem(TOOL, TinkersInnovationToolsDefinition.Claw));
     public static final RegistryObject<ModifiableItem> heavy_shield = TOOLS.register("heavy_shield", () -> new ModifiableItem(TOOL, TinkersInnovationToolsDefinition.HeavyShield));

@@ -1,0 +1,22 @@
+{
+  "type": "tconstruct:alloy",
+  "result": {
+    "fluid": "tinkersinnovation:molten_mudslime",
+    "amount": 90
+  },
+  "inputs": [
+    {
+      "amount": 90,
+      "tag": "forge:molten_copper"
+    },
+    {
+      "fluid": "minecraft:water",
+      "amount": 50
+    },
+    {
+      "tag": "tconstruct:molten_clay",
+      "amount": 250
+    }
+  ],
+  "temperature": 560
+}

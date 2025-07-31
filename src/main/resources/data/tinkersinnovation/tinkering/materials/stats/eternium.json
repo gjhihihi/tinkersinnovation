@@ -62,14 +62,8 @@
       "block_amount": 1.0,
       "shield_amount": 80
     },
-    "tinkersinnovation:bomb_core": {
-      "durability": 1.0,
-      "bomb_radius": 4,
-      "velocity": 0.25,
-      "accuracy": -0.1
-    },
     "tinkersinnovation:bomb_shell": {
-      "durability": 9999,
+      "bomb_radius": 4,
       "piece_count": 2,
       "piece_damage": 5,
       "melee_range_damage": 3.5

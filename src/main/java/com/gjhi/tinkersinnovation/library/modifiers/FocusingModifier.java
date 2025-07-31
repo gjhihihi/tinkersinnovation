@@ -1,6 +1,7 @@
 package com.gjhi.tinkersinnovation.library.modifiers;
 
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.phys.EntityHitResult;
@@ -28,7 +29,7 @@ public class FocusingModifier extends Modifier implements MeleeHitModifierHook, 
         if (target != null){
             int time = target.getRemainingFireTicks();
             if (time > 0){
-                target.hurt(target.damageSources().onFire(), time / 200f);
+                target.hurt(TinkerDamageTypes.source(target.level().registryAccess(), DamageTypes.ON_FIRE, attacker), time / 200f);
             }
             target.setRemainingFireTicks(target.getRemainingFireTicks() + 60);
         }
@@ -41,8 +42,7 @@ public class FocusingModifier extends Modifier implements MeleeHitModifierHook, 
         if (target != null){
             int time = target.getRemainingFireTicks();
             if (time > 0){
-                target.invulnerableTime = 0;
-                target.hurt(target.damageSources().onFire(), time / 200f);
+                target.hurt(TinkerDamageTypes.source(target.level().registryAccess(), DamageTypes.ON_FIRE, context.getAttacker()), time / 200f);
             }
             target.setRemainingFireTicks(target.getRemainingFireTicks() + 60);
         }

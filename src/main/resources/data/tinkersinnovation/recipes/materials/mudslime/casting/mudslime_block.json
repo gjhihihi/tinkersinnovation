@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:casting_basin",
+  "fluid": {
+    "name": "tinkersinnovation:molten_mudslime",
+    "amount": 810
+  },
+  "result": "tinkersinnovation:mudslime_block",
+  "cooling_time": 180
+}

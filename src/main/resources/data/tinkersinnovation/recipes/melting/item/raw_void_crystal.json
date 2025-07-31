@@ -8,12 +8,16 @@
     "fluid": "tinkersinnovation:molten_void_crystal",
     "amount": 90
   },
-  "temperature": 900,
-  "time": 200,
   "byproducts": [
     {
       "fluid": "tconstruct:molten_amethyst",
       "amount": 10
+    },
+    {
+      "fluid": "tinkersinnovation:lightning",
+      "amount": 10
     }
-  ]
+  ],
+  "temperature": 900,
+  "time": 200
 }

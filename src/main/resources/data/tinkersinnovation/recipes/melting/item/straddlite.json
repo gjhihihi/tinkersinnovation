@@ -1,11 +1,12 @@
 {
-  "type": "tconstruct:melting",
+  "type": "tconstruct:ore_melting",
   "conditions": [
     {
       "modid": "alexsmobs",
       "type": "forge:mod_loaded"
     }
   ],
+  "rate": "gem",
   "ingredient": {
     "item": "alexsmobs:straddlite"
   },
@@ -13,6 +14,13 @@
     "fluid": "tinkersinnovation:molten_straddlite",
     "amount": 90
   },
+  "byproducts": [
+    {
+      "amount": 30,
+      "fluid": "tconstruct:molten_diamond",
+      "rate": "gem"
+    }
+  ],
   "temperature": 1050,
   "time": 200
 }

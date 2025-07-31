@@ -7,11 +7,11 @@
   "inputs": [
     {
       "tag": "tconstruct:molten_amethyst_bronze",
-      "amount": 200
+      "amount": 180
     },
     {
       "tag": "forge:molten_gold",
-      "amount": 200
+      "amount": 180
     },
     {
       "tag": "tconstruct:sky_slime",

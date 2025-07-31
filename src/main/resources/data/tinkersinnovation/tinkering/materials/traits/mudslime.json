@@ -1,0 +1,12 @@
+{
+  "default": [
+    {
+      "level": 1,
+      "name": "tconstruct:overslime"
+    },
+    {
+      "name": "tinkersinnovation:overtrip",
+      "level": 1
+    }
+  ]
+}

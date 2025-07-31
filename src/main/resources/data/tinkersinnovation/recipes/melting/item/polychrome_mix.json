@@ -1,5 +1,6 @@
 {
-  "type": "tconstruct:melting",
+  "type": "tconstruct:ore_melting",
+  "rate": "metal",
   "ingredient": {
     "item": "tinkersinnovation:polychrome_mix"
   },
@@ -7,6 +8,13 @@
     "fluid": "tinkersinnovation:molten_polychrome_alloy",
     "amount": 90
   },
+  "byproducts": [
+    {
+      "amount": 30,
+      "rate": "metal",
+      "tag": "forge:molten_netherite"
+    }
+  ],
   "temperature": 1200,
   "time": 200
 }

@@ -1,5 +1,11 @@
 {
   "type": "tconstruct:modifier",
+  "conditions": [
+    {
+      "modid": "l2complements",
+      "type": "forge:mod_loaded"
+    }
+  ],
   "inputs": [
     {
       "item": "tinkersinnovation:polychrome_alloy_ingot"

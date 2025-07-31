@@ -15,5 +15,10 @@
   "craftable": false,
   "tier": 4,
   "sortOrder": 5,
-  "hidden": false
+  "hidden": false,
+  "redirect": [
+    {
+      "id": "tconstruct:rose_gold"
+    }
+  ]
 }

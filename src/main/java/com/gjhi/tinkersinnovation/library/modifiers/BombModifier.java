@@ -41,7 +41,7 @@ public class BombModifier extends NoLevelsModifier implements ProjectileHitModif
         return 1;
     }
 
-    private boolean onBombHit (ModifierNBT modifiers, ModDataNBT persistentData, ModifierEntry modifier, Projectile projectile, @Nullable LivingEntity attacker){
+    private boolean onBombHit(ModifierNBT modifiers, ModDataNBT persistentData, ModifierEntry modifier, Projectile projectile, @Nullable LivingEntity attacker){
         if (attacker != null && projectile instanceof EBomb bomb) {
             ToolStack tool = getHeldTool(attacker, attacker.getUsedItemHand());
             if (tool != null) {

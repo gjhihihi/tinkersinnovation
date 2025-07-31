@@ -1,5 +1,6 @@
 package com.gjhi.tinkersinnovation.library.modifiers;
 
+import com.gjhi.tinkersinnovation.register.TinkersInnovationDamageTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -23,6 +24,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.Event;
 import org.jetbrains.annotations.NotNull;
+import slimeknights.tconstruct.common.TinkerDamageTypes;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.ModifierHooks;
@@ -195,7 +197,7 @@ public class VoidModifier extends Modifier implements ProjectileHitModifierHook,
         float voiddamage = damage * 0.05f * modifier.getLevel();
         LivingEntity entity = context.getLivingTarget();
         if (entity != null) {
-            entity.hurt(context.getAttacker().damageSources().fellOutOfWorld(), voiddamage);
+            entity.hurt(TinkerDamageTypes.source(entity.level().registryAccess(), TinkersInnovationDamageTypes.VOID), voiddamage);
             return damage - voiddamage;
         }
         return damage;

@@ -5,8 +5,8 @@
       "effects": [
         {
           "effect": "minecraft:regeneration",
-          "level": 2,
-          "time": 60
+          "level": 3,
+          "time": 120
         }
       ]
     }
@@ -16,8 +16,8 @@
       "type": "tconstruct:mob_effect",
       "action": "set",
       "effect": "minecraft:regeneration",
-      "level": 2,
-      "time": 60
+      "level": 3,
+      "time": 120
     },
     {
       "type": "tconstruct:remove_effect",
@@ -33,7 +33,7 @@
     }
   ],
   "fluid": {
-    "amount": 20,
+    "amount": 10,
     "tag": "tinkersinnovation:molten_totemic_gold"
   }
 }

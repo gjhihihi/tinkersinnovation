@@ -39,9 +39,11 @@ public class EnchantmentModifier extends Modifier implements MeleeHitModifierHoo
         LivingEntity player = context.getAttacker();
         LivingEntity target = context.getLivingTarget();
         if (target != null) {
-            for (MobEffect effect : EnchantmentEffectsBase.getBadEffectsByCopy()){
-                if (RANDOM.nextFloat() < 0.1){
-                    TinkersInnovationUtils.updateEffect(target, effect, 1, 2 * level, 40 * level);
+            if (target.isAlive()) {
+                for (MobEffect effect : EnchantmentEffectsBase.getBadEffectsByCopy()) {
+                    if (RANDOM.nextFloat() < 0.1) {
+                        TinkersInnovationUtils.updateEffect(target, effect, 1, 2 * level, 40 * level);
+                    }
                 }
             }
             for (MobEffect effect : EnchantmentEffectsBase.getGoodEffectsByCopy()){
@@ -54,7 +56,7 @@ public class EnchantmentModifier extends Modifier implements MeleeHitModifierHoo
     @Override
     public boolean onProjectileHitEntity(ModifierNBT modifiers, ModDataNBT persistentData, @NotNull ModifierEntry modifier, @NotNull Projectile projectile, EntityHitResult hit, @Nullable LivingEntity player, @Nullable LivingEntity target) {
         int level = modifier.getLevel();
-        if (target != null) {
+        if (target != null && target.isAlive()) {
             for (MobEffect effect : EnchantmentEffectsBase.getBadEffectsByCopy()){
                 if (RANDOM.nextFloat() < 0.1){
                     TinkersInnovationUtils.updateEffect(target, effect, 1, 2 * level, 40 * level);

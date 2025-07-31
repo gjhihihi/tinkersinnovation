@@ -6,7 +6,7 @@
         {
           "effect": "minecraft:wither",
           "level": 2,
-          "time": 100
+          "time": 120
         }
       ]
     }
@@ -16,10 +16,11 @@
       "type": "tconstruct:conditional",
       "effect": {
         "type": "tconstruct:damage",
-        "damage": 1.0,
-        "modifier": [
-          "tconstruct:fire"
-        ]
+        "damage": 2.0,
+        "damage_type": {
+          "melee": "tconstruct:fluid_fire_melee",
+          "ranged": "tconstruct:fluid_fire_ranged"
+        }
       },
       "target": {
         "type": "mantle:inverted",
@@ -28,14 +29,14 @@
     },
     {
       "type": "tconstruct:mob_effect",
-      "action": "set",
+      "action": "add",
       "effect": "minecraft:wither",
       "level": 2,
-      "time": 100
+      "time": 120
     }
   ],
   "fluid": {
-    "amount": 50,
+    "amount": 10,
     "tag": "tinkersinnovation:molten_decline"
   }
 }

@@ -12,7 +12,7 @@
       "materials": [
         {
           "type": "tconstruct:random",
-          "tier": 1
+          "allow_hidden": true
         }
       ]
     },
@@ -35,14 +35,14 @@
     {
       "type": "tconstruct:modifier_slots",
       "slots": {
-        "abilities": 1,
-        "upgrades": 4
+        "abilities": 2,
+        "upgrades": 3
       }
     },
     {
       "type": "tconstruct:material_repair",
-      "durability": 20,
-      "material": "minecraft:bone"
+      "material": "tconstruct:bone",
+      "stat_type": "tconstruct:head"
     },
     {
       "type": "tconstruct:traits",
@@ -74,15 +74,6 @@
         "minecraft:cobweb"
       ],
       "modifier": 7.5,
-      "predicate_type": "mantle:set"
-    },
-    {
-      "type": "tconstruct:mining_speed_modifier",
-      "blocks": [
-        "minecraft:bamboo",
-        "minecraft:bamboo_sapling"
-      ],
-      "modifier": 100.0,
       "predicate_type": "mantle:set"
     },
     {

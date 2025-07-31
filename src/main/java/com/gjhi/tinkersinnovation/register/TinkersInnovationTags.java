@@ -33,6 +33,7 @@ public class TinkersInnovationTags {
     }
     public static class EntityTypes{
         public static final TagKey<EntityType<?>> ANIMALS = tag("animals");
+        public static final TagKey<EntityType<?>> WITHERS = tag("withers");
         private static TagKey<EntityType<?>> tag(String path) {
             return TagKey.create(Registries.ENTITY_TYPE, TinkersInnovation.getResource(path));
         }

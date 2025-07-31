@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "tag": "forge:molten_zinc",
+    "amount": 90
+  },
+  "temperature": 420,
+  "output": "tinkersinnovation:zinc"
+}

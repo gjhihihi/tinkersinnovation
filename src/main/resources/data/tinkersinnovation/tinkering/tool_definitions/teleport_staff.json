@@ -12,10 +12,12 @@
       "type": "tconstruct:default_materials",
       "materials": [
         {
-          "type": "tconstruct:random"
+          "type": "tconstruct:random",
+          "allow_hidden": true
         },
         {
-          "type": "tconstruct:random"
+          "type": "tconstruct:random",
+          "allow_hidden": true
         }
       ]
     },
@@ -24,8 +26,8 @@
       "hooks": [
         "tconstruct:rebalanced_trait"
       ],
-      "material_index": 0,
-      "stat_type": "tconstruct:head"
+      "material_index": 1,
+      "stat_type": "tconstruct:handle"
     },
     {
       "type": "tconstruct:base_stats",

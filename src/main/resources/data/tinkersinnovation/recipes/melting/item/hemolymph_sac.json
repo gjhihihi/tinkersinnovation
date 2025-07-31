@@ -10,7 +10,7 @@
     "item": "alexsmobs:hemolymph_sac"
   },
   "result": {
-    "fluid": "tinkersinnovation:molten_hemolymph",
+    "fluid": "tinkersinnovation:hemolymph",
     "amount": 250
   },
   "temperature": 100,

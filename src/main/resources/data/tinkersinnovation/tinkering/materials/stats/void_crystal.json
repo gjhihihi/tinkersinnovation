@@ -23,12 +23,6 @@
       "durability": -0.1,
       "accuracy": -0.2,
       "melee_damage": 1.5
-    },
-    "tinkersinnovation:bomb_core": {
-      "durability": -0.15,
-      "bomb_radius": 3,
-      "velocity": 0.25,
-      "accuracy": -0.15
     }
   }
 }

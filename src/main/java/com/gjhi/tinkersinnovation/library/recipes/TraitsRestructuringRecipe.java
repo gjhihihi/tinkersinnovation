@@ -2,6 +2,7 @@ package com.gjhi.tinkersinnovation.library.recipes;
 
 import com.gjhi.tinkersinnovation.register.TinkersInnovationItems;
 import com.gjhi.tinkersinnovation.register.TinkersInnovationModifiers;
+import com.gjhi.tinkersinnovation.register.TinkersInnovationRecipes;
 import com.gjhi.tinkersinnovation.register.TinkersInnovationSlots;
 import com.google.gson.JsonObject;
 import net.minecraft.core.RegistryAccess;
@@ -148,23 +149,7 @@ public class TraitsRestructuringRecipe implements ITinkerStationRecipe {
 
     @Override
     public RecipeSerializer<?> getSerializer() {
-        return TRSerializer.INSTANCE;
+        return TinkersInnovationRecipes.TRAITS_RESTRUCTURING_RECIPE.get();
     }
 
-    public static class TRSerializer implements RecipeSerializer<TraitsRestructuringRecipe>{
-        public static final TRSerializer INSTANCE = new TRSerializer();
-        @Override
-        public TraitsRestructuringRecipe fromJson(ResourceLocation resource, JsonObject json) {
-            return new TraitsRestructuringRecipe(resource);
-        }
-
-        @Override
-        public @Nullable TraitsRestructuringRecipe fromNetwork(ResourceLocation resource, FriendlyByteBuf buffer) {
-            return new TraitsRestructuringRecipe(resource);
-        }
-
-        @Override
-        public void toNetwork(FriendlyByteBuf buffer, TraitsRestructuringRecipe recipe) {
-        }
-    }
 }

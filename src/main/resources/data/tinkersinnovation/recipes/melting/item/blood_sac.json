@@ -10,7 +10,7 @@
     "item": "alexsmobs:blood_sac"
   },
   "result": {
-    "fluid": "tinkersinnovation:molten_blood",
+    "fluid": "tinkersinnovation:blood",
     "amount": 250
   },
   "temperature": 100,

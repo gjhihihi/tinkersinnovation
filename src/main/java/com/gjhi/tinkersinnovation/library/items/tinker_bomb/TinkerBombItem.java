@@ -50,8 +50,10 @@ public class TinkerBombItem extends ModifiableLauncherItem {
         ToolStack tool = ToolStack.from(itemStack);
         ModDataNBT data = tool.getPersistentData();
         float velocity;
+        float draw_speed;
         if (!tool.isBroken()){
             velocity = ConditionalStatModifierHook.getModifiedStat(tool, player, ToolStats.VELOCITY);
+            draw_speed = ConditionalStatModifierHook.getModifiedStat(tool, player, ToolStats.DRAW_SPEED);
             float power = 0.75F * velocity;
             if(!level.isClientSide){
                 ItemStack ammo = IBomb.setAmmo();
@@ -79,14 +81,14 @@ public class TinkerBombItem extends ModifiableLauncherItem {
                     ModDataNBT arrowData = PersistentDataCapability.getOrWarn(arrow);
 
                     for (ModifierEntry entry : modifiers.getModifiers()) {
-                        entry.getHook(ModifierHooks.PROJECTILE_LAUNCH).onProjectileLaunch(tool, entry, player, arrow, arrow, arrowData, arrowIndex == primaryIndex);
+                        entry.getHook(ModifierHooks.PROJECTILE_LAUNCH).onProjectileLaunch(tool, entry, player, ammo, arrow, arrow, arrowData, arrowIndex == primaryIndex);
                     }
 
                     level.addFreshEntity(arrow);
                     level.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.ARROW_SHOOT  , SoundSource.PLAYERS, 1.0F, 1.0F / (level.getRandom().nextFloat() * 0.4F + 1.2F) * 0.5F + angle / 10.0F);
                 }
                 ToolDamageUtil.damageAnimated(tool, ammo.getCount(), player, hand);
-                player.getCooldowns().addCooldown(this, 30);
+                player.getCooldowns().addCooldown(this, Math.max((int)(20 / draw_speed), 1));
                 return InteractionResultHolder.consume(itemStack);
             }
         }else {

@@ -1,0 +1,40 @@
+{
+  "name": "minecraft:chests/end_city_treasure",
+  "pools": [
+    {
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "tconstruct:add_tool_data",
+              "materials": [
+                {
+                  "type": "tconstruct:random",
+                  "allow_hidden": true,
+                  "material": {
+                    "type": "mantle:inverted",
+                    "inverted_type": "mantle:tag",
+                    "tag": "tconstruct:exclude_from_loot"
+                  }
+                },
+                {
+                  "type": "tconstruct:random",
+                  "allow_hidden": true,
+                  "material": {
+                    "type": "mantle:inverted",
+                    "inverted_type": "mantle:tag",
+                    "tag": "tconstruct:exclude_from_loot"
+                  }
+                }
+              ]
+            }
+          ],
+          "name": "tinkersinnovation:teleport_staff",
+          "weight": 3
+        }
+      ],
+      "name": "main"
+    }
+  ]
+}

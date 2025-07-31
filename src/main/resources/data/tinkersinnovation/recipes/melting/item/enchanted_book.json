@@ -1,6 +1,5 @@
 {
-  "type": "tconstruct:ore_melting",
-  "rate": "gem",
+  "type": "tconstruct:melting",
   "ingredient": {
     "item": "minecraft:enchanted_book"
   },

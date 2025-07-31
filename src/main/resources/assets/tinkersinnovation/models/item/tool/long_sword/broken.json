@@ -14,5 +14,5 @@
     { "name": "handle", "index": 1 },
     { "name": "head",   "index": 0 },
     { "name": "guard",  "index": 2 }
-  ],
+  ]
 }

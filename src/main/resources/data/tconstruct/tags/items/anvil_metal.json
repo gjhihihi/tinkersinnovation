@@ -10,6 +10,7 @@
     "tinkersinnovation:farseeing_alloy_block",
     "tinkersinnovation:sunsoul_alloy_block",
     "tinkersinnovation:straddlite_alloy_block",
+    "tinkersinnovation:mudslime_block",
     {
       "id": "l2complements:totemic_gold_block",
       "required": false

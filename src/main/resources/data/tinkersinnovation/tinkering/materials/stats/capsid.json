@@ -27,7 +27,7 @@
     "tconstruct:maille": {},
     "tconstruct:shield_core": {},
     "tinkersinnovation:bomb_shell": {
-      "durability": 150,
+      "bomb_radius": 2,
       "piece_count": 10,
       "piece_damage": 0.5,
       "melee_range_damage": 1.5

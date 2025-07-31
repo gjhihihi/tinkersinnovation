@@ -19,7 +19,18 @@ import java.util.List;
 
 public record ShieldMaterialStats(int durability, float armor, float toughness, float knockback_resistance, float block_amount, int shield_amount) implements IRepairableMaterialStats {
     public static final MaterialStatsId ID = new MaterialStatsId(TinkersInnovation.getResource("shield_plate"));
-    public static final MaterialStatType<ShieldMaterialStats> TYPE = new MaterialStatType(ID, new ShieldMaterialStats(1, 0, 0, 0, 0, 1), RecordLoadable.create(IRepairableMaterialStats.DURABILITY_FIELD,FloatLoadable.FROM_ZERO.defaultField("armor",0f, true, ShieldMaterialStats::armor),FloatLoadable.FROM_ZERO.defaultField("toughness", 0f, true, ShieldMaterialStats::toughness),FloatLoadable.FROM_ZERO.defaultField("knockback_resistance", 0f, true, ShieldMaterialStats::knockback_resistance),FloatLoadable.ANY.defaultField("block_amount", 0f, true, ShieldMaterialStats::block_amount), IntLoadable.FROM_ZERO.defaultField("shield_amount", 5, true, ShieldMaterialStats::shield_amount), ShieldMaterialStats::new));
+    public static final MaterialStatType<ShieldMaterialStats> TYPE = new MaterialStatType(
+            ID,
+            new ShieldMaterialStats(1, 0, 0, 0, 0, 1),
+            RecordLoadable.create(IRepairableMaterialStats.DURABILITY_FIELD,
+                    FloatLoadable.FROM_ZERO.defaultField("armor",0f, true, ShieldMaterialStats::armor),
+                    FloatLoadable.FROM_ZERO.defaultField("toughness", 0f, true, ShieldMaterialStats::toughness),
+                    FloatLoadable.FROM_ZERO.defaultField("knockback_resistance", 0f, true, ShieldMaterialStats::knockback_resistance),
+                    FloatLoadable.ANY.defaultField("block_amount", 0f, true, ShieldMaterialStats::block_amount),
+                    IntLoadable.FROM_ZERO.defaultField("shield_amount", 5, true, ShieldMaterialStats::shield_amount),
+                    ShieldMaterialStats::new
+            )
+    );
     private static final List<Component> DESCRIPTION = ImmutableList.of(ToolStats.DURABILITY.getDescription(), ToolStats.ARMOR.getDescription(), ToolStats.ARMOR_TOUGHNESS.getDescription(), ToolStats.KNOCKBACK_RESISTANCE.getDescription(), ToolStats.BLOCK_AMOUNT.getDescription(), TinkersInnovationToolStats.SHIELD_AMOUNT.getDescription());
 
     @Override

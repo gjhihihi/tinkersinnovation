@@ -1,9 +1,9 @@
 package com.gjhi.tinkersinnovation.register;
 
 import com.gjhi.tinkersinnovation.library.effects.CalibrationEffect;
-import com.gjhi.tinkersinnovation.library.effects.NotHungryEffect;
 import com.gjhi.tinkersinnovation.library.effects.PetrifiedCooldownEffect;
 import com.gjhi.tinkersinnovation.library.effects.SoulDevouringEffect;
+import com.gjhi.tinkersinnovation.library.effects.ThunderTribulationEffect;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -18,5 +18,5 @@ public class TinkersInnovationEffects {
     public static RegistryObject<TinkerEffect> petrifiedCooldownEffect = MOB_EFFECTS.register("petrified_cooldown", PetrifiedCooldownEffect::new);
     public static RegistryObject<TinkerEffect> soulDevouringEffect = MOB_EFFECTS.register("soul_devouring", SoulDevouringEffect::new);
     public static RegistryObject<TinkerEffect> calibrationEffect = MOB_EFFECTS.register("calibration", CalibrationEffect::new);
-    public static RegistryObject<TinkerEffect> notHungryEffect = MOB_EFFECTS.register("not_hungry", NotHungryEffect::new);
+    public static RegistryObject<TinkerEffect> thunderTribulationEffect = MOB_EFFECTS.register("thunder_tribulation", ThunderTribulationEffect::new);
 }

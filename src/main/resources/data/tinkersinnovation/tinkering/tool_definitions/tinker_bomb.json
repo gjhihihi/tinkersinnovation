@@ -4,7 +4,7 @@
       "type": "tconstruct:material_stats",
       "primary_part": 1,
       "stat_types": [
-        "tinkersinnovation:bomb_core",
+        "tconstruct:limb",
         "tinkersinnovation:bomb_shell"
       ]
     },
@@ -37,7 +37,6 @@
       "type": "tconstruct:multiply_stats",
       "multipliers": {
         "tconstruct:durability": 0.1,
-        "tconstruct:overslime": 0.1,
         "tconstruct:velocity": 0.3
       }
     },

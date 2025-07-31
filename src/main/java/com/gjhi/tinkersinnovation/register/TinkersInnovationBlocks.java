@@ -31,8 +31,9 @@ public class TinkersInnovationBlocks {
     public static RegistryObject<Block> farseeing_alloy_block = BLOCKS.register("farseeing_alloy_block", () -> new Block(METAL));
     public static RegistryObject<Block> sunsoul_alloy_block = BLOCKS.register("sunsoul_alloy_block", () -> new Block(METAL));
     public static RegistryObject<Block> straddlite_alloy_block = BLOCKS.register("straddlite_alloy_block", () -> new Block(METAL));
+    public static RegistryObject<Block> mudslime_block = BLOCKS.register("mudslime_block", () -> new Block(GLASS_METAL));
 
-    public static RegistryObject<Block> void_crystal_ore = BLOCKS.register("void_crystal_ore", () -> new Block(DEEPSLATE_ORE));
+    public static RegistryObject<Block> void_crystal_ore = BLOCKS.register("void_crystal_ore", () -> new Block(DEEPSLATE_ORE.strength(2.5f, 1200)));
     public static RegistryObject<Block> seared_bedrock = BLOCKS.register("seared_bedrock", () -> new Block(BEDROCK));
     public static RegistryObject<Block> scorched_bedrock = BLOCKS.register("scorched_bedrock", () -> new Block(BEDROCK));
 

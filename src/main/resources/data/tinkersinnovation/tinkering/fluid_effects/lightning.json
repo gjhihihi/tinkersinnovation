@@ -1,0 +1,38 @@
+{
+  "block_effects": [
+    {
+      "type": "tinkersinnovation:spawn_lightning_bolt",
+      "damage": 5
+    }
+  ],
+  "entity_effects": [
+    {
+      "type": "tconstruct:conditional",
+      "effect": {
+        "type": "tconstruct:damage",
+        "damage": 4.0,
+        "damage_type": {
+          "melee": "tconstruct:fluid_fire_melee",
+          "ranged": "tconstruct:fluid_fire_ranged"
+        }
+      },
+      "target": {
+        "type": "mantle:inverted",
+        "inverted_type": "mantle:fire_immune"
+      }
+    },
+    {
+      "type": "tconstruct:fire",
+      "action": "add",
+      "time": 4
+    },
+    {
+      "type": "tinkersinnovation:spawn_lightning_bolt",
+      "damage": 5
+    }
+  ],
+  "fluid": {
+    "amount": 50,
+    "tag": "tinkersinnovation:lightning"
+  }
+}

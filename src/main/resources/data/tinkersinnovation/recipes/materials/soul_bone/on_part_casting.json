@@ -2,7 +2,7 @@
   "type": "tconstruct:material_fluid",
   "fluid": {
     "amount": 200,
-    "tag": "tinkersinnovation:molten_blazing_soul"
+    "tag": "tinkersinnovation:blazing_soul"
   },
   "input": "tconstruct:blazing_bone",
   "output": "tinkersinnovation:soul_bone",

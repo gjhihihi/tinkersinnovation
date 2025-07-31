@@ -1,5 +1,11 @@
 {
   "type": "tconstruct:alloy",
+  "conditions": [
+    {
+      "modid": "alexsmobs",
+      "type": "forge:mod_loaded"
+    }
+  ],
   "result": {
     "fluid": "tinkersinnovation:molten_straddlite_alloy",
     "amount": 30

@@ -6,30 +6,45 @@
         {
           "effect": "minecraft:conduit_power",
           "level": 1,
-          "time": 100
+          "time": 120
         },
         {
           "effect": "minecraft:dolphins_grace",
           "level": 1,
-          "time": 100
+          "time": 120
         }
       ]
     }
   ],
   "entity_effects": [
     {
+      "type": "tconstruct:conditional",
+      "effect": {
+        "type": "tconstruct:damage",
+        "damage": 4.0,
+        "damage_type": {
+          "melee": "tconstruct:water_melee",
+          "ranged": "tconstruct:water_ranged"
+        }
+      },
+      "target": "mantle:water_sensitive"
+    },
+    {
+      "type": "tconstruct:extinguish"
+    },
+    {
       "type": "tconstruct:mob_effect",
       "action": "set",
       "effect": "minecraft:conduit_power",
       "level": 1,
-      "time": 100
+      "time": 120
     },
     {
       "type": "tconstruct:mob_effect",
       "action": "set",
       "effect": "minecraft:dolphins_grace",
       "level": 1,
-      "time": 100
+      "time": 120
     },
     {
       "type": "tconstruct:remove_effect",

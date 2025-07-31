@@ -4,21 +4,29 @@
       {
         "name": "tinkersinnovation:wither_killer",
         "level": 1
+      },
+      {
+        "name": "tinkersinnovation:adversity_resistance",
+        "level": 1
       }
     ],
     "tconstruct:ranged": [
       {
-        "name": "tinkersinnovation:wither_skull",
+        "name": "tinkersinnovation:wither_killer",
         "level": 1
       },
       {
-        "name": "tinkersinnovation:wither_killer",
+        "name": "tinkersinnovation:adversity_resistance",
         "level": 1
       }
     ],
     "tconstruct:armor": [
       {
         "name": "tinkersinnovation:wither_protection",
+        "level": 1
+      },
+      {
+        "name": "tinkersinnovation:adversity_protection",
         "level": 1
       }
     ]

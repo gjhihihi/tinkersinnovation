@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "conditions": [
+    {
+      "modid": "alexsmobs",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "pattern": [
+    "ACA",
+    "BDB",
+    "ACA"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:netherite_scrap"
+    },
+    "B": {
+      "item": "alexsmobs:farseer_arm"
+    },
+    "C": {
+      "item": "alexsmobs:void_worm_mandible"
+    },
+    "D": {
+      "item": "alexsmobs:void_worm_eye"
+    }
+  },
+  "result": {
+    "item": "tinkersinnovation:farseeing_alloy_ingot"
+  }
+}

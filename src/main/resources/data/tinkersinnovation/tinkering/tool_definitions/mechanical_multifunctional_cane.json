@@ -3,7 +3,7 @@
     {
       "type": "tconstruct:base_stats",
       "stats": {
-        "tconstruct:accuracy": 1.2,
+        "tconstruct:accuracy": 1,
         "tconstruct:projectile_damage": 2.0,
         "tconstruct:durability": 1000,
         "tconstruct:harvest_tier": "minecraft:gold",

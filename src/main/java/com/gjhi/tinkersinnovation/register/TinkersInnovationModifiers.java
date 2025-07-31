@@ -40,8 +40,9 @@ public class TinkersInnovationModifiers {
     public static StaticModifier<BlastingModifier> blasting = MODIFIERS.register("blasting", BlastingModifier::new);
     public static StaticModifier<ExplosiveModifier> explosive = MODIFIERS.register("explosive", ExplosiveModifier::new);
     public static StaticModifier<WitherKillerModifier> wither_killer = MODIFIERS.register("wither_killer", WitherKillerModifier::new);
-    public static StaticModifier<WitherSkullModifier> wither_skull = MODIFIERS.register("wither_skull", WitherSkullModifier::new);
+    public static StaticModifier<AdversityResistanceModifier> adversity_resistance = MODIFIERS.register("adversity_resistance", AdversityResistanceModifier::new);
     public static StaticModifier<WitherProtectionModifier> wither_protection = MODIFIERS.register("wither_protection", WitherProtectionModifier::new);
+    public static StaticModifier<AdversityProtectionModifier> adversity_protection = MODIFIERS.register("adversity_protection", AdversityProtectionModifier::new);
     public static StaticModifier<SculkModifier> sculk = MODIFIERS.register("sculk", SculkModifier::new);
     public static StaticModifier<EnvironmentRejectModifier> environment_reject = MODIFIERS.register("environment_reject", EnvironmentRejectModifier::new);
     public static StaticModifier<ProjectileRejectModifier> projectile_reject = MODIFIERS.register("projectile_reject", ProjectileRejectModifier::new);
@@ -93,11 +94,12 @@ public class TinkersInnovationModifiers {
     public static StaticModifier<BombLoverModifier> bomb_lover = MODIFIERS.register("bomb_lover", BombLoverModifier::new);
     public static StaticModifier<FarThrowModifier> far_throw = MODIFIERS.register("far_throw", FarThrowModifier::new);
     public static StaticModifier<LaceratingBombModifier> lacerating_bomb = MODIFIERS.register("lacerating_bomb", LaceratingBombModifier::new);
-    public static StaticModifier<FiredExplosionModifier> fired_explosion = MODIFIERS.register("fired_explosion", FiredExplosionModifier::new);
     public static StaticModifier<HoldSteadyModifier> thick_shield = MODIFIERS.register("thick_shield", HoldSteadyModifier::new);
     public static StaticModifier<OverCushionModifier> over_cushion = MODIFIERS.register("over_cushion", OverCushionModifier::new);
     public static StaticModifier<ShieldBreakModifier> shield_break = MODIFIERS.register("shield_break", ShieldBreakModifier::new);
     public static StaticModifier<MachineAddingModifier> mechanism_adding = MODIFIERS.register("mechanism_adding", MachineAddingModifier::new);
+    public static StaticModifier<OvertripModifier> overtrip = MODIFIERS.register("overtrip", OvertripModifier::new);
+    public static StaticModifier<SturdyModifier> sturdy = MODIFIERS.register("sturdy", SturdyModifier::new);
     public static class L2ComplementsModifier {
         public static ModifierDeferredRegister L2C_MODIFIERS = ModifierDeferredRegister.create(MOD_ID);
         public static void init() {

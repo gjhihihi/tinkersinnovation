@@ -1,8 +1,10 @@
 package com.gjhi.tinkersinnovation.library.modifiers;
 
+import com.gjhi.tinkersinnovation.library.modifiers.base.ChaosDamageTypesBase;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
+import slimeknights.tconstruct.common.TinkerDamageTypes;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.ModifierHooks;
@@ -30,6 +32,7 @@ public class ChaosArmorModifier extends Modifier implements OnAttackedModifierHo
             target = entity;
         }
         if (target != null){
+            target.hurt(TinkerDamageTypes.source(target.level().registryAccess(), ChaosDamageTypesBase.getChaosDamageType(), context.getEntity()), 2 * modifier.getLevel());
         }
     }
 }

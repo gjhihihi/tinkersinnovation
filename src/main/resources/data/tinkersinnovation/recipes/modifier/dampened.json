@@ -1,5 +1,11 @@
 {
   "type": "tconstruct:incremental_modifier",
+  "conditions": [
+    {
+      "modid": "l2complements",
+      "type": "forge:mod_loaded"
+    }
+  ],
   "allow_crystal": true,
   "amount_per_item": 1,
   "input": {

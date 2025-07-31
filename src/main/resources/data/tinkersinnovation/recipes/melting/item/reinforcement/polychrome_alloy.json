@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkersinnovation:polychrome_alloy_reinforcement"
+  },
+  "result": {
+    "amount": 90,
+    "fluid": "tinkersinnovation:molten_polychrome_alloy"
+  },
+  "byproducts": [
+    {
+      "amount": 250,
+      "fluid": "tconstruct:molten_obsidian"
+    }
+  ],
+  "temperature": 1200,
+  "time": 35
+}

@@ -20,7 +20,7 @@ public class EnchantmentEffectsBase {
     private static final List<MobEffect> BAD_EFFECTS = new ArrayList<>(List.of(
             MobEffects.DIG_SLOWDOWN, MobEffects.WITHER, MobEffects.WEAKNESS, MobEffects.MOVEMENT_SLOWDOWN, MobEffects.BLINDNESS, MobEffects.POISON, MobEffects.CONFUSION, MobEffects.HUNGER,
             TinkerEffects.bleeding.get(), TinkerEffects.enderference.get(),
-            TinkersInnovationEffects.soulDevouringEffect.get()
+            TinkersInnovationEffects.soulDevouringEffect.get(), TinkersInnovationEffects.thunderTribulationEffect.get()
     ));
     public static List<MobEffect> getGoodEffectsByCopy(){
         ArrayList<MobEffect> list = new ArrayList<>(GOOD_EFFECTS);

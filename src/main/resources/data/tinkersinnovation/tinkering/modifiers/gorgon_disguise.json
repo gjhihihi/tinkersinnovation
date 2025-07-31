@@ -1,5 +1,8 @@
 {
-  "type": "tconstruct:composable",
+  "condition": {
+    "type": "forge:mod_loaded",
+    "modid": "iceandfire"
+  },
   "level_display": "tconstruct:single_level",
   "modules": [
     {

@@ -35,7 +35,7 @@ public class TinkersInnovationMaterials {
     public static final MaterialId sapphire = createMaterial("sapphire");
     public static final MaterialId straddlite_alloy = createMaterial("straddlite_alloy");
     public static final MaterialId bear_fur = createMaterial("bear_fur");
-    //public static final MaterialId zinc = createMaterial("zinc");
+    public static final MaterialId zinc = createMaterial("zinc");
     public static final MaterialId brass = createMaterial("brass");
     public static final MaterialId farseeing_alloy = createMaterial("farseer_arm");
     public static final MaterialId fools_gold = createMaterial("fools_gold");
@@ -49,6 +49,6 @@ public class TinkersInnovationMaterials {
     public static final MaterialId capsid = createMaterial("capsid");
     public static final MaterialId elastic_tendon = createMaterial("elastic_tendon");
     public static final MaterialId spacebreakium = createMaterial("spacebreakium");
-    public static final MaterialId blazing_steel = createMaterial("blazing_steel");
     public static final MaterialId mechanism = createMaterial("mechanism");
+    public static final MaterialId mudslime = createMaterial("mudslime");
 }
