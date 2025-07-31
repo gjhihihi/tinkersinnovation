@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkersinnovation:totemic_gold_reinforcement"
+  },
+  "result": {
+    "amount": 90,
+    "fluid": "tinkersinnovation:molten_totemic_gold"
+  },
+  "byproducts": [
+    {
+      "amount": 250,
+      "fluid": "tconstruct:molten_obsidian"
+    }
+  ],
+  "temperature": 900,
+  "time": 35
+}

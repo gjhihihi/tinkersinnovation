@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkersinnovation:sculkium_reinforcement"
+  },
+  "result": {
+    "amount": 90,
+    "fluid": "tinkersinnovation:molten_sculkium"
+  },
+  "byproducts": [
+    {
+      "amount": 250,
+      "fluid": "tconstruct:molten_obsidian"
+    }
+  ],
+  "temperature": 1000,
+  "time": 35
+}
