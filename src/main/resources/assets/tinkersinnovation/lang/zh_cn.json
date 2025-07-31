@@ -358,6 +358,10 @@
   "block.tinkersinnovation.lightning_fluid": "闪电",
   "fluid.tinkersinnovation.flowing_lightning": "流动的闪电",
   "item.tinkersinnovation.lightning_bucket": "闪电桶",
+  "fluid.tinkersinnovation.molten_mudslime": "熔融泥泞黏液",
+  "block.tinkersinnovation.molten_mudslime_fluid": "熔融泥泞黏液",
+  "fluid.tinkersinnovation.flowing_molten_mudslime": "流动的熔融泥泞黏液",
+  "item.tinkersinnovation.molten_mudslime_bucket": "熔融泥泞黏液桶",
 
   "modifier.tinkersinnovation.poseidite_weapon": "海神利器",
   "modifier.tinkersinnovation.poseidite_weapon.flavor": "你手里的，是海神曾经的武器……但现在不是了。",
