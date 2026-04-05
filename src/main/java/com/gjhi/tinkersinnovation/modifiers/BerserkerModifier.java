@@ -26,7 +26,7 @@ public class BerserkerModifier extends Modifier implements DamageTakenModifierHo
     public void onDamageTaken(IToolStackView tool, ModifierEntry modifier, EquipmentContext context, EquipmentSlot slotType, DamageSource source, float amount, boolean isDirectDamage) {
         int level = modifier.getLevel();
         LivingEntity player = context.getEntity();
-        if(!player.hasEffect(MobEffects.DAMAGE_RESISTANCE)){
+        if(!player.hasEffect(MobEffects.DAMAGE_RESISTANCE) && !source.equals(BERSERKER)){
             player.hurt(BERSERKER,level * level);
             player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE,level*200,level-1));
             player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED,level*200,level-1));
