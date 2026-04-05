@@ -50,10 +50,10 @@ public class OverImitateArmorModifier extends Modifier implements AttributesModi
             float boost_armor = tool.getPersistentData().getFloat(KEY_ARMOR);
             float boost_toughness = tool.getPersistentData().getFloat(KEY_TOUGHNESS);
             if (boost_armor >= 0) {
-                consumer.accept(Attributes.ARMOR, new AttributeModifier(UUID.fromString("116aab4f-49fb-4366-8bc1-dceba697fece"), Attributes.ARMOR.getDescriptionId(), 0.2 * modifier.getLevel() * boost_armor, AttributeModifier.Operation.ADDITION));
+                consumer.accept(Attributes.ARMOR, new AttributeModifier(UUID.fromString("116aab4f-49fb-4366-8bc1-dceba697fece"), Attributes.ARMOR.getDescriptionId(), 0.2 * modifier.getEffectiveLevel() * boost_armor, AttributeModifier.Operation.ADDITION));
             }
             if (boost_toughness >= 0){
-                consumer.accept(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(UUID.fromString("94e7c303-808f-4966-9c2b-6e678a0cb8bd"), Attributes.ARMOR_TOUGHNESS.getDescriptionId(), 0.2 * modifier.getLevel() * boost_toughness, AttributeModifier.Operation.ADDITION));
+                consumer.accept(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(UUID.fromString("94e7c303-808f-4966-9c2b-6e678a0cb8bd"), Attributes.ARMOR_TOUGHNESS.getDescriptionId(), 0.2 * modifier.getEffectiveLevel() * boost_toughness, AttributeModifier.Operation.ADDITION));
             }
         }
     }
@@ -67,10 +67,10 @@ public class OverImitateArmorModifier extends Modifier implements AttributesModi
         AttributeInstance attribute_armor = target.getAttribute(Attributes.ARMOR);
         AttributeInstance attribute_toughness = target.getAttribute(Attributes.ARMOR_TOUGHNESS);
         if (attribute_armor != null){
-            data.putFloat(KEY_ARMOR, (float) attribute_armor.getValue() * 0.2f * modifier.getLevel());
+            data.putFloat(KEY_ARMOR, (float) attribute_armor.getValue() * 0.2f * modifier.getEffectiveLevel());
         }
         if (attribute_toughness != null){
-            data.putFloat(KEY_TOUGHNESS, (float) attribute_toughness.getValue() * 0.2f * modifier.getLevel());
+            data.putFloat(KEY_TOUGHNESS, (float) attribute_toughness.getValue() * 0.2f * modifier.getEffectiveLevel());
         }
     }
     public void addTooltip(IToolStackView tool, ModifierEntry modifier, @javax.annotation.Nullable Player player, List<Component> tooltip, TooltipKey tooltipKey, TooltipFlag tooltipFlag) {

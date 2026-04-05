@@ -25,7 +25,7 @@ public class BlindTraitModifier extends Modifier implements MeleeHitModifierHook
         if (target != null) {
             if (CurioCompat.hasItemInCurio(target, LHItems.RING_REFLECTION.get()))return;
             if (CurioCompat.hasItemInCurio(target, LHItems.ABRAHADABRA.get()))return;
-            target.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, LHConfig.COMMON.blindTime.get() * modifier.getLevel()));
+            target.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, (int) (LHConfig.COMMON.blindTime.get() * modifier.getEffectiveLevel())));
         }
     }
 }

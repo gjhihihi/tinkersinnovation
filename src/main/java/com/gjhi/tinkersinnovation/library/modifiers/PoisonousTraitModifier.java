@@ -25,7 +25,7 @@ public class PoisonousTraitModifier extends Modifier implements MeleeHitModifier
         if (target != null) {
             if (CurioCompat.hasItemInCurio(target, LHItems.RING_REFLECTION.get()))return;
             if (CurioCompat.hasItemInCurio(target, LHItems.ABRAHADABRA.get()))return;
-            target.addEffect(new MobEffectInstance(MobEffects.POISON, LHConfig.COMMON.poisonTime.get() * modifier.getLevel()));
+            target.addEffect(new MobEffectInstance(MobEffects.POISON, (int) (LHConfig.COMMON.poisonTime.get() * modifier.getEffectiveLevel())));
         }
     }
 }

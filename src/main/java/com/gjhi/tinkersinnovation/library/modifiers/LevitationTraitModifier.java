@@ -25,7 +25,7 @@ public class LevitationTraitModifier extends Modifier implements MeleeHitModifie
         if (target != null) {
             if (CurioCompat.hasItemInCurio(target, LHItems.RING_REFLECTION.get()))return;
             if (CurioCompat.hasItemInCurio(target, LHItems.ABRAHADABRA.get()))return;
-            target.addEffect(new MobEffectInstance(MobEffects.LEVITATION, LHConfig.COMMON.levitationTime.get() * modifier.getLevel()));
+            target.addEffect(new MobEffectInstance(MobEffects.LEVITATION, (int) (LHConfig.COMMON.levitationTime.get() * modifier.getEffectiveLevel())));
         }
     }
 }

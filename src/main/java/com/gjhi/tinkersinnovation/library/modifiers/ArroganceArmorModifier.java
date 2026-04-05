@@ -35,7 +35,7 @@ public class ArroganceArmorModifier extends Modifier implements OnAttackedModifi
             target = entity;
         }
         if (target != null){
-            player.setAbsorptionAmount(Math.min(player.getAbsorptionAmount() + DifficultyLevel.ofAny(target) * 0.2f * modifier.getLevel(), player.getMaxHealth() * 2));
+            player.setAbsorptionAmount(Math.min(player.getAbsorptionAmount() + DifficultyLevel.ofAny(target) * 0.2f * modifier.getEffectiveLevel(), player.getMaxHealth() * 2));
         }
     }
 }

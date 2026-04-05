@@ -194,7 +194,7 @@ public class VoidModifier extends Modifier implements ProjectileHitModifierHook,
     }
     @Override
     public float getMeleeDamage(@NotNull IToolStackView tool, @NotNull ModifierEntry modifier, ToolAttackContext context, float baseDamage, float damage) {
-        float voiddamage = damage * 0.05f * modifier.getLevel();
+        float voiddamage = damage * 0.05f * modifier.getEffectiveLevel();
         LivingEntity entity = context.getLivingTarget();
         if (entity != null) {
             entity.hurt(TinkerDamageTypes.source(entity.level().registryAccess(), TinkersInnovationDamageTypes.VOID), voiddamage);

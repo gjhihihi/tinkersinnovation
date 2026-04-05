@@ -43,7 +43,7 @@ public class TinkerHooksEvents {
                 amount = modifier.getHook(TinkersInnovationHooks.ON_BLOCKING).onBlocking(tool, modifier, blocker, event, amount);
             }
             ModifierEntry shield = tool.getModifier(TinkersInnovationModifiers.shield_amount.get());
-            if (shield.getLevel() > 0 && shield.getModifier() instanceof ShieldAmountModifier shield_amount){
+            if (shield.getEffectiveLevel() > 0 && shield.getModifier() instanceof ShieldAmountModifier shield_amount){
                 shield_amount.addShieldAmount(tool, shield, -amount);
             }
         }

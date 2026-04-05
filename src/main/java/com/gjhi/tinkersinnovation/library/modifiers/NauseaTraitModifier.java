@@ -25,7 +25,7 @@ public class NauseaTraitModifier extends Modifier implements MeleeHitModifierHoo
         if (target != null) {
             if (CurioCompat.hasItemInCurio(target, LHItems.RING_REFLECTION.get()))return;
             if (CurioCompat.hasItemInCurio(target, LHItems.ABRAHADABRA.get()))return;
-            target.addEffect(new MobEffectInstance(MobEffects.CONFUSION, LHConfig.COMMON.confusionTime.get() * modifier.getLevel()));
+            target.addEffect(new MobEffectInstance(MobEffects.CONFUSION, (int) (LHConfig.COMMON.confusionTime.get() * modifier.getEffectiveLevel())));
         }
     }
 }

@@ -28,7 +28,7 @@ public class MountKillerModifier extends Modifier implements MeleeDamageModifier
         LivingEntity target = context.getLivingTarget();
         if (target != null){
             if (target.getFirstPassenger() != null){
-                damage += damage * 0.2f * modifier.getLevel();
+                damage += damage * 0.2f * modifier.getEffectiveLevel();
             }
         }
         return damage;
@@ -38,7 +38,7 @@ public class MountKillerModifier extends Modifier implements MeleeDamageModifier
     public boolean onProjectileHitEntity(ModifierNBT modifiers, ModDataNBT persistentData, ModifierEntry modifier, Projectile projectile, EntityHitResult hit, @Nullable LivingEntity attacker, @Nullable LivingEntity target) {
         if (target != null && projectile instanceof AbstractArrow arrow){
             if (target.getFirstPassenger() != null){
-                arrow.setBaseDamage(arrow.getBaseDamage() * (1 + 0.2 * modifier.getLevel()));
+                arrow.setBaseDamage(arrow.getBaseDamage() * (1 + 0.2 * modifier.getEffectiveLevel()));
             }
         }
         return false;

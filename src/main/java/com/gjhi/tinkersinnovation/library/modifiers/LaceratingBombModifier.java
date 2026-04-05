@@ -20,6 +20,6 @@ public class LaceratingBombModifier extends Modifier implements TinkersBombHook 
 
     @Override
     public void afterBombPiecesHit(ModifierNBT modifiers, ModDataNBT persistentData, ModifierEntry modifier, EBomb bomb, LivingEntity attacker, LivingEntity target, int hitcount) {
-        TinkerEffects.bleeding.get().apply(target, 200, modifier.getLevel() * hitcount - 1);
+        TinkerEffects.bleeding.get().apply(target, 200, (int) (modifier.getEffectiveLevel() * hitcount - 1));
     }
 }

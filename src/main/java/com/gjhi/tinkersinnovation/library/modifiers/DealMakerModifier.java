@@ -52,7 +52,7 @@ public class DealMakerModifier extends Modifier implements ProcessLootModifierHo
     @Override
     public void processLoot(@NotNull IToolStackView tool, ModifierEntry modifier, List<ItemStack> generatedLoot, @NotNull LootContext context) {
         generatedLoot.clear();
-        if(RANDOM.nextFloat() < 0.2 * modifier.getLevel()){
+        if(RANDOM.nextFloat() < 0.2 * modifier.getEffectiveLevel()){
             generatedLoot.add(new ItemStack(Items.EMERALD));
         }
     }

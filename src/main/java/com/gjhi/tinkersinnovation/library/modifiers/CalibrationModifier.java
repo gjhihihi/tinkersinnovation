@@ -43,7 +43,7 @@ public class CalibrationModifier extends Modifier implements ProjectileLaunchMod
     @Override
     public float modifyStat(IToolStackView tool, ModifierEntry modifier, LivingEntity living, FloatToolStat stat, float baseValue, float multiplier) {
         if (stat == ToolStats.ACCURACY) {
-            baseValue *= 1 + getBonus(living) * modifier.getLevel();
+            baseValue *= 1 + getBonus(living) * modifier.getEffectiveLevel();
         }
         return baseValue;
     }

@@ -31,7 +31,7 @@ public class BacktrackModifier extends Modifier implements InventoryTickModifier
             OverslimeModifier overslime = TinkerModifiers.overslime.get();
             if (data.getInt(KEY) > 0){
                 if (data.getInt(KEY) > overslime.getShield(tool)){
-                    if (RANDOM.nextFloat() > 0.2 * modifier.getLevel()){
+                    if (RANDOM.nextFloat() > 0.2 * modifier.getEffectiveLevel()){
                         overslime.setShield(tool, modifier, data.getInt(KEY));
                     }
                 }

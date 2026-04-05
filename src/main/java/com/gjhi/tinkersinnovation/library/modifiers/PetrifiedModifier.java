@@ -30,7 +30,7 @@ public class PetrifiedModifier extends Modifier implements MeleeHitModifierHook,
     @Override
     public float beforeMeleeHit(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float damage, float baseKnockback, float knockback) {
         LivingEntity target = context.getLivingTarget();
-        if (target != null && RANDOM.nextFloat() < 0.05 * modifier.getLevel()){
+        if (target != null && RANDOM.nextFloat() < 0.05 * modifier.getEffectiveLevel()){
             boolean wasSuccessful = true;
             if (target instanceof Player) {
                 wasSuccessful = target.hurt(IafDamageRegistry.causeGorgonDamage(target), Integer.MAX_VALUE);
@@ -55,7 +55,7 @@ public class PetrifiedModifier extends Modifier implements MeleeHitModifierHook,
 
     @Override
     public boolean onProjectileHitEntity(ModifierNBT modifiers, ModDataNBT persistentData, ModifierEntry modifier, Projectile projectile, EntityHitResult hit, @Nullable LivingEntity attacker, @Nullable LivingEntity target) {
-        if (target != null && RANDOM.nextFloat() < 0.1 * modifier.getLevel()){
+        if (target != null && RANDOM.nextFloat() < 0.1 * modifier.getEffectiveLevel()){
             boolean wasSuccessful = true;
             if (target instanceof Player) {
                 wasSuccessful = target.hurt(IafDamageRegistry.causeGorgonDamage(target), Integer.MAX_VALUE);

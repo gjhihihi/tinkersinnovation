@@ -51,7 +51,7 @@ public class RipeningModifier extends Modifier implements MeleeHitModifierHook, 
     public void afterMeleeHit(@NotNull IToolStackView tool, @NotNull ModifierEntry modifier, ToolAttackContext context, float damageDealt) {
         LivingEntity target = context.getLivingTarget();
         if (target != null) {
-            if (target.isBaby() && RANDOM.nextFloat() < 0.1f * modifier.getLevel()) {
+            if (target.isBaby() && RANDOM.nextFloat() < 0.1f * modifier.getEffectiveLevel()) {
                 if (target instanceof AgeableMob age) {
                     age.setBaby(false);
                 }
@@ -98,7 +98,7 @@ public class RipeningModifier extends Modifier implements MeleeHitModifierHook, 
                     if (world instanceof ServerLevel) {
                         if (bonemealableblock.isBonemealSuccess(world, world.random, pos, blockstate)) {
                             bonemealableblock.performBonemeal((ServerLevel)world, world.random, pos, blockstate);
-                            if (RANDOM.nextFloat() > 0.2f * modifier.getLevel()){
+                            if (RANDOM.nextFloat() > 0.2f * modifier.getEffectiveLevel()){
                                 bonemealableblock.performBonemeal((ServerLevel)world, world.random, pos, blockstate);
                                 bonemealableblock.performBonemeal((ServerLevel)world, world.random, pos, blockstate);
                             }
@@ -157,7 +157,7 @@ public class RipeningModifier extends Modifier implements MeleeHitModifierHook, 
                             world.setBlock(blockpos, blockstate, 3);
                         } else if (blockstate1.is(Blocks.SEAGRASS) && random.nextInt(10) == 0) {
                             ((BonemealableBlock)Blocks.SEAGRASS).performBonemeal((ServerLevel)world, random, blockpos, blockstate1);
-                            if (RANDOM.nextFloat() > 0.2f * modifier.getLevel()){
+                            if (RANDOM.nextFloat() > 0.2f * modifier.getEffectiveLevel()){
                                 ((BonemealableBlock)Blocks.SEAGRASS).performBonemeal((ServerLevel)world, random, blockpos, blockstate1);
                                 ((BonemealableBlock)Blocks.SEAGRASS).performBonemeal((ServerLevel)world, random, blockpos, blockstate1);
                             }

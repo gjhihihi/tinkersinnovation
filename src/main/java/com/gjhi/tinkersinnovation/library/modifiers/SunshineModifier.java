@@ -29,8 +29,8 @@ public class SunshineModifier extends Modifier implements MeleeDamageModifierHoo
         LivingEntity target = context.getLivingTarget();
         if (target != null){
             if (target.isFallFlying() && !target.isInWaterOrBubble()){
-                damage += damage * 0.2f * modifier.getLevel();
-                target.addEffect(new MobEffectInstance(AMEffectRegistry.SUNBIRD_CURSE.get(), 100 * modifier.getLevel()));
+                damage += damage * 0.2f * modifier.getEffectiveLevel();
+                target.addEffect(new MobEffectInstance(AMEffectRegistry.SUNBIRD_CURSE.get(), (int) (100 * modifier.getEffectiveLevel())));
             }
         }
         return damage;
@@ -41,9 +41,9 @@ public class SunshineModifier extends Modifier implements MeleeDamageModifierHoo
         if (target != null){
             if (target.isFallFlying() && !target.isInWaterOrBubble()){
                 if (projectile instanceof AbstractArrow arrow){
-                    arrow.setBaseDamage(arrow.getBaseDamage() * (1 + 0.2 * modifier.getLevel()));
+                    arrow.setBaseDamage(arrow.getBaseDamage() * (1 + 0.2 * modifier.getEffectiveLevel()));
                 }
-                target.addEffect(new MobEffectInstance(AMEffectRegistry.SUNBIRD_CURSE.get(), 100 * modifier.getLevel()));
+                target.addEffect(new MobEffectInstance(AMEffectRegistry.SUNBIRD_CURSE.get(), (int) (100 * modifier.getEffectiveLevel())));
             }
         }
         return false;

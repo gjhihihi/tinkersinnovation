@@ -23,11 +23,11 @@ public class BIGSHOTModifier extends Modifier implements ConditionalStatModifier
         OverslimeModifier overslime = TinkerModifiers.overslime.get();
         float current = (float)overslime.getShield(tool);
         if (stat == ToolStats.DRAW_SPEED) {
-            return (float)(baseValue + Math.sqrt(current) * modifier.getLevel() * 0.01 * tool.getMultiplier(ToolStats.DRAW_SPEED));
+            return (float)(baseValue + Math.sqrt(current) * modifier.getEffectiveLevel() * 0.01 * tool.getMultiplier(ToolStats.DRAW_SPEED));
         } else if (stat == ToolStats.ACCURACY) {
-            return (float)(baseValue + Math.sqrt(current) * modifier.getLevel() * 0.01 * tool.getMultiplier(ToolStats.ACCURACY));
+            return (float)(baseValue + Math.sqrt(current) * modifier.getEffectiveLevel() * 0.01 * tool.getMultiplier(ToolStats.ACCURACY));
         } else if (stat == ToolStats.VELOCITY) {
-            return (float)(baseValue + Math.sqrt(current) * modifier.getLevel() * 0.01 * tool.getMultiplier(ToolStats.VELOCITY));
+            return (float)(baseValue + Math.sqrt(current) * modifier.getEffectiveLevel() * 0.01 * tool.getMultiplier(ToolStats.VELOCITY));
         }
         return baseValue;
     }

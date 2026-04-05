@@ -34,7 +34,7 @@ public class ChaosModifier extends Modifier implements MeleeDamageModifierHook, 
     @Override
     public boolean onProjectileHitEntity(ModifierNBT modifiers, ModDataNBT persistentData, ModifierEntry modifier, Projectile projectile, EntityHitResult hit, @Nullable LivingEntity attacker, @Nullable LivingEntity target) {
         if (target != null && projectile instanceof AbstractArrow arrow) {
-            target.hurt(TinkerDamageTypes.source(target.level().registryAccess(), ChaosDamageTypesBase.getChaosDamageType(), projectile, attacker), 2 * modifier.getLevel());
+            target.hurt(TinkerDamageTypes.source(target.level().registryAccess(), ChaosDamageTypesBase.getChaosDamageType(), projectile, attacker), 2 * modifier.getEffectiveLevel());
         }
         return false;
     }
@@ -43,7 +43,7 @@ public class ChaosModifier extends Modifier implements MeleeDamageModifierHook, 
     public float getMeleeDamage(@NotNull IToolStackView tool, @NotNull ModifierEntry modifier, ToolAttackContext context, float baseDamage, float damage) {
         LivingEntity target = context.getLivingTarget();
         if (target != null) {
-            target.hurt(TinkerDamageTypes.source(target.level().registryAccess(), ChaosDamageTypesBase.getChaosDamageType(), context.getAttacker()), 2 * modifier.getLevel());
+            target.hurt(TinkerDamageTypes.source(target.level().registryAccess(), ChaosDamageTypesBase.getChaosDamageType(), context.getAttacker()), 2 * modifier.getEffectiveLevel());
         }
         return damage;
     }

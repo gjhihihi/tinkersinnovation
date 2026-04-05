@@ -33,9 +33,9 @@ public class InflammationModifier extends Modifier implements MeleeDamageModifie
         if (target != null && projectile instanceof AbstractArrow arrow){
             for (MobEffectInstance effect : target.getActiveEffects()){
                 if (effect.getEffect().getCategory().equals(MobEffectCategory.HARMFUL)){
-                    factor += 0.1f * (effect.getAmplifier() + 1) * modifier.getLevel();
+                    factor += 0.1f * (effect.getAmplifier() + 1) * modifier.getEffectiveLevel();
                 }else if (effect.getEffect().getCategory().equals(MobEffectCategory.BENEFICIAL)){
-                    factor -= 0.1f * (effect.getAmplifier() + 1) * modifier.getLevel();
+                    factor -= 0.1f * (effect.getAmplifier() + 1) * modifier.getEffectiveLevel();
                 }
             }
             arrow.setBaseDamage(arrow.getBaseDamage() * Math.max(factor, 0));
@@ -50,9 +50,9 @@ public class InflammationModifier extends Modifier implements MeleeDamageModifie
         if (target != null){
             for (MobEffectInstance effect : target.getActiveEffects()){
                 if (effect.getEffect().getCategory().equals(MobEffectCategory.HARMFUL)){
-                    factor += 0.1f * (effect.getAmplifier() + 1) * modifier.getLevel();
+                    factor += 0.1f * (effect.getAmplifier() + 1) * modifier.getEffectiveLevel();
                 }else if (effect.getEffect().getCategory().equals(MobEffectCategory.BENEFICIAL)){
-                    factor -= 0.1f * (effect.getAmplifier() + 1) * modifier.getLevel();
+                    factor -= 0.1f * (effect.getAmplifier() + 1) * modifier.getEffectiveLevel();
                 }
             }
         }

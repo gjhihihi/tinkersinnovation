@@ -36,7 +36,7 @@ public class AdversityProtectionModifier extends Modifier implements ProtectionM
         for (MobEffectInstance effect : attacker.getActiveEffects()) {
             if (effect.getEffect().getCategory().equals(MobEffectCategory.HARMFUL)) {
                 //4% protection per effect level per modifier level
-                factor += (effect.getAmplifier() + 1) * modifier.getLevel();
+                factor += (effect.getAmplifier() + 1) * modifier.getEffectiveLevel();
             }
         }
         return modifierValue + factor;
@@ -48,7 +48,7 @@ public class AdversityProtectionModifier extends Modifier implements ProtectionM
             float factor = 0;
             for (MobEffectInstance effect : player.getActiveEffects()) {
                 if (effect.getEffect().getCategory().equals(MobEffectCategory.HARMFUL)) {
-                    factor += (effect.getAmplifier() + 1) * modifier.getLevel();
+                    factor += (effect.getAmplifier() + 1) * modifier.getEffectiveLevel();
                 }
             }
             ProtectionModule.addResistanceTooltip(tool, modifier.getModifier(), factor, player, tooltip);

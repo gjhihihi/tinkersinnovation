@@ -36,9 +36,9 @@ public class OverCushionModifier extends Modifier implements OnBlockingModifierH
     @Override
     public int onBlocking(IToolStackView tool, ModifierEntry modifier, LivingEntity blocker, ShieldBlockEvent event, int amount) {
         OverslimeModifier overslime = TinkerModifiers.overslime.get();
-        if (overslime.getShield(tool) >= 10 * modifier.getLevel()){
-            overslime.addOverslime(tool, modifier, -10 * modifier.getLevel());
-            amount -= (int) (amount * 0.3 * modifier.getLevel());
+        if (overslime.getShield(tool) >= 10 * modifier.getEffectiveLevel()){
+            overslime.removeOverslime(tool, modifier, (int) (10 * modifier.getEffectiveLevel()));
+            amount -= (int) (amount * 0.3 * modifier.getEffectiveLevel());
         }
         return amount;
     }

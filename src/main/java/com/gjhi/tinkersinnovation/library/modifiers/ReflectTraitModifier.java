@@ -29,7 +29,7 @@ public class ReflectTraitModifier extends Modifier implements OnAttackedModifier
         if (target != null && isDirectDamage){
             if (CurioCompat.hasItemInCurio(target, LHItems.ABRAHADABRA.get()))return;
             int time = target.invulnerableTime;
-            target.hurt(target.damageSources().indirectMagic(context.getEntity(), null), (float) (amount * LHConfig.COMMON.reflectFactor.get() * modifier.getLevel()));
+            target.hurt(target.damageSources().indirectMagic(context.getEntity(), null), (float) (amount * LHConfig.COMMON.reflectFactor.get() * modifier.getEffectiveLevel()));
             target.invulnerableTime = time;
         }
     }

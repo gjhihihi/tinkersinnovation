@@ -48,7 +48,7 @@ public class ErosionTraitModifier extends Modifier implements MeleeHitModifierHo
                 }
             }
             if (!tools.isEmpty()) {
-                for (int i = 0; i < modifier.getLevel(); i++) {
+                for (int i = 0; i < modifier.getEffectiveLevel(); i++) {
                     int amount = 0;
                     ItemStack item = tools.get(RANDOM.nextInt(tools.size()));
                     if (item.getItem() instanceof IModifiable) {
@@ -57,7 +57,7 @@ public class ErosionTraitModifier extends Modifier implements MeleeHitModifierHo
                             target.invulnerableTime = 0;
                             //target.hurt(new EntityDamageSource("erosion", context.getAttacker()), (float) (damageDealt * LHConfig.COMMON.erosionDamage.get() * modifier.getLevel()));
                         } else {
-                            amount = (int) ((itool.getCurrentDurability() - itool.getDamage()) * LHConfig.COMMON.erosionDurability.get() * modifier.getLevel());
+                            amount = (int) ((itool.getCurrentDurability() - itool.getDamage()) * LHConfig.COMMON.erosionDurability.get() * modifier.getEffectiveLevel());
                             sametools.put(item, amount);
                         }
                         ToolDamageUtil.damage(itool, amount, target, item);
@@ -66,7 +66,7 @@ public class ErosionTraitModifier extends Modifier implements MeleeHitModifierHo
                             target.invulnerableTime = 0;
                             //target.hurt(new EntityDamageSource("erosion", context.getAttacker()), (float) (damageDealt * LHConfig.COMMON.erosionDamage.get() * modifier.getLevel() * modifier.getLevel()));
                         } else {
-                            amount = (int) ((item.getMaxDamage() - item.getDamageValue()) * LHConfig.COMMON.erosionDurability.get() * modifier.getLevel());
+                            amount = (int) ((item.getMaxDamage() - item.getDamageValue()) * LHConfig.COMMON.erosionDurability.get() * modifier.getEffectiveLevel());
                             sametools.put(item, amount);
                         }
                         item.setDamageValue(item.getDamageValue() + amount);

@@ -17,9 +17,9 @@ public class WindPowerModifier extends Modifier implements ToolStatsModifierHook
     }
     @Override
     public void addToolStats(@NotNull IToolContext context, @NotNull ModifierEntry modifier, @NotNull ModifierStatsBuilder builder) {
-        ToolStats.VELOCITY.multiply(builder, 1 + 0.12 * modifier.getLevel());
-        ToolStats.DRAW_SPEED.multiply(builder, 1 + 0.12 * modifier.getLevel());
-        ToolStats.MINING_SPEED.multiply(builder, 1 + 0.12 * modifier.getLevel());
-        ToolStats.ATTACK_SPEED.multiply(builder, 1 + 0.12 * modifier.getLevel());
+        ToolStats.VELOCITY.multiply(builder, 1 + 0.12 * modifier.getEffectiveLevel());
+        ToolStats.DRAW_SPEED.multiply(builder, 1 + 0.12 * modifier.getEffectiveLevel());
+        ToolStats.MINING_SPEED.multiply(builder, 1 + 0.12 * modifier.getEffectiveLevel());
+        ToolStats.ATTACK_SPEED.multiply(builder, 1 + 0.12 * modifier.getEffectiveLevel());
     }
 }

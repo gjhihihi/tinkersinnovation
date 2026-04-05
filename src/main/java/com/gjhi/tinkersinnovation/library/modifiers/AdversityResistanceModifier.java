@@ -44,7 +44,7 @@ public class AdversityResistanceModifier extends Modifier implements MeleeDamage
         if (arrow != null){
             for (MobEffectInstance effect : shooter.getActiveEffects()){
                 if (effect.getEffect().getCategory().equals(MobEffectCategory.HARMFUL)){
-                    factor += 0.1f * (effect.getAmplifier() + 1) * modifier.getLevel();
+                    factor += 0.1f * (effect.getAmplifier() + 1) * modifier.getEffectiveLevel();
                 }
             }
             arrow.setBaseDamage(arrow.getBaseDamage() * Math.max(factor, 0));
@@ -57,7 +57,7 @@ public class AdversityResistanceModifier extends Modifier implements MeleeDamage
         float factor = 1;
         for (MobEffectInstance effect : attacker.getActiveEffects()) {
             if (effect.getEffect().getCategory().equals(MobEffectCategory.HARMFUL)) {
-                factor += 0.1f * (effect.getAmplifier() + 1) * modifier.getLevel();
+                factor += 0.1f * (effect.getAmplifier() + 1) * modifier.getEffectiveLevel();
             }
         }
         return damage * Math.max(factor, 0);
@@ -69,7 +69,7 @@ public class AdversityResistanceModifier extends Modifier implements MeleeDamage
             double factor = 0;
             for (MobEffectInstance effect : player.getActiveEffects()) {
                 if (effect.getEffect().getCategory().equals(MobEffectCategory.HARMFUL)) {
-                    factor += 0.1 * (effect.getAmplifier() + 1) * modifier.getLevel();
+                    factor += 0.1 * (effect.getAmplifier() + 1) * modifier.getEffectiveLevel();
                 }
             }
             TooltipModifierHook.addPercentBoost(this, TooltipModifierHook.statName(this, ToolStats.ATTACK_DAMAGE), factor, tooltip);

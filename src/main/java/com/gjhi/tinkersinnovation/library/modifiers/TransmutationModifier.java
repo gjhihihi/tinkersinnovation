@@ -85,7 +85,7 @@ public class TransmutationModifier extends Modifier implements InventoryTickModi
             addExperienceLevel(tool, -exp);
             ToolDamageUtil.damage(tool, modifier.getLevel(), player, stack);
             if (RANDOM.nextFloat() < 0.05){
-                MobEffectInstance effect = new MobEffectInstance(TinkerEffects.selfDestructing.get(), 200 - 20 * (modifier.getLevel() - 1));
+                MobEffectInstance effect = new MobEffectInstance(TinkerEffects.selfDestructing.get(), (int) (200 - 20 * (modifier.getEffectiveLevel() - 1)));
                 effect.setCurativeItems(List.of(new ItemStack(Items.MILK_BUCKET)));
                 holder.addEffect(effect);
             }

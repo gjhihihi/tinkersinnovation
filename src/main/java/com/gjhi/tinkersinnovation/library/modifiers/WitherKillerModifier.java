@@ -37,7 +37,7 @@ public class WitherKillerModifier extends Modifier implements MeleeDamageModifie
             }
             MobEffectInstance effect = target.getEffect(MobEffects.WITHER);
             if (effect != null) {
-                damage += (effect.getAmplifier() + 1) * 2 * modifier.getLevel();
+                damage += (effect.getAmplifier() + 1) * 2 * modifier.getEffectiveLevel();
             }
         }
         return damage;
@@ -51,7 +51,7 @@ public class WitherKillerModifier extends Modifier implements MeleeDamageModifie
             }
             MobEffectInstance effect = target.getEffect(MobEffects.WITHER);
             if (effect != null) {
-                arrow.setBaseDamage(arrow.getBaseDamage() + (effect.getAmplifier() + 1) * 2 * modifier.getLevel());
+                arrow.setBaseDamage(arrow.getBaseDamage() + (effect.getAmplifier() + 1) * 2 * modifier.getEffectiveLevel());
             }
         }
         return false;

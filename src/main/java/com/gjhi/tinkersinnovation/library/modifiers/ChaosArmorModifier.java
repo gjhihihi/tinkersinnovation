@@ -32,7 +32,7 @@ public class ChaosArmorModifier extends Modifier implements OnAttackedModifierHo
             target = entity;
         }
         if (target != null){
-            target.hurt(TinkerDamageTypes.source(target.level().registryAccess(), ChaosDamageTypesBase.getChaosDamageType(), context.getEntity()), 2 * modifier.getLevel());
+            target.hurt(TinkerDamageTypes.source(target.level().registryAccess(), ChaosDamageTypesBase.getChaosDamageType(), context.getEntity()), 2 * modifier.getEffectiveLevel());
         }
     }
 }

@@ -25,7 +25,7 @@ public class CurseTraitModifier extends Modifier implements MeleeHitModifierHook
         if (target != null) {
             if (CurioCompat.hasItemInCurio(target, LHItems.RING_REFLECTION.get()))return;
             if (CurioCompat.hasItemInCurio(target, LHItems.ABRAHADABRA.get()))return;
-            target.addEffect(new MobEffectInstance(LCEffects.CURSE.get(), LHConfig.COMMON.curseTime.get() * modifier.getLevel()));
+            target.addEffect(new MobEffectInstance(LCEffects.CURSE.get(), (int) (LHConfig.COMMON.curseTime.get() * modifier.getEffectiveLevel())));
         }
     }
 }

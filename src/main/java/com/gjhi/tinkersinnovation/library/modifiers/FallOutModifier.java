@@ -30,10 +30,10 @@ public class FallOutModifier extends Modifier implements MeleeDamageModifierHook
         if (target != null){
             if (attacker.getLastHurtMob() != null){
                 if (!attacker.getLastHurtMob().equals(target)){
-                    damage += damage * 0.1f * modifier.getLevel();
+                    damage += damage * 0.1f * modifier.getEffectiveLevel();
                 }
             }else {
-                damage += damage * 0.1f * modifier.getLevel();
+                damage += damage * 0.1f * modifier.getEffectiveLevel();
             }
         }
         return damage;
@@ -44,10 +44,10 @@ public class FallOutModifier extends Modifier implements MeleeDamageModifierHook
         if (attacker != null && target != null && projectile instanceof AbstractArrow arrow){
             if (attacker.getLastHurtMob() != null){
                 if (!attacker.getLastHurtMob().equals(target)){
-                    arrow.setBaseDamage(arrow.getBaseDamage() * (1 + 0.1 * modifier.getLevel()));
+                    arrow.setBaseDamage(arrow.getBaseDamage() * (1 + 0.1 * modifier.getEffectiveLevel()));
                 }
             }else {
-                arrow.setBaseDamage(arrow.getBaseDamage() * (1 + 0.1 * modifier.getLevel()));
+                arrow.setBaseDamage(arrow.getBaseDamage() * (1 + 0.1 * modifier.getEffectiveLevel()));
             }
         }
         return false;

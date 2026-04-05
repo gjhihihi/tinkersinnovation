@@ -27,7 +27,7 @@ public class VitalityArmorModifier extends Modifier implements InventoryTickModi
         if (TinkersInnovationUtils.isInArmorSlots(holder, stack) || TinkersInnovationUtils.isShieldInHandSlots(tool, holder, stack)) {
             if (!world.isClientSide && holder.tickCount % 100 == 0) {
                 if (holder.getHealth() != holder.getMaxHealth() && !tool.isBroken()) {
-                    holder.heal(modifier.getLevel());
+                    holder.heal(modifier.getEffectiveLevel());
                 }
             }
             holder.removeEffect(MobEffects.WITHER);

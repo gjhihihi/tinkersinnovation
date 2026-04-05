@@ -22,9 +22,9 @@ public class MoisturizingModifier extends Modifier implements ToolDamageModifier
     @Override
     public int onDamageTool(IToolStackView tool, ModifierEntry modifier, int amount, @Nullable LivingEntity holder) {
         if (holder != null && holder.isInWaterRainOrBubble()){
-            holder.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 100 * modifier.getLevel()));
+            holder.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, (int) (100 * modifier.getEffectiveLevel())));
             if (RANDOM.nextFloat() < 0.2) {
-                holder.heal(modifier.getLevel());
+                holder.heal(modifier.getEffectiveLevel());
             }
         }
         return amount;

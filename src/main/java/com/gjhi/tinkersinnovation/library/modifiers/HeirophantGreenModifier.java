@@ -46,18 +46,18 @@ public class HeirophantGreenModifier extends Modifier implements DamageDealtModi
     public void onDamageDealt(IToolStackView tool, ModifierEntry modifier, EquipmentContext context, EquipmentSlot slotType, @NotNull LivingEntity target, DamageSource source, float amount, boolean isDirectDamage) {
         LivingEntity wearer = context.getEntity();
         if (wearer.hasEffect(LCEffects.EMERALD.get())){
-            wearer.addEffect(new MobEffectInstance(LCEffects.EMERALD.get(), 100 * modifier.getLevel(), 1));
+            wearer.addEffect(new MobEffectInstance(LCEffects.EMERALD.get(), (int) (100 * modifier.getEffectiveLevel()), 1));
         }else{
-            wearer.addEffect(new MobEffectInstance(LCEffects.EMERALD.get(), 100 * modifier.getLevel()));
+            wearer.addEffect(new MobEffectInstance(LCEffects.EMERALD.get(), (int) (100 * modifier.getEffectiveLevel())));
         }
     }
     @Override
     public void onAttacked(@NotNull IToolStackView tool, @NotNull ModifierEntry modifier, @NotNull EquipmentContext context, EquipmentSlot slotType, DamageSource source, float amount, boolean isDirectDamage) {
         LivingEntity wearer = context.getEntity();
         if (wearer.hasEffect(LCEffects.EMERALD.get())){
-            wearer.addEffect(new MobEffectInstance(LCEffects.EMERALD.get(), 100 * modifier.getLevel(), 1));
+            wearer.addEffect(new MobEffectInstance(LCEffects.EMERALD.get(), (int) (100 * modifier.getEffectiveLevel()), 1));
         }else{
-            wearer.addEffect(new MobEffectInstance(LCEffects.EMERALD.get(), 100 * modifier.getLevel()));
+            wearer.addEffect(new MobEffectInstance(LCEffects.EMERALD.get(), (int) (100 * modifier.getEffectiveLevel())));
         }
     }
 }

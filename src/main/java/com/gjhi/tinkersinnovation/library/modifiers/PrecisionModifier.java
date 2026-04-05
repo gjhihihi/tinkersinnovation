@@ -19,14 +19,14 @@ public class PrecisionModifier extends Modifier implements RepairFactorModifierH
 
     @Override
     public float getRepairFactor(IToolStackView tool, ModifierEntry entry, float factor) {
-        return factor + 0.15f * entry.getLevel();
+        return factor + 0.15f * entry.getEffectiveLevel();
     }
 
     @Override
     public void addToolStats(IToolContext context, ModifierEntry modifier, ModifierStatsBuilder builder) {
-        ToolStats.DURABILITY.percent(builder, 0.15 * modifier.getLevel());
-        ToolStats.ATTACK_SPEED.percent(builder, 0.05 * modifier.getLevel());
-        ToolStats.ACCURACY.add(builder, 0.05 * modifier.getLevel());
-        ToolStats.KNOCKBACK_RESISTANCE.add(builder, 0.05 * modifier.getLevel());
+        ToolStats.DURABILITY.percent(builder, 0.15 * modifier.getEffectiveLevel());
+        ToolStats.ATTACK_SPEED.percent(builder, 0.05 * modifier.getEffectiveLevel());
+        ToolStats.ACCURACY.add(builder, 0.05 * modifier.getEffectiveLevel());
+        ToolStats.KNOCKBACK_RESISTANCE.add(builder, 0.05 * modifier.getEffectiveLevel());
     }
 }

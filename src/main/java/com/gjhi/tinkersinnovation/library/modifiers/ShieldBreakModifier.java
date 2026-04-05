@@ -22,9 +22,9 @@ public class ShieldBreakModifier extends Modifier implements MeleeHitModifierHoo
                     ToolStack shield = ToolStack.from(target.getUseItem());
                     if (shield.getModifierLevel(TinkersInnovationModifiers.shield_amount.getId()) > 0){
                         ShieldAmountModifier shield_amount = TinkersInnovationModifiers.shield_amount.get();
-                        shield_amount.addShieldAmount(shield, modifier, -40 * modifier.getLevel());
+                        shield_amount.addShieldAmount(shield, modifier, (int) (-40 * modifier.getEffectiveLevel()));
                     }else {
-                        if (RANDOM.nextFloat() < 0.2 * modifier.getLevel()){
+                        if (RANDOM.nextFloat() < 0.2 * modifier.getEffectiveLevel()){
                             if (target instanceof Player player){
                                 player.getCooldowns().addCooldown(target.getUseItem().getItem(), 100);
                             }
@@ -32,7 +32,7 @@ public class ShieldBreakModifier extends Modifier implements MeleeHitModifierHoo
                         }
                     }
                 }else {
-                    if (RANDOM.nextFloat() < 0.2 * modifier.getLevel()){
+                    if (RANDOM.nextFloat() < 0.2 * modifier.getEffectiveLevel()){
                         if (target instanceof Player player){
                             player.getCooldowns().addCooldown(target.getUseItem().getItem(), 100);
                         }

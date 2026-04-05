@@ -47,7 +47,7 @@ public class OverImitateModifier extends Modifier implements MeleeHitModifierHoo
         if (target != null){
             AttributeInstance attribute_damage = target.getAttribute(Attributes.ATTACK_DAMAGE);
             if (attribute_damage != null){
-                data.putFloat(KEY_ATTACK_DAMAGE, (float) attribute_damage.getValue() * 0.2f * modifier.getLevel());
+                data.putFloat(KEY_ATTACK_DAMAGE, (float) attribute_damage.getValue() * 0.2f * modifier.getEffectiveLevel());
             }
         }
     }
@@ -59,7 +59,7 @@ public class OverImitateModifier extends Modifier implements MeleeHitModifierHoo
             }
             AttributeInstance attribute = target.getAttribute(Attributes.ATTACK_DAMAGE);
             if (attribute != null){
-                persistentData.putFloat(KEY_ATTACK_DAMAGE, (float) attribute.getValue() * 0.2f * modifier.getLevel());
+                persistentData.putFloat(KEY_ATTACK_DAMAGE, (float) attribute.getValue() * 0.2f * modifier.getEffectiveLevel());
             }
         }
         return false;

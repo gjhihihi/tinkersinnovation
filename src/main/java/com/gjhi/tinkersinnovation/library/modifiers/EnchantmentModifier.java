@@ -36,31 +36,31 @@ public class EnchantmentModifier extends Modifier implements MeleeHitModifierHoo
     }
     @Override
     public void afterMeleeHit(@NotNull IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float damageDealt) {
-        int level = modifier.getLevel();
+        float level = modifier.getEffectiveLevel();
         LivingEntity player = context.getAttacker();
         LivingEntity target = context.getLivingTarget();
         if (target != null) {
             if (target.isAlive()) {
                 for (MobEffect effect : EnchantmentEffectsBase.getBadEffectsByCopy()) {
                     if (RANDOM.nextFloat() < 0.1) {
-                        TinkersInnovationUtils.updateEffect(target, effect, 1, 2 * level, 40 * level);
+                        TinkersInnovationUtils.updateEffect(target, effect, 1, (int) (2 * level), (int) (40 * level));
                     }
                 }
             }
             for (MobEffect effect : EnchantmentEffectsBase.getGoodEffectsByCopy()){
                 if (RANDOM.nextFloat() < 0.1){
-                    TinkersInnovationUtils.updateEffect(player, effect, 1, 2 * level, 40 * level);
+                    TinkersInnovationUtils.updateEffect(player, effect, 1, (int) (2 * level), (int) (40 * level));
                 }
             }
         }
     }
     @Override
     public boolean onProjectileHitEntity(ModifierNBT modifiers, ModDataNBT persistentData, @NotNull ModifierEntry modifier, @NotNull Projectile projectile, EntityHitResult hit, @Nullable LivingEntity player, @Nullable LivingEntity target) {
-        int level = modifier.getLevel();
+        float level = modifier.getEffectiveLevel();
         if (target != null && target.isAlive()) {
             for (MobEffect effect : EnchantmentEffectsBase.getBadEffectsByCopy()){
                 if (RANDOM.nextFloat() < 0.1){
-                    TinkersInnovationUtils.updateEffect(target, effect, 1, 2 * level, 40 * level);
+                    TinkersInnovationUtils.updateEffect(target, effect, 1, (int) (2 * level), (int) (40 * level));
                 }
             }
         }
@@ -68,10 +68,10 @@ public class EnchantmentModifier extends Modifier implements MeleeHitModifierHoo
     }
     @Override
     public void onProjectileLaunch(IToolStackView tool, ModifierEntry modifier, LivingEntity shooter, Projectile projectile, @Nullable AbstractArrow arrow, ModDataNBT persistentData, boolean primary) {
-        int level = modifier.getLevel();
+        float level = modifier.getEffectiveLevel();
         for (MobEffect effect : EnchantmentEffectsBase.getGoodEffectsByCopy()){
             if (RANDOM.nextFloat() < 0.1){
-                TinkersInnovationUtils.updateEffect(shooter, effect, 1, 2 * level, 40 * level);
+                TinkersInnovationUtils.updateEffect(shooter, effect, 1, (int) (2 * level), (int) (40 * level));
             }
         }
     }

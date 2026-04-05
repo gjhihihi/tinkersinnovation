@@ -21,7 +21,7 @@ public class CurseBladeModifier extends Modifier implements MeleeHitModifierHook
     public void afterMeleeHit(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float damageDealt) {
         LivingEntity target = context.getLivingTarget();
         if (target != null) {
-            target.addEffect(new MobEffectInstance(LCEffects.CURSE.get(), 100 * modifier.getLevel()));
+            target.addEffect(new MobEffectInstance(LCEffects.CURSE.get(), (int) (100 * modifier.getEffectiveLevel())));
         }
     }
 }

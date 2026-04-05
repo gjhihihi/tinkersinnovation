@@ -17,6 +17,6 @@ public class SturdyModifier extends Modifier implements ToolStatsModifierHook {
     }
     @Override
     public void addToolStats(@NotNull IToolContext context, @NotNull ModifierEntry modifier, @NotNull ModifierStatsBuilder builder) {
-        ToolStats.DURABILITY.percent(builder,  0.15 * modifier.getLevel());
+        ToolStats.DURABILITY.percent(builder,  0.15 * modifier.getEffectiveLevel());
     }
 }

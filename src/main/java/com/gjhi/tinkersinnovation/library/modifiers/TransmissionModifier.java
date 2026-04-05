@@ -24,6 +24,6 @@ public class TransmissionModifier extends Modifier implements ToolStatsModifierH
     }
     @Override
     public void addToolStats(IToolContext context, ModifierEntry modifier, ModifierStatsBuilder builder) {
-        TinkersInnovationToolStats.STRESS.add(builder, 10 * modifier.getLevel());
+        TinkersInnovationToolStats.STRESS.add(builder, 10 * modifier.getEffectiveLevel());
     }
 }

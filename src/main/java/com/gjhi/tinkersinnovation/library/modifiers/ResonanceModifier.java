@@ -45,7 +45,7 @@ public class ResonanceModifier extends Modifier implements MeleeHitModifierHook,
                 targets.remove(attacker);
             }
             for (LivingEntity living : targets) {
-                living.hurt(TinkerDamageTypes.source(target.level().registryAccess(), TinkersInnovationDamageTypes.RESONANCE, projectile, attacker), (float) (arrow.getBaseDamage() * modifier.getLevel()));
+                living.hurt(TinkerDamageTypes.source(target.level().registryAccess(), TinkersInnovationDamageTypes.RESONANCE, projectile, attacker), (float) (arrow.getBaseDamage() * modifier.getEffectiveLevel()));
             }
         }
         return false;
@@ -59,7 +59,7 @@ public class ResonanceModifier extends Modifier implements MeleeHitModifierHook,
             List<LivingEntity> targets = TinkersInnovationUtils.getLivingEntitiesInRange(target, radius, true);
             targets.remove(attacker);
             for (LivingEntity living : targets) {
-                living.hurt(TinkerDamageTypes.source(target.level().registryAccess(), TinkersInnovationDamageTypes.RESONANCE, attacker), damageDealt * 0.2f * modifier.getLevel());
+                living.hurt(TinkerDamageTypes.source(target.level().registryAccess(), TinkersInnovationDamageTypes.RESONANCE, attacker), damageDealt * 0.2f * modifier.getEffectiveLevel());
             }
         }
     }

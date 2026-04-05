@@ -2,6 +2,7 @@ package com.gjhi.tinkersinnovation.library.modifiers;
 
 import dev.xkmc.l2complements.init.registrate.LCEffects;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -20,14 +21,14 @@ public class IceThornModifier extends Modifier implements OnAttackedModifierHook
     }
     @Override
     public void onAttacked(IToolStackView tool, ModifierEntry modifier, EquipmentContext context, EquipmentSlot slotType, DamageSource source, float amount, boolean isDirectDamage) {
-        int level = modifier.getLevel();
+        float level = modifier.getEffectiveLevel();
         LivingEntity player = context.getEntity();
         LivingEntity target = null;
         if (source.getEntity() instanceof LivingEntity entity){
             target = entity;
         }
         if (target != null) {
-           target.addEffect(new MobEffectInstance(LCEffects.ICE.get(), 100 * modifier.getLevel()));
+           target.addEffect(new MobEffectInstance(LCEffects.ICE.get(), (int) (100 * level)));
         }
     }
 }

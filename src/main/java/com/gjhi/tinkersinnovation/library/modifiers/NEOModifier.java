@@ -36,7 +36,7 @@ public class NEOModifier extends Modifier implements AttributesModifierHook, OnA
         if (tool.hasTag(TinkerTags.Items.ARMOR)) {
             float boost = tool.getPersistentData().getFloat(KEY);
             if (boost > 0) {
-                consumer.accept(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(UUID.fromString("03230c69-3614-4ca5-9ab8-8e3d5c51cab2"), Attributes.ARMOR_TOUGHNESS.getDescriptionId(), 5 * modifier.getLevel() * boost, AttributeModifier.Operation.ADDITION));
+                consumer.accept(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(UUID.fromString("03230c69-3614-4ca5-9ab8-8e3d5c51cab2"), Attributes.ARMOR_TOUGHNESS.getDescriptionId(), 5 * modifier.getEffectiveLevel() * boost, AttributeModifier.Operation.ADDITION));
             }
         }
     }

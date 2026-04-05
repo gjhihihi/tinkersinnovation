@@ -18,7 +18,7 @@ public class ElasticModifier extends Modifier implements ToolStatsModifierHook {
     }
 
     private double getBonus(ModifierEntry modifier){
-        return Math.min(0.1 * modifier.getLevel(), 0.3);
+        return Math.min(0.1 * modifier.getEffectiveLevel(), 0.3);
     }
     @Override
     public void addToolStats(IToolContext context, ModifierEntry modifier, ModifierStatsBuilder builder) {

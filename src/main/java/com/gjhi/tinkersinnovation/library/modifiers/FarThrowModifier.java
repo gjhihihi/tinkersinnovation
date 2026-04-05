@@ -20,11 +20,11 @@ public class FarThrowModifier extends Modifier implements ConditionalStatModifie
     @Override
     public float modifyStat(IToolStackView tool, ModifierEntry modifier, LivingEntity living, FloatToolStat stat, float baseValue, float multiplier) {
         if (stat == ToolStats.VELOCITY) {
-            baseValue *= 1 + 0.5f * modifier.getLevel();
+            baseValue *= 1 + 0.5f * modifier.getEffectiveLevel();
         }else if (stat == ToolStats.PROJECTILE_DAMAGE) {
-            baseValue *= 1 - 0.2f * modifier.getLevel();
+            baseValue *= 1 - 0.2f * modifier.getEffectiveLevel();
         }else if (stat == TinkersInnovationToolStats.BOMB_RADIUS) {
-            baseValue *= 1 - 0.1f * modifier.getLevel();
+            baseValue *= 1 - 0.1f * modifier.getEffectiveLevel();
         }
         return baseValue;
     }

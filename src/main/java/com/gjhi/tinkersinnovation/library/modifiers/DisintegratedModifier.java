@@ -19,7 +19,7 @@ public class DisintegratedModifier extends Modifier implements TinkersBombHook {
 
     @Override
     public void onTinkersBombExplosion(ModifierNBT modifiers, ModDataNBT persistentData, ModifierEntry modifier, EBomb bomb, LivingEntity attacker, BombExplodeContext context) {
-        context.setPieceCount(context.getPieceCount() * (int)Math.pow(2, modifier.getLevel()));
-        context.setPieceDamage(context.getPieceDamage() * (float)Math.pow(0.5, modifier.getLevel()));
+        context.setPieceCount(context.getPieceCount() * (int)Math.pow(2, modifier.getEffectiveLevel()));
+        context.setPieceDamage(context.getPieceDamage() * (float)Math.pow(0.5, modifier.getEffectiveLevel()));
     }
 }

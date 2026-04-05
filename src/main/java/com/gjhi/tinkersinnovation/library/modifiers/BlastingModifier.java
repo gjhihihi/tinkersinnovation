@@ -30,7 +30,7 @@ public class BlastingModifier extends NoLevelsModifier implements MeleeHitModifi
 
     private void leftClickBlock(PlayerInteractEvent.LeftClickBlock event) {
         ToolStack tool = getHeldTool(event.getEntity(), InteractionHand.MAIN_HAND);
-        if (tool != null && tool.getModifier(this).getLevel() > 0){
+        if (tool != null && tool.getModifier(this).getEffectiveLevel() > 0){
             event.getEntity().level().explode(null, event.getPos().getX(), event.getPos().getY(), event.getPos().getZ(), 4, false, Level.ExplosionInteraction.MOB);
             if (!event.getEntity().isCreative())
                 ToolDamageUtil.damage(tool, 10, event.getEntity(), event.getItemStack());

@@ -26,7 +26,7 @@ public class ExplosiveModifier extends NoLevelsModifier implements OnAttackedMod
 
     @Override
     public void onAttacked(IToolStackView tool, ModifierEntry modifier, EquipmentContext context, @NotNull EquipmentSlot slotType, DamageSource source, float amount, boolean isDirectDamage) {
-        int level = modifier.getLevel();
+        float level = modifier.getEffectiveLevel();
         LivingEntity player = context.getEntity();
         LivingEntity target = null;
         if (source.getEntity() instanceof LivingEntity entity){

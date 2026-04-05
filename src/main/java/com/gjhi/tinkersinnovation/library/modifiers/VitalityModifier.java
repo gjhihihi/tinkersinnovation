@@ -19,7 +19,7 @@ public class VitalityModifier extends Modifier implements ToolDamageModifierHook
     @Override
     public int onDamageTool(@NotNull IToolStackView tool, @NotNull ModifierEntry modifier, int amount, @Nullable LivingEntity holder) {
         if (holder != null && !tool.isBroken()) {
-            holder.heal(amount * modifier.getLevel());
+            holder.heal(amount * modifier.getEffectiveLevel());
         }
         return amount;
     }

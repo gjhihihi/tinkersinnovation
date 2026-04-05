@@ -25,7 +25,7 @@ public class FreezingTraitModifier extends Modifier implements MeleeHitModifierH
         if (target != null) {
             if (CurioCompat.hasItemInCurio(target, LHItems.RING_REFLECTION.get()))return;
             if (CurioCompat.hasItemInCurio(target, LHItems.ABRAHADABRA.get()))return;
-            target.addEffect(new MobEffectInstance(LCEffects.ICE.get(), LHConfig.COMMON.freezingTime.get() * modifier.getLevel()));
+            target.addEffect(new MobEffectInstance(LCEffects.ICE.get(), (int) (LHConfig.COMMON.freezingTime.get() * modifier.getEffectiveLevel())));
         }
     }
 }

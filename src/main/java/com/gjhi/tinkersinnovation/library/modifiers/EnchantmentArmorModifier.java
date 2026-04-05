@@ -23,7 +23,7 @@ public class EnchantmentArmorModifier extends Modifier implements OnAttackedModi
     }
     @Override
     public void onAttacked(IToolStackView tool, ModifierEntry modifier, EquipmentContext context, EquipmentSlot slotType, DamageSource source, float amount, boolean isDirectDamage) {
-        int level = modifier.getLevel();
+        float level = modifier.getEffectiveLevel();
         LivingEntity player = context.getEntity();
         LivingEntity target = null;
         if (source.getEntity() instanceof LivingEntity entity){
@@ -33,13 +33,13 @@ public class EnchantmentArmorModifier extends Modifier implements OnAttackedModi
             if (target.isAlive()) {
                 for (MobEffect effect : EnchantmentEffectsBase.getBadEffectsByCopy()) {
                     if (RANDOM.nextFloat() < 0.1) {
-                        TinkersInnovationUtils.updateEffect(target, effect, 1, 2 * level, 40 * level);
+                        TinkersInnovationUtils.updateEffect(target, effect, 1, (int) (2 * level), (int) (40 * level));
                     }
                 }
             }
             for (MobEffect effect : EnchantmentEffectsBase.getGoodEffectsByCopy()){
                 if (RANDOM.nextFloat() < 0.1){
-                    TinkersInnovationUtils.updateEffect(player, effect, 1, 2 * level, 40 * level);
+                    TinkersInnovationUtils.updateEffect(player, effect, 1, (int) (2 * level), (int) (40 * level));
                 }
             }
         }

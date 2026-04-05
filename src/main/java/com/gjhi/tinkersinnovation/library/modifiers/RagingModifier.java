@@ -21,7 +21,7 @@ public class RagingModifier extends Modifier implements MeleeDamageModifierHook,
     @Override
     public float getMeleeDamage(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float baseDamage, float damage) {
         if (context.getAttacker().getHealth() * 10 <= context.getAttacker().getMaxHealth()){
-            damage += modifier.getLevel() * 4;
+            damage += modifier.getEffectiveLevel() * 4;
         }
         return damage;
     }
@@ -29,7 +29,7 @@ public class RagingModifier extends Modifier implements MeleeDamageModifierHook,
     @Override
     public float modifyStat(IToolStackView tool, ModifierEntry modifier, LivingEntity living, FloatToolStat stat, float baseValue, float multiplier) {
         if (living.getHealth() * 10 <= living.getMaxHealth()){
-            if (stat.equals(ToolStats.DRAW_SPEED))baseValue += 0.25f * modifier.getLevel();
+            if (stat.equals(ToolStats.DRAW_SPEED))baseValue += 0.25f * modifier.getEffectiveLevel();
         }
         return baseValue;
     }

@@ -18,7 +18,7 @@ public class HoldSteadyModifier extends Modifier implements ToolStatsModifierHoo
     }
     @Override
     public void addToolStats(@NotNull IToolContext context, @NotNull ModifierEntry modifier, @NotNull ModifierStatsBuilder builder) {
-        ToolStats.BLOCK_AMOUNT.add(builder, 5 * modifier.getLevel());
-        TinkersInnovationToolStats.SHIELD_AMOUNT.add(builder, 20 * modifier.getLevel());
+        ToolStats.BLOCK_AMOUNT.add(builder, 5 * modifier.getEffectiveLevel());
+        TinkersInnovationToolStats.SHIELD_AMOUNT.add(builder, 20 * modifier.getEffectiveLevel());
     }
 }
