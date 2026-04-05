@@ -6,7 +6,6 @@ import com.gjhi.tinkersinnovation.library.hooks.TinkersBombHook;
 import com.gjhi.tinkersinnovation.register.TinkersInnovationHooks;
 import net.minecraft.world.entity.LivingEntity;
 import slimeknights.mantle.data.loadable.record.RecordLoadable;
-import slimeknights.mantle.data.registry.GenericLoaderRegistry;
 import slimeknights.tconstruct.library.json.LevelingValue;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.modules.ModifierModule;
@@ -24,7 +23,7 @@ public record FreezingBombModule(LevelingValue time) implements ModifierModule, 
     );
 
     @Override
-    public RecordLoadable<? extends GenericLoaderRegistry.IHaveLoader> getLoader() {
+    public RecordLoadable<? extends ModifierModule> getLoader() {
         return LOADER;
     }
 
