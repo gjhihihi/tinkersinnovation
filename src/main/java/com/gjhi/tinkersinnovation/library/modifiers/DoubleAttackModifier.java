@@ -109,7 +109,7 @@ public class DoubleAttackModifier extends NoLevelsModifier implements MeleeHitMo
     public float beforeMeleeHit(@NotNull IToolStackView tool, @NotNull ModifierEntry modifier, @NotNull ToolAttackContext context, float damage, float baseKnockback, float knockback) {
         Player player = context.getPlayerAttacker();
         float offknockback = 0, offbaseknockback;
-        if (player != null) {
+        if (player != null && !context.isProjectile()) {
             ToolStack offtool = getHeldTool(player, InteractionHand.OFF_HAND);
             if (offtool != null && !(offtool.equals(tool)) && offtool.getDefinition().equals(tool.getDefinition()) && offtool.getModifierLevel(double_attack.getId()) > 0) {
                 offknockback = offbaseknockback = baseKnockback;
@@ -125,7 +125,7 @@ public class DoubleAttackModifier extends NoLevelsModifier implements MeleeHitMo
     @Override
     public void afterMeleeHit(@NotNull IToolStackView tool, @NotNull ModifierEntry modifier, ToolAttackContext context, float damageDealt) {
         Player player = context.getPlayerAttacker();
-        if (player != null) {
+        if (player != null && !context.isProjectile()) {
             ToolStack offtool = getHeldTool(player, InteractionHand.OFF_HAND);
             if (offtool != null && !(offtool.equals(tool)) && offtool.getDefinition().equals(tool.getDefinition()) && offtool.getModifierLevel(double_attack.getId()) > 0) {
                 for (ModifierEntry mod : offtool.getModifierList()) {
@@ -138,7 +138,7 @@ public class DoubleAttackModifier extends NoLevelsModifier implements MeleeHitMo
     @Override
     public void failedMeleeHit(@NotNull IToolStackView tool, @NotNull ModifierEntry modifier, ToolAttackContext context, float damageAttempted) {
         Player player = context.getPlayerAttacker();
-        if (player != null) {
+        if (player != null && !context.isProjectile()) {
             ToolStack offtool = getHeldTool(player, InteractionHand.OFF_HAND);
             if (offtool != null && !(offtool.equals(tool)) && offtool.getDefinition().equals(tool.getDefinition()) && offtool.getModifierLevel(double_attack.getId()) > 0) {
                 for (ModifierEntry mod : offtool.getModifierList()) {
@@ -152,7 +152,7 @@ public class DoubleAttackModifier extends NoLevelsModifier implements MeleeHitMo
     public float getMeleeDamage(@NotNull IToolStackView tool, @NotNull ModifierEntry modifier, ToolAttackContext context, float baseDamage, float damage) {
         Player player = context.getPlayerAttacker();
         float offdamage = 0, offbasedamage;
-        if (player != null) {
+        if (player != null && !context.isProjectile()) {
             ToolStack offtool = getHeldTool(player, InteractionHand.OFF_HAND);
             if (offtool != null && !(offtool.equals(tool)) && offtool.getDefinition().equals(tool.getDefinition()) && offtool.getModifierLevel(double_attack.getId()) > 0) {
                 offdamage = offbasedamage = offtool.getStats().get(ToolStats.ATTACK_DAMAGE);
@@ -179,7 +179,7 @@ public class DoubleAttackModifier extends NoLevelsModifier implements MeleeHitMo
     @Override
     public void afterBlockBreak(IToolStackView tool, ModifierEntry modifier, ToolHarvestContext context) {
         Player player = context.getPlayer();
-        if (player != null) {
+        if (player != null && !context.isProjectile()) {
             ToolStack offtool = getHeldTool(player, InteractionHand.OFF_HAND);
             if (offtool != null && !(offtool.equals(tool)) && offtool.getDefinition().equals(tool.getDefinition()) && offtool.getModifierLevel(double_attack.getId()) > 0) {
                 for (ModifierEntry mod : offtool.getModifierList()) {
@@ -206,7 +206,7 @@ public class DoubleAttackModifier extends NoLevelsModifier implements MeleeHitMo
     @Override
     public void startHarvest(IToolStackView tool, ModifierEntry modifier, ToolHarvestContext context) {
         Player player = context.getPlayer();
-        if (player != null) {
+        if (player != null && !context.isProjectile()) {
             ToolStack offtool = getHeldTool(player, InteractionHand.OFF_HAND);
             if (offtool != null && !(offtool.equals(tool)) && offtool.getDefinition().equals(tool.getDefinition()) && offtool.getModifierLevel(double_attack.getId()) > 0) {
                 for (ModifierEntry mod : offtool.getModifierList()) {
@@ -220,7 +220,7 @@ public class DoubleAttackModifier extends NoLevelsModifier implements MeleeHitMo
     @Override
     public void finishHarvest(IToolStackView tool, ModifierEntry modifier, ToolHarvestContext context, int harvested) {
         Player player = context.getPlayer();
-        if (player != null) {
+        if (player != null && !context.isProjectile()) {
             ToolStack offtool = getHeldTool(player, InteractionHand.OFF_HAND);
             if (offtool != null && !(offtool.equals(tool)) && offtool.getDefinition().equals(tool.getDefinition()) && offtool.getModifierLevel(double_attack.getId()) > 0) {
                 for (ModifierEntry mod : offtool.getModifierList()) {
