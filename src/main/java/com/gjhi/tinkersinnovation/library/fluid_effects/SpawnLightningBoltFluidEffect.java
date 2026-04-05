@@ -8,13 +8,14 @@ import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.capability.IFluidHandler;
 import slimeknights.mantle.data.loadable.primitive.FloatLoadable;
 import slimeknights.mantle.data.loadable.record.RecordLoadable;
+import slimeknights.tconstruct.library.json.LevelingValue;
 import slimeknights.tconstruct.library.modifiers.fluid.EffectLevel;
 import slimeknights.tconstruct.library.modifiers.fluid.FluidEffect;
 import slimeknights.tconstruct.library.modifiers.fluid.FluidEffectContext;
 
-public record SpawnLightningBoltFluidEffect(float damage) implements FluidEffect<FluidEffectContext> {
+public record SpawnLightningBoltFluidEffect(LevelingValue damage) implements FluidEffect<FluidEffectContext> {
     public static final RecordLoadable<SpawnLightningBoltFluidEffect> LOADER = RecordLoadable.create(
-            FloatLoadable.FROM_ZERO.requiredField("damage", (e) -> e.damage),
+            LevelingValue.LOADABLE.requiredField("damage", SpawnLightningBoltFluidEffect::damage),
             SpawnLightningBoltFluidEffect::new
     );
 
@@ -31,7 +32,7 @@ public record SpawnLightningBoltFluidEffect(float damage) implements FluidEffect
     @Override
     public float apply(FluidStack fluid, EffectLevel level, FluidEffectContext context, IFluidHandler.FluidAction action) {
         if (action.execute()) {
-            TinkersInnovationUtils.spawnLightningBolt(context.getLevel(), (int) context.getLocation().x(), (int) context.getLocation().y(), (int) context.getLocation().z(), MobSpawnType.MOB_SUMMONED, damage);
+            TinkersInnovationUtils.spawnLightningBolt(context.getLevel(), (int) context.getLocation().x(), (int) context.getLocation().y(), (int) context.getLocation().z(), MobSpawnType.MOB_SUMMONED, damage.computeForScale(level.value()));
         }
         return level.value();
     }
