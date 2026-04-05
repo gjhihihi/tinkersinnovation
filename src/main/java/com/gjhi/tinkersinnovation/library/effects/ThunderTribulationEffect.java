@@ -14,7 +14,7 @@ public class ThunderTribulationEffect extends NoMilkEffect {
 
     @Override
     public boolean isDurationEffectTick(int tick, int amplifier) {
-        return tick > 0 && tick % Math.max(40 / (amplifier + 1), 1) == 0;
+        return tick > 0 && tick % 20 == 0;
     }
 
     @Override
