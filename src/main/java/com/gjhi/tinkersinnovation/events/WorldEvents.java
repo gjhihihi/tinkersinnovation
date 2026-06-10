@@ -48,11 +48,15 @@ public class WorldEvents {
             player.getCooldowns().addCooldown(item.getItem(), 20);
         }
     }
+
+    /*
+    * 若苦力怕死于闪电伤害，生成雷劫效果云。
+    */
     @SubscribeEvent
     public static void KillingCreeper(LivingDeathEvent event){
         if (event.getEntity() instanceof Creeper creeper){
-            if (creeper.isPowered()){
-                DamageSource source = event.getSource();
+            DamageSource source = event.getSource();
+            if (source.is(DamageTypes.LIGHTNING_BOLT) && creeper.isPowered()){
                 AreaEffectCloud cloud = new AreaEffectCloud(creeper.level(), creeper.getX(), creeper.getY(), creeper.getZ());
                 cloud.setOwner(creeper);
                 cloud.setRadius(2);
@@ -61,12 +65,12 @@ public class WorldEvents {
                 cloud.setRadiusPerTick(-cloud.getRadius() / (float)cloud.getDuration());
                 cloud.addEffect(new MobEffectInstance(TinkersInnovationEffects.thunderTribulationEffect.get(),100));
                 creeper.level().addFreshEntity(cloud);
-                if (source.is(DamageTypes.LIGHTNING_BOLT) && new Random().nextFloat() < 0.05){
+                /*if (new Random().nextFloat() < 0.05){
                     LiquidBlock block = TinkersInnovationFluids.lightning.getBlock();
                     if (block != null) {
                         creeper.level().setBlock(new BlockPos((int) creeper.getX(), (int) creeper.getY(), (int) creeper.getZ()), block.defaultBlockState(), Block.UPDATE_ALL_IMMEDIATE);
                     }
-                }
+                }*/
             }
         }
     }
