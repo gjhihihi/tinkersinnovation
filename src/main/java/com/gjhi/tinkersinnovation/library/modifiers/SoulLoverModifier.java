@@ -36,7 +36,7 @@ import java.util.List;
 public class SoulLoverModifier extends NoLevelsModifier implements MeleeHitModifierHook, MeleeDamageModifierHook, TooltipModifierHook, ProjectileHitModifierHook, MonsterMeleeHitModifierHook.RedirectAfter {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
-        hookBuilder.addHook(this, ModifierHooks.MELEE_DAMAGE, ModifierHooks.MELEE_HIT, ModifierHooks.TOOLTIP, ModifierHooks.PROJECTILE_HIT, ModifierHooks.MONSTER_MELEE_HIT);
+        hookBuilder.addHook(this, ModifierHooks.MELEE_DAMAGE, ModifierHooks.MONSTER_MELEE_DAMAGE, ModifierHooks.MELEE_HIT, ModifierHooks.TOOLTIP, ModifierHooks.PROJECTILE_HIT, ModifierHooks.MONSTER_MELEE_HIT);
     }
 
     private final ResourceLocation KEY = new ResourceLocation(TinkersInnovation.MOD_ID, "soul_lover");

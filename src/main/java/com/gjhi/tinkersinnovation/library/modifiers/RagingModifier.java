@@ -15,7 +15,7 @@ import slimeknights.tconstruct.library.tools.stat.ToolStats;
 public class RagingModifier extends Modifier implements MeleeDamageModifierHook, ConditionalStatModifierHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
-        hookBuilder.addHook(this, ModifierHooks.CONDITIONAL_STAT, ModifierHooks.MELEE_DAMAGE);
+        hookBuilder.addHook(this, ModifierHooks.CONDITIONAL_STAT, ModifierHooks.MELEE_DAMAGE, ModifierHooks.MONSTER_MELEE_DAMAGE);
     }
 
     @Override

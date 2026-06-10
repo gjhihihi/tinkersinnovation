@@ -56,7 +56,7 @@ import static java.lang.Math.min;
 public class DoubleAttackModifier extends NoLevelsModifier implements MeleeHitModifierHook, MeleeDamageModifierHook, ToolDamageModifierHook, BlockBreakModifierHook, BlockHarvestModifierHook, BreakSpeedModifierHook, AttributesModifierHook, InventoryTickModifierHook, ModifierRemovalHook, ModifyDamageSourceModifierHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
-        hookBuilder.addHook(this, ModifierHooks.MELEE_HIT, ModifierHooks.MELEE_DAMAGE, ModifierHooks.TOOL_DAMAGE, ModifierHooks.BLOCK_BREAK, ModifierHooks.BREAK_SPEED, ModifierHooks.BLOCK_HARVEST, ModifierHooks.INVENTORY_TICK, ModifierHooks.ATTRIBUTES, ModifierHooks.REMOVE, TinkersInnovationHooks.MODIFY_SOURCE);
+        hookBuilder.addHook(this, ModifierHooks.MELEE_HIT, ModifierHooks.MELEE_DAMAGE, ModifierHooks.MONSTER_MELEE_DAMAGE, ModifierHooks.TOOL_DAMAGE, ModifierHooks.BLOCK_BREAK, ModifierHooks.BREAK_SPEED, ModifierHooks.BLOCK_HARVEST, ModifierHooks.INVENTORY_TICK, ModifierHooks.ATTRIBUTES, ModifierHooks.REMOVE, TinkersInnovationHooks.MODIFY_SOURCE);
     }
 
     private final ResourceLocation KEY = new ResourceLocation(TinkersInnovation.MOD_ID, "double_attack");

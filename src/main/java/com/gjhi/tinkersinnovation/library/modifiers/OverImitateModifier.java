@@ -35,7 +35,7 @@ import java.util.List;
 public class OverImitateModifier extends Modifier implements MeleeHitModifierHook, ProjectileHitModifierHook, MeleeDamageModifierHook, TooltipModifierHook, MonsterMeleeHitModifierHook.RedirectAfter {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
-        hookBuilder.addHook(this, ModifierHooks.MELEE_HIT, ModifierHooks.PROJECTILE_HIT, ModifierHooks.MELEE_DAMAGE, ModifierHooks.TOOLTIP, ModifierHooks.MONSTER_MELEE_HIT);
+        hookBuilder.addHook(this, ModifierHooks.MELEE_HIT, ModifierHooks.PROJECTILE_HIT, ModifierHooks.MELEE_DAMAGE, ModifierHooks.MONSTER_MELEE_DAMAGE, ModifierHooks.TOOLTIP, ModifierHooks.MONSTER_MELEE_HIT);
     }
     private final ResourceLocation KEY_ATTACK_DAMAGE = new ResourceLocation(TinkersInnovation.MOD_ID, "over_imitate_attack_damage");
     void modifyImitateDamage(ModDataNBT data, float factor){

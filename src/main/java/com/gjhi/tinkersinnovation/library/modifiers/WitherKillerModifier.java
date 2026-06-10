@@ -26,7 +26,7 @@ import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
 public class WitherKillerModifier extends Modifier implements MeleeDamageModifierHook, ProjectileHitModifierHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
-        hookBuilder.addHook(this, ModifierHooks.MELEE_DAMAGE);
+        hookBuilder.addHook(this, ModifierHooks.MELEE_DAMAGE, ModifierHooks.MONSTER_MELEE_DAMAGE);
     }
     @Override
     public float getMeleeDamage(@NotNull IToolStackView tool, @NotNull ModifierEntry modifier, ToolAttackContext context, float baseDamage, float damage) {

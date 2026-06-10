@@ -21,7 +21,7 @@ import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 public class MountKillerModifier extends Modifier implements MeleeDamageModifierHook, ProjectileHitModifierHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
-        hookBuilder.addHook(this, ModifierHooks.MELEE_DAMAGE, ModifierHooks.PROJECTILE_HIT);
+        hookBuilder.addHook(this, ModifierHooks.MELEE_DAMAGE, ModifierHooks.MONSTER_MELEE_DAMAGE, ModifierHooks.PROJECTILE_HIT);
     }
 
     @Override
