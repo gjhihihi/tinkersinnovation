@@ -239,7 +239,7 @@
   "material.tinkersinnovation.mechanism.encyclopedia": "",
   "material.tinkersinnovation.mudslime": "Mudslime",
   "material.tinkersinnovation.mudslime.flavor": "The gooey mud doesn't appeal to the slimes.\nIs this the reason they left?",
-  "material.tinkersinnovation.mudslime.encyclopedia": "Overslimes on the tool will gradually spread to other tools with overslime modifier at a rate of 0.25 overslimes per second per tier.",
+  "material.tinkersinnovation.mudslime.encyclopedia": "Overslimes on the tool will gradually spread to other tools with overslime modifier at a rate of 0.25 overslimes per second per level.",
 
   "fluid.tinkersinnovation.molten_andesite_alloy": "Molten Andesite Alloy",
   "block.tinkersinnovation.molten_andesite_alloy_fluid": "Molten Andesite Alloy",
