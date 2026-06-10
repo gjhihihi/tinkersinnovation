@@ -237,6 +237,9 @@
   "material.tinkersinnovation.mechanism": "机械装置",
   "material.tinkersinnovation.mechanism.flavor": "",
   "material.tinkersinnovation.mechanism.encyclopedia": "",
+  "material.tinkersinnovation.mudslime": "泥泞黏液",
+  "material.tinkersinnovation.mudslime.flavor": "黏糊糊的泥巴不招黏液喜欢。\n这便是它们离开的原因吗？",
+  "material.tinkersinnovation.mudslime.encyclopedia": "工具上的黏液覆层会慢慢来到其它有黏液覆层的工具上，速度为每级0.25点黏液覆层每秒。",
 
   "fluid.tinkersinnovation.molten_andesite_alloy": "熔融安山合金",
   "block.tinkersinnovation.molten_andesite_alloy_fluid": "熔融安山合金",
