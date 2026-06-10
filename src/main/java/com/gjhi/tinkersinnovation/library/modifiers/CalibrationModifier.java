@@ -29,7 +29,7 @@ import java.util.List;
 public class CalibrationModifier extends Modifier implements ProjectileLaunchModifierHook, ConditionalStatModifierHook, TooltipModifierHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
-        hookBuilder.addHook(this, ModifierHooks.CONDITIONAL_STAT, ModifierHooks.PROJECTILE_LAUNCH, ModifierHooks.TOOLTIP);
+        hookBuilder.addHook(this, ModifierHooks.CONDITIONAL_STAT, ModifierHooks.PROJECTILE_LAUNCH, ModifierHooks.PROJECTILE_THROWN, ModifierHooks.TOOLTIP);
     }
 
     private static float getBonus(LivingEntity living) {

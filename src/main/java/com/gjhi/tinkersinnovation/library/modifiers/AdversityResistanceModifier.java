@@ -35,7 +35,7 @@ import java.util.List;
 public class AdversityResistanceModifier extends Modifier implements MeleeDamageModifierHook, ProjectileLaunchModifierHook, TooltipModifierHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
-        hookBuilder.addHook(this, ModifierHooks.MELEE_DAMAGE, ModifierHooks.MONSTER_MELEE_DAMAGE, ModifierHooks.PROJECTILE_LAUNCH, ModifierHooks.TOOLTIP);
+        hookBuilder.addHook(this, ModifierHooks.MELEE_DAMAGE, ModifierHooks.MONSTER_MELEE_DAMAGE, ModifierHooks.PROJECTILE_LAUNCH, ModifierHooks.PROJECTILE_SHOT, ModifierHooks.TOOLTIP);
     }
 
     @Override

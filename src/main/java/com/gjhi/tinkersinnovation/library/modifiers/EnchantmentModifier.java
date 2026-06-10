@@ -32,7 +32,7 @@ import java.util.List;
 public class EnchantmentModifier extends Modifier implements MeleeHitModifierHook, ProjectileHitModifierHook, ProjectileLaunchModifierHook, MonsterMeleeHitModifierHook.RedirectAfter {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
-        hookBuilder.addHook(this, ModifierHooks.MELEE_HIT, ModifierHooks.PROJECTILE_HIT, ModifierHooks.PROJECTILE_LAUNCH, ModifierHooks.MONSTER_MELEE_HIT);
+        hookBuilder.addHook(this, ModifierHooks.MELEE_HIT, ModifierHooks.PROJECTILE_HIT, ModifierHooks.PROJECTILE_LAUNCH, ModifierHooks.PROJECTILE_SHOT, ModifierHooks.MONSTER_MELEE_HIT);
     }
     @Override
     public void afterMeleeHit(@NotNull IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float damageDealt) {
