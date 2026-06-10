@@ -7,6 +7,7 @@ import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 
 import java.util.Collection;
 
+@Deprecated
 public interface ModifyDamageSourceModifierHook {
     void modifyDamageSource(IToolStackView tool, ModifierEntry modifier, LivingEntity attacker, LivingEntity target, DamageSource source);
     record AllMerger(Collection<ModifyDamageSourceModifierHook> modules) implements ModifyDamageSourceModifierHook {

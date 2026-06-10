@@ -22,6 +22,7 @@ import static com.gjhi.tinkersinnovation.TinkersInnovation.MOD_ID;
 )
 public class TinkerHooksEvents {
     @SubscribeEvent
+    @Deprecated
     public static void onSource(LivingHurtEvent event){
         Entity entity = event.getSource().getEntity();
         if (entity instanceof LivingEntity attacker){
@@ -34,6 +35,7 @@ public class TinkerHooksEvents {
         }
     }
     @SubscribeEvent
+    @Deprecated
     public static void onBlocking(ShieldBlockEvent event){
         int amount = (int) event.getOriginalBlockedDamage();
         LivingEntity blocker = event.getEntity();

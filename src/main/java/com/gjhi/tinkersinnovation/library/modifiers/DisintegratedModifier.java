@@ -11,6 +11,7 @@ import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
 import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 
+@Deprecated
 public class DisintegratedModifier extends Modifier implements TinkersBombHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {

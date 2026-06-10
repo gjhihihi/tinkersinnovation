@@ -27,6 +27,7 @@ import javax.annotation.Nullable;
 import java.util.Iterator;
 import java.util.List;
 
+@Deprecated
 public class StressModifier extends NoLevelsModifier implements InventoryTickModifierHook, TooltipModifierHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {

@@ -31,6 +31,7 @@ import slimeknights.tconstruct.tools.TinkerModifiers;
 import java.util.ArrayList;
 import java.util.List;
 
+@Deprecated
 public class TransmutationModifier extends Modifier implements InventoryTickModifierHook, ProcessLootModifierHook, ModifierRemovalHook {
     @Override
     public int getPriority() {

@@ -15,5 +15,14 @@
   "craftable": false,
   "tier": 4,
   "sortOrder": 5,
-  "hidden": false
+  "hidden": false,
+  "redirect": [
+    {
+      "redirect": "l2tinkers:sculkium",
+      "condition": {
+        "modid": "l2tinkers",
+        "type": "forge:mod_loaded"
+      }
+    }
+  ]
 }

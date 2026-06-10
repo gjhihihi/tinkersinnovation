@@ -41,6 +41,7 @@ import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import javax.annotation.Nullable;
 import java.util.Random;
 
+@Deprecated
 public class RipeningModifier extends Modifier implements MeleeHitModifierHook, BlockInteractionModifierHook, MonsterMeleeHitModifierHook.RedirectAfter {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {

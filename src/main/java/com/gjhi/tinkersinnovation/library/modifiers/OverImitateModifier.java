@@ -31,6 +31,7 @@ import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 
 import java.util.List;
 
+@Deprecated
 public class OverImitateModifier extends Modifier implements MeleeHitModifierHook, ProjectileHitModifierHook, MeleeDamageModifierHook, TooltipModifierHook, MonsterMeleeHitModifierHook.RedirectAfter {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {

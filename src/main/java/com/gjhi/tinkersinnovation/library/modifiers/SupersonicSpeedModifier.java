@@ -18,6 +18,7 @@ import slimeknights.tconstruct.tools.TinkerModifiers;
 
 import java.util.List;
 
+@Deprecated
 public class SupersonicSpeedModifier extends NoLevelsModifier implements ToolStatsModifierHook, RequirementsModifierHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {

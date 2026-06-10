@@ -12,6 +12,7 @@ import slimeknights.tconstruct.library.modifiers.impl.NoLevelsModifier;
 import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 
+@Deprecated
 public class EternalModifier extends NoLevelsModifier implements ToolDamageModifierHook, DurabilityDisplayModifierHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {

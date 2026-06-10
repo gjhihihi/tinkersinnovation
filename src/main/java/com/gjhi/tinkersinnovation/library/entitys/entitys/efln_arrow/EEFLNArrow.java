@@ -1,17 +1,16 @@
 package com.gjhi.tinkersinnovation.library.entitys.entitys.efln_arrow;
 
-import com.gjhi.tinkersinnovation.library.entitys.entitys.tinker_bomb.EBomb;
 import com.gjhi.tinkersinnovation.register.TinkersInnovationEntityTypes;
 import com.gjhi.tinkersinnovation.register.TinkersInnovationItems;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 
+@Deprecated
 public class EEFLNArrow extends AbstractArrow {
     public EEFLNArrow(Level level, LivingEntity livingEntity) {
         super(TinkersInnovationEntityTypes.EFLN_ARROW_ENTITY.get(), livingEntity, level);

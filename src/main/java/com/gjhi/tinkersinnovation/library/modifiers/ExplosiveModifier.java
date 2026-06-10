@@ -18,6 +18,7 @@ import slimeknights.tconstruct.library.tools.context.EquipmentContext;
 import slimeknights.tconstruct.library.tools.helper.ToolDamageUtil;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 
+@Deprecated
 public class ExplosiveModifier extends NoLevelsModifier implements OnAttackedModifierHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {

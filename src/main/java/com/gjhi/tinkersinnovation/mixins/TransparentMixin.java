@@ -23,6 +23,7 @@ import slimeknights.tconstruct.library.tools.nbt.ToolStack;
 import static slimeknights.tconstruct.library.modifiers.Modifier.getHeldTool;
 
 @Mixin(ItemInHandLayer.class)
+@Deprecated
 public abstract class TransparentMixin {
     @Inject(at = @At("HEAD"), method = "renderArmWithItem", cancellable = true)
     public void hideInvisibleItem(LivingEntity entity, ItemStack stack, ItemDisplayContext context, HumanoidArm arm, PoseStack pose, MultiBufferSource buffer, int light, CallbackInfo ci) {

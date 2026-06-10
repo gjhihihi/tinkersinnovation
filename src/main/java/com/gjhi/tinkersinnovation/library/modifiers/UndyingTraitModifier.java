@@ -15,6 +15,7 @@ import slimeknights.tconstruct.library.modifiers.impl.NoLevelsModifier;
 import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 
+@Deprecated
 public class UndyingTraitModifier extends NoLevelsModifier implements InventoryTickModifierHook, ModifierRemovalHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {

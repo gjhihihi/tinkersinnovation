@@ -12,6 +12,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
+@Deprecated
 public interface TinkersBombHook {
     default void onTinkersBombExplosion(ModifierNBT modifiers, ModDataNBT persistentData, ModifierEntry modifier, EBomb bomb, LivingEntity attacker, BombExplodeContext context) {
     }

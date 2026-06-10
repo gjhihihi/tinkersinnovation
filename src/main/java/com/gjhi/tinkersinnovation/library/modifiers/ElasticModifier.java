@@ -11,6 +11,7 @@ import slimeknights.tconstruct.library.tools.stat.ToolStats;
 
 import java.util.Iterator;
 
+@Deprecated
 public class ElasticModifier extends Modifier implements ToolStatsModifierHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {

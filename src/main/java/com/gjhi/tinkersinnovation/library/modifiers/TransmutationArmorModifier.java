@@ -24,6 +24,7 @@ import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 
 
+@Deprecated
 public class TransmutationArmorModifier extends Modifier implements InventoryTickModifierHook, OnAttackedModifierHook, ModifierRemovalHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {

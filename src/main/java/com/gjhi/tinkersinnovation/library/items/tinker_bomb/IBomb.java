@@ -12,6 +12,7 @@ import net.minecraft.world.level.Level;
 import slimeknights.tconstruct.library.modifiers.hook.build.ConditionalStatModifierHook;
 import slimeknights.tconstruct.library.tools.nbt.ToolStack;
 
+@Deprecated
 public class IBomb extends ArrowItem {
     public IBomb() {
         super(new Item.Properties());

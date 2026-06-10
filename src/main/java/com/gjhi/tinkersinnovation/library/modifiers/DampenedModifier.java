@@ -5,5 +5,6 @@ import slimeknights.tconstruct.library.modifiers.impl.NoLevelsModifier;
 /**
 * This modifier uses mixin. Please see ./mixins.
 */
+@Deprecated
 public class DampenedModifier extends NoLevelsModifier {
 }

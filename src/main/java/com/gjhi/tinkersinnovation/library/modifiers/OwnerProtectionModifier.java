@@ -13,6 +13,7 @@ import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.context.EquipmentContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 
+@Deprecated
 public class OwnerProtectionModifier extends NoLevelsModifier implements DamageBlockModifierHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {

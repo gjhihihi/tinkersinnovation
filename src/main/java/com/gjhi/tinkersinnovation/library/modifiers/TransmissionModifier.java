@@ -13,6 +13,7 @@ import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 import slimeknights.tconstruct.library.tools.nbt.ToolDataNBT;
 import slimeknights.tconstruct.library.tools.stat.ModifierStatsBuilder;
 
+@Deprecated
 public class TransmissionModifier extends Modifier implements ToolStatsModifierHook, VolatileDataModifierHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {

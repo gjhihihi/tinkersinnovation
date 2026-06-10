@@ -8,6 +8,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
+@Deprecated
 public class IEFLNArrow extends ArrowItem {
     public IEFLNArrow() {
         super(new Item.Properties());

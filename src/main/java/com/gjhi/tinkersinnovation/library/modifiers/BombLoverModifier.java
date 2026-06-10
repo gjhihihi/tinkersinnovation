@@ -14,6 +14,7 @@ import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 import java.util.List;
 import java.util.Map;
 
+@Deprecated
 public class BombLoverModifier extends NoLevelsModifier implements TinkersBombHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {

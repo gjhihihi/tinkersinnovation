@@ -1,11 +1,9 @@
 package com.gjhi.tinkersinnovation.library.items.skelewag_sword;
 
-import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import slimeknights.tconstruct.library.tools.definition.ToolDefinition;
 import slimeknights.tconstruct.library.tools.item.ModifiableItem;
 
-import java.util.function.Consumer;
-
+@Deprecated
 public class SkelewagSwordItem extends ModifiableItem {
     public SkelewagSwordItem(Properties properties, ToolDefinition toolDefinition) {
         super(properties, toolDefinition);

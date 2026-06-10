@@ -27,6 +27,7 @@ import java.util.ListIterator;
 import java.util.Optional;
 import java.util.concurrent.ExecutionException;
 
+@Deprecated
 public class CrushingModifier extends NoLevelsModifier implements ProcessLootModifierHook {
     private final Cache<Item, Optional<CrushingRecipe>> recipeCache = CacheBuilder.newBuilder().maximumSize(64L).build();
     private final SingleItemContainer inventory = new SingleItemContainer();

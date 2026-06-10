@@ -18,6 +18,7 @@ import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import java.util.UUID;
 import java.util.function.BiConsumer;
 
+@Deprecated
 public class TankyTraitModifier extends Modifier implements AttributesModifierHook, ModifierRemovalHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {

@@ -13,6 +13,7 @@ import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.context.EquipmentContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 
+@Deprecated
 public class ChaosArmorModifier extends Modifier implements OnAttackedModifierHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {

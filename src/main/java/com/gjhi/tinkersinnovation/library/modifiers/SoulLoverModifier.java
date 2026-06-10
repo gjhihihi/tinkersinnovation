@@ -32,6 +32,7 @@ import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 
 import java.util.List;
 
+@Deprecated
 public class SoulLoverModifier extends NoLevelsModifier implements MeleeHitModifierHook, MeleeDamageModifierHook, TooltipModifierHook, ProjectileHitModifierHook, MonsterMeleeHitModifierHook.RedirectAfter {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {

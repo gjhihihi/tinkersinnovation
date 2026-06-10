@@ -36,6 +36,7 @@ import java.util.Objects;
 import java.util.UUID;
 import java.util.function.BiConsumer;
 
+@Deprecated
 public class PoseiditeBlessingModifier extends NoLevelsModifier implements AttributesModifierHook,  ModifierRemovalHook,  InventoryTickModifierHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {

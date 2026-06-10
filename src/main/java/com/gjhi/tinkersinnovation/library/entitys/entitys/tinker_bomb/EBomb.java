@@ -17,6 +17,7 @@ import slimeknights.tconstruct.tools.TinkerModifiers;
 
 import java.util.List;
 
+@Deprecated
 public class EBomb extends AbstractArrow{
     public EBomb(Level level, LivingEntity livingEntity) {
         super(TinkersInnovationEntityTypes.BOMB_ENTITY.get(), livingEntity, level);

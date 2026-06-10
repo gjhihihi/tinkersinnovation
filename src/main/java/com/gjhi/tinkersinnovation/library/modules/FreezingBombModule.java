@@ -16,6 +16,7 @@ import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
 
 import java.util.List;
 
+@Deprecated
 public record FreezingBombModule(LevelingValue time) implements ModifierModule, TinkersBombHook {
     public static final RecordLoadable<FreezingBombModule> LOADER = RecordLoadable.create(
             LevelingValue.LOADABLE.requiredField("seconds", FreezingBombModule::time),

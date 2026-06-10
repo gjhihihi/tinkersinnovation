@@ -29,6 +29,7 @@ import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import java.util.List;
 import java.util.Optional;
 
+@Deprecated
 public class PetrifiedSlimeSkullModifier extends NoLevelsModifier implements KeybindInteractModifierHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {

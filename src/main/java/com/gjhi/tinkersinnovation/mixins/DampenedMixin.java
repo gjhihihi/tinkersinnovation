@@ -20,6 +20,7 @@ import slimeknights.tconstruct.library.tools.nbt.ToolStack;
 import static slimeknights.tconstruct.library.modifiers.Modifier.getHeldTool;
 
 @Mixin(Entity.class)
+@Deprecated
 public abstract class DampenedMixin{
 
     @Inject(at = @At("HEAD"), method = "dampensVibrations", cancellable = true)

@@ -13,6 +13,7 @@ import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 
 import javax.annotation.Nullable;
 
+@Deprecated
 public class SuspendModifier extends Modifier implements ProjectileLaunchModifierHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {

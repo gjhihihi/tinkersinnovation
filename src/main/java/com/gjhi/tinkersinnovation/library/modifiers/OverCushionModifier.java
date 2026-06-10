@@ -17,6 +17,7 @@ import slimeknights.tconstruct.tools.modifiers.slotless.OverslimeModifier;
 
 import java.util.List;
 
+@Deprecated
 public class OverCushionModifier extends Modifier implements OnBlockingModifierHook, RequirementsModifierHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {

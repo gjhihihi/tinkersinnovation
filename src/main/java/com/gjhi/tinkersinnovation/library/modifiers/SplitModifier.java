@@ -27,6 +27,7 @@ import slimeknights.tconstruct.library.tools.stat.ToolStats;
 import javax.annotation.Nullable;
 import java.util.List;
 
+@Deprecated
 public class SplitModifier extends NoLevelsModifier implements ToolStatsModifierHook, InventoryTickModifierHook, ModifierRemovalHook, TooltipModifierHook {
 
     @Override

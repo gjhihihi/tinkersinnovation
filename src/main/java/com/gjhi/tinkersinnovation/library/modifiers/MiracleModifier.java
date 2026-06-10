@@ -11,6 +11,7 @@ import slimeknights.tconstruct.library.tools.nbt.IToolContext;
 import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 import slimeknights.tconstruct.library.tools.nbt.ToolDataNBT;
 
+@Deprecated
 public class MiracleModifier extends Modifier implements VolatileDataModifierHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {

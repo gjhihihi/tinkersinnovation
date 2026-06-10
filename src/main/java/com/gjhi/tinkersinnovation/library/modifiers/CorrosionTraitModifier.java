@@ -20,6 +20,7 @@ import slimeknights.tconstruct.library.tools.nbt.ToolStack;
 
 import java.util.*;
 
+@Deprecated
 public class CorrosionTraitModifier extends Modifier implements MeleeHitModifierHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {

@@ -31,6 +31,7 @@ import java.util.List;
 import java.util.UUID;
 import java.util.function.BiConsumer;
 
+@Deprecated
 public class OverImitateArmorModifier extends Modifier implements AttributesModifierHook, ModifierRemovalHook, DamageDealtModifierHook, TooltipModifierHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {

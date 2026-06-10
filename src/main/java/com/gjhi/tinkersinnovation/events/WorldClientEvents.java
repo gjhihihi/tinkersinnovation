@@ -34,12 +34,14 @@ import static com.gjhi.tinkersinnovation.TinkersInnovation.MOD_ID;
 public class WorldClientEvents {
 
     @SubscribeEvent
+    @Deprecated
     static void clientSetup(FMLClientSetupEvent event){
         event.enqueueWork(()->{
             SlimeskullArmorModel.registerHeadModel(TinkersInnovationMaterials.gorgon_hair.getId(), makeSkullName("gorgon"), TinkersInnovation.getResource("textures/entity/skull/gorgon.png"));
         });
     }
     @SubscribeEvent
+    @Deprecated
     static void registerRenderers(EntityRenderersEvent.RegisterLayerDefinitions event){
         Supplier<LayerDefinition> normalHead = Lazy.of(SkullModel::createMobHeadLayer);
         event.registerLayerDefinition(makeSkullName("gorgon"), normalHead);

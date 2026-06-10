@@ -24,6 +24,7 @@ import slimeknights.tconstruct.library.tools.stat.ToolStats;
 
 import java.util.function.Predicate;
 
+@Deprecated
 public class TinkerBombItem extends ModifiableLauncherItem {
     public TinkerBombItem(Properties properties, ToolDefinition toolDefinition) {
         super(properties, toolDefinition);

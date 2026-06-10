@@ -10,6 +10,7 @@ import slimeknights.tconstruct.library.modifiers.hook.behavior.ToolDamageModifie
 import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 
+@Deprecated
 public class VitalityModifier extends Modifier implements ToolDamageModifierHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {

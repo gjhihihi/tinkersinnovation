@@ -17,6 +17,7 @@ import slimeknights.tconstruct.library.tools.stat.ToolStats;
 
 import java.util.List;
 
+@Deprecated
 public record ShieldMaterialStats(int durability, float armor, float toughness, float knockback_resistance, float block_amount, int shield_amount) implements IRepairableMaterialStats {
     public static final MaterialStatsId ID = new MaterialStatsId(TinkersInnovation.getResource("shield_plate"));
     public static final MaterialStatType<ShieldMaterialStats> TYPE = new MaterialStatType(

@@ -7,6 +7,7 @@ import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 
 import java.util.Collection;
 
+@Deprecated
 public interface OnBlockingModifierHook {
     int onBlocking(IToolStackView tool, ModifierEntry modifier, LivingEntity blocker, ShieldBlockEvent event, int amount);
 

@@ -15,6 +15,7 @@ import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ToolStack;
 
 @Mixin(value = ToolDamageUtil.class, remap = false)
+@Deprecated
 public abstract class ToolDamageMixin {
     @Inject(at = @At(value = "HEAD"), method = "directDamage", cancellable = true)
     private static void ToolDamage(IToolStackView tool, int amount, LivingEntity entity, ItemStack stack, CallbackInfoReturnable<Boolean> ci){

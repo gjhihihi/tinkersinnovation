@@ -20,6 +20,7 @@ import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.context.EquipmentContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 
+@Deprecated
 public class SunshineArmorModifier extends NoLevelsModifier implements InventoryTickModifierHook, DamageBlockModifierHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {

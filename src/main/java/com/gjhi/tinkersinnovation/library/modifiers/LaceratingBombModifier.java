@@ -12,6 +12,7 @@ import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 import slimeknights.tconstruct.shared.TinkerEffects;
 import slimeknights.tconstruct.tools.TinkerModifiers;
 
+@Deprecated
 public class LaceratingBombModifier extends Modifier implements TinkersBombHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {

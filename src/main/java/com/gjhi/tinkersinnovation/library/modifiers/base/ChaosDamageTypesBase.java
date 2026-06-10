@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+@Deprecated
 public class ChaosDamageTypesBase {
     private static final List<ResourceKey<DamageType>> TYPES = new ArrayList<>(List.of(
             DamageTypes.ON_FIRE,

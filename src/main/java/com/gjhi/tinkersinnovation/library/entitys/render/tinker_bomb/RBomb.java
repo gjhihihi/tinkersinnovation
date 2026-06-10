@@ -16,6 +16,7 @@ import net.minecraft.world.inventory.InventoryMenu;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 
+@Deprecated
 public class RBomb extends ArrowRenderer<EBomb> {
     private final ItemRenderer itemRenderer;
     public RBomb(EntityRendererProvider.Context context) {

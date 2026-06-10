@@ -32,6 +32,7 @@ import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 import java.util.UUID;
 import java.util.function.BiConsumer;
 
+@Deprecated
 public class SculkModifier extends NoLevelsModifier implements AttributesModifierHook, ModifierRemovalHook, InventoryTickModifierHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {

@@ -10,6 +10,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import slimeknights.tconstruct.library.tools.nbt.ToolStack;
 
 @Mixin(value = RagnarokTrait.class, remap = false)
+@Deprecated
 public abstract class NoSealedMixin {
     @Inject(at = @At("HEAD"), method = "allowSeal", cancellable = true)
     private static void allowSeal(EntitySlotAccess access, CallbackInfoReturnable<Boolean> cir){

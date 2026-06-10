@@ -11,6 +11,7 @@ import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.stat.FloatToolStat;
 import slimeknights.tconstruct.library.tools.stat.ToolStats;
 
+@Deprecated
 public class FarThrowModifier extends Modifier implements ConditionalStatModifierHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {

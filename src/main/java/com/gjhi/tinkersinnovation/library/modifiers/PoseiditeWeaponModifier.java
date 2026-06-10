@@ -51,6 +51,7 @@ import java.util.function.BiConsumer;
 
 import static slimeknights.tconstruct.tools.data.material.MaterialIds.manyullyn;
 
+@Deprecated
 public class PoseiditeWeaponModifier extends NoLevelsModifier implements MeleeDamageModifierHook, AttributesModifierHook,InventoryTickModifierHook, ModifierRemovalHook {
 
     private final ResourceLocation KEY = new ResourceLocation(TinkersInnovation.MOD_ID, "poseidite_weapon");

@@ -19,6 +19,7 @@ import slimeknights.tconstruct.tools.stats.ToolType;
 
 import java.util.List;
 
+@Deprecated
 public class AbyssResonanceModifier extends NoLevelsModifier implements ModifyDamageSourceModifierHook, RequirementsModifierHook {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {

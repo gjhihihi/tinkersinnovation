@@ -9,6 +9,7 @@ import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
+@Deprecated
 public class BEFLNArrow extends AbstractProjectileDispenseBehavior {
     @Override
     protected Projectile getProjectile(Level level, Position position, ItemStack itemStack) {

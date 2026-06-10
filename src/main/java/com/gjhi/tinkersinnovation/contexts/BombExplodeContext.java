@@ -1,8 +1,8 @@
 package com.gjhi.tinkersinnovation.contexts;
 
-import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
 
+@Deprecated
 public class BombExplodeContext {
     private float bomb_radius;
     private int piece_count;

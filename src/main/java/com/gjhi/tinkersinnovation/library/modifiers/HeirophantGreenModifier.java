@@ -26,6 +26,7 @@ import slimeknights.tconstruct.tools.data.ModifierIds;
 
 import java.util.List;
 
+@Deprecated
 public class HeirophantGreenModifier extends Modifier implements DamageDealtModifierHook, OnAttackedModifierHook, RequirementsModifierHook {
 
     @Override

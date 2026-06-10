@@ -21,6 +21,7 @@ import slimeknights.tconstruct.tools.stats.ToolType;
 
 import java.util.List;
 
+@Deprecated
 public class GhostSlashModifier extends NoLevelsModifier implements RequirementsModifierHook {
     public GhostSlashModifier() {
         MinecraftForge.EVENT_BUS.addListener(this::leftClickEmpty);

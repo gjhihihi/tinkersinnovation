@@ -31,6 +31,7 @@ import java.util.List;
 
 import static com.gjhi.tinkersinnovation.register.TinkersInnovationModifiers.double_attack;
 
+@Deprecated
 public class ResonanceModifier extends Modifier implements MeleeHitModifierHook, ProjectileHitModifierHook, MonsterMeleeHitModifierHook.RedirectAfter {
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
