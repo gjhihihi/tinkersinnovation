@@ -49,10 +49,9 @@
       "type": "tconstruct:base_stats",
       "stats": {
         "tconstruct:attack_damage": 5,
-        "tconstruct:attack_speed": 0.6,
-        "tconstruct:block_amount": 100.0,
-        "tconstruct:block_angle": 180.0,
-        "tinkersinnovation:shield_amount": 20
+        "tconstruct:attack_speed": 0.5,
+        "tconstruct:block_amount": 150.0,
+        "tconstruct:block_angle": 180.0
       }
     },
     {
@@ -60,16 +59,13 @@
       "multipliers": {
         "tconstruct:attack_damage": 1.5,
         "tconstruct:durability": 4,
-        "tconstruct:mining_speed": 0.3,
-        "tinkersinnovation:shield_amount": 3
+        "tconstruct:mining_speed": 0.3
       }
     },
     {
       "type": "tconstruct:modifier_slots",
       "slots": {
-        "defense": 3,
-        "abilities": 1,
-        "upgrades": 2
+        "defense": 2
       }
     },
     {
@@ -81,17 +77,12 @@
         },
         {
           "level": 1,
-          "name": "tinkersinnovation:shield_amount"
+          "name": "tconstruct:heavy"
         }
       ]
     },
     {
-      "type": "tconstruct:preference_set_interaction",
-      "preferred_modifiers": {
-        "type": "tconstruct:single",
-        "modifier": "tconstruct:blocking"
-      },
-      "preferred_source": "right_click"
+      "type": "tconstruct:attack_interaction"
     }
   ]
 }

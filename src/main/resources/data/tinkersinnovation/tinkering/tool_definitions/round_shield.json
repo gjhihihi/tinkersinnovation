@@ -40,14 +40,7 @@
       "stats": {
         "tconstruct:block_amount": 10.0,
         "tconstruct:block_angle": 90.0,
-        "tconstruct:use_item_speed": 1.0,
-        "tinkersinnovation:shield_amount": 20
-      }
-    },
-    {
-      "type": "tconstruct:multiply_stats",
-      "multipliers": {
-        "tinkersinnovation:shield_amount": 0.75
+        "tconstruct:use_item_speed": 1.0
       }
     },
     {
@@ -64,20 +57,11 @@
         {
           "level": 1,
           "name": "tconstruct:blocking"
-        },
-        {
-          "level": 1,
-          "name": "tinkersinnovation:shield_amount"
         }
       ]
     },
     {
-      "type": "tconstruct:preference_set_interaction",
-      "preferred_modifiers": {
-        "type": "tconstruct:single",
-        "modifier": "tconstruct:blocking"
-      },
-      "preferred_source": "right_click"
+      "type": "tconstruct:attack_interaction"
     }
   ]
 }

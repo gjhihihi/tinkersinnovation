@@ -19,6 +19,7 @@ import slimeknights.tconstruct.library.tools.item.ModifiableItem;
 import slimeknights.tconstruct.library.tools.item.ranged.ModifiableLauncherItem;
 import slimeknights.tconstruct.library.tools.part.ToolPartItem;
 import slimeknights.tconstruct.tools.stats.LimbMaterialStats;
+import slimeknights.tconstruct.tools.stats.PlatingMaterialStats;
 
 import static com.gjhi.tinkersinnovation.TinkersInnovation.MOD_ID;
 
@@ -90,11 +91,11 @@ public class TinkersInnovationItems {
     public static RegistryObject<Item> seared_bedrock = ITEMS.register("seared_bedrock", () -> register_block(TinkersInnovationBlocks.seared_bedrock.get()));
     public static RegistryObject<Item> scorched_bedrock = ITEMS.register("scorched_bedrock", () -> register_block(TinkersInnovationBlocks.scorched_bedrock.get()));
     //tool parts
-    public static final RegistryObject<ToolPartItem> light_shield_plate = TOOLS.register("light_shield_plate", () -> new ToolPartItem(PARTS_PROPS, ShieldMaterialStats.ID));
+    public static final RegistryObject<ToolPartItem> light_shield_plate = TOOLS.register("light_shield_plate", () -> new ToolPartItem(PARTS_PROPS, PlatingMaterialStats.SHIELD.getId()));
     public static RegistryObject<Item> light_shield_plate_cast = ITEMS.register("light_shield_plate_cast", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> light_shield_plate_sand_cast = ITEMS.register("light_shield_plate_sand_cast", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> light_shield_plate_red_sand_cast = ITEMS.register("light_shield_plate_red_sand_cast", TinkersInnovationItems::register_item);
-    public static final RegistryObject<ToolPartItem> heavy_shield_plate = TOOLS.register("heavy_shield_plate", () -> new ToolPartItem(PARTS_PROPS, ShieldMaterialStats.ID));
+    public static final RegistryObject<ToolPartItem> heavy_shield_plate = TOOLS.register("heavy_shield_plate", () -> new ToolPartItem(PARTS_PROPS, PlatingMaterialStats.SHIELD.getId()));
     public static RegistryObject<Item> heavy_shield_plate_cast = ITEMS.register("heavy_shield_plate_cast", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> heavy_shield_plate_sand_cast = ITEMS.register("heavy_shield_plate_sand_cast", TinkersInnovationItems::register_item);
     public static RegistryObject<Item> heavy_shield_plate_red_sand_cast = ITEMS.register("heavy_shield_plate_red_sand_cast", TinkersInnovationItems::register_item);
