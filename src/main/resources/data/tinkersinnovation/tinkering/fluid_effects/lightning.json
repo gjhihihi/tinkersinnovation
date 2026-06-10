@@ -2,7 +2,9 @@
   "block_effects": [
     {
       "type": "tinkersinnovation:spawn_lightning_bolt",
-      "damage": 5
+      "damage": {
+        "each_level": 5.0
+      }
     }
   ],
   "entity_effects": [
