@@ -799,6 +799,7 @@
   "recipe.tconstruct.modifier.fiery.each_level": "需要相同等级的怒火作为前置",
   "recipe.tconstruct.modifier.traits_restructuring.omnipotent": "禁止套娃",
   "recipe.tconstruct.modifier.traits_restructuring.not_included": "部件上无此材料特性",
+  "recipe.tconstruct.modifier.traits_restructuring.not_included.with_name": "部件上无注册名为“%1$s”的材料特性",
 
   "death.attack.tinkersinnovation.berserker": "%1$s暴怒而死",
   "death.attack.tinkersinnovation.berserker.player": "%1$s被%2$s招惹以致暴怒而死",

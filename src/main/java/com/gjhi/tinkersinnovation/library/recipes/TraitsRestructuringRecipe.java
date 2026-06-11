@@ -122,7 +122,11 @@ public class TraitsRestructuringRecipe implements ITinkerStationRecipe {
             newTool.getPersistentData().addSlots(TinkersInnovationSlots.OMNIPOTENT, -1);
             return ITinkerStationRecipe.success(newTool, inv);
         }else {
-            return RecipeResult.failure(Component.translatable("recipe.tconstruct.modifier.traits_restructuring.not_included"));
+            if (name_tag != ItemStack.EMPTY) {
+                return RecipeResult.failure(Component.translatable("recipe.tconstruct.modifier.traits_restructuring.not_included.with_name", name_tag.getHoverName().getString()));
+            }else {
+                return RecipeResult.failure(Component.translatable("recipe.tconstruct.modifier.traits_restructuring.not_included"));
+            }
         }
     }
 

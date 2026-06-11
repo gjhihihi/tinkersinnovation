@@ -798,7 +798,8 @@
   "recipe.tconstruct.modifier.overslime": "Need overslime to be the prepose.",
   "recipe.tconstruct.modifier.fiery.each_level": "Need same level's fire to be the prepose.",
   "recipe.tconstruct.modifier.traits_restructuring.omnipotent": "Not allowed to repeat.",
-  "recipe.tconstruct.modifier.traits_restructuring.not_included": "No materials on tools' patterns.",
+  "recipe.tconstruct.modifier.traits_restructuring.not_included": "No correct trait on the part.",
+  "recipe.tconstruct.modifier.traits_restructuring.not_included.with_name": "No trait whose register name is called \"%1$s\" on the part.",
 
   "death.attack.tinkersinnovation.berserker": "%1$s dead because of anger.",
   "death.attack.tinkersinnovation.berserker.player": "%1$s was made to be angry by %2$s then died.",
