@@ -10,6 +10,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.registries.RegistryObject;
 import slimeknights.mantle.registration.deferred.SynchronizedDeferredRegister;
+import slimeknights.tconstruct.common.registration.CastItemObject;
 import slimeknights.tconstruct.fluids.TinkerFluids;
 import slimeknights.tconstruct.library.tools.helper.ToolBuildHandler;
 import slimeknights.tconstruct.library.tools.item.IModifiable;
@@ -37,8 +38,8 @@ public class TinkersInnovationTabs {
             .title(Component.translatable("itemGroup.TinkersInnovationToolGroup"))
             .icon(() -> TinkersInnovationItems.claw.get().getRenderTool())
             .displayItems((displayParameters, output) -> {
-                output.accept(TinkersInnovationItems.light_shield_plate_cast);
-                output.accept(TinkersInnovationItems.heavy_shield_plate_cast);
+                acceptCast(output, TinkersInnovationItems.light_shield_plate_cast);
+                acceptCast(output, TinkersInnovationItems.heavy_shield_plate_cast);
                 for (RegistryObject<Item> item : TinkersInnovationItems.TOOLS.getEntries()){
                     if (item.get() instanceof IModifiable iModifiable){
                         acceptTool(output::accept, iModifiable);
@@ -99,5 +100,10 @@ public class TinkersInnovationTabs {
     }
     private static void acceptPart(Consumer<ItemStack> output, IMaterialItem item) {
         item.addVariants(output, "");
+    }
+    private static void acceptCast(CreativeModeTab.Output output, CastItemObject cast) {
+        output.accept(cast.get().getDefaultInstance());
+        output.accept(cast.getSand().getDefaultInstance());
+        output.accept(cast.getRedSand().getDefaultInstance());
     }
 }
