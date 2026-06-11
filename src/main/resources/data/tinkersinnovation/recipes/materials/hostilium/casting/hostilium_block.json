@@ -1,7 +1,7 @@
 {
   "type": "tconstruct:casting_basin",
   "fluid": {
-    "name": "tinkersinnovation:molten_hostilium",
+    "fluid": "tinkersinnovation:molten_hostilium",
     "amount": 810
   },
   "result": "tinkersinnovation:hostilium_block",

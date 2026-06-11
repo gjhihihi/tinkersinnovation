@@ -11,7 +11,7 @@
   },
   "cast_consumed": true,
   "fluid": {
-    "name": "tinkersinnovation:molten_polychrome_alloy",
+    "fluid": "tinkersinnovation:molten_polychrome_alloy",
     "amount": 300
   },
   "result": "tinkers_ingenuity:bedrock_alloy_ingot",

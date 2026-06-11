@@ -5,7 +5,7 @@
   },
   "cast_consumed": true,
   "fluid": {
-    "name": "tinkersinnovation:hemolymph",
+    "fluid": "tinkersinnovation:hemolymph",
     "amount": 250
   },
   "result": "tinkersinnovation:hemolymph_bone",

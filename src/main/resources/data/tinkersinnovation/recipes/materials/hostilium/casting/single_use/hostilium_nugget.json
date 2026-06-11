@@ -5,7 +5,7 @@
   },
   "cast_consumed": true,
   "fluid": {
-    "name": "tinkersinnovation:molten_hostilium",
+    "fluid": "tinkersinnovation:molten_hostilium",
     "amount": 10
   },
   "result": "tinkersinnovation:hostilium_nugget",

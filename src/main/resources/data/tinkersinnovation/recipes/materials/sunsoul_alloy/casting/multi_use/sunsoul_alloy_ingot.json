@@ -5,7 +5,7 @@
   },
   "cast_consumed": false,
   "fluid": {
-    "name": "tinkersinnovation:molten_sunsoul_alloy",
+    "fluid": "tinkersinnovation:molten_sunsoul_alloy",
     "amount": 90
   },
   "result": "tinkersinnovation:sunsoul_alloy_ingot",

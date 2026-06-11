@@ -5,7 +5,7 @@
   },
   "cast_consumed": true,
   "fluid": {
-    "name": "tinkersinnovation:molten_void_crystal",
+    "fluid": "tinkersinnovation:molten_void_crystal",
     "amount": 90
   },
   "result": "tinkersinnovation:void_crystal_ingot",

@@ -11,7 +11,7 @@
   },
   "cast_consumed": false,
   "fluid": {
-    "name": "tinkersinnovation:molten_miracle",
+    "fluid": "tinkersinnovation:molten_miracle",
     "amount": 90
   },
   "result": "l2hostility:miracle_ingot",

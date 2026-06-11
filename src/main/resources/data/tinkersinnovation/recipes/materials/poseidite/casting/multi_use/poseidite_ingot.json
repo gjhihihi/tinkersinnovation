@@ -11,7 +11,7 @@
   },
   "cast_consumed": false,
   "fluid": {
-    "name": "tinkersinnovation:molten_poseidite",
+    "fluid": "tinkersinnovation:molten_poseidite",
     "amount": 90
   },
   "result": "l2complements:poseidite_ingot",

@@ -1,7 +1,7 @@
 {
   "type": "tconstruct:casting_basin",
   "fluid": {
-    "name": "tinkersinnovation:molten_fools_gold",
+    "fluid": "tinkersinnovation:molten_fools_gold",
     "amount": 810
   },
   "result": "tinkersinnovation:fools_gold_block",

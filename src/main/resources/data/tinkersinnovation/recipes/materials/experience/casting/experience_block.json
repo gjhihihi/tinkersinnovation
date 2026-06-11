@@ -7,7 +7,7 @@
     }
   ],
   "fluid": {
-    "name": "tinkersinnovation:molten_experience",
+    "fluid": "tinkersinnovation:molten_experience",
     "amount": 810
   },
   "result": "create:experience_block",

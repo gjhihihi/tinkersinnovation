@@ -5,7 +5,7 @@
   },
   "cast_consumed": false,
   "fluid": {
-    "name": "tinkersinnovation:molten_decline",
+    "fluid": "tinkersinnovation:molten_decline",
     "amount": 10
   },
   "result": "tinkersinnovation:decline_nugget",

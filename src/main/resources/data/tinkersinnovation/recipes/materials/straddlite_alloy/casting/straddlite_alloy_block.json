@@ -1,7 +1,7 @@
 {
   "type": "tconstruct:casting_basin",
   "fluid": {
-    "name": "tinkersinnovation:molten_straddlite_alloy",
+    "fluid": "tinkersinnovation:molten_straddlite_alloy",
     "amount": 810
   },
   "result": "tinkersinnovation:straddlite_alloy_block",

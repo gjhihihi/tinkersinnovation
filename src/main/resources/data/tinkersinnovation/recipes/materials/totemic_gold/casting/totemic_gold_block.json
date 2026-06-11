@@ -7,7 +7,7 @@
     }
   ],
   "fluid": {
-    "name": "tinkersinnovation:molten_totemic_gold",
+    "fluid": "tinkersinnovation:molten_totemic_gold",
     "amount": 810
   },
   "result": "l2complements:totemic_gold_block",

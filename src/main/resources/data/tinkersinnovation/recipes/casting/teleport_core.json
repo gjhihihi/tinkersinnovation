@@ -5,7 +5,7 @@
   },
   "cast_consumed": true,
   "fluid": {
-    "name": "tconstruct:molten_ender",
+    "fluid": "tconstruct:molten_ender",
     "amount": 1000
   },
   "result": "tinkersinnovation:teleport_core",

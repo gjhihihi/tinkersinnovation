@@ -5,7 +5,7 @@
   },
   "cast_consumed": false,
   "fluid": {
-    "name": "tinkersinnovation:molten_farseeing_alloy",
+    "fluid": "tinkersinnovation:molten_farseeing_alloy",
     "amount": 90
   },
   "result": "tinkersinnovation:farseeing_alloy_ingot",

@@ -11,7 +11,7 @@
   },
   "cast_consumed": true,
   "fluid": {
-    "name": "tinkersinnovation:molten_totemic_gold",
+    "fluid": "tinkersinnovation:molten_totemic_gold",
     "amount": 90
   },
   "result": "l2complements:totemic_gold_ingot",

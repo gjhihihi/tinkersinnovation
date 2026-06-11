@@ -5,7 +5,7 @@
   },
   "cast_consumed": true,
   "fluid": {
-    "name": "tinkersinnovation:molten_straddlite_alloy",
+    "fluid": "tinkersinnovation:molten_straddlite_alloy",
     "amount": 10
   },
   "result": "tinkersinnovation:straddlite_alloy_nugget",

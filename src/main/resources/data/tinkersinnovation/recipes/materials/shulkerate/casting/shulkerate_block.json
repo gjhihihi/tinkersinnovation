@@ -7,7 +7,7 @@
     }
   ],
   "fluid": {
-    "name": "tinkersinnovation:molten_shulkerate",
+    "fluid": "tinkersinnovation:molten_shulkerate",
     "amount": 810
   },
   "result": "l2complements:shulkerate_block",

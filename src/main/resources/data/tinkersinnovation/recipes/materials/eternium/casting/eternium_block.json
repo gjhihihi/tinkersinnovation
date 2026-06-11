@@ -7,7 +7,7 @@
     }
   ],
   "fluid": {
-    "name": "tinkersinnovation:molten_eternium",
+    "fluid": "tinkersinnovation:molten_eternium",
     "amount": 810
   },
   "result": "l2complements:eternium_block",

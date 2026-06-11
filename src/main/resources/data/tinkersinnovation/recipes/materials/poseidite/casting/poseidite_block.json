@@ -7,7 +7,7 @@
     }
   ],
   "fluid": {
-    "name": "tinkersinnovation:molten_poseidite",
+    "fluid": "tinkersinnovation:molten_poseidite",
     "amount": 810
   },
   "result": "l2complements:poseidite_block",

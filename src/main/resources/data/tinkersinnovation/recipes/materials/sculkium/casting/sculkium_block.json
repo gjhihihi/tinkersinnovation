@@ -7,7 +7,7 @@
     }
   ],
   "fluid": {
-    "name": "tinkersinnovation:molten_sculkium",
+    "fluid": "tinkersinnovation:molten_sculkium",
     "amount": 810
   },
   "result": "l2complements:sculkium_block",

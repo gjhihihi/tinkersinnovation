@@ -7,7 +7,7 @@
     }
   ],
   "fluid": {
-    "name": "tinkersinnovation:molten_capsid",
+    "fluid": "tinkersinnovation:molten_capsid",
     "amount": 810
   },
   "result": "alexsmobs:capsid",

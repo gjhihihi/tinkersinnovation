@@ -11,7 +11,7 @@
   },
   "cast_consumed": true,
   "fluid": {
-    "name": "tinkersinnovation:molten_shulkerate",
+    "fluid": "tinkersinnovation:molten_shulkerate",
     "amount": 10
   },
   "result": "l2complements:shulkerate_nugget",

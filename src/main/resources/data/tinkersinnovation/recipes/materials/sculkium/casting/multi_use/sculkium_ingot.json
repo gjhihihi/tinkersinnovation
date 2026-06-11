@@ -11,7 +11,7 @@
   },
   "cast_consumed": false,
   "fluid": {
-    "name": "tinkersinnovation:molten_sculkium",
+    "fluid": "tinkersinnovation:molten_sculkium",
     "amount": 90
   },
   "result": "l2complements:sculkium_ingot",

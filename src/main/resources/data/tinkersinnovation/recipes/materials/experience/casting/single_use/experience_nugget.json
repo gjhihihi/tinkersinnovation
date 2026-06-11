@@ -11,7 +11,7 @@
   },
   "cast_consumed": true,
   "fluid": {
-    "name": "tinkersinnovation:molten_experience",
+    "fluid": "tinkersinnovation:molten_experience",
     "amount": 90
   },
   "result": "create:experience_nugget",

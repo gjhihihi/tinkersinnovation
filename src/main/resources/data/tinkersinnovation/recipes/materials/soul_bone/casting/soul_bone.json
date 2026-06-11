@@ -5,7 +5,7 @@
   },
   "cast_consumed": true,
   "fluid": {
-    "name": "tinkersinnovation:blazing_soul",
+    "fluid": "tinkersinnovation:blazing_soul",
     "amount": 200
   },
   "result": "tinkersinnovation:soul_bone",

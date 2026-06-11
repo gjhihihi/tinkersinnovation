@@ -7,7 +7,7 @@
     }
   ],
   "fluid": {
-    "name": "tinkersinnovation:molten_andesite_alloy",
+    "fluid": "tinkersinnovation:molten_andesite_alloy",
     "amount": 810
   },
   "result": "create:andesite_alloy_block",
