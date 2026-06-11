@@ -43,6 +43,7 @@ public class TinkersInnovation {
         bus.addListener(this::setup);
         bus.addListener(this::setupClient);
         bus.addListener(this::registerSerializers);
+        bus.addListener(TinkersInnovationTabs::addCreative);
         TinkersInnovationModifiers.MODIFIERS.register(bus);
         TinkersInnovationBlocks.BLOCKS.register(bus);
         TinkersInnovationItems.ITEMS.register(bus);
