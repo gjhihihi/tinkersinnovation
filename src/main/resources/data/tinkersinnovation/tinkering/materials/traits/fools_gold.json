@@ -27,7 +27,13 @@
       },
       {
         "level": 1,
-        "name": "tconstruct:piglin_disguise"
+        "name": "tconstruct:golden"
+      }
+    ],
+    "tconstruct:plating_shield": [
+      {
+        "level": 1,
+        "name": "tconstruct:blast_protection"
       }
     ]
   }

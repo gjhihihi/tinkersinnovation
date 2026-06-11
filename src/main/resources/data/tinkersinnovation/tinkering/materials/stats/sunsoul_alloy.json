@@ -54,14 +54,6 @@
       "knockback_resistance": 0.1,
       "toughness": 3
     },
-    "tinkersinnovation:shield_plate": {
-      "durability": 1660,
-      "armor": 5.0,
-      "toughness": 3,
-      "knockback_resistance": 0.1,
-      "block_amount": 0.1,
-      "shield_amount": 64
-    },
     "tinkersinnovation:bomb_shell": {
       "bomb_radius": 4,
       "piece_count": 4,

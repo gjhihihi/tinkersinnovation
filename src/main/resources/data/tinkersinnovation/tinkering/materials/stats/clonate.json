@@ -53,14 +53,6 @@
       "durability": 2000,
       "knockback_resistance": 0.1,
       "toughness": 2.0
-    },
-    "tinkersinnovation:shield_plate": {
-      "durability": 2000,
-      "armor": 5.0,
-      "toughness": 2.0,
-      "knockback_resistance": 0.1,
-      "block_amount": 0.1,
-      "shield_amount": 64
     }
   }
 }

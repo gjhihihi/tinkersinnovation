@@ -1,13 +1,5 @@
 {
   "stats": {
-    "tinkersinnovation:shield_plate": {
-      "durability": 162,
-      "armor": 3.0,
-      "toughness": 0,
-      "knockback_resistance": 0,
-      "block_amount": -0.05,
-      "shield_amount": 28
-    },
     "tinkersinnovation:bomb_shell": {
       "bomb_radius": 2,
       "piece_count": 3,
