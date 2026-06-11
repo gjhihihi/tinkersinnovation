@@ -48,6 +48,7 @@ public class TinkersInnovation {
         TinkersInnovationBlocks.BLOCKS.register(bus);
         TinkersInnovationItems.ITEMS.register(bus);
         TinkersInnovationItems.TOOLS.register(bus);
+        TinkersInnovationItems.CASTS.register(bus);
         TinkersInnovationItems.NOTDISPLAYS.register(bus);
         TinkersInnovationTabs.CREATIVE_TABS.register(bus);
         TinkersInnovationFluids.FLUIDS.register(bus);

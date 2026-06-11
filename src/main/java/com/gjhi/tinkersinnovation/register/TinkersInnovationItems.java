@@ -1,5 +1,6 @@
 package com.gjhi.tinkersinnovation.register;
 
+import com.gjhi.tinkersinnovation.contexts.BetterItemDeferredRegisterExtension;
 import com.gjhi.tinkersinnovation.library.items.efln_arrow.IEFLNArrow;
 import com.gjhi.tinkersinnovation.library.items.skelewag_sword.SkelewagSwordItem;
 import com.gjhi.tinkersinnovation.library.items.tinker_bomb.IBomb;
@@ -14,6 +15,8 @@ import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import slimeknights.tconstruct.common.registration.CastItemObject;
+import slimeknights.tconstruct.common.registration.ItemDeferredRegisterExtension;
 import slimeknights.tconstruct.fluids.item.ContainerFoodItem;
 import slimeknights.tconstruct.library.tools.item.ModifiableItem;
 import slimeknights.tconstruct.library.tools.item.ranged.ModifiableLauncherItem;
@@ -27,6 +30,7 @@ public class TinkersInnovationItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MOD_ID);
     public static final DeferredRegister<Item> NOTDISPLAYS = DeferredRegister.create(ForgeRegistries.ITEMS, MOD_ID);
     public static final DeferredRegister<Item> TOOLS = DeferredRegister.create(ForgeRegistries.ITEMS, MOD_ID);
+    public static final BetterItemDeferredRegisterExtension CASTS = new BetterItemDeferredRegisterExtension(MOD_ID);
     private static Item register_item() {
         return new Item(new Item.Properties());
     }
@@ -92,13 +96,9 @@ public class TinkersInnovationItems {
     public static RegistryObject<Item> scorched_bedrock = ITEMS.register("scorched_bedrock", () -> register_block(TinkersInnovationBlocks.scorched_bedrock.get()));
     //tool parts
     public static final RegistryObject<ToolPartItem> light_shield_plate = TOOLS.register("light_shield_plate", () -> new ToolPartItem(PARTS_PROPS, PlatingMaterialStats.SHIELD.getId()));
-    public static RegistryObject<Item> light_shield_plate_cast = ITEMS.register("light_shield_plate_cast", TinkersInnovationItems::register_item);
-    public static RegistryObject<Item> light_shield_plate_sand_cast = ITEMS.register("light_shield_plate_sand_cast", TinkersInnovationItems::register_item);
-    public static RegistryObject<Item> light_shield_plate_red_sand_cast = ITEMS.register("light_shield_plate_red_sand_cast", TinkersInnovationItems::register_item);
+    public static CastItemObject light_shield_plate_cast = CASTS.registerCast(light_shield_plate, PARTS_PROPS);
     public static final RegistryObject<ToolPartItem> heavy_shield_plate = TOOLS.register("heavy_shield_plate", () -> new ToolPartItem(PARTS_PROPS, PlatingMaterialStats.SHIELD.getId()));
-    public static RegistryObject<Item> heavy_shield_plate_cast = ITEMS.register("heavy_shield_plate_cast", TinkersInnovationItems::register_item);
-    public static RegistryObject<Item> heavy_shield_plate_sand_cast = ITEMS.register("heavy_shield_plate_sand_cast", TinkersInnovationItems::register_item);
-    public static RegistryObject<Item> heavy_shield_plate_red_sand_cast = ITEMS.register("heavy_shield_plate_red_sand_cast", TinkersInnovationItems::register_item);
+    public static CastItemObject heavy_shield_plate_cast = CASTS.registerCast(heavy_shield_plate, PARTS_PROPS);
     public static final RegistryObject<ToolPartItem> bomb_core = TOOLS.register("bomb_core", () -> new ToolPartItem(PARTS_PROPS, LimbMaterialStats.ID));
     //tools
     public static final RegistryObject<ModifiableItem> claw = TOOLS.register("claw", () -> new ModifiableItem(TOOL, TinkersInnovationToolsDefinition.Claw));

@@ -37,6 +37,8 @@ public class TinkersInnovationTabs {
             .title(Component.translatable("itemGroup.TinkersInnovationToolGroup"))
             .icon(() -> TinkersInnovationItems.claw.get().getRenderTool())
             .displayItems((displayParameters, output) -> {
+                output.accept(TinkersInnovationItems.light_shield_plate_cast);
+                output.accept(TinkersInnovationItems.heavy_shield_plate_cast);
                 for (RegistryObject<Item> item : TinkersInnovationItems.TOOLS.getEntries()){
                     if (item.get() instanceof IModifiable iModifiable){
                         acceptTool(output::accept, iModifiable);
