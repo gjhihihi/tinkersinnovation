@@ -3,6 +3,7 @@ package com.gjhi.tinkersinnovation.library.modifiers;
 import dev.xkmc.l2hostility.compat.curios.CurioCompat;
 import dev.xkmc.l2hostility.content.traits.legendary.RagnarokTrait;
 import dev.xkmc.l2hostility.init.registrate.LHItems;
+import dev.xkmc.l2hostility.init.registrate.LHTraits;
 import net.minecraft.ChatFormatting;
 import net.minecraft.world.entity.LivingEntity;
 import slimeknights.tconstruct.library.modifiers.Modifier;
@@ -24,9 +25,7 @@ public class RagnarokTraitModifier extends Modifier implements MeleeHitModifierH
     public void afterMeleeHit(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float damageDealt) {
         LivingEntity target = context.getLivingTarget();
         if (target != null){
-            if (CurioCompat.hasItemInCurio(target, LHItems.ABRAHADABRA.get()))return;
-            RagnarokTrait trait = new RagnarokTrait(ChatFormatting.BLACK);
-            trait.postHurtImpl(modifier.getLevel(), context.getAttacker(), target);
+            LHTraits.RAGNAROK.get().postHurtImpl(modifier.getLevel(), context.getAttacker(), target);
         }
     }
 }
