@@ -1,7 +1,6 @@
 package com.gjhi.tinkersinnovation.library.modifiers;
 
 import com.gjhi.tinkersinnovation.TinkersInnovation;
-import com.gjhi.tinkersinnovation.register.TinkersInnovationSlots;
 import com.gjhi.tinkersinnovation.register.TinkersInnovationToolStats;
 import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
@@ -14,17 +13,13 @@ import net.minecraft.world.level.Level;
 import slimeknights.mantle.client.TooltipKey;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.ModifierHooks;
-import slimeknights.tconstruct.library.modifiers.hook.build.VolatileDataModifierHook;
 import slimeknights.tconstruct.library.modifiers.hook.display.TooltipModifierHook;
 import slimeknights.tconstruct.library.modifiers.hook.interaction.InventoryTickModifierHook;
 import slimeknights.tconstruct.library.modifiers.impl.NoLevelsModifier;
 import slimeknights.tconstruct.library.module.ModuleHookMap;
-import slimeknights.tconstruct.library.tools.nbt.IToolContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
-import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 
 import javax.annotation.Nullable;
-import java.util.Iterator;
 import java.util.List;
 
 @Deprecated

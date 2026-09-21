@@ -1,21 +1,11 @@
 package com.gjhi.tinkersinnovation.library.entitys.entitys.tinker_bomb;
 
 import com.gjhi.tinkersinnovation.register.TinkersInnovationEntityTypes;
-import com.gjhi.tinkersinnovation.register.TinkersInnovationUtils;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.phys.EntityHitResult;
-import slimeknights.tconstruct.TConstruct;
-import slimeknights.tconstruct.tools.TinkerModifiers;
-
-import java.util.List;
 
 @Deprecated
 public class EBomb extends AbstractArrow{

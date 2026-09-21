@@ -7,6 +7,7 @@ import slimeknights.tconstruct.library.modifiers.util.StaticModifier;
 
 import static com.gjhi.tinkersinnovation.TinkersInnovation.MOD_ID;
 
+@SuppressWarnings("removal")
 public class TinkersInnovationModifiers {
     public static ModifierDeferredRegister MODIFIERS = ModifierDeferredRegister.create(MOD_ID);
     public static StaticModifier<PoseiditeWeaponModifier> poseidite_weapon = MODIFIERS.register("poseidite_weapon", PoseiditeWeaponModifier::new);

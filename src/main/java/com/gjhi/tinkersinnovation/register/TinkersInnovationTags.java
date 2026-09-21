@@ -1,7 +1,6 @@
 package com.gjhi.tinkersinnovation.register;
 
 import com.gjhi.tinkersinnovation.TinkersInnovation;
-import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.EntityType;

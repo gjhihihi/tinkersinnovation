@@ -1,10 +1,8 @@
 package com.gjhi.tinkersinnovation.library.effects;
 
 import net.minecraft.world.effect.MobEffectCategory;
-import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import slimeknights.tconstruct.common.TinkerEffect;
 import slimeknights.tconstruct.tools.modifiers.effect.NoMilkEffect;
 
 public class SoulDevouringEffect extends NoMilkEffect {

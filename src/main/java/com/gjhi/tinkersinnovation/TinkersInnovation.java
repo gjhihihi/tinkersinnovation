@@ -24,6 +24,7 @@ import slimeknights.tconstruct.library.modifiers.fluid.FluidEffect;
 import slimeknights.tconstruct.library.modifiers.modules.ModifierModule;
 
 // The value here should match an entry in the META-INF/mods.toml file
+@SuppressWarnings("removal")
 @Mod(TinkersInnovation.MOD_ID)
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class TinkersInnovation {

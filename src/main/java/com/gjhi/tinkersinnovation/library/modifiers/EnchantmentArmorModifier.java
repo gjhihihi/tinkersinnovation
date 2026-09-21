@@ -4,7 +4,6 @@ import com.gjhi.tinkersinnovation.library.modifiers.base.EnchantmentEffectsBase;
 import com.gjhi.tinkersinnovation.register.TinkersInnovationUtils;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffect;
-import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import slimeknights.tconstruct.library.modifiers.Modifier;

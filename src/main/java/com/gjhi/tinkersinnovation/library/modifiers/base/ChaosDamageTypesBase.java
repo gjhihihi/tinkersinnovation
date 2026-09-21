@@ -3,7 +3,6 @@ package com.gjhi.tinkersinnovation.library.modifiers.base;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.damagesource.DamageType;
 import net.minecraft.world.damagesource.DamageTypes;
-import slimeknights.tconstruct.common.TinkerDamageTypes;
 
 import java.util.ArrayList;
 import java.util.List;

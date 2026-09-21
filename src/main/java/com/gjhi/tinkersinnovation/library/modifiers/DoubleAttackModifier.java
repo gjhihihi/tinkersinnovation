@@ -27,7 +27,6 @@ import slimeknights.tconstruct.library.modifiers.hook.behavior.ToolDamageModifie
 import slimeknights.tconstruct.library.modifiers.hook.build.ModifierRemovalHook;
 import slimeknights.tconstruct.library.modifiers.hook.combat.MeleeDamageModifierHook;
 import slimeknights.tconstruct.library.modifiers.hook.combat.MeleeHitModifierHook;
-import slimeknights.tconstruct.library.modifiers.hook.display.RequirementsModifierHook;
 import slimeknights.tconstruct.library.modifiers.hook.interaction.InventoryTickModifierHook;
 import slimeknights.tconstruct.library.modifiers.hook.mining.BlockBreakModifierHook;
 import slimeknights.tconstruct.library.modifiers.hook.mining.BlockHarvestModifierHook;
@@ -41,17 +40,12 @@ import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 import slimeknights.tconstruct.library.tools.nbt.ToolStack;
 import slimeknights.tconstruct.library.tools.stat.ToolStats;
-import slimeknights.tconstruct.tools.TinkerModifiers;
 
 import javax.annotation.Nonnull;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 import java.util.UUID;
 import java.util.function.BiConsumer;
 
 import static com.gjhi.tinkersinnovation.register.TinkersInnovationModifiers.double_attack;
-import static java.lang.Math.min;
 
 public class DoubleAttackModifier extends NoLevelsModifier implements MeleeHitModifierHook, MeleeDamageModifierHook, ToolDamageModifierHook, BlockBreakModifierHook, BlockHarvestModifierHook, BreakSpeedModifierHook, AttributesModifierHook, InventoryTickModifierHook, ModifierRemovalHook, ModifyDamageSourceModifierHook {
     @Override

@@ -5,8 +5,8 @@ import com.gjhi.tinkersinnovation.library.entitys.entitys.tinker_bomb.EBomb;
 import com.gjhi.tinkersinnovation.register.TinkersInnovationUtils;
 import net.minecraft.world.entity.LivingEntity;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
-import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
 import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
+import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
 
 import java.util.Collection;
 import java.util.List;

@@ -9,8 +9,6 @@ import slimeknights.tconstruct.library.tools.nbt.IToolContext;
 import slimeknights.tconstruct.library.tools.stat.ModifierStatsBuilder;
 import slimeknights.tconstruct.library.tools.stat.ToolStats;
 
-import java.util.Iterator;
-
 @Deprecated
 public class ElasticModifier extends Modifier implements ToolStatsModifierHook {
     @Override

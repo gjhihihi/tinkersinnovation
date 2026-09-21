@@ -1,19 +1,11 @@
 package com.gjhi.tinkersinnovation.register;
 
 import com.gjhi.tinkersinnovation.TinkersInnovation;
-import com.gjhi.tinkersinnovation.library.entitys.entitys.tinker_bomb.EBomb;
 import com.gjhi.tinkersinnovation.library.hooks.ModifyDamageSourceModifierHook;
 import com.gjhi.tinkersinnovation.library.hooks.OnBlockingModifierHook;
 import com.gjhi.tinkersinnovation.library.hooks.TinkersBombHook;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.projectile.Projectile;
-import org.jetbrains.annotations.Nullable;
-import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.ModifierHooks;
 import slimeknights.tconstruct.library.module.ModuleHook;
-import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
-
-import java.util.List;
 
 public class TinkersInnovationHooks {
     public static void init(){

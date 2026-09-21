@@ -2,10 +2,7 @@ package com.gjhi.tinkersinnovation.library.modifiers;
 
 import com.gjhi.tinkersinnovation.register.TinkersInnovationDamageTypes;
 import com.gjhi.tinkersinnovation.register.TinkersInnovationUtils;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.phys.EntityHitResult;
@@ -23,13 +20,9 @@ import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
-import slimeknights.tconstruct.library.tools.nbt.ToolStack;
 import slimeknights.tconstruct.tools.TinkerModifiers;
 
-import java.util.ArrayList;
 import java.util.List;
-
-import static com.gjhi.tinkersinnovation.register.TinkersInnovationModifiers.double_attack;
 
 @Deprecated
 public class ResonanceModifier extends Modifier implements MeleeHitModifierHook, ProjectileHitModifierHook, MonsterMeleeHitModifierHook.RedirectAfter {

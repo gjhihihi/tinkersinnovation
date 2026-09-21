@@ -2,7 +2,6 @@ package com.gjhi.tinkersinnovation.library.modifiers;
 
 import dev.xkmc.l2complements.init.registrate.LCEffects;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;

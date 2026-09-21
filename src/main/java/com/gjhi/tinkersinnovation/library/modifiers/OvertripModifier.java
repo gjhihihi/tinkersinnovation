@@ -1,6 +1,5 @@
 package com.gjhi.tinkersinnovation.library.modifiers;
 
-import com.gjhi.tinkersinnovation.TinkersInnovation;
 import com.gjhi.tinkersinnovation.register.TinkersInnovationUtils;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;

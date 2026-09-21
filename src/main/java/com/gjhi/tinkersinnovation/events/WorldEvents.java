@@ -1,9 +1,7 @@
 package com.gjhi.tinkersinnovation.events;
 
 import com.gjhi.tinkersinnovation.register.TinkersInnovationEffects;
-import com.gjhi.tinkersinnovation.register.TinkersInnovationFluids;
 import com.gjhi.tinkersinnovation.register.TinkersInnovationItems;
-import net.minecraft.core.BlockPos;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -13,9 +11,6 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.LiquidBlock;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -23,8 +18,6 @@ import net.minecraftforge.fml.common.Mod;
 import slimeknights.tconstruct.common.TinkerDamageTypes;
 import slimeknights.tconstruct.library.tools.helper.ModifierUtil;
 import slimeknights.tconstruct.shared.TinkerEffects;
-
-import java.util.Random;
 
 import static com.gjhi.tinkersinnovation.TinkersInnovation.MOD_ID;
 

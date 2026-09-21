@@ -5,13 +5,12 @@ import com.gjhi.tinkersinnovation.library.entitys.entitys.tinker_bomb.EBomb;
 import com.gjhi.tinkersinnovation.library.hooks.TinkersBombHook;
 import com.gjhi.tinkersinnovation.register.TinkersInnovationHooks;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.impl.NoLevelsModifier;
 import slimeknights.tconstruct.library.module.ModuleHookMap;
-import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
 import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
+import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
 
 @Deprecated
 public class NoBlocksBreakModifier extends NoLevelsModifier implements TinkersBombHook {

@@ -1,14 +1,9 @@
 package com.gjhi.tinkersinnovation.mixins;
 
 import com.gjhi.tinkersinnovation.register.TinkersInnovationModifiers;
-import net.minecraft.commands.CommandSource;
-import net.minecraft.world.Nameable;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.level.entity.EntityAccess;
-import net.minecraftforge.common.capabilities.CapabilityProvider;
-import net.minecraftforge.common.extensions.IForgeEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;

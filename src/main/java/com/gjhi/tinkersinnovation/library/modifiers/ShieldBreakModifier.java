@@ -1,7 +1,6 @@
 package com.gjhi.tinkersinnovation.library.modifiers;
 
 import com.gjhi.tinkersinnovation.register.TinkersInnovationModifiers;
-import com.gjhi.tinkersinnovation.register.TinkersInnovationTags;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import slimeknights.tconstruct.library.modifiers.Modifier;

@@ -3,10 +3,7 @@ package com.gjhi.tinkersinnovation.library.modifiers;
 import com.gjhi.tinkersinnovation.library.modifiers.base.EnchantmentEffectsBase;
 import com.gjhi.tinkersinnovation.register.TinkersInnovationUtils;
 import net.minecraft.world.effect.MobEffect;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.phys.EntityHitResult;
@@ -21,12 +18,10 @@ import slimeknights.tconstruct.library.modifiers.hook.ranged.ProjectileLaunchMod
 import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
-import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
 import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
+import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
 
 import javax.annotation.Nullable;
-import java.util.Iterator;
-import java.util.List;
 
 
 public class EnchantmentModifier extends Modifier implements MeleeHitModifierHook, ProjectileHitModifierHook, ProjectileLaunchModifierHook, MonsterMeleeHitModifierHook.RedirectAfter {

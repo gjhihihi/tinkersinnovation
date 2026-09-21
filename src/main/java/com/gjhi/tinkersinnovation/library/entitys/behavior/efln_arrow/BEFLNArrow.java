@@ -1,7 +1,6 @@
 package com.gjhi.tinkersinnovation.library.entitys.behavior.efln_arrow;
 
 import com.gjhi.tinkersinnovation.library.entitys.entitys.efln_arrow.EEFLNArrow;
-import com.gjhi.tinkersinnovation.library.entitys.entitys.tinker_bomb.EBomb;
 import net.minecraft.core.Position;
 import net.minecraft.core.dispenser.AbstractProjectileDispenseBehavior;
 import net.minecraft.world.entity.projectile.AbstractArrow;

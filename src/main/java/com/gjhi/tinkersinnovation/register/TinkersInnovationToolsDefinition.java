@@ -1,6 +1,5 @@
 package com.gjhi.tinkersinnovation.register;
 
-import com.gjhi.tinkersinnovation.register.TinkersInnovationItems;
 import slimeknights.tconstruct.library.tools.definition.ToolDefinition;
 
 public class TinkersInnovationToolsDefinition {

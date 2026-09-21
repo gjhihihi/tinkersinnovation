@@ -1,10 +1,6 @@
 package com.gjhi.tinkersinnovation.library.modifiers;
 
-import dev.xkmc.l2hostility.compat.curios.CurioCompat;
-import dev.xkmc.l2hostility.content.traits.legendary.RagnarokTrait;
-import dev.xkmc.l2hostility.init.registrate.LHItems;
 import dev.xkmc.l2hostility.init.registrate.LHTraits;
-import net.minecraft.ChatFormatting;
 import net.minecraft.world.entity.LivingEntity;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;

@@ -15,8 +15,6 @@ import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 import slimeknights.tconstruct.tools.TinkerModifiers;
 import slimeknights.tconstruct.tools.modifiers.slotless.OverslimeModifier;
 
-import java.util.Iterator;
-
 @Deprecated
 public class BacktrackModifier extends Modifier implements InventoryTickModifierHook {
     @Override

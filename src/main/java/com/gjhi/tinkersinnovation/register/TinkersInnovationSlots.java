@@ -21,6 +21,7 @@ public class TinkersInnovationSlots {
         );
     }
     public static SlotType HOSTILITY = SlotType.getOrCreate("hostilities");
+    @Deprecated
     public static SlotType MECHANISM = SlotType.getOrCreate("mechanisms");
     public static SlotType OMNIPOTENT = SlotType.getOrCreate("omnipotent");
 }
